@@ -1,7 +1,7 @@
 ---
 title: Changelog - Was sich geändert hat
 type: note
-last_updated: 2026-02-16
+last_updated: 2026-03-29
 tags: ["personal"]
 ---
 
@@ -11,7 +11,84 @@ tags: ["personal"]
 
 ---
 
-## 2026-02 (Aktuell)
+## 2026-03 (Aktuell)
+
+### v1.4 — Pinecone Resync + Counter Drafts + Skill Upgrade (2026-03-29)
+- 🔧 Pinecone full resync: 960 → 508 Vektoren (clean, deterministic IDs, PKS 2024 verifiziert)
+- ✨ `_internal/reddit-drafts-dashboard.html` — 12 Counter-Entwürfe für 16 unbeantwortete Replies (6 Threads, 4 Subs), Taktik-Badges, Comment-Permalinks, Copy-Paste mit Quellen-URLs
+- 🔫 Alle 12 Counter mit Taktik-Openers umgeschrieben (Eigenverantwortungsrhetorik, Sippenhaft-Logik, Topic-Hopping, Falsche Dichotomie, Institutionendelegitimierung, Selektives Zitieren)
+- 🔫 K4 Ortskräfte-Argument komplett zerlegt (6 rhetorische Schichten, Bundestag-Quellen)
+- 🔫 K6 Beknotze-Hammer: "Du hörst bei S.51 auf. Die Studie geht weiter." + Policy-Implikation
+- 📝 Counter-Speech Skill: Phase 10 (mandatory Dashboard), Phase 11 (mandatory Umlaut-Validierung mit `\S`-Regex), Exposure-Opener-Regel
+- 📊 Mode-Restructure-Analyse: 5-Modus-Vorschlag (reply, factcheck, Entlarvung, deescalation, prep), Entlarvung-Systemprompt entworfen (nicht implementiert)
+- 📝 Counter-Speech-Format als Feedback-Memory gespeichert (Taktik-Opener → Fakten → bare URLs)
+
+### Frontend UX Upgrade (2026-03-27)
+- ✨ Inline citations: numbered superscripts in LLM responses, keyword-overlap matching to RAG sources, collapsible source panel with coloured relevance bars
+- ✨ Suggested follow-up pills: 3 contextual capsule buttons after each response for guided exploration
+- ✨ Bridging labels: [BRÜCKE]/[BESTÄTIGUNG] tags parsed from LLM output, rendered as green/grey pills
+- ✨ Confidence scoring: computed from RAG source count + relevance, coloured pill (high/medium/low)
+- All changes in `docs/index.html`, bilingual DE/EN, no new dependencies
+
+### r/Marcant Counter-Speech Campaign + PKS 2024 Daten (2026-03-27/28)
+- 🔫 14 Konter geschrieben, stress-getestet, gepostet in 2 r/Marcant-Threads ("Männer sind das Problem" + "Zahlen zu Verurteilte")
+- ✨ `_internal/counter-speech-dashboard.html` — Neuer Tab "r/Marcant Männer (14)", 2 Thread-Summaries, NEU-Markierungen für offene Replies (1152→1732 Zeilen)
+- ✨ `_internal/reddit-antworten-marcant-maenner-problem.md` — Thread-Analyse, Assertion Audit, 10 Konter-Entwürfe
+- 📊 PKS 2024 BKA-Tabellen T40/T50 ausgewertet: TVBZ nach Delikt (Mord 3,9x, Raub 5,6x, KV 3,4x), Pro-Kopf-Zeitreihe 2014-2024
+- 📝 `CONTENT/02-themen/migration-fakten.md` — Neue Sektion "PKS 2024: Pro-Kopf-Raten nach Delikt" (4 Datentabellen)
+- 📝 `META/techniques.md` — 8 neue Taktiken (Torpfosten-Verschiebung, Strohmann→Sarkasmus, Kultur-Eskalationsstufen, Modellminoritäten, Pro-Kopf-Trick, Bureau of Justice US-Import, Anekdoten-Widerlegung, Abschiebungs-Pragmatismus)
+- 📝 `QUICK/one-liners.md` — 6 neue One-Liner (Counter-Speech Taktiken)
+- 🔑 Key Finding: Pro-Kopf-Rate (ohne ausl. Verstöße) sinkt seit 2014 (-21%), ABER nach Delikt gemischt: Mord -13%, Vergewaltigung +18%, Raub +20%
+
+
+### r/armes_deutschland Counter-Speech + Thread-Viz (2026-03-20)
+- ✨ `_internal/reddit-antworten-armes-deutschland-wirtschaft.html` — Interaktive Thread-Visualisierung: Dark/Light Mode, Fraktions-Filter, Gegner-Profile, Konter-Labels, "Duelle"-Modus (3 Iterationen, Expert-Panel-Review)
+- 🔫 13 Konter gepostet (alle rechten Kommentare mit falsifizierbaren Claims gekontert)
+- 🔫 8 Gegner-Profile erstellt (Scheindebattierer, Ideologe, Fossil-Apologet, etc.)
+- 🔫 Devil's Advocate Stress-Test: 10 Konter geprüft, COP-Effizienz-Fehler gefunden ("dreimal effizienter" → "fast doppelt so effizient")
+- 🔧 Pinecone Resync: 454 → 960 Vektoren (506 Records, 43 Dateien, 0 Fehler)
+
+### Thread-Learnings: Ölpreise 180$ (2026-03-20)
+- ✨ `CONTENT/02-themen/klima.md` — 2 neue Sektionen: Dunkelflaute/Spanien-Blackout + Merit-Order mit Konter-Arsenal
+- 📝 `CONTENT/02-themen/heizungsgesetz-betrug.md` — RWTH Aachen WP-Kosten-Studie, COP-Effizienz-Caveat
+- ✨ `META/techniques.md` — 2 neue Taktiken: Topic-Hopping/Whack-a-Mole + Sealioning mit eigener Erfahrung
+- ✨ `QUICK/one-liners.md` — 8 neue One-Liner (Energiepolitik/Wärmewende)
+- 📝 `INDEX.md` — 9 neue Schnellsuche-Einträge (Energiepolitik)
+- Quelle: r/armes_deutschland Thread "Ölpreise 180$" (51 Kommentare, 13 eigene Konter)
+
+### r/Freiheitsfront Counter-Speech (2026-03-14)
+- ✨ `_internal/reddit-antworten-freiheitsfront-afd-kinderschutz.md` — 3 Konter (Strafverschärfung vs Prävention, Verharmlosungsmuster, Grüne-Whataboutism), stress-getestet, quellenbelegt, gepostet
+- 🔧 Reddit JSON-API als Scraping-Fallback (Virtual Scrolling umgangen)
+- 🔧 Reddit `/api/comment` Posting via Playwright als REST-Proxy (Shadow DOM umgangen)
+
+### Counter-Speech Pipeline Sessions (2026-03-13/14)
+- ✨ `_internal/reddit-antworten-marcant-ip.md` — 3 Konter (Human Shields, Flugblätter/Genozid, 75%-Umfrage), nur Brigader
+- ✨ `_internal/reddit-antworten-tja-motra.md` — 4 Konter (MOTRA-Methodenkritik, Relativierung, 45% HEFTIG, Weltbild-Meta)
+- 🔧 Palästina-Item-Fehler korrigiert (existiert nicht in MOTRA-Skala)
+- 📝 `CONTENT/02-themen/islam-integration-religionsfreiheit.md` — Standardreferenzen, MOTRA Arsenal, VS-Zahl korrigiert
+- 📝 `.claude/skills/boldclaim-reddit-counter-speech/SKILL.md` — Brigader-Check, Studien-Debunking, Output-Template
+
+### KI-Gefahren Content (2026-03-10)
+- ✨ `CONTENT/02-themen/ki-gefahren.md` - Warum KI gefährlich ist ohne "böse" zu sein: Instrumentelle Konvergenz, Intent Gap, Alignment-Versagen, Deepfakes, autonome Waffen, Job-Displacement, Sicherheitswettlauf
+- 📝 `INDEX.md` - 8 neue Schnellsuche-Einträge (KI-Gefahren), Ordner-Übersicht aktualisiert
+- 📝 `QUICK/one-liners.md` - 6 neue One-Liner (KI-Werkzeug, Sicherheitsteam, Experten, Deepfakes, Gleichgültigkeit, Scheming)
+- 📝 `AUTOMATION/triggers.yaml` - 20 neue KI-Trigger-Keywords (deepfake, alignment, scheming, agi, etc.)
+
+### Quellen-Verifizierung (2026-03-10)
+- ✅ `ki-gefahren.md` - Apollo Research, Anthropic/arxiv, CNN, NBC News, Surfshark, CNBC, Future of Life, CBS News, Science, UNRIC, EIN Presswire
+
+### Anonymisierung & Org-Migration (2026-03-02)
+- 🔒 GitHub Org `boldclaim` erstellt (Free Plan, private Mitgliedschaft)
+- 🔒 Repo transferiert: `frederikmetz42/boldclaim` → `boldclaim/boldclaim`
+- 🔒 Git-History komplett umgeschrieben: alle 7 Commits auf `boldclaim <boldclaim@proton.me>`
+- 🔒 Proton Mail Account `boldclaim@proton.me` für anonyme Kontakt-Email
+- 🔒 Keine Custom Domain (vermeidet Impressumspflicht TMG §5 / MStV §18)
+- 📄 `_internal/handoff.md` erstellt (vollständige Projektdokumentation)
+- 🌐 Neue GitHub Pages URL: `boldclaim.github.io/boldclaim`
+
+---
+
+## 2026-02
 
 ### Rebranding "Bold Claim" + UI-Redesign (2026-02-27)
 - 📂 Neuer Name: "Bold Claim" (vorher "Counter-Speech")
@@ -191,7 +268,7 @@ tags: ["personal"]
 | project-2025.md | 2025-01-25 | ✅ Verifiziert | Heritage Foundation, ACLU, Time |
 | russland-ukraine.md | 2026-02 | ✅ Aktuell | CSIS, Mediazona, PIIE, Bank of Finland, Moscow Times |
 | migration-fakten.md | 2025-08 | ✅ Aktuell | IAB Aug 2025, ifo 2025 |
-| wirtschaft-housing.md | 2025-01 | ⚠️ Review nötig | - |
+| wirtschaft-housing.md | 2025-02 | ⚠️ Review nötig (13 Monate alt) | - |
 | false-equivalence.md | 2026-02 | ✅ Aktuell | BKA PMK 2024, NRW LKA 2025, VS-Bericht 2024, Statista, Mediendienst |
 | klima.md | 2025-01-25 | ✅ Verifiziert | NASA, IPCC AR6, Klimafakten.de, Skeptical Science |
 | gender.md | 2025-01-25 | ✅ Verifiziert | WHO ICD-11, APA 2024, UN News, PubMed |

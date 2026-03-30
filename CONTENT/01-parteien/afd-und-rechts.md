@@ -484,6 +484,33 @@ In Russland werden Kritiker vergiftet.
 Demos wirken. Deswegen wollen Autokraten sie verbieten.
 ```
 
+### Pluralistische Ignoranz: Warum Sichtbarkeit die 70% erreicht
+
+**Psychologisches Konzept:** Pluralistische Ignoranz beschreibt die Situation, in der die Mehrheit einer Gruppe privat eine Meinung teilt, aber glaubt, allein damit zu sein. Jeder denkt: "Ich bin der Einzige, der so denkt" - und schweigt.
+
+**Warum das für Aktivismus entscheidend ist:**
+- ~15% sind überzeugte Rechte. Die erreichst du nicht.
+- ~15% sind überzeugte Demokraten. Die brauchen Bestätigung, keine Überzeugung.
+- **~70% sind Unentschiedene/Schweigende.** Die sehen, was sichtbar ist - und halten das für die Norm.
+
+Wenn nur die 15% Rechten sichtbar sind (Sticker, Kommentare, Demos), glauben die 70%: "So denkt die Mehrheit." Sichtbarer Gegenprotest, Sticker, Gegenrede normalisiert die demokratische Position. Nicht für die Überzeugten, sondern für die Schweigenden.
+
+**Das erklärt:**
+- Warum Sticker wirken (Sichtbarkeit normalisiert)
+- Warum Gegenrede in Kommentarspalten wichtig ist (Mitleser sehen: "Ich bin nicht allein")
+- Warum Demos auch ohne direkte politische Wirkung Wert haben (Signal an die 70%)
+
+**Konter:**
+```
+"Was bringen deine Sticker/Demos/Kommentare?"
+
+70% der Menschen orientieren sich daran, was sichtbar ist.
+Wenn nur die Lauten sichtbar sind, wird das zur Norm.
+
+Sichtbarkeit normalisiert. Das ist keine Theorie -
+das ist der Grund, warum Autokraten Gegenprotest verbieten.
+```
+
 ---
 
 ## Copy-Paste Arsenal

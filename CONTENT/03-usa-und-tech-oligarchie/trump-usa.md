@@ -1,7 +1,7 @@
 ---
 title: Trump & US-Faschismus
 type: note
-last_updated: 2026-02-16
+last_updated: 2026-03-05
 tags: ["personal"]
 ---
 
@@ -105,6 +105,7 @@ tags: ["personal"]
 - 140 Trump-Mitarbeiter haben an Project 2025 mitgeschrieben
 - Nach Wahlsieg: Mehrere Autoren in Schlüsselpositionen nominiert
 - 4 Tage nach Amtsantritt: 2/3 seiner Executive Orders spiegeln Project 2025
+- **Stand Feb 2026: 53% der Project-2025-Agenda umgesetzt** (283 von 532 Empfehlungen, Center for Progressive Reform)
 
 **Quelle:** [NPR: Trump has rolled out many Project 2025 policies](https://www.npr.org/2026/01/19/nx-s1-5640006/trump-has-rolled-out-many-of-the-project-2025-policies-he-once-claimed-ignorance-about) ✅
 
@@ -172,6 +173,10 @@ Trump nannte politische Gegner "Vermin" (Ungeziefer).
 - Jason Stanley
 
 Alle drei flohen 2025 nach Kanada wegen "Amerikas Abstieg in eine faschistische Diktatur".
+
+**Peer-reviewed (2026):**
+- Nitasha Kaul & Barry Buzan (Cambridge Review of International Affairs, 2026): Analysieren "Trump's new America and the question of fascism"
+- Ben Worthy (Political Quarterly, 2025): "The Fascism of Donald Trump" als akademische Einordnung
 
 **Quelle:** [ECPS: Trump 2025 - Dystopia and Fascism](https://www.populismstudies.org/trump-2025-dystopia-and-fascism-the-rise-of-authoritarianism-in-the-new-government/) ✅
 
@@ -252,13 +257,13 @@ Er wusste nicht mal vom 20. Juli. Das ist kein Kontext. Das ist Ignoranz + Bewun
 ```
 "Project 2025 hat nichts mit Trump zu tun!"
 
-140 Trump-Mitarbeiter haben daran geschrieben.
-Nach der Wahl hat er die Autoren in sein Kabinett geholt.
-2/3 seiner ersten Dekrete spiegeln Project 2025.
+140 Trump-Mitarbeiter haben es geschrieben.
+Autoren ins Kabinett geholt.
+Stand Feb 2026: 53% der Agenda bereits umgesetzt.
 
 Heritage Foundation: "Zweite amerikanische Revolution - unblutig, wenn die Linke es zulässt."
 
-Das ist eine Drohung.
+Das ist keine Verschwörungstheorie. Das ist ein Fahrplan, der befolgt wird.
 ```
 
 ### 6. Januar
@@ -425,6 +430,53 @@ Ausführlich: [[CONTENT/02-themen/kontokuendigungen-sanktionen]]
 
 ---
 
+## DOGE - Systematischer Staatsabbau (2025-2026)
+
+### Was passiert ist
+
+- **DOGE (Department of Government Efficiency):** Von Elon Musk geführt, größter Einzelspender für Trumps Wahlkampf
+- **212.000 Bundesangestellte weniger** bis Ende 2025 (~9% der zivilen Bundesbelegschaft)
+- **330.000 Abgänge** insgesamt 2025, nur ~110.000 Neueinstellungen
+- **75.000 Bundesangestellte** nahmen "Deferred Resignation"-Angebot an (erzwungene Kündigungsprogramme)
+- **$410 Mrd.** vom Kongress bewilligte Mittel zurückgehalten (Schätzung House Democrats)
+
+### Konkrete Zerstörung
+
+| Behörde | Was passiert ist |
+|---------|-----------------|
+| **Bildungsministerium** | 69% Personal gekürzt, Abschaffung per Executive Order angekündigt |
+| **EPA** | 388 Mitarbeiter sofort entlassen, Trump: 65% (~11.000) sollen gehen |
+| **Verteidigungsministerium** | 60.000+ Mitarbeiter verloren |
+| **USAID** | Praktisch aufgelöst |
+| **NOAA** | Auflösung angestrebt |
+| **Atomwaffen-Ingenieure** | Erst entlassen, dann panisch zurückgeholt |
+| **Veterans Crisis Line** | Mitarbeiter entlassen, dann wieder eingestellt |
+
+### Das Chaos-Prinzip
+
+- Atomwaffen-Ingenieure entlassen, dann panisch zurückgeholt
+- Babynahrungsaufsicht-Ärzte entlassen, dann wieder eingestellt
+- Veterans-Krisentelefon-Mitarbeiter gekündigt, dann zurückgerufen
+
+**Quellen:**
+- [Washington Post: The year Trump broke the federal government](https://www.washingtonpost.com/politics/interactive/2025/trump-federal-government-workers-doge/) ✅
+- [Boston Globe: Full scale of federal workforce cuts](https://www.bostonglobe.com/2026/02/26/nation/federal-job-losses-data/) ✅
+- [PBS: DOGE purged employees asked to return](https://www.pbs.org/newshour/politics/these-federal-employees-were-purged-by-doge-months-later-the-trump-administration-is-asking-if-they-want-to-return) ✅
+
+**Konter:**
+```
+"DOGE macht den Staat effizienter!"
+
+212.000 Bundesangestellte entlassen.
+Atomwaffen-Ingenieure gefeuert — dann panisch zurückgeholt.
+Veterans-Krisentelefon geschlossen — dann wieder geöffnet.
+
+Das ist keine Effizienz. Das ist Sabotage.
+Geleitet von Trumps größtem Wahlkampf-Spender.
+```
+
+---
+
 ## Warum das Deutschland betrifft
 
 ### Die Verbindungen
@@ -449,7 +501,7 @@ Ausführlich: [[CONTENT/02-themen/kontokuendigungen-sanktionen]]
 
 ---
 
-## Quellen [LAST_CHECKED: 2025-01]
+## Quellen [LAST_CHECKED: 2026-03]
 
 **Insider-Aussagen:**
 - [PBS: Kelly on Trump's fascist tendencies](https://www.pbs.org/newshour/show/what-john-kelly-said-about-trumps-praise-of-hitler-and-fascist-tendencies) ✅
@@ -469,3 +521,10 @@ Ausführlich: [[CONTENT/02-themen/kontokuendigungen-sanktionen]]
 - [TIME: 31 Nobel Laureates Warn](https://time.com/7294056/signs-of-fascism-are-here/) ✅
 - [Rolling Stone: American Authoritarianism](https://www.rollingstone.com/politics/politics-features/trump-america-fascism-authoritarianism-resist-election-2024-1235157764/) ✅
 - [Verfassungsblog: Sliding into Quasi-Fascism](https://verfassungsblog.de/sliding-into-quasi-fascism/) ✅
+
+**DOGE & Staatsabbau:**
+- [Washington Post: Trump broke the federal government](https://www.washingtonpost.com/politics/interactive/2025/trump-federal-government-workers-doge/) ✅
+- [Boston Globe: Federal job losses data](https://www.bostonglobe.com/2026/02/26/nation/federal-job-losses-data/) ✅
+- [PBS: DOGE purged employees](https://www.pbs.org/newshour/politics/these-federal-employees-were-purged-by-doge-months-later-the-trump-administration-is-asking-if-they-want-to-return) ✅
+- [TIME: Trump's Year of Government Cuts](https://time.com/7342386/trump-government-cuts-foreign-aid-health-climate-workers/) ✅
+- [Center for Progressive Reform: Project 2025 Tracker](https://progressivereform.org/tracking-trump-2/project-2025-executive-action-tracker/) ✅

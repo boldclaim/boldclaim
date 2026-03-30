@@ -2,5 +2,5 @@
 _internal/
 archive/
 input/
-web/.wrangler/
+.wrangler/
 CLAUDE-PROJECT-INSTRUCTIONS.md

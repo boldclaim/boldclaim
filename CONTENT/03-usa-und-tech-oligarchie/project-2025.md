@@ -1,7 +1,7 @@
 ---
 title: Project 2025 - Das komplette Playbook
 type: note
-last_updated: 2026-02-16
+last_updated: 2026-03-05
 tags: ["personal"]
 ---
 
@@ -214,16 +214,28 @@ tags: ["personal"]
 
 ### Was seit Amtsantritt passiert ist
 
-| Project 2025 Forderung | Trump-Umsetzung |
+| Project 2025 Forderung | Trump-Umsetzung (Stand Feb 2026) |
 |------------------------|-----------------|
 | Schedule F | Executive Order unterzeichnet |
-| Bildungsministerium | "Wird abgeschafft" angekündigt |
-| Massendeportationen | ICE-Razzien gestartet |
-| Klima-Rückzug | Paris-Abkommen verlassen |
-| DOJ-Kontrolle | Staatsanwälte entlassen |
-| EPA entmachten | Regulierungen gestoppt |
+| Bildungsministerium | 69% Personal gekürzt, Abschaffung per EO angekündigt |
+| Massendeportationen | ICE-Razzien gestartet, Lager gebaut |
+| Klima-Rückzug | Paris-Abkommen verlassen, EPA entmachtet |
+| DOJ-Kontrolle | Staatsanwälte entlassen, Watchdogs gefeuert |
+| EPA entmachten | 388 Mitarbeiter sofort entlassen, 65% Abbau-Ziel |
+| DOGE | 212.000 Bundesangestellte weniger, $410 Mrd. Mittel eingefroren |
+| NPR/PBS | Defundierung eingeleitet |
+| USAID | Praktisch aufgelöst |
+| Trans-Rechte | Passrechte eingeschränkt, Pentagon-Schutz aufgehoben |
 
-**Quelle:** [Time: Two-thirds of Trump's actions mirror Project 2025](https://time.com/7209197/project-2025-trump-executive-actions/) ✅
+**Umsetzungsgrad: 53% der Agenda** (283 von 532 Empfehlungen, Center for Progressive Reform, Feb 2026)
+
+**Heritage Foundation "Project 2026":** Im Dezember 2025 veröffentlichte Heritage neue Prioritäten für 2026, darunter weiterer Staatsabbau, Umweltderegulierung, und Angriff auf Bildungsrechte für undokumentierte Kinder.
+
+**Quellen:**
+- [Time: Two-thirds of Trump's actions mirror Project 2025](https://time.com/7209197/project-2025-trump-executive-actions/) ✅
+- [Center for Progressive Reform: P2025 Tracker](https://progressivereform.org/tracking-trump-2/project-2025-executive-action-tracker/) ✅
+- [19th News: How much implemented](https://19thnews.org/2025/12/project-2025-heritage-foundation-progress/) ✅
+- [Axios: Project 2025 architects lay out 2026 vision](https://www.axios.com/2025/12/09/trump-china-project-2026-2025-policy-heritage-foundation-abortion) ✅
 
 ### Die Drohung
 
@@ -243,8 +255,10 @@ tags: ["personal"]
 "Project 2025 hat nichts mit Trump zu tun!"
 
 140 Trump-Mitarbeiter haben es geschrieben.
-Nach der Wahl: Autoren ins Kabinett geholt.
-4 Tage im Amt: 2/3 seiner Dekrete spiegeln Project 2025.
+Autoren ins Kabinett geholt.
+Stand Feb 2026: 53% der Agenda umgesetzt. 283 von 532 Empfehlungen.
+
+Heritage hat schon "Project 2026" vorgelegt.
 
 Er hat gelogen. Wie immer.
 ```
@@ -292,7 +306,7 @@ Das ist eine Drohung. Wörtlich.
 
 ---
 
-## Quellen [LAST_CHECKED: 2025-01]
+## Quellen [LAST_CHECKED: 2026-03]
 
 **Primärquellen:**
 - [Heritage Foundation: Project 2025](https://www.heritage.org/conservatism/commentary/project-2025) ✅
@@ -304,6 +318,10 @@ Das ist eine Drohung. Wörtlich.
 - [Democracy Forward: People's Guide](https://democracyforward.org/the-peoples-guide-to-project-2025/) ✅
 - [Center for American Progress: Imperial Presidency](https://www.americanprogress.org/article/project-2025-would-destroy-the-u-s-system-of-checks-and-balances-and-create-an-imperial-presidency/) ✅
 
-**Trump-Verbindung:**
+**Trump-Verbindung & Umsetzung:**
 - [NPR: Trump rolled out Project 2025 policies](https://www.npr.org/2026/01/19/nx-s1-5640006/trump-has-rolled-out-many-of-the-project-2025-policies-he-once-claimed-ignorance-about) ✅
 - [Time: Two-thirds mirror Project 2025](https://time.com/7209197/project-2025-trump-executive-actions/) ✅
+- [Center for Progressive Reform: P2025 Executive Action Tracker](https://progressivereform.org/tracking-trump-2/project-2025-executive-action-tracker/) ✅
+- [19th News: How much of Project 2025 implemented](https://19thnews.org/2025/12/project-2025-heritage-foundation-progress/) ✅
+- [PBS: Tracking Project 2025 implementation](https://www.pbs.org/newshour/politics/tracking-how-much-of-project-2025-the-trump-administration-achieved-this-year) ✅
+- [Axios: Project 2025 architects lay out 2026 vision](https://www.axios.com/2025/12/09/trump-china-project-2026-2025-policy-heritage-foundation-abortion) ✅

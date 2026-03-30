@@ -226,6 +226,208 @@ Unabhängig von der Herkunft.
 
 ---
 
+## Aufenthaltsstatus als Kriminalitätsprädiktor
+
+### Der Gradient läuft am Rechtsstatus, nicht an der Herkunft
+
+**Rechte Behauptung:** "Bestimmte Kulturen sind krimineller!"
+
+**Was die Forschung zeigt:**
+
+- KFN Forschungsbericht 161 (Glaubitz/Bliesener, Schleswig-Holstein 2013-2019): **Personen mit Aufenthaltserlaubnis oder Niederlassungserlaubnis weisen niedrigere Kriminalitätsbelastungen auf als Personen mit Aufenthaltsgestattung oder Duldung.**
+- SVR-Expertise 2024 (Bliesener): Aufenthaltsunsicherheit korreliert systematisch mit erhöhten Belastungszahlen. Integrierte Zuwanderer mit gesichertem Status weisen keine nennenswert höheren Belastungen auf.
+- KFN identifiziert konkrete kriminogene Faktoren im Duldungsstatus: Beschäftigungsverbot, fehlende Wohnperspektive, eingeschränkte gesellschaftliche Teilhabe.
+- Wollinger/Bögelein (Uni Köln, 2025): **"Herkunft hat keinen Einfluss, wenn diese Faktoren kontrolliert werden."**
+- BKA Bundeslagebild unterscheidet selbst 4 Aufenthaltsanlässe (Asylbewerber, Schutzberechtigte, Duldung, unerlaubter Aufenthalt). Wer diese in eine Zahl wirft, verzerrt die Analyse.
+
+**Quellen:**
+- [KFN Forschungsbericht 161](https://kfn.de/wp-content/uploads/Forschungsberichte/FB_161.pdf)
+- [SVR-Expertise 2024 (Bliesener)](https://www.svr-migration.de/wp-content/uploads/2024/05/SVR-Expertise_JG24_Bliesener-1.pdf)
+- [Wollinger/Bögelein 2025](https://kriminologie.uni-koeln.de/sites/kriminologie/UzK_2015/dokumente/publikationen/Wollinger_Boegelein_2025_Kriminalitaet_im_Kontext_von_Migration.pdf)
+
+**Konter:**
+```
+KFN-Studie (Schleswig-Holstein, 2013-2019): Anerkannte Schutzberechtigte zeigen
+deutlich niedrigere Kriminalitätsbelastungen als Geduldete. Der Gradient läuft
+entlang des Rechtsstatus, nicht der Herkunft.
+
+Beschäftigungsverbote + Wohnperspektivlosigkeit sind kriminogene Faktoren.
+Wir produzieren sie selbst.
+
+Quelle: kfn.de/wp-content/uploads/Forschungsberichte/FB_161.pdf
+```
+
+---
+
+## Meldeverhalten und PKS-Verzerrung
+
+### Warum die PKS keine Kriminalitätsrate misst
+
+**Rechte Behauptung:** "Die PKS beweist, dass Ausländer krimineller sind!"
+
+**Was die PKS tatsächlich misst:**
+
+Die PKS erfasst **Ermittlungsverfahren**, nicht Verurteilungen und nicht tatsächliche Tatbegehung. Drei Verzerrungsfaktoren:
+
+1. **Differenzielles Anzeigeverhalten:** Dunkelfeldforschung zeigt: Anzeigerate bei Jugendkörperverletzungen 6,6% wenn beide deutsch, **12% wenn der Täter als nicht-deutsch wahrgenommen** wird. Gleiche Tat, fast doppelt so hohe Anzeige.
+2. **Institutionelle Meldestellen:** Sammelunterkünfte funktionieren als erzwungene Meldestellen. Heimleitungen, Sozialarbeiter und Sicherheitsdienste rufen die Polizei für Konflikte, die in Privatwohnungen unsichtbar bleiben.
+3. **Ausländerrechtsverstöße:** Aufenthaltsgesetz-Verstöße können per Definition nur Nicht-Deutsche begehen. Diese Delikte überhöhen den Ausländeranteil in der PKS strukturell.
+
+**Belastungszahl 2024:** 5.091 je 100.000 Ausländer vs. 1.878 je 100.000 Deutsche (Faktor 2,7). Nach Bereinigung um Ausländerrechtsdelikte, Alters-/Geschlechtsstruktur und Wohnortlosigkeit schrumpft dieser Abstand erheblich.
+
+**Quellen:**
+- [Mediendienst Integration: Werden Ausländer öfter angezeigt?](https://mediendienst-integration.de/kriminalitaet/auslaenderkriminalitaet/werden-auslaender-oefter-angezeigt-als-deutsche/)
+- [BKA Methodenhinweise PKS](https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/pks_node.html)
+
+**Konter:**
+```
+6,6% Anzeigerate wenn beide deutsch, 12% wenn Täter als nicht-deutsch
+wahrgenommen. Gleiche Tat, fast doppelt so hohe Anzeige.
+
+PKS = Ermittlungsverfahren, keine Verurteilungen. Touristen und
+Transitreisende: drin. Ausländerrechtsverstöße: per Definition nur für
+Nicht-Deutsche möglich.
+
+Quelle: mediendienst-integration.de/kriminalitaet/auslaenderkriminalitaet/werden-auslaender-oefter-angezeigt-als-deutsche/
+```
+
+---
+
+## PKS 2024: Pro-Kopf-Raten nach Delikt
+
+### PKS 2024: Tatverdächtigenbelastungszahl nach Delikt
+
+Erstmals veröffentlicht das BKA 2024 die TVBZ für Deutsche und Nichtdeutsche.
+
+**Pro 100k Einwohner (PKS 2024, Tabellen T40/T50):**
+
+| Delikt | Deutsche | Nichtdeutsche | Faktor | ND-Anteil |
+|--------|----------|---------------|--------|-----------|
+| Straftaten insgesamt | 1.752 | 7.365 | 4,2x | 41,8% |
+| Mord | 0,7 | 2,8 | 3,9x | 40,0% |
+| Totschlag | 1,5 | 7,6 | 5,1x | 46,4% |
+| Vergewaltigung/sex. Nötigung | 9,5 | 35,8 | 3,8x | 39,2% |
+| Körperverletzung gesamt | 436 | 1.481 | 3,4x | 36,7% |
+| Gef./schwere KV | 125 | 545 | 4,4x | 42,7% |
+| Raub | 23 | 128 | 5,6x | 48,7% |
+| Gewaltkriminalität | 155 | 686 | 4,4x | 43,1% |
+
+**TVBZ Gewaltkriminalität nach Nationalität (Bundestag Drucksache, 2024):**
+Deutsche: 163 pro 100k. Syrer: 1.740, Afghanen: 1.722, Marokkaner: 1.885, Iraker: 1.606, Türken: 538, Ukrainer: 443, Polen: 427.
+
+**Pro-Kopf-Zeitreihe (eigene Berechnung, PKS + AZR):**
+
+| Jahr | ND pro 100k (ohne ausl. Verstöße) | DE pro 100k | Faktor |
+|------|-----------------------------------|-------------|--------|
+| 2014 | ~6.260 | ~2.180 | 2,9x |
+| 2019 | ~5.310 | ~1.895 | 2,8x |
+| 2024 | ~4.960 | ~1.750 | 2,8x |
+
+Trend: ND pro Kopf minus 21% seit 2014. DE pro Kopf minus 20%. Beide fallen parallel, Faktor stabil ~2,8x.
+
+**Pro-Kopf-Zeitreihe nach Delikt (PKS T40/T50, 2019-2024):**
+
+| Delikt | 2019 | 2024 | Trend |
+|--------|------|------|-------|
+| Mord | 2,8 | 2,5 | -13% |
+| Totschlag | 7,7 | 6,7 | -14% |
+| Gef./schwere KV | 469 | 481 | +3% |
+| Gewaltkriminalität | 578 | 605 | +5% |
+| Vergewaltigung | 26,8 | 31,6 | +18% |
+| Raub | 94 | 113 | +20% |
+
+Fazit: Gemischtes Bild. Tötungsdelikte sinken pro Kopf. Gewaltkriminalität leicht steigend. Vergewaltigung und Raub steigen spürbar. "Pro Kopf sinkt alles" ist falsch. "Explodiert" auch.
+
+**Quellen:**
+- BKA PKS 2024, Tabellen T40 (Deutsche TV) und T50 (Nichtdeutsche TV)
+- Ausländerzentralregister (Destatis)
+- Bundestag Drucksache (TVBZ nach Nationalität)
+
+[LAST_CHECKED: 2026-03]
+
+---
+
+## StGB §177 Reform 2016: Statistik-Verzerrung bei Sexualdelikten
+
+### Mehr erfasst ≠ mehr passiert
+
+**Rechte Behauptung:** "Sexualdelikte explodieren seit 2015/16!"
+
+**Was tatsächlich passiert ist:**
+
+Am 10. November 2016 trat die Reform des §177 StGB in Kraft ("Nein heißt Nein"):
+
+1. **Neuer Tatbestand:** Sexuelle Handlungen gegen den erkennbar entgegenstehenden Willen sind strafbar. Vorher war Gewalt oder Drohung als Nötigungsmittel erforderlich.
+2. **§184i (sexuelle Belästigung):** Komplett neuer Straftatbestand. Vorher nicht strafbar. Natürlich steigen die Zahlen, wenn eine neue Kategorie eingeführt wird.
+3. **§184j (Gruppenübergriffe):** Ebenfalls neu 2016, Reaktion auf Silvester Köln 2015/16.
+
+**Fachwissenschaft:** Prof. Dr. Tatjana Hörnle (KriPoZ 2018): Der Anstieg der erfassten §177-Taten erklärt sich durch den erweiterten Strafbarkeitsrahmen, nicht zwingend durch mehr tatsächliche Übergriffe.
+
+**Correctiv (November 2025):** "Die Zunahme der Verdächtigen ist nur bedingt aussagekräftig, da es Verschärfungen und Änderungen im Strafrecht gab."
+
+**Offene Frage:** Eine Studie, die den Anstieg sauber in Gesetzeserweiterung vs. höhere Anzeigebereitschaft vs. tatsächlich mehr Taten aufteilt, liegt bisher nicht vor.
+
+**Quellen:**
+- [KriPoZ: Hörnle 2018, Taten nach §177 StGB](https://kripoz.de/2018/07/24/taten-nach-%C2%A7-177-stgb-in-der-polizeilichen-kriminalstatistik-zusammenhaenge-mit-zuwanderung/)
+- [Correctiv Faktencheck (Nov. 2025)](https://correctiv.org/faktencheck/2025/11/28/sexualisierte-gewalt-warum-zahl-der-tatverdaechtigen-seit-2015-gestiegen-ist/)
+- [Bundestag: Beschluss Nein-heißt-Nein](https://www.bundestag.de/webarchiv/textarchiv/2016/kw27-de-selbstbestimmung-434214)
+
+**Konter:**
+```
+§184i (sexuelle Belästigung) gibt es erst seit November 2016.
+Vorher: kein Straftatbestand. Natürlich steigen die Zahlen.
+
+§184j (Gruppenübergriffe) ebenfalls neu 2016.
+Correctiv (Nov. 2025): "Zunahme der Verdächtigen nur bedingt aussagekräftig"
+wegen Strafrechtsänderungen.
+
+Quelle: correctiv.org/faktencheck/2025/11/28/sexualisierte-gewalt-warum-zahl-der-tatverdaechtigen-seit-2015-gestiegen-ist/
+```
+
+---
+
+## Kanada TFW-System vs. Deutschland Fachkräfteeinwanderung
+
+### Warum der Kanada-Vergleich nicht funktioniert
+
+**Rechte Behauptung:** "Frag mal Kanada wie das läuft mit der Masseneinwanderung!"
+
+**Was in Kanada schiefging:**
+
+- Kanadas TFW-Bestand: 845.000 (2021), ca. 2,3% der Erwerbsbevölkerung
+- Das Kernproblem: Jedes TFWP-Visum ist **employer-specific**. Der Arbeitgeber kontrolliert gleichzeitig Aufenthaltsstatus und Arbeitsbedingungen. Wer den Job verliert, verliert das Aufenthaltsrecht.
+- **Amnesty International (Januar 2025, 71 Seiten, 44 Befragte):** "Migrants travelling to Canada under the TFWP are granted temporary visas that tie them to a single employer, who controls both their migration status and labour conditions." Dokumentiert: Lohnraub, überlange Arbeitszeiten, physischer/sexueller Missbrauch.
+- Amnesty: Missstände sind "systemic and structurally embedded in the TFWP's design"
+- 10% der geprüften Arbeitgeber non-konform, 36 ausgeschlossen. McMaster University: "Tropfen auf den heißen Stein."
+
+**Unterschied zu Deutschland:**
+
+Deutschlands Fachkräfteeinwanderungsgesetz (FEG 2023):
+- Chancenkarte zur Jobsuche ohne vorherigen Arbeitgeber
+- Weg zur dauerhaften Niederlassung
+- Qualifikationsanerkennung als Basis
+
+Kanadas TFWP: Gebundenes Visum, kein Exit, kein Permanenzweg für die meisten Kategorien.
+
+**Quellen:**
+- [Amnesty International: Canada TFW Report (PDF)](https://amnesty.ca/wp-content/uploads/2025/01/AMR_20_8872_2025-EN.pdf)
+- [Statistics Canada: TFW Research](https://www150.statcan.gc.ca/n1/pub/11-631-x/11-631-x2024006-eng.htm)
+
+**Konter:**
+```
+Amnesty International (Jan. 2025): Kanadas TFW-Programm ist "strukturell
+ausbeuterisch". Arbeitgeber kontrolliert Aufenthalt und Arbeitsbedingungen.
+44 Befragte: Lohnraub, Misshandlung, keine Ruhetage.
+
+Deutschlands FEG 2023: Chancenkarte + Permanenzweg.
+Kanadas TFWP: gebundenes Visum + kein Exit.
+Wer ein kanadisches Modell fordert, fordert Leibeigenschaft.
+
+Quelle: amnesty.ca/wp-content/uploads/2025/01/AMR_20_8872_2025-EN.pdf
+```
+
+---
+
 ## Wirtschaftlicher Beitrag
 
 ### Steuern und Sozialabgaben

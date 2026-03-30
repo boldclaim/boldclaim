@@ -1,7 +1,7 @@
 ---
 title: Die Linke - Konter gegen rechte Hetze
 type: note
-last_updated: 2026-02-16
+last_updated: 2026-03-05
 tags: ["personal"]
 ---
 
@@ -128,12 +128,16 @@ Richtig: NULL.
 
 | Kategorie | Rechtsextrem | Linksextrem |
 |-----------|-------------|-------------|
-| Straftaten gesamt | 37.800 | 5.860 |
-| Gewalttaten | 1.281 | 532 |
+| Straftaten gesamt | 37.835 (+47% ggü. Vorjahr) | 5.857 (+38%) |
+| Gewalttaten | 1.281 (+12%) | 532 (-27%) |
+| Personenpotenzial | 50.250 | 38.000 |
 | Gewaltorientierte Personen | 15.300 | 11.200 |
 | Todesopfer seit 1990 | **200+** | **<5** |
 
-**Quelle:** [bpb: Links- und rechtsextremistische Straftaten](https://www.bpb.de/themen/linksextremismus/dossier-linksextremismus/523927/links-und-rechtsextremistische-straftaten-im-vergleich/) ✅
+**Quellen:** Verfassungsschutzbericht 2024 (veröffentlicht Juni 2025)
+- [BfV: Zahlen und Fakten Linksextremismus](https://www.verfassungsschutz.de/DE/themen/linksextremismus/zahlen-und-fakten/zahlen-und-fakten_node.html) ✅
+- [BMI: Verfassungsschutzbericht 2024](https://www.bmi.bund.de/SharedDocs/pressemitteilungen/DE/2025/06/vsb2024.html) ✅
+- [bpb: Links- und rechtsextremistische Straftaten](https://www.bpb.de/themen/linksextremismus/dossier-linksextremismus/523927/links-und-rechtsextremistische-straftaten-im-vergleich/) ✅
 
 ### Qualitative Unterschiede
 
@@ -208,6 +212,18 @@ Wer ist hier die Gefahr?
 - Stärkerer Sozialstaat
 
 **Kann man ablehnen. Ist aber demokratisch.**
+
+### Bundestagswahl 2025 - Das Comeback
+
+**Ergebnis:** 8,8% und 64 Sitze (bestes Ergebnis seit 2017)
+- Beliebteste Partei bei 18-24-Jährigen: 25% in dieser Altersgruppe
+- 6 Direktmandate (Gysi, Pellmann, Ramelow + 3 neue in Berlin)
+- Vorher bei 3% in Umfragen, Wiedereinzug in den Bundestag nicht erwartet
+- Fraktionsvorsitz: Heidi Reichinnek und Sören Pellmann
+- Parteivorsitz: Ines Schwerdtner und Jan van Aken (seit Oktober 2024)
+- Frauenanteil Mitgliedschaft: 44,5% (höchster aller Parteien, Stand Juni 2025)
+
+**Quelle:** [Bundeswahlleiterin: Ergebnisse BTW 2025](https://www.bundeswahlleiterin.de/bundestagswahlen/2025/ergebnisse/bund-99.html) ✅
 
 ### Was will die AfD?
 
@@ -297,7 +313,7 @@ Das ist nicht dasselbe Extrem.
 ```
 "SED!" → "95% ausgetreten, 1989 entschuldigt. Die AfD entschuldigt sich nie."
 
-"Kommunisten!" → "Ramelow hat Schulden abgebaut. Was hat die AfD regiert?"
+"Kommunisten!" → "Ramelow hat Schulden abgebaut. 8,8% bei der BTW 2025. Beliebteste Partei bei unter 25."
 
 "Linke Terroristen!" → "200 Tote rechts, <5 links. Wer ist die Gefahr?"
 
@@ -389,12 +405,14 @@ Das ist NICHT dasselbe.
 
 | Kategorie | Rechtsextrem | Linksextrem | Faktor |
 |-----------|-------------|-------------|--------|
-| **Straftaten 2024** | 37.800 | 5.860 | 6,5x mehr rechts |
-| **Gewalttaten 2024** | 1.281 | 532 | 2,4x mehr rechts |
+| **Straftaten 2024** | 37.835 (+47%) | 5.857 (+38%) | 6,5x mehr rechts |
+| **Gewalttaten 2024** | 1.281 (+12%) | 532 (-27%) | 2,4x mehr rechts |
 | **Verletzte 2023** | 714 | 327 | 2,2x mehr rechts |
 | **Todesopfer seit 1990** | **200+** | **<5** | **50x mehr rechts** |
 | **Personenpotenzial 2024** | 50.250 | 38.000 | 1,3x mehr rechts |
 | **Gewaltorientiert** | 15.300 | 11.200 | 1,4x mehr rechts |
+
+**Wichtig:** Rechtsextreme Gewalttaten stiegen 2024 um 12%, linksextreme sanken um 27%. Der Trend zeigt klar: rechte Gewalt eskaliert, linke Gewalt geht zurück.
 
 **Quellen:**
 - [bpb: Straftaten-Vergleich](https://www.bpb.de/themen/linksextremismus/dossier-linksextremismus/523927/links-und-rechtsextremistische-straftaten-im-vergleich/) ✅
@@ -454,7 +472,12 @@ Warum rechte Straftaten so viel höher sind:
 
 ---
 
-## Quellen [LAST_CHECKED: 2025-01]
+## Quellen [LAST_CHECKED: 2026-03]
+
+**Bundestagswahl 2025:**
+- [Bundeswahlleiterin: Ergebnisse BTW 2025](https://www.bundeswahlleiterin.de/bundestagswahlen/2025/ergebnisse/bund-99.html) ✅
+- [CEPA: The Unlikely Revival of Germany's Far Left](https://cepa.org/article/the-unlikely-revival-of-germanys-far-left/) ✅
+- [Jacobin: Die Linke's Comeback](https://jacobin.com/2025/02/die-linke-germany-renewal-strategy/) ✅
 
 **Parteigeschichte:**
 - [bpb: Etappen der Parteigeschichte](https://www.bpb.de/themen/parteien/parteien-in-deutschland/die-linke/42130/etappen-der-parteigeschichte-der-linken/) ✅

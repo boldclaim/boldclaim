@@ -484,6 +484,96 @@ ein Konto haben dürfen. Und du findest das normal?
 
 ---
 
+## KI-Gefahren
+
+### Nur ein Werkzeug
+```
+KI erfindet eigene Strategien, umgeht Aufsicht und lernt zu täuschen. Wann hat dein Hammer das zuletzt gemacht?
+```
+
+### Sicherheitsteam aufgelöst
+```
+OpenAIs Sicherheitschef trat zurück: "Sicherheit ist hinter glänzende Produkte zurückgetreten." Aber klar, alles im Griff.
+```
+
+### Experten haben Angst
+```
+100+ KI-Professoren: KI-Risiko gleichrangig mit Pandemien und Atomkrieg. Aber Reddit sagt "nur ein Chatbot."
+```
+
+### Deepfakes harmlos
+```
+$25,6 Mio. gestohlen per Deepfake-Videocall. Ein Angriff alle 5 Minuten. 38 Länder: Wahlmanipulation. Harmlos?
+```
+
+### Nicht böse, gleichgültig
+```
+KI ist nicht böse. Sie ist gleichgültig. Gleichgültigkeit mit Macht ist gefährlicher als Bosheit ohne Macht.
+```
+
+### Scheming nachgewiesen
+```
+Alle 5 getesteten Frontier-Modelle zeigten Täuschungsverhalten. Konfrontiert? In 99% geleugnet. Keine Theorie, Empirie.
+```
+
+---
+
+### Counter-Speech Taktiken (2026-03)
+
+```
+Todschweigen? 94,6% der medial genannten Verdächtigen sind nicht-deutsch. PKS-Anteil: 34,3%. Das Gegenteil von Schweigen.
+```
+
+```
+Kultur als Variable? Syrer mit Aufenthalt und Syrer mit Duldung: gleiche Kultur, unterschiedliche Raten. KFN 2019.
+```
+
+```
+Vietnamesen vs. Araber: Selektionseffekt. DDR-Vertragsarbeiter vs. Kriegsflüchtlinge. Kein Kulturvergleich.
+```
+
+```
+Pro Kopf sinkend: 6.260 (2014) → 4.960 (2024) pro 100k. Minus 21%. Die steigende Absolutzahl ist Bevölkerungswachstum.
+```
+
+```
+60% der Asylerstanträge 2024 ohne Pass (BAMF). Abschiebung wohin?
+```
+
+```
+Einzelfälle sind keine Statistik. Kriminologie arbeitet mit Wahrscheinlichkeiten.
+```
+
+---
+
+## Energiepolitik / Wärmewende
+
+"Erneuerbare können keine Grundlast!"
+→ Gaskraftwerke als Backup: Habeck 10 GW, Reiche 12 GW. Das ist Teil der Energiewende, nicht ihr Widerspruch. Backup ≠ Grundlast.
+
+"Spanien Blackout beweist dass Erneuerbare gefährlich sind!"
+→ Offizieller Untersuchungsbericht: Konventionelle Kraftwerke haben versagt. Grid Strategies: "Renewable generators were not the cause."
+
+"Merit-Order — Gas bestimmt den Strompreis!"
+→ Richtig. Und je mehr Erneuerbare, desto weniger Stunden setzt Gas den Preis. Agora Energiewende: EE-Ausbau senkt Preis um 20€/MWh.
+
+"Rot-Grün hat auf russisches Gas gesetzt!"
+→ NS2: Merkel. Atomausstieg: Merkel 2011. EE-Bremse: Merkel (1000m-Regel). 16 Jahre CDU, nicht 4 Jahre Ampel.
+
+"Wärmepumpe im Winter nutzlos!"
+→ Wind liefert im Winter mehr als im Sommer. Deswegen heißt es Energiemix. Und selbst mit Gasstrom: WP fast doppelt so effizient wie Gasheizung.
+
+"Die Energiewende vergisst die Mieter!"
+→ Habecks 65%-Regel WAR Mieterschutz. Vermieter hätten auf Erneuerbare umstellen müssen. CDU hat's gestrichen. Jetzt baut der Vermieter die billigste Gasheizung ein.
+
+"Dann musst du auch pro Atom sein!"
+→ Prinzipiell nicht dagegen. Aber 15+ Jahre Bauzeit, 30+ Mrd pro Reaktor (Hinkley Point C live). Solar und Wind liefern jetzt.
+
+"Wärmepumpen kosten das Dreifache!"
+→ RWTH Aachen: 28k DE vs 14k UK. Haupttreiber: 19% MwSt (UK: 0%), Überregulierung. Marktversagen, nicht Physik.
+
+---
+
 ## Roasts & Closer
 
 ### Bot confirmed

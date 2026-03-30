@@ -468,6 +468,76 @@ Wer diese Zahlen zeigt, relativiert nicht. Wer sie verschweigt, schon.
 
 ---
 
+## Demobilisierungsrhetorik
+
+### Muster:
+"Bringt eh nichts" / "Hast du keine anderen Probleme?" / "Warum machst du das überhaupt?" / "Du erreichst damit niemanden" / "Die Leute haben echte Sorgen"
+
+### Warum das eine eigene Taktik ist:
+Unterscheidet sich von Whataboutism (der ein anderes Thema einbringt) und Gish Gallop (der mit Masse überwältigt). Demobilisierungsrhetorik liefert gar kein Gegenargument. Ihr einziges Ziel: Energie rauben, Engagement ersticken, Resignation erzeugen.
+
+Funktioniert besonders gut, weil sie als "vernünftiger Rat" getarnt ist. "Spar dir die Mühe" klingt fürsorglich, ist aber destruktiv.
+
+### Erkennungsmerkmal:
+Kein inhaltlicher Widerspruch. Nur Infragestellung, warum du überhaupt redest/handelst.
+
+### Konter:
+```
+"Bringt eh nichts!"
+
+Wenn es nichts bringt, warum versuchst du so hart,
+mich zum Aufhören zu bewegen?
+
+Stille ist genau das, was Autokraten wollen.
+Deswegen investieren sie in "bringt eh nichts"-Rhetorik.
+```
+
+```
+"Hast du keine echten Probleme?"
+
+Demokratie verteidigen IST ein echtes Problem.
+Wer das als Hobby abtut, profitiert davon,
+dass andere aufhören.
+```
+
+### Taktik: Nicht verteidigen, warum du aktiv bist. Stattdessen die Frage umdrehen: Wem nützt es, wenn du aufhörst?
+
+---
+
+## Credibility-Concede-Move
+
+### Was es ist:
+Einen legitimen Teilpunkt des Gegners bewusst zugestehen, um den Rest der eigenen Argumentation zu stärken. Keine Schwäche, sondern eine Technik.
+
+### Warum es funktioniert:
+- Signalisiert intellektuelle Ehrlichkeit (Mitleser merken das)
+- Nimmt dem Gegner den stärksten Einzelpunkt weg, bevor er ihn als Waffe benutzen kann
+- Der Kontrast zwischen "das gebe ich dir" und "aber hier liegst du falsch" macht die Kernaussage stärker
+- Verhindert, dass man eine unhaltbare 100%-Position verteidigen muss
+
+### Beispiele aus der Praxis:
+- "Stimmt, linke Gewalttaten lagen zeitweise über rechten. Aber: Was zählt als Gewalttat? Eier werfen und Menschen töten landen beide in derselben Kategorie."
+- "Stimmt, die PMK-Zuordnung hat Grenzfälle. Aber selbst wenn du alles rausrechnest, sinkt der Faktor von 6,5 auf 5,9."
+- "Stimmt, das Timing ist unsicher. Aber der Strukturtrend nicht."
+
+### Wann einsetzen:
+- Wenn der Gegner einen faktisch korrekten Einzelpunkt hat
+- Wenn die eigene Gesamtposition auch nach dem Zugeständnis stark bleibt
+- Wenn Mitleser sonst denken könnten, du ignorierst berechtigte Einwände
+
+### Wann NICHT einsetzen:
+- Wenn das Zugeständnis den Kern deiner Position untergräbt
+- Wenn der Gegner das Zugeständnis als vollständige Kapitulation framen wird
+- In Hit-and-Run-Threads wo Kontext verloren geht
+
+### Formel:
+```
+"Stimmt, [Punkt zugestehen]. Aber [Kernargument bleibt]."
+"Das gebe ich dir: [X]. Und trotzdem: [Y]."
+```
+
+---
+
 ## Taktik: Offener Nazi im Thread
 
 Manche Gesprächspartner outen sich offen als rechtsextrem. "Du bist Nazi" prallt ab, weil sie stolz drauf sind.
@@ -481,6 +551,55 @@ Kommentar 2: "Wir wollen doch nur deutsche Kultur bewahren"
 Unter Gleichgesinnten ehrlich, für Mitleser die harmlose Version. Strategie: seine eigenen Worte zitieren und Widersprüche für Mitleser sichtbar machen.
 
 Ausführlich: [[../CONTENT/02-themen/verfassungsschutz-verteidigung#Taktik Offener Nazi im Thread]]
+
+---
+
+## Taktik: Topic-Hopping / Whack-a-Mole
+
+### Was es ist:
+Der Gegner springt von Thema zu Thema sobald ein Punkt widerlegt wird. Statt auf deine Antwort einzugehen, bringt er ein neues Argument. Verwandt mit Gish Gallop, aber subtiler: Jeder einzelne Punkt klingt berechtigt, aber die Summe ist ein Ausweichmanöver.
+
+### Erkennen:
+- Du beantwortest Merit-Order → er springt zu Netzfrequenz
+- Du widerlegst Spanien-Blackout → er springt zu Atomkraft
+- Du zeigst Habeck-Fakten → er springt zu WP-Kosten
+- Kein einziger deiner Punkte wird direkt adressiert
+
+### Beobachtet bei:
+- u/Extreme_Literature28 (r/armes_deutschland, März 2026): Merit-Order → Spanien-Blackout → Netzfrequenz, ohne je auf die Gegenargumente einzugehen
+
+### Konter-Strategie:
+1. **Benennen:** "Das ist kein Dialog, das ist Whack-a-Mole. Ich habe dir zu X geantwortet. Du gehst auf keinen meiner Punkte ein."
+2. **Pinnen:** "Bevor wir zu Y springen: Was ist deine Antwort auf X?"
+3. **Für Mitleser:** Trotzdem sachlich auf das neue Thema eingehen, aber die Taktik sichtbar machen.
+
+### Konter (Copy-Paste):
+```
+Kurze Beobachtung: Ich habe dir zu [Thema A] geantwortet. Du gehst auf keinen dieser Punkte ein und springst stattdessen zu [Thema B]. Das ist kein Dialog, das ist Whack-a-Mole.
+
+Aber gut, nehmen wir auch diesen Punkt auseinander: [sachliche Antwort].
+```
+
+---
+
+## Taktik: Sealioning mit eigener Erfahrung
+
+### Was es ist:
+Eine Variante des Sealioning wo der Gegner selbst die Technologie besitzt/nutzt (WP, E-Auto, Solar) aber trotzdem dagegen argumentiert. Besonders effektiv weil es wie ein "authentischer Erfahrungsbericht" wirkt.
+
+### Erkennen:
+- "Hab selbst eine WP, Speicher und eAuto. Im Winter heize ich nahezu komplett mit Strom aus Gas."
+- Stellt rhetorische Fragen (sokratische Methode) statt Behauptungen aufzustellen
+- Weicht auf Emoji-Spam (😂😂😂) oder Einzeiler ("Go for it", "Schau dir doch den Strommix an") aus wenn widerlegt
+- Ignoriert eigene Widersprüche (besitzt Speicher, fragt aber "was ist die Konsequenz?")
+
+### Beobachtet bei:
+- u/xianghufr (r/armes_deutschland, März 2026): 7 Kommentare, Score -1 gesamt. Besitzt WP+Speicher+eAuto, argumentiert gegen alle drei.
+
+### Konter-Strategie:
+1. **Eigene Entscheidung spiegeln:** "Du hast buchstäblich die richtige Entscheidung getroffen und argumentierst jetzt dagegen."
+2. **Sokratische Methode benennen:** "Du versuchst gerade die sokratische Methode. Sag einfach was du sagen willst."
+3. **Antwort vorwegnehmen:** "Aber ich nehme die Antwort vorweg: Du willst auf X hinaus."
 
 ---
 
@@ -508,3 +627,54 @@ Ausführlich: [[../CONTENT/02-themen/verfassungsschutz-verteidigung#Taktik Offen
 **Hilfsorganisationen:**
 - [Parents for Peace](https://www.parents4peace.org/) - Deradikalisierung
 - [Antidote.ngo](https://antidote.ngo/) - Recovery-Gruppen
+
+---
+
+## Torpfosten-Verschiebung nach Datenkonfrontation
+
+Pattern: Opponent makes claim X ("Medien schweigen"). Gets confronted with data disproving X (Hestermann: 3x media overrepresentation). Shifts to claim Y ("Ich meinte Schweigen in Debatten, weil man Rassist genannt wird"). Symptom: The argument migrates because it can't hold any single position. Counter: Pin the original claim ("Du hast wörtlich X gesagt"), then address Y separately.
+
+---
+
+## Strohmann → "War nur Sarkasmus"
+
+Pattern: Build a strawman nobody made ("90% weiße Männer dominieren die Verurteilten"). When called out, retreat to "Das war überspitzter Sarkasmus, leicht zu erkennen." Defense: Defend the claim until refuted, then retroactively reframe as irony. Counter: "Eine Behauptung so lange verteidigen, bis sie widerlegt wird, dann war es nie ernst gemeint."
+
+---
+
+## Kultur-Argument Eskalationsstufen
+
+Three levels of sophistication:
+- **Stufe 1 (einfach):** "Ekelhaftes Frauenbild, muslimische Kultur ist schuld." Counter: KFN Aufenthaltsstatus-Gradient.
+- **Stufe 2 (mittel):** "Wenn Demografie kontrolliert wird, bleibt Kultur als Variable." Counter: Innergruppen-Varianz (gleiche Kultur + unterschiedlicher Rechtsstatus = unterschiedliche Raten).
+- **Stufe 3 (fortgeschritten):** "Du verkürzt auf Nationalität, Syrien ist multiethnisch, seriöse Milieuforschung nutzt feinere Metriken." Counter: PKS kann Kultur nicht messen. Wer seine eigene feinere Methodik anwendet, findet Struktur > Herkunft. Das Zitat aus KFN S.51 stützt das Strukturargument.
+
+---
+
+## Modellminoritäten-Vergleich ("Vietnamesen vs. Araber")
+
+Pattern: "Vietnamesen/Chinesen integrieren sich problemlos, Araber nicht. Also Kultur." Counter: Selektionseffekt. Vietnamesische Migration nach Deutschland war hochselektiv (DDR-Vertragsarbeiter, Boat People). Syrische Migration war Flucht. Man vergleicht Selbstselektierte mit Vertriebenen. Zusätzlich: Höhere Auffälligkeit der 2. Generation ist in ALLEN Einwanderergruppen weltweit dokumentiert (Tonry 1997, Killias 2011), nicht kulturspezifisch.
+
+---
+
+## "Gründe sind irrelevant, Abschiebung reicht"
+
+Pattern: Pragmatisch klingend, verschiebt Diskussion von Ursachen auf Symptombekämpfung. Counter: Ursachen ignorieren reproduziert das Problem. Abschiebung scheitert praktisch an: ungeklärter Identität (60% der Asylerstanträge 2024 ohne Pass, BAMF), Staatenlosen, Art. 6 GG (Kinder), fehlenden Rücknahmeabkommen. Skaliert nicht.
+
+---
+
+## "Ich war auch arm jung männlich" (Anekdoten-Widerlegung)
+
+Pattern: Eigene Biografie als Gegenbeweis zu statistischen Mustern. Counter: Einzelfälle sind keine Statistik. Kriminologie arbeitet mit Wahrscheinlichkeiten, nicht Einzelbiografien.
+
+---
+
+## Bureau of Justice 2006 Tabelle (US-Import)
+
+Pattern: US-Mordrate nach Einkommen × Ethnie wird als Beweis gepostet, dass Kultur/Rasse stärker wirkt als Ökonomie. Counter: Einkommen ist nicht der einzige Konfounder. Segregation, Redlining, War on Drugs, Masseninhaftierung. Asiatische Niedrigraten = Selektionseffekt (US-Visa-System bevorzugt Hochqualifizierte), nicht "genetische Friedlichkeit."
+
+---
+
+## Pro-Kopf-Trick (Absolutzahlen als Beweis)
+
+Pattern: Steigende Absolutzahlen von Ausländer-Tatverdächtigen als "explodierende Kriminalität" gepostet. Counter: Pro-Kopf-Rate berechnen. Ausländische Bevölkerung hat sich 2014-2024 von 8,2M auf 14,1M fast verdoppelt. Pro Kopf (Straftaten insgesamt ohne ausl. Verstöße): sinkend von ~6.260 auf ~4.960 pro 100k (-21%). ABER: nach Delikt differenziert ist das Bild gemischt (Mord -13%, Vergewaltigung +18%). Immer nach Delikt aufschlüsseln.

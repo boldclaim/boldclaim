@@ -1,7 +1,7 @@
 ---
 title: Gender & Trans - Fakten gegen Hetze
 type: note
-last_updated: 2026-02-16
+last_updated: 2026-03-05
 tags: ["personal"]
 ---
 
@@ -50,14 +50,21 @@ Realität ist komplizierter als Grundschul-Bio.
 
 ### Trans-Identität ist real
 
-**Wissenschaftlicher Konsens:** [LAST_CHECKED: 2025-01]
+**Wissenschaftlicher Konsens:** [LAST_CHECKED: 2026-03]
 - WHO ICD-11 (2019): Geschlechtsinkongruenz aus "Psychische Störungen" entfernt → [Quelle](https://www.who.int/standards/classifications/frequently-asked-questions/gender-incongruence-and-transgender-health-in-the-icd)
 - APA (2024): Transgender-affirmierende Versorgung ist evidenzbasiert → [Policy Statement](https://www.apa.org/news/press/releases/2024/02/policy-supporting-transgender-nonbinary)
+- APA (2025): Erneute Stellungnahme für Zugang zu evidenzbasierter Versorgung → [Statement](https://updates.apaservices.org/statement-on-access-to-treatment-for-transgender-gender-diverse-and-nonbinary-people)
+- WPATH SOC8 (2022): 260 Seiten, 3.000+ Mitglieder weltweit, Konsens zu Best Practices
 - Bundesärztekammer: Unterstützt Behandlung
 
 **Neurologische Forschung:**
 - Hirnstruktur-Studien zeigen Unterschiede
 - Trans-Identität ist nicht "ausgedacht"
+
+**Politische Angriffe 2025:**
+- Trump-Regierung: Trans-Passrechte eingeschränkt, Pentagon hat Trans-Schutz aufgehoben
+- US HHS-Bericht (2025): Stellte Gender-affirming Care in Frage, AAP sofort widersprochen: "Bericht verzerrt den medizinischen Konsens"
+- Cass Review (UK, 2024): Empfahl Pubertätsblocker nur in klinischen Studien, aber methodisch umstritten (keine Trans-Kliniker im Review, veraltete systematische Reviews, peer-reviewed Kritik in BMJ und PLOS)
 
 **Konter:**
 ```
@@ -238,13 +245,14 @@ Das ist der Preis von "nur eine Phase".
 - Trans-Frauen gewinnen nicht überproportional oft
 - Einzelfälle werden zu Panik aufgeblasen
 - Sportverbände regeln das bereits
+- Paris 2024: Keine trans Athletin hat eine Medaille gewonnen
 
 **Konter:**
 ```
 "Trans-Frauen zerstören Frauensport!"
 
-Wie viele olympische Medaillen haben Trans-Frauen?
-Null. Seit 2004 erlaubt.
+Olympische Medaillen für Trans-Frauen?
+Null. Seit 2004 erlaubt. Auch Paris 2024: Null.
 
 Das "Problem" existiert hauptsächlich
 in Panik-Headlines, nicht in der Realität.
@@ -319,20 +327,24 @@ Es kostet sie alles, wenn du es nicht bist.
 
 ---
 
-## Quellen [LAST_CHECKED: 2025-01]
+## Quellen [LAST_CHECKED: 2026-03]
 
 **Medizinisch:**
 - [WHO: Gender Incongruence in ICD-11](https://www.who.int/standards/classifications/frequently-asked-questions/gender-incongruence-and-transgender-health-in-the-icd) ✅ Verifiziert - Nicht mehr als psychische Störung klassifiziert
 - [APA: Transgender Guidelines (PDF)](https://www.apa.org/practice/guidelines/transgender.pdf) ✅ Verifiziert
 - [APA Policy 2024: Supporting Transgender Care](https://www.apa.org/news/press/releases/2024/02/policy-supporting-transgender-nonbinary) ✅ Verifiziert
+- [APA 2025: Statement on Access to Treatment](https://updates.apaservices.org/statement-on-access-to-treatment-for-transgender-gender-diverse-and-nonbinary-people) ✅
 - [UN News: WHO drops 'gender identity disorder'](https://news.un.org/en/story/2019/05/1039531) ✅ Verifiziert
 - [Bundesärztekammer](https://www.bundesaerztekammer.de/)
+- [GLAAD: Evidence-Based Healthcare Fact Sheet](https://glaad.org/factsheet-evidence-based-healthcare-transgender-people-and-youth/) ✅
 
 **Studien:**
 - [PubMed: ICD-11 Gender Incongruence](https://pubmed.ncbi.nlm.nih.gov/32796778/) ✅ Verifiziert
 - [PLOS ONE: ICD-11 Acceptability Study](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0160066) ✅ Verifiziert
 - [American Academy of Pediatrics](https://www.aap.org/)
 - [Endocrine Society Guidelines](https://www.endocrine.org/)
+- [Science/AAAS: Researchers slam HHS report](https://www.science.org/content/article/researchers-slam-hhs-report-gender-affirming-care-youth) ✅
+- [PMC: Critically appraising the Cass Report](https://pmc.ncbi.nlm.nih.gov/articles/PMC12065279/) ✅
 
 **Deutschland:**
 - [Deutsche Gesellschaft für Transidentität](https://www.dgti.org/)

@@ -1,7 +1,7 @@
 ---
 title: Wirtschaft & Wohnungspolitik - Markt-Mythen zerstören
 type: note
-last_updated: 2026-02-16
+last_updated: 2026-03-05
 tags: ["personal"]
 ---
 
@@ -257,21 +257,23 @@ Und trotzdem: Kleinere Wohnungen, weniger Mieterschutz.
 | 2015 | 1,33 Mio | -36% seit 2006 |
 | 2020 | 1,13 Mio | -46% seit 2006 |
 | 2024 | **1,05 Mio** | **-50% seit 2006** |
+| 2025 | **~1,0 Mio** | **Erstmals unter 1 Mio (geschätzt)** |
 
 **Was das bedeutet:**
-- Halbierung in 18 Jahren (2006–2024)
+- Halbierung in 18 Jahren (2006–2024), Tendenz weiter fallend
 - Nicht einmal jede 20. Mietwohnung (4,6%) ist Sozialwohnung
-- 2024: Nochmal -26.000 gegenüber Vorjahr
-- IG BAU: "Alle 19 Minuten verschwindet eine Sozialwohnung. Nur alle 25 Minuten kommt eine dazu."
+- 2025: Weitere ~45.000 Wohnungen aus Sozialbindung gefallen
+- Mieterbund Mietenreport 2025: Wohnungskrise erreicht "Mitte der Gesellschaft", 6 Mio Mieter "extrem überlastet"
+- Nur jede 4. angebotene Wohnung noch bezahlbar für Durchschnittsmieter, nur jede 20. für Geringverdiener
 
 **Wer regierte:**
 - 2005–2021: CDU-Kanzlerschaft (Merkel)
 - 2006: Föderalismusreform → Bund zieht sich aus Wohnungsbau zurück
 - 1990: Abschaffung der Wohnungsgemeinnützigkeit → Sozialwohnungen werden Renditeobjekte
 
-**Quellen:** [LAST_CHECKED: 2025-02]
+**Quellen:** [LAST_CHECKED: 2026-03]
 - [Statista: Sozialwohnungen 2006–2024](https://de.statista.com/statistik/daten/studie/892789/umfrage/sozialwohnungen-in-deutschland/) ✅
-- [Deutscher Mieterbund: Historischer Tiefstand](https://mieterbund.de/aktuelles/meldungen/historischer-tiefstand-bei-sozialwohnungen/) ✅
+- [Deutscher Mieterbund: Mietenreport 2025](https://mieterbund.de/aktuelles/meldungen/deutscher-mieterbund-praesentiert-mietenreport-2025/) ✅
 - [evangelisch.de: Immer weniger Sozialwohnungen](https://www.evangelisch.de/inhalte/243851/30-05-2025/kaum-neue-sozialwohnungen-immer-weniger-sozialwohnungen-deutschland) ✅
 - [Wikipedia: Sozialer Wohnungsbau in Deutschland](https://de.wikipedia.org/wiki/Sozialer_Wohnungsbau_in_Deutschland) ✅
 - [taz: Studie zum Mangel an Sozialwohnungen](https://taz.de/Studie-zum-Mangel-an-Sozialwohnungen/!5983106/) ✅
@@ -283,10 +285,10 @@ Und trotzdem: Kleinere Wohnungen, weniger Mieterschutz.
 16 Jahre CDU-Wohnungspolitik:
 
 2006: 2,09 Mio Sozialwohnungen.
-2024: 1,05 Mio.
+2025: Erstmals unter 1 Million.
 
-Halbiert. In 18 Jahren.
-Nicht einmal jede 20. Mietwohnung ist noch Sozialwohnung.
+Halbiert. In 19 Jahren.
+Mieterbund 2025: 6 Mio Mieter "extrem überlastet".
 
 "Der Markt regelt" — ja, er hat geregelt. Gegen euch.
 ```
@@ -301,7 +303,7 @@ Sozialwohnungen haben eine befristete Bindung (15–25 Jahre, München: 40 Jahre
 **BGH-Urteil 2019:** Unbefristete Sozialbindung ist unwirksam. Bindung darf nur so lange dauern wie der günstige Kredit läuft.
 
 **Die Netto-Rechnung:**
-- **Jährlich fallen ~41.000 Wohnungen** aus der Sozialbindung
+- **Jährlich fallen ~45.000 Wohnungen** aus der Sozialbindung (2025: 47.700 erwartet bis Ende 2026)
 - Bis 2035: Über **500.000 weitere** fallen raus
 - Neubau: Nur ~25.000–50.000 pro Jahr
 - **Ergebnis: Netto-Verlust jedes Jahr, egal wie viel gebaut wird**
@@ -315,8 +317,8 @@ Sozialwohnungen haben eine befristete Bindung (15–25 Jahre, München: 40 Jahre
 **Warum das der wichtigste Debattenpunkt ist:**
 Jede Partei, die nur "mehr bauen" verspricht, ohne die Bindungsfrist zu ändern, betreibt Symptombekämpfung. Du kannst nicht schneller bauen als das System Wohnungen ausspuckt.
 
-**Quellen:** [LAST_CHECKED: 2025-02]
-- [Deutscher Mieterbund: Historischer Tiefstand](https://mieterbund.de/aktuelles/meldungen/historischer-tiefstand-bei-sozialwohnungen/) ✅
+**Quellen:** [LAST_CHECKED: 2026-03]
+- [Deutscher Mieterbund: Mietenreport 2025](https://mieterbund.de/aktuelles/meldungen/deutscher-mieterbund-praesentiert-mietenreport-2025/) ✅
 - [evangelisch.de: Immer weniger Sozialwohnungen](https://www.evangelisch.de/inhalte/243851/30-05-2025/kaum-neue-sozialwohnungen-immer-weniger-sozialwohnungen-deutschland) ✅
 - [vorwärts: Gutachten Sozialquote](https://www.vorwaerts.de/inland/gutachten-so-liessen-sich-vermieter-zu-sozialwohnungen-verpflichten) ✅
 - BGH-Urteil Februar 2019, Az: V ZR 176/17
@@ -357,8 +359,13 @@ Der Staat subventioniert **hohe Mieten** statt **bezahlbare Wohnungen** zu bauen
 
 **Was gefordert wird:**
 - Pestel-Institut/Bündnis Soziales Wohnen: **Sondervermögen 50 Mrd. €**
-- Mieterbund: 100.000 neue Sozialwohnungen pro Jahr + 75.000 Bestandswohnungen mit Bindung
-- Ziel: 2 Mio Sozialwohnungen bis 2030 (fehlen aktuell: 910.000)
+- Mieterbund: 100.000 neue Sozialwohnungen pro Jahr + 75.000 Bestandswohnungen mit Bindung + 60.000 bezahlbare Mietwohnungen/Jahr
+- Ziel: 2 Mio Sozialwohnungen bis 2030 (fehlen aktuell: ~1 Mio)
+
+**Koalitionsvertrag 2025 (CDU/CSU + SPD):**
+- Verspricht Bürokratieabbau und mehr Baugenehmigungen
+- Keine konkreten Sozialwohnungszahlen vereinbart
+- Keine Änderung der Sozialbindungsfristen geplant
 
 **Quelle:** [taz: "Der Staat ist erpressbar"](https://taz.de/Studie-zum-Mangel-an-Sozialwohnungen/!5983106/) ✅
 

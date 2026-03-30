@@ -199,6 +199,32 @@ verkehr:
   - "wahlkampf": "verkehr-umwelt#Die Reiter-Posse (Januar/Februar 2026)"
 
 # ==================
+# KI-Gefahren
+# ==================
+
+ki:
+  - "ki gefährlich": "ki-gefahren#Das Kernproblem - Optimierung ohne Verständnis"
+  - "ki sicher": "ki-gefahren#Alignment-Training versagt"
+  - "ki werkzeug": "ki-gefahren#Das Kernproblem - Optimierung ohne Verständnis"
+  - "ai danger": "ki-gefahren#Das Kernproblem - Optimierung ohne Verständnis"
+  - "ai safe": "ki-gefahren#Alignment-Training versagt"
+  - "deepfake": "ki-gefahren#Deepfakes"
+  - "alignment": "ki-gefahren#Alignment-Training versagt"
+  - "scheming": "ki-gefahren#Instrumentelle Konvergenz"
+  - "superintelligenz": "ki-gefahren#Der Sicherheitswettlauf nach unten"
+  - "agi": "ki-gefahren#Der Sicherheitswettlauf nach unten"
+  - "büroklammer": "ki-gefahren#Das Kernproblem - Optimierung ohne Verständnis"
+  - "paperclip": "ki-gefahren#Das Kernproblem - Optimierung ohne Verständnis"
+  - "terminator": "ki-gefahren#Schleichender Kontrollverlust"
+  - "ki jobs": "ki-gefahren#Schleichender Kontrollverlust"
+  - "ki arbeitsplätze": "ki-gefahren#Schleichender Kontrollverlust"
+  - "openai sicherheit": "ki-gefahren#Der Sicherheitswettlauf nach unten"
+  - "hinton": "ki-gefahren#Der Sicherheitswettlauf nach unten"
+  - "autonome waffen": "ki-gefahren#Autonome Waffen"
+  - "eu ai act": "ki-gefahren#EU AI Act - Was passiert"
+  - "ki regulierung": "ki-gefahren#EU AI Act - Was passiert"
+
+# ==================
 # Quick One-Liners (für sofortige Response)
 # ==================
 

@@ -41,7 +41,7 @@ Drei Dinge passieren gleichzeitig:
 
 ### A. Keyword Matching
 
-[[../AUTOMATION/triggers.yaml|triggers.yaml]] mapped Keywords aus dem Kommentar auf Repo-Dateien.
+`AUTOMATION/triggers.yaml` mapped Keywords aus dem Kommentar auf Repo-Dateien.
 
 | Keyword im Kommentar | Wird geroutet zu |
 |----------------------|-----------------|
@@ -106,8 +106,8 @@ graph LR
 
 | Layer | Ordner | Liefert |
 |-------|--------|---------|
-| Fakten | [[../CONTENT/|CONTENT/]] | Verifizierte Statistiken, Gerichtsurteile, Quellen |
-| Quick Response | [[../QUICK/|QUICK/]] | Fertige Konter unter 30 Wörtern, Zinger, Templates |
+| Fakten | `CONTENT/` | Verifizierte Statistiken, Gerichtsurteile, Quellen |
+| Quick Response | `QUICK/` | Fertige Konter unter 30 Wörtern, Zinger, Templates |
 | Taktik | [[techniques\|META/techniques]] | Bot-Erkennung, Gesprächsstrategie, Exit-Optionen |
 
 ### Plattform-Formatierung

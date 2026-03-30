@@ -1,7 +1,7 @@
 ---
 title: CDU-Argumente kontern - Policy-Faktencheck
 type: note
-last_updated: 2026-02-16
+last_updated: 2026-03-12
 tags: ["personal"]
 ---
 
@@ -31,6 +31,12 @@ tags: ["personal"]
   - [[#Kernenergie als Brücke]]
   - [[#Klimaschutz schadet Wirtschaft]]
   - [[#Windkraft verschandelt Landschaft]]
+- [[#CDU WAHLKAMPF & DOPPELSTANDARDS]]
+  - [[#Schmutzkampagnen-Doppelstandard]]
+  - [[#Cancel-Culture-Deflection]]
+  - [[#Grüne-80er-Whataboutism ("Partei der Kinderficker")]]
+  - [[#Sexualisierung-Verharmlosung]]
+- [[#Maaßen-Chemnitz-Verteidigung]]
 - [[#CDU RHETORISCHE MUSTER]]
 - [[#Copy-Paste Arsenal]]
 
@@ -91,6 +97,11 @@ Das ist kein Wirtschaftskonzept. Das ist ein Glaubensbekenntnis.
 **Die CDU-Heuchelei:**
 16 Jahre Merkel-Regierung (2005–2021) — die meisten beklagten Bürokratieprobleme entstanden oder verschärften sich in dieser Zeit. Digitalversagen ist kein Erbe von Rot-Grün.
 
+**Koalitionsvertrag 2025 (CDU/CSU + SPD):**
+- Bürokratiekosten sollen um 25% gesenkt werden (~16 Mrd. €)
+- Klingt ambitioniert, aber: Keine konkrete Digitalisierungsstrategie vereinbart
+- Früheres Versprechen: Merkel versprach bereits 2013 "digitale Offensive"
+
 **Rhetorisches Muster:** *Vereinfachung durch Feindbild* — "Bürokratie" wird zum diffusen Feind. Verschleiert, dass spezifische Regulierung Zwecke erfüllt (Umweltschutz, Verbraucherschutz, Arbeitnehmerrechte).
 
 **Konter:**
@@ -125,6 +136,8 @@ Unterlassene Investitionen in Infrastruktur, Bildung und Klimaschutz belasten zu
 **Kontext:**
 - Deutschland: ~64% Staatsverschuldung/BIP — weit unter Maastricht (60% nach Corona-Normalisierung)
 - Japan: >250% und trotzdem kreditwürdig
+
+**Koalitionsvertrag 2025:** CDU hat Schuldenbremse-Reform akzeptiert (Infrastrukturfonds, Verteidigungsausgaben). Ein pragmatischer Bruch mit der eigenen Rhetorik. Merz selbst sagte: "massive infrastructure boost via debt rule overhaul".
 
 **Wo die CDU einen Punkt hat:**
 - Haushaltsdisziplin hat niedrige Zinslast und hohe Kreditwürdigkeit ermöglicht
@@ -256,6 +269,8 @@ Das ist kein Konzept. Das ist Umverteilung nach oben.
 ## Obergrenze und Migration begrenzen
 
 **CDU-Behauptung:** "Deutschland nimmt zu viele Migranten auf. Systeme sind überlastet. Wir brauchen eine Obergrenze."
+
+**Koalitionsvertrag 2025:** CDU hat verschärfte Migrationspolitik durchgesetzt: Freiwillige Aufnahmeprogramme und Familiennachzug ausgesetzt, Zurückweisungen an der Grenze "in Abstimmung mit EU-Partnern" vereinbart.
 
 ### Fakten:
 
@@ -442,7 +457,9 @@ Wahlkampf dagegen kam danach.
 - **Kosten:** Hinkley Point C (UK): >30 Mrd. £, Bauzeit >15 Jahre. Garantierte Einspeisevergütung ÜBER dem Preis für Solar und Wind
 - **Bauzeit:** 10-20 Jahre für ein neues AKW. Für Klimaziele 2030/2035 schlicht zu spät
 - **Rückbau:** Deutsche AKWs sind im Rückbau. Wiederinbetriebnahme technisch und rechtlich extrem aufwändig
-- **Erneuerbare:** Solar und Wind sind die günstigsten Energiequellen weltweit (IRENA, Lazard). Jeder Euro in AKWs fehlt beim EE-Ausbau
+- **Erneuerbare:** Solar und Wind sind die günstigsten Energiequellen weltweit (IRENA 2025: Solar 41% billiger, Wind 53% billiger als fossile Alternativen). Jeder Euro in AKWs fehlt beim EE-Ausbau
+
+**Koalitionsvertrag 2025:** CDU hält am Klimaneutralitätsziel 2045 fest, will aber "Technologieoffenheit" bei Energiepolitik. Keine Rückkehr zur Kernkraft vereinbart.
 
 **Die CDU-Heuchelei:**
 Atomausstieg wurde 2011 von CDU-Kanzlerin Merkel beschleunigt. Die CDU kann hier schlecht die Grünen kritisieren.
@@ -525,13 +542,202 @@ Windkraft ist für Vogelschutz ein Rundungsfehler.
 
 ---
 
+# CDU WAHLKAMPF & DOPPELSTANDARDS
+
+## Schmutzkampagnen-Doppelstandard
+
+**CDU-Behauptung:** "Die Grünen führen Schmutzkampagnen gegen CDU-Kandidaten." (BaWü 2026: Hagel-Video)
+
+### Fakten:
+
+**Was die CDU jahrelang macht:**
+- "Habecks Heizungshammer" (2023-2025): Bewusste Verzerrung des GEG, koordiniert zwischen CDU-Fraktion und Bild (dokumentiert)
+- "Kinderbuchautor" für Habeck: Reduktion auf den am wenigsten politischen Teil seiner Biographie (Dr. phil., Umweltminister SH, Bundeswirtschaftsminister)
+- "Kobold statt Cobalt" für Baerbock: Ein Versprecher, monatelang durch alle Medien
+- "Verbots-Partei": Framing ohne Substanz. Das Verbrenner-Aus 2035 ist ein EU-Beschluss, dem die CDU im Rat zugestimmt hat
+
+**Was Mayer 2026 gemacht hat:**
+- Ein öffentlich verfügbares, unverändertes Video geteilt
+- Kein Schnitt, kein Kontext geraubt, keine Falschdarstellung
+- Hagels eigene Worte, in seinem eigenen Interview, vor seiner eigenen Kamera
+
+**Nils Dorenbeck** (Linguist, Germanistische Linguistik, Uni Trier) auf LinkedIn: Wenn bei der Hinterfragung der Charaktereigenschaften eines Kandidaten "Schmutz" zutage tritt, sagt das etwas über den Kandidaten, nicht über die, die den Schmutz thematisieren. Er bezeichnete Hagels Beschwerden als "unanständig, geschmacklos und obendrein weinerlich". (FR berichtete)
+
+**Konter:**
+```
+"Die Grünen führen eine Schmutzkampagne!"
+
+Eine Schmutzkampagne arbeitet mit Lügen und Verzerrungen.
+"Heizungshammer" war eine Schmutzkampagne (GEG bewusst verzerrt, CDU/Bild koordiniert).
+
+Mayer hat ein unverändertes, öffentlich verfügbares Video geteilt.
+Hagels Worte, seine Kamera, sein Interview.
+
+Wenn dabei "Schmutz" zutage tritt, sagt das etwas über den Kandidaten.
+```
+
+---
+
+## Cancel-Culture-Deflection
+
+**CDU-Behauptung:** "Hagel wurde gecancelt." / "Das ist cancel culture."
+
+### Fakten:
+
+**Was "gecancelt" heisst vs. was passiert ist:**
+- Hagel hat eine Wahl verloren
+- Er hat weiterhin seinen Job, seine Karriere, seine Familie
+- Er ist weiterhin CDU-Fraktionsvorsitzender in BaWü
+- Kein Berufsverbot, keine gesellschaftliche Ächtung
+
+**Das Muster:**
+Jede öffentliche Konsequenz für eigenes Verhalten wird als "cancel culture" geframt. Damit wird demokratische Rechenschaft (Wähler entscheiden auf Basis von Informationen) umgedeutet zu einer unfairen Attacke.
+
+**Konter:**
+```
+"Hagel wurde gecancelt!"
+
+Er hat eine Wahl verloren. Er hat weiterhin Job, Karriere, Familie.
+Er ist CDU-Fraktionsvorsitzender.
+
+Das ist eine Wahlniederlage, keine "cancel culture".
+
+Demokratie heisst: Wähler bewerten Kandidaten.
+Das Video hat ihnen dabei geholfen.
+```
+
+---
+
+## Grüne-80er-Whataboutism ("Partei der Kinderficker")
+
+**CDU/rechter Standardangriff:** "Die Grünen wollten in den 80ern Sex mit Kindern legalisieren. Die sollten bei Sexualisierung leise sein."
+
+### Fakten:
+
+**Aufarbeitung (vollständig dokumentiert):**
+- **2013:** Bundesvorstand der Grünen beauftragt Institut für Demokratieforschung Göttingen (Prof. Franz Walter)
+- **Laufzeit:** Juni 2013 bis Dezember 2014, Budget 200.000+ EUR
+- **Ergebnis:** Buch "Die Grünen und die Pädosexualität" (Vandenhoeck & Ruprecht, November 2014)
+- **Konsequenzen:** Opfer anerkannt, Entschädigungsfonds eingerichtet
+- **Status:** Kein aktuell mandatstragendes Grünen-Mitglied vertritt diese Positionen
+
+**Gegenbeispiel CDU (gleiche Logik angewendet):**
+- Am 15. Mai 1997 stimmten 138 Abgeordnete (überwiegend CDU/CSU und FDP) gegen die Strafbarkeit der Vergewaltigung in der Ehe
+- correctiv.org hat die Namensliste veröffentlicht
+- Kontext: CDU/CSU wollte eine "Widerspruchsklausel" (Ehefrau hätte Anzeige zurückziehen können, was Druckmittel für Ehemänner geschaffen hätte)
+- Ist die CDU deshalb die "Partei der Ehefrauenvergewaltiger"? Nein. Genau deshalb taugt die Logik nicht.
+
+**Konter:**
+```
+"Partei der Kinderficker!"
+
+Die Grünen haben 2013-14 eine unabhängige Studie beauftragt
+(Göttinger Institut, Franz Walter, 200.000 EUR Budget).
+Ergebnisse veröffentlicht, Opfer anerkannt, Entschädigungsfonds.
+
+Kein aktives Grünen-Mitglied vertritt diese Positionen.
+
+Zum Vergleich: 1997 stimmten 138 CDU/CSU/FDP-Abgeordnete
+gegen die Strafbarkeit der Vergewaltigung in der Ehe (correctiv.org hat die Liste).
+Ist die CDU deshalb die "Partei der Ehefrauenvergewaltiger"?
+
+Man kann Parteien nicht auf ihre schlechtesten historischen Positionen reduzieren.
+```
+
+---
+
+## Sexualisierung-Verharmlosung
+
+**Standardargument:** "Hagels Aussagen waren harmlos / nur ungeschickt / Pedo-Hysterie aus den USA."
+
+### Fakten:
+
+**Die Aussagen (Stuttgarter Zeitung, Originalzitat):**
+- "In der Klasse hätten damals 80 Prozent Mädchen gesessen. Also da gibt's für 29-jährige Abgeordnete schlimmere Termine als diesen."
+- "Die erste Frage, sie hieß Eva, braune Haare, rehbraune Augen."
+
+**Warum das nicht "harmlos" ist:**
+- Kontext: öffentliches Amt, Schutzbefohlene (Schülerinnen bei offiziellem Besuch), laufende Kamera
+- Er rahmt den Termin über das Geschlecht und sein eigenes Alter, nicht über die Gesprächsqualität
+- "Rehbraune Augen" ist romantisch-sexuelle Codierung, keine neutrale Personenbeschreibung
+- Kontrastfrage: Hat Hagel jemals einen männlichen Schüler oder einen erwachsenen Gesprächspartner so beschrieben?
+
+**Hagels Reaktion bestätigt das Problem:**
+- Statt "war ein Fehler, bin heute klüger": Frau vorgeschickt (watson.de)
+- Beim nächsten Schulbesuch 2026: Lehrerin angeblafft (News4teachers)
+- "Das war Mist" kam erst nach medialem Druck
+
+**"Pedo-Hysterie" als rhetorischer Trick:**
+Setzt echte Fälle von Kindesmissbrauch mit öffentlicher Kritik an einem Amtsträger gleich. Niemand wirft Hagel eine Straftat vor. Der Vorwurf ist: schlechtes professionelles Urteilsvermögen in einem Kontext mit Schutzbefohlenen.
+
+**Konter:**
+```
+"War doch harmlos / Pedo-Hysterie!"
+
+Ein 29-jähriger Amtsträger bewertet bei einem dienstlichen Schulbesuch
+den Mädchenanteil der Klasse in Verbindung mit seinem Alter
+und beschreibt die "rehbraunen Augen" einer Schülerin.
+
+Strafrechtlich relevant? Nein.
+Professionell deplatziert? Ja.
+Relevant für Wähler? Die haben entschieden.
+
+"Pedo-Hysterie" setzt echten Kindesmissbrauch gleich
+mit öffentlicher Kritik an einem Politiker. Das sind zwei verschiedene Dinge.
+```
+
+---
+
+## Maaßen-Chemnitz-Verteidigung
+
+**Standardargument:** "Maaßen hat nur den Begriff 'Hetzjagd' bestritten, nicht die Gewalt. Und seine politische Entwicklung danach (Werteunion) ist wie bei der SPD zwischen SPD und Grünen zu stehen."
+
+### Fakten:
+
+**Maaßens Zitat (Bild, 6.9.2018):**
+"Es liegen dem Verfassungsschutz keine belastbaren Informationen darüber vor, dass solche Hetzjagden stattgefunden haben." ([t-online](https://www.t-online.de/nachrichten/deutschland/gesellschaft/id_84409554/hans-georg-maassen-bezweifelt-belege-fuer-hetzjagd-in-chemnitz.html))
+
+**Was am selben Wochenende passierte:**
+- Jüdisches Restaurant Schalom angegriffen, Besitzer Dziuballa verletzt ([Jüdische Allgemeine, Urteil](https://www.juedische-allgemeine.de/politik/urteil-nach-angriff-auf-juedisches-restaurant-schalom/))
+- Hitlergrüße vor laufenden Kameras ([Tagesspiegel, Verurteilung](https://www.tagesspiegel.de/politik/vorbestrafter-chemnitzer-zu-funf-monaten-haft-verurteilt-5531983.html))
+- Über 240 Ermittlungsverfahren eingeleitet ([migazin, Bilanz](https://www.migazin.de/2023/08/27/was-aus-hunderten-ermittlungsverfahren-zu-chemnitz-2018-geworden-ist/))
+
+**Der Rollenbruch:** Ein VS-Chef, der öffentlich die Kanzlerin konterkariert und eine Begriffsdebatte führt, während Synagogen angegriffen werden, verlässt seine Rolle. Der Verfassungsblog analysiert: Maaßen durfte als Behördenchef keine politischen Bewertungen abgeben. ([Verfassungsblog](https://verfassungsblog.de/desinformieren-und-interpretieren-was-maassen-sagen-durfte-und-was-nicht/))
+
+**Danach (eigene Entscheidungen, keine Interpretation):**
+- Gründung Werteunion als Partei (2024)
+- Persönlich vom Verfassungsschutz als rechtsextremistisches Beobachtungsobjekt gespeichert ([Tagesspiegel](https://www.tagesspiegel.de/politik/als-rechtsextremist-abgespeichert-verfassungsschutz-beobachtet-werteunion-chef-maassen-11141251.html), [t-online](https://www.t-online.de/nachrichten/deutschland/id_100333210/hans-georg-maassen-verfassungsschutz-speichert-ex-chef-als-rechtsextremisten-.html))
+- 20-seitiges Dossier mit Verbindungen zum Reichsbürger-Umfeld um Heinrich XIII. Prinz Reuß
+- Klagt gegen die Einstufung ([taz](https://taz.de/Einstufung-als-rechtsextrem/!6002232/))
+
+**Konter:**
+```
+Maaßen wird persönlich vom Verfassungsschutz als rechtsextremistisches
+Beobachtungsobjekt geführt (Tagesspiegel, t-online, ARD Kontraste).
+20-seitiges Dossier, Verbindungen zum Reichsbürger-Umfeld.
+Das mit "zwischen SPD und Grünen stehen" zu vergleichen, ist absurd.
+
+Zum Chemnitz-Wording: Ob "Hetzjagd" der richtige Begriff war,
+ist die falsche Debatte. Am selben Wochenende wurde das jüdische
+Restaurant Schalom angegriffen, Hitlergrüße vor Kameras gezeigt,
+über 240 Ermittlungsverfahren eingeleitet. Ein VS-Chef, der in
+dieser Lage das Wording zum Problem erklärt statt die Gewalt,
+hat seine Prioritäten offengelegt.
+
+Wohin sein Kompass zeigt, hat er danach durch eigene Entscheidungen
+belegt: Werteunion, AfD-Nähe, rechtsextremistisches Beobachtungsobjekt
+des VS. Dokumentierte Entwicklung, kein Feindbild.
+```
+
+---
+
 # CDU RHETORISCHE MUSTER
 
 Die CDU nutzt wiederkehrende Argumentationstechniken. Hier die häufigsten:
 
 | Muster | Beispiel | Entlarvung |
 |--------|----------|------------|
-| **Verantwortung abschieben** | "Ampel hat alles kaputt gemacht" | CDU regierte 16 von 20 Jahren. Welche Probleme hat sie gelöst? |
+| **Verantwortung abschieben** | "Ampel hat alles kaputt gemacht" | CDU regierte 16 von 20 Jahren. Jetzt wieder an der Macht (seit Mai 2025). Welche Probleme hat sie gelöst? |
 | **Scheinbar pragmatisch** | "Wir sind die Partei der Mitte" | "Mitte" ist kein Argument, sondern Positionierung. Inhalte prüfen. |
 | **Werte statt Fakten** | "Leistung muss sich lohnen" | Normativer Satz, kein empirischer. Lohnt sich Pflegearbeit? |
 | **Selektive Vergleiche** | "In den USA sind Steuern niedriger" | Warum nicht Dänemark? Selektive Ländervergleiche sind kein Beweis. |
@@ -646,7 +852,7 @@ Ohne Migration bricht das System zusammen.
 
 ---
 
-## Quellen [LAST_CHECKED: 2025-02]
+## Quellen [LAST_CHECKED: 2026-03]
 
 **Wirtschaft:**
 - [DIW Berlin](https://www.diw.de/) — Wirtschaftspolitik, Verteilung, Klima
@@ -669,6 +875,11 @@ Ohne Migration bricht das System zusammen.
 **Kriminalität:**
 - [BKA / PKS](https://www.bka.de/) — Kriminalstatistik
 - [Bertelsmann Stiftung](https://www.bertelsmann-stiftung.de/) — Demografie, Integration
+
+**Koalitionsvertrag 2025:**
+- [Euronews: CDU/CSU and SPD sign coalition agreement](https://www.euronews.com/my-europe/2025/05/05/cducsu-and-spd-have-signed-coalition-agreement) ✅
+- [Deloitte: Coalition agreement analysis](https://www.deloittelegal.de/dl/en/services/legal/perspectives/koalitionsvertrag-cdu-csu-spd.html) ✅
+- [Clean Energy Wire: Coalition on climate and energy](https://www.cleanenergywire.org/factsheets/what-germanys-aspiring-coalition-government-agreement-means-climate-and-energy) ✅
 
 **Studien (Schlüsselreferenzen):**
 - London School of Economics (2020): 50 Jahre Steuersenkungen, 18 OECD-Länder

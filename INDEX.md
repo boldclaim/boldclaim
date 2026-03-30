@@ -36,7 +36,10 @@ bullshit-bingo/
 │   │   ├── verkehr-tempo30.md       ← Tempo 30 München, technische Fakten
 │   │   ├── verkehr-umwelt.md        ← Tempo 30 Politik, NIMBY, Gesundheit
 │   │   ├── heizungsgesetz-betrug.md ← CDU-Heizungskampagne, Gaskosten-Falle
-│   │   └── verfassungsschutz-verteidigung.md ← VS-Verteidigung, Maaßen, NSU, Kramer
+│   │   ├── verfassungsschutz-verteidigung.md ← VS-Verteidigung, Maaßen, NSU, Kramer
+│   │   ├── bge-grundeinkommen.md   ← BGE als Systemerhaltung, Kaufkraft-Argument
+│   │   ├── frauenquote.md          ← Quoten, Pay Gap, Meritokratie-Mythos
+│   │   └── ki-gefahren.md          ← KI-Gefahren: Optimierung, Scheming, Deepfakes, Kontrollverlust
 │   │
 │   ├── 03-usa-und-tech-oligarchie/
 │   │   ├── trump-usa.md             ← Trump-Faschismus, Hitler-Zitate, 6. Januar
@@ -158,6 +161,30 @@ bullshit-bingo/
 | "Texas/Houston zeigt..." | [[CONTENT/wirtschaft-housing#Der freie Markt Mythos]] | 🟢 EASY |
 | "Regulierung funktioniert nicht" | [[CONTENT/wirtschaft-housing#Best Practice - Was funktioniert]] | 🟡 MEDIUM |
 
+### Bedingungsloses Grundeinkommen
+
+| Behauptung | Antwort | Schwierigkeit |
+|------------|---------|---------------|
+| "BGE können wir uns nicht leisten" | [[CONTENT/02-themen/bge-grundeinkommen#Das können wir uns nicht leisten]] | 🟡 MEDIUM |
+| "BGE macht faul" | [[CONTENT/02-themen/bge-grundeinkommen#Das macht faul]] | 🟡 MEDIUM |
+| "BGE verursacht Inflation" | [[CONTENT/02-themen/bge-grundeinkommen#Inflation kommt]] | 🟢 EASY |
+| "Dann kommen noch mehr Einwanderer" | [[CONTENT/02-themen/bge-grundeinkommen#Dann kommen noch mehr Einwanderer]] | 🟢 EASY |
+| "Zeichnet sich doch noch nicht ab" | [[CONTENT/02-themen/bge-grundeinkommen#Der Tobi-Einwand Zeichnet sich doch noch nicht ab]] | 🔴 HARD |
+
+### Frauenquote & Gender Pay Gap
+
+| Behauptung | Antwort | Schwierigkeit |
+|------------|---------|---------------|
+| "Quote ist Diskriminierung" | [[CONTENT/02-themen/frauenquote#Quote ist Diskriminierung gegen Männer]] | 🟢 EASY |
+| "Meritokratie reicht" | [[CONTENT/02-themen/frauenquote#Die Besten sollen gewinnen egal ob Mann oder Frau]] | 🟡 MEDIUM |
+| "Frauen wollen das nicht" | [[CONTENT/02-themen/frauenquote#Frauen wollen das gar nicht Die entscheiden sich halt anders]] | 🟡 MEDIUM |
+| "Pay Gap ist Mythos" | [[CONTENT/02-themen/frauenquote#Gender Pay Gap richtig lesen]] | 🔴 HARD |
+| "Mit Quote sinkt Qualität" | [[CONTENT/02-themen/frauenquote#Mit Quote wird jemand Schlechtes eingestellt]] | 🟢 EASY |
+| "Ihr gebt Diskriminierung zu!" | [[CONTENT/02-themen/frauenquote#Die Grünen geben ja selbst zu dass sie diskriminieren]] | 🟡 MEDIUM |
+| "Lieber Kitas als Quote!" | [[CONTENT/02-themen/frauenquote#Lieber bessere Kitas als Quote]] | 🟡 MEDIUM |
+| "Wann hört das auf?" | [[CONTENT/02-themen/frauenquote#Wann hört das auf Quote für alles bis in die Ewigkeit]] | 🟢 EASY |
+| "Orchesterstudie hinkt" | [[CONTENT/02-themen/frauenquote#Orchesterstudie hinkt - Politik ist nicht objektiv messbar]] | 🟡 MEDIUM |
+
 ### Klima
 
 | Behauptung | Antwort | Schwierigkeit |
@@ -168,6 +195,20 @@ bullshit-bingo/
 | "Deutschland allein ändert nichts" | [[CONTENT/klima#Deutschland allein kann das Klima nicht retten]] | 🟡 MEDIUM |
 | "Erneuerbare sind zu teuer" | [[CONTENT/klima#Erneuerbare sind zu teuer unzuverlässig]] | 🟢 EASY |
 | "Klimaschutz vernichtet Jobs" | [[CONTENT/klima#Klimaschutz zerstört Arbeitsplätze]] | 🟢 EASY |
+
+### Energiepolitik & Wärmewende
+
+| Behauptung | Antwort | Schwierigkeit |
+|------------|---------|---------------|
+| "Erneuerbare können keine Grundlast" | [[CONTENT/02-themen/klima#Erneuerbare können keine Grundlast! Dunkelflaute! Spanien Blackout!]] | 🟡 MEDIUM |
+| "Dunkelflaute" | [[CONTENT/02-themen/klima#Erneuerbare können keine Grundlast! Dunkelflaute! Spanien Blackout!]] | 🟡 MEDIUM |
+| "Spanien Blackout" | [[CONTENT/02-themen/klima#Erneuerbare können keine Grundlast! Dunkelflaute! Spanien Blackout!]] | 🟢 EASY |
+| "Merit-Order" | [[CONTENT/02-themen/klima#Erneuerbare senken den Strompreis nicht! Merit-Order!]] | 🟡 MEDIUM |
+| "Gas bestimmt Strompreis" | [[CONTENT/02-themen/klima#Erneuerbare senken den Strompreis nicht! Merit-Order!]] | 🟡 MEDIUM |
+| "Rot-Grün russisches Gas" | [[CONTENT/02-themen/klima#Erneuerbare senken den Strompreis nicht! Merit-Order!]] | 🟢 EASY |
+| "Wärmepumpe unbezahlbar" | [[CONTENT/02-themen/heizungsgesetz-betrug#Mythos 1: "Wärmepumpen sind unbezahlbar!"]] | 🟢 EASY |
+| "Habeck Mieterschutz" | [[CONTENT/02-themen/heizungsgesetz-betrug#Die soziale Dimension]] | 🟡 MEDIUM |
+| "Topic-Hopping" | [[META/techniques#Taktik: Topic-Hopping / Whack-a-Mole]] | 🟢 EASY |
 
 ### Gender
 
@@ -247,6 +288,19 @@ bullshit-bingo/
 | "Du relativierst nur!" | [[META/techniques#Deflection Du relativierst]] | 🟢 EASY |
 | "Thanks ChatGPT" | [[META/exits#Exit Thanks ChatGPT]] | 🟢 EASY |
 | "VS/Richter/ÖRR = Antifa" | [[META/techniques#Eskalations-Kette Statistik-Delegitimierung]] | 🟢 EASY |
+
+### KI-Gefahren
+
+| Behauptung | Antwort | Schwierigkeit |
+|------------|---------|---------------|
+| "KI ist nur ein Werkzeug" | [[CONTENT/02-themen/ki-gefahren#Das Kernproblem - Optimierung ohne Verständnis]] | 🟢 EASY |
+| "KI folgt doch nur Anweisungen" | [[CONTENT/02-themen/ki-gefahren#Instrumentelle Konvergenz]] | 🟡 MEDIUM |
+| "Wir können KI sicher machen" | [[CONTENT/02-themen/ki-gefahren#Alignment-Training versagt]] | 🟡 MEDIUM |
+| "KI wird niemanden ersetzen" | [[CONTENT/02-themen/ki-gefahren#Schleichender Kontrollverlust]] | 🟢 EASY |
+| "Deepfakes sind harmlos" | [[CONTENT/02-themen/ki-gefahren#Deepfakes]] | 🟢 EASY |
+| "KI-Firmen haben alles im Griff" | [[CONTENT/02-themen/ki-gefahren#Der Sicherheitswettlauf nach unten]] | 🟡 MEDIUM |
+| "Das ist Science-Fiction" | [[CONTENT/02-themen/ki-gefahren#Das ist alles Science-Fiction Panikmache]] | 🟢 EASY |
+| "Regulierung bremst Innovation" | [[CONTENT/02-themen/ki-gefahren#Regulierung würde Innovation bremsen]] | 🟡 MEDIUM |
 
 ### Kontokündigungen & Sanktionen
 

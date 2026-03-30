@@ -195,6 +195,8 @@ Die Branche hatte sich bereits umgestellt. Die CDU hat mit ihrer Kampagne eine *
 
 **Preise sinken weiter:** 2025 lagen die Durchschnittspreise bereits 4.000 € unter dem Vorjahr. Hersteller zielen auf bis zu 40% Kostensenkung bis 2030.
 
+**RWTH Aachen / Octopus Energy Studie (2025):** 28.000€ für eine 8kW Luft-Wasser-WP in Deutschland vs. 14.000€ in UK. Haupttreiber: 19% MwSt (UK: 0%), prozentuale Förderung die Preise nach oben zieht statt sie zu drücken, überregulierte Installationsanforderungen. Japanische Top-Geräte unter 5.000€ Herstellerpreis, aber kaum ein deutscher Installateur bietet sie an. Marktversagen, nicht Physik.
+
 **Quellen:** KfW, BEG-Förderrichtlinien, EnBW Preisanalyse, Bundesverband Wärmepumpe
 
 ### Mythos 2: "Ewige Wartelisten!"
@@ -224,6 +226,9 @@ Die Branche hatte sich bereits umgestellt. Die CDU hat mit ihrer Kampagne eine *
 | **Ersparnis Wärmepumpe** | **~1.000+ € pro Jahr, Tendenz steigend** |
 
 **Die Verbraucherzentrale rät schon heute vom Einbau neuer Gasheizungen ab.**
+
+**⚠️ Vorsicht bei "dreimal effizienter"-Argument:**
+COP 3-4 gilt für die WP selbst (Strom → Wärme). Wenn der Gegner das Szenario "100% Gasstrom" annimmt, muss man die Kraftwerksverluste einrechnen: GuD 60%, normales GKW 40-50%. Kette: 1 kWh Gas → 0,55 kWh Strom → 0,55 × 3 = 1,65 kWh Wärme vs. direkte Gasheizung 0,9 kWh. Ergebnis: ~1,8× effizienter, nicht 3×. Immer noch besser! Aber "das ist Physik" + "dreimal" ist angreifbar. Sicherer: "Selbst im ungünstigsten Fall fast doppelt so effizient — und der deutsche Strommix hat über 60% Erneuerbare, da ist der Vorteil noch größer."
 
 ---
 
