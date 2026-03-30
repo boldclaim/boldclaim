@@ -76,6 +76,102 @@ tailwind.config = {
   .loading-steps {
     animation: pulse 1.8s ease-in-out infinite;
   }
+  /* Inline citation superscripts */
+  .cite-ref {
+    font-size: 0.65em;
+    vertical-align: super;
+    color: #3b82f6;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 1px;
+  }
+  .cite-ref:hover { text-decoration: underline; }
+  /* Source relevance bar */
+  .relevance-bar {
+    display: inline-block;
+    height: 6px;
+    border-radius: 3px;
+    min-width: 20px;
+    max-width: 60px;
+  }
+  /* Follow-up pills */
+  .followup-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .followup-pill {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #d1d5db;
+    border-radius: 999px;
+    background: #f9fafb;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+  .followup-pill:hover {
+    border-color: #3b82f6;
+    color: #1d4ed8;
+    background: #eff6ff;
+  }
+  /* Bridging labels */
+  .bridge-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .bridge-label--bridge {
+    background: #dcfce7;
+    color: #166534;
+  }
+  .bridge-label--confirm {
+    background: #f3f4f6;
+    color: #6b7280;
+  }
+  /* Confidence pill */
+  .confidence-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .confidence-pill--high { background: #dcfce7; color: #166534; }
+  .confidence-pill--medium { background: #fef9c3; color: #854d0e; }
+  .confidence-pill--low { background: #fee2e2; color: #991b1b; }
+  /* Source details toggle */
+  .sources-details summary {
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 0;
+    list-style: none;
+  }
+  .sources-details summary::-webkit-details-marker { display: none; }
+  .sources-details summary::before {
+    content: '▸ ';
+    transition: transform 0.15s;
+  }
+  .sources-details[open] summary::before {
+    content: '▾ ';
+  }
+  .source-topic {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 2px;
+  }
 </style>
 </head>
 <body class="bg-[#f8fafc] text-gray-800 min-h-screen font-sans antialiased">
@@ -144,13 +240,20 @@ tailwind.config = {
   <!-- Results -->
   <div id="results" class="mt-8 space-y-4 hidden">
     <div class="bg-white rounded-xl shadow-sm border-l-4 border-blue-600 p-5">
+      <div id="confidence-container" class="mb-3"></div>
       <p id="response-label" class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Antwort</p>
       <div id="reply-text" class="text-base text-gray-800 leading-relaxed whitespace-pre-wrap"></div>
+      <div id="confidence-warning" class="text-sm text-red-600 mt-2 hidden"></div>
+      <details class="sources-details mt-4" id="inline-sources">
+        <summary id="sources-toggle-label">Quellen</summary>
+        <ul id="inline-sources-list" class="space-y-2 mt-2"></ul>
+      </details>
+      <div id="followup-container" class="followup-pills"></div>
       <div class="flex justify-end mt-4">
         <button id="copy-btn" onclick="copyReply()" class="px-3 py-1.5 text-xs font-medium border border-gray-200 rounded-lg text-gray-500 hover:text-gray-700 hover:border-gray-300 transition">Kopieren</button>
       </div>
     </div>
-    <div id="sources-section" class="bg-white rounded-xl shadow-sm p-5 overflow-hidden">
+    <div id="sources-section" class="bg-white rounded-xl shadow-sm p-5 overflow-hidden hidden">
       <p id="sources-label" class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Quellen aus der Datenbank</p>
       <ul id="sources-list" class="space-y-2"></ul>
     </div>
@@ -222,6 +325,15 @@ tailwind.config = {
         { value: 'empathetic', label: 'Empathisch' },
         { value: 'ironic', label: 'Ironisch' },
       ],
+      sources_toggle: 'Quellen',
+      confidence_high: '\u{1F7E2} Hohe Konfidenz',
+      confidence_medium: '\u{1F7E1} Mittlere Konfidenz',
+      confidence_low: '\u{1F534} Niedrige Konfidenz',
+      confidence_tooltip: 'Basierend auf {n} Quellen in der Datenbank',
+      confidence_warning: '\u26A0\uFE0F Bitte zus\u00e4tzlich manuell \u00fcberpr\u00fcfen.',
+      followup_default: ['Gegenargument entkr\u00e4ften', 'K\u00fcrzer f\u00fcr Social Media', 'Weitere Quellen'],
+      bridge_label: '\u{1F309} Br\u00fcckenargument',
+      confirm_label: '\u{1F504} Best\u00e4tigend',
     },
     en: {
       hero_title: 'Facts Against Disinformation',
@@ -275,6 +387,15 @@ tailwind.config = {
         { value: 'empathetic', label: 'Empathetic' },
         { value: 'ironic', label: 'Ironic' },
       ],
+      sources_toggle: 'Sources',
+      confidence_high: '\u{1F7E2} High confidence',
+      confidence_medium: '\u{1F7E1} Medium confidence',
+      confidence_low: '\u{1F534} Low confidence',
+      confidence_tooltip: 'Based on {n} sources in the database',
+      confidence_warning: '\u26A0\uFE0F Please verify manually.',
+      followup_default: ['Counter the counter-argument', 'Shorter for social media', 'More sources'],
+      bridge_label: '\u{1F309} Bridging argument',
+      confirm_label: '\u{1F504} Reinforcing',
     }
   };
 
@@ -306,6 +427,15 @@ tailwind.config = {
   var cfgTone       = document.getElementById('cfg-tone');
   var loadingBar    = document.getElementById('loading-bar');
   var loadingStep   = document.getElementById('loading-step');
+  var confidenceContainer = document.getElementById('confidence-container');
+  var confidenceWarning = document.getElementById('confidence-warning');
+  var inlineSources = document.getElementById('inline-sources');
+  var inlineSourcesList = document.getElementById('inline-sources-list');
+  var sourcesToggleLabel = document.getElementById('sources-toggle-label');
+  var followupContainer = document.getElementById('followup-container');
+
+  // Track last request context for follow-ups
+  var lastRequestContext = { text: '', mode: '', platform: '', goal: '', tone: '' };
 
   // --- Render mode cards ---
 
@@ -352,6 +482,9 @@ tailwind.config = {
     resultsEl.classList.add('hidden');
     resultsEl.classList.remove('animate-fade-up');
     errorEl.classList.add('hidden');
+    while (followupContainer.firstChild) followupContainer.removeChild(followupContainer.firstChild);
+    while (confidenceContainer.firstChild) confidenceContainer.removeChild(confidenceContainer.firstChild);
+    confidenceWarning.classList.add('hidden');
   }
 
   function updateInputArea() {
@@ -399,6 +532,7 @@ tailwind.config = {
     heroSub.textContent = t.hero_sub;
     responseLabel.textContent = t.response_label;
     sourcesLabel.textContent = t.sources_label;
+    sourcesToggleLabel.textContent = t.sources_toggle;
     copyBtn.textContent = t.copy;
     submitBtn.textContent = t.submit;
     footerText.textContent = t.footer;
@@ -443,23 +577,32 @@ tailwind.config = {
       clearTimeout(stepTimer);
       setTimeout(function() {
         loadingBar.classList.add('hidden');
-        replyEl.textContent = t.demo_msg;
-        while (sourcesListEl.firstChild) sourcesListEl.removeChild(sourcesListEl.firstChild);
-        var li = document.createElement('li');
-        li.className = 'px-3 py-2 bg-gray-50 rounded-lg text-sm text-gray-500';
-        li.textContent = t.demo_source;
-        sourcesListEl.appendChild(li);
+        var demoSources = [{ topic: 'Demo', snippet: t.demo_source, score: 0.5 }];
+        renderReplyWithCitations(t.demo_msg, demoSources, t);
+        renderInlineSources(demoSources, t);
+        renderConfidence(demoSources, t);
+        renderFollowupPills(t);
+        sourcesSectionEl.style.display = 'none';
         showResults();
         resetButton();
       }, 800);
       return;
     }
 
+    // Store context for follow-up pills
+    lastRequestContext = { text: text, mode: currentMode, platform: platform, goal: goal, tone: tone };
+
+    // Build extra prompt instructions
+    var extraPrompt = '';
+    if (currentMode === 'reply') {
+      extraPrompt = ' Kennzeichne Argumente die auf gemeinsamen Werten basieren (Sicherheit, Fairness, wirtschaftlicher Nutzen) als [BRÜCKE], andere als [BESTÄTIGUNG].';
+    }
+
     try {
       var res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mode: currentMode, text: text, platform: platform, goal: goal, tone: tone, lang: currentLang })
+        body: JSON.stringify({ mode: currentMode, text: text + extraPrompt, platform: platform, goal: goal, tone: tone, lang: currentLang })
       });
       var data = await res.json();
 
@@ -468,28 +611,25 @@ tailwind.config = {
 
       if (data.error) throw new Error(data.error);
 
-      replyEl.textContent = data.reply || t.no_reply;
+      var sources = data.sources || [];
+      var replyRaw = data.reply || t.no_reply;
 
-      while (sourcesListEl.firstChild) sourcesListEl.removeChild(sourcesListEl.firstChild);
-      if (data.sources && data.sources.length > 0) {
-        sourcesSectionEl.style.display = '';
-        data.sources.forEach(function(s) {
-          var li = document.createElement('li');
-          li.className = 'px-3 py-2.5 bg-gray-50 rounded-lg text-sm overflow-hidden';
-          var snippetDiv = document.createElement('div');
-          snippetDiv.className = 'text-gray-600 leading-snug';
-          snippetDiv.style.cssText = 'display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden';
-          snippetDiv.textContent = s.snippet || '...';
-          var scoreSpan = document.createElement('span');
-          scoreSpan.className = 'text-xs text-blue-600 font-semibold mt-1 inline-block';
-          scoreSpan.textContent = Math.round(s.score * 100) + '% Relevanz';
-          li.appendChild(snippetDiv);
-          li.appendChild(scoreSpan);
-          sourcesListEl.appendChild(li);
-        });
-      } else {
-        sourcesSectionEl.style.display = 'none';
-      }
+      // --- Feature 3: Bridging labels are parsed inside renderReplyWithCitations ---
+
+      // --- Feature 1: Inline citations ---
+      renderReplyWithCitations(replyRaw, sources, t);
+
+      // --- Feature 1: Collapsible source panel ---
+      renderInlineSources(sources, t);
+
+      // --- Feature 4: Confidence scoring ---
+      renderConfidence(sources, t);
+
+      // --- Feature 2: Follow-up pills ---
+      renderFollowupPills(t);
+
+      // Hide old sources section (replaced by inline)
+      sourcesSectionEl.style.display = 'none';
 
       showResults();
     } catch(err) {
@@ -502,11 +642,216 @@ tailwind.config = {
     resetButton();
   };
 
+  // --- Feature 3: Parse [BRÜCKE] / [BESTÄTIGUNG] into marker tokens ---
+  // Returns text with markers replaced by placeholder tokens for DOM rendering
+  var BRIDGE_TOKEN = '\u200B__BRIDGE__\u200B';
+  var CONFIRM_TOKEN = '\u200B__CONFIRM__\u200B';
+  function replaceBridgingTokens(text) {
+    text = text.replace(/\[BRÜCKE\]/g, BRIDGE_TOKEN);
+    text = text.replace(/\[BESTÄTIGUNG\]/g, CONFIRM_TOKEN);
+    return text;
+  }
+
+  // Build a DOM fragment from text containing bridge/confirm tokens
+  function buildTextWithLabels(text, t) {
+    var frag = document.createDocumentFragment();
+    var parts = text.split(/(\u200B__BRIDGE__\u200B|\u200B__CONFIRM__\u200B)/);
+    parts.forEach(function(part) {
+      if (part === BRIDGE_TOKEN) {
+        var span = document.createElement('span');
+        span.className = 'bridge-label bridge-label--bridge';
+        span.textContent = t.bridge_label;
+        frag.appendChild(span);
+      } else if (part === CONFIRM_TOKEN) {
+        var span2 = document.createElement('span');
+        span2.className = 'bridge-label bridge-label--confirm';
+        span2.textContent = t.confirm_label;
+        frag.appendChild(span2);
+      } else if (part) {
+        frag.appendChild(document.createTextNode(part));
+      }
+    });
+    return frag;
+  }
+
+  // --- Feature 1: Render reply with inline citation superscripts (safe DOM) ---
+  function renderReplyWithCitations(replyText, sources, t) {
+    while (replyEl.firstChild) replyEl.removeChild(replyEl.firstChild);
+
+    // Replace bridging tags with tokens
+    replyText = replaceBridgingTokens(replyText);
+
+    var paragraphs = replyText.split('\n\n');
+    var assignedSources = sources.length ? assignSourcesToParas(paragraphs, sources) : {};
+
+    paragraphs.forEach(function(para, i) {
+      if (!para.trim()) return;
+      var p = document.createElement('p');
+      p.style.marginBottom = '0.5em';
+      // Build text content with bridging labels
+      p.appendChild(buildTextWithLabels(para, t));
+      // Add citation superscripts
+      var refs = assignedSources[i] || [];
+      refs.forEach(function(idx) {
+        var sup = document.createElement('sup');
+        sup.className = 'cite-ref';
+        sup.textContent = '[' + (idx + 1) + ']';
+        sup.title = ((sources[idx].topic || sources[idx].snippet || '').substring(0, 80));
+        sup.addEventListener('click', function() {
+          inlineSources.open = true;
+        });
+        p.appendChild(sup);
+      });
+      replyEl.appendChild(p);
+    });
+  }
+
+  // Simple keyword-overlap heuristic to map sources to paragraphs
+  function assignSourcesToParas(paragraphs, sources) {
+    var result = {};
+    var usedSources = {};
+
+    var sourceWords = sources.map(function(s) {
+      var text = (s.snippet || s.topic || '').toLowerCase();
+      return text.split(/\s+/).filter(function(w) { return w.length > 4; });
+    });
+
+    paragraphs.forEach(function(para, pi) {
+      var paraLower = para.toLowerCase();
+      var matches = [];
+      sources.forEach(function(s, si) {
+        if (usedSources[si]) return;
+        var overlap = 0;
+        sourceWords[si].forEach(function(w) {
+          if (paraLower.indexOf(w) !== -1) overlap++;
+        });
+        if (overlap >= 2 || (s.score && s.score > 0.8 && overlap >= 1)) {
+          matches.push({ idx: si, overlap: overlap, score: s.score || 0 });
+        }
+      });
+      matches.sort(function(a, b) { return b.overlap - a.overlap || b.score - a.score; });
+      if (matches.length > 0) {
+        var best = matches[0];
+        if (!result[pi]) result[pi] = [];
+        result[pi].push(best.idx);
+        usedSources[best.idx] = true;
+      }
+    });
+
+    var lastPara = paragraphs.length - 1;
+    sources.forEach(function(s, si) {
+      if (!usedSources[si]) {
+        if (!result[lastPara]) result[lastPara] = [];
+        result[lastPara].push(si);
+      }
+    });
+
+    return result;
+  }
+
+  // --- Feature 1: Collapsible source panel with relevance bars ---
+  function renderInlineSources(sources, t) {
+    while (inlineSourcesList.firstChild) inlineSourcesList.removeChild(inlineSourcesList.firstChild);
+    sourcesToggleLabel.textContent = t.sources_toggle + ' (' + sources.length + ')';
+
+    if (!sources.length) {
+      inlineSources.style.display = 'none';
+      return;
+    }
+    inlineSources.style.display = '';
+    inlineSources.removeAttribute('open');
+
+    sources.forEach(function(s, i) {
+      var li = document.createElement('li');
+      li.className = 'px-3 py-2.5 bg-gray-50 rounded-lg text-sm overflow-hidden';
+
+      var numSpan = document.createElement('span');
+      numSpan.className = 'text-xs font-bold text-blue-600 mr-1';
+      numSpan.textContent = '[' + (i + 1) + ']';
+
+      var topicDiv = document.createElement('div');
+      topicDiv.className = 'source-topic';
+      topicDiv.appendChild(numSpan);
+      topicDiv.appendChild(document.createTextNode(s.topic || ''));
+
+      var snippetDiv = document.createElement('div');
+      snippetDiv.className = 'text-gray-600 leading-snug text-xs mt-1';
+      snippetDiv.style.cssText = 'display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden';
+      snippetDiv.textContent = s.snippet || '\u2026';
+
+      var score = s.score || 0;
+      var barColor = score > 0.8 ? '#22c55e' : score > 0.6 ? '#f59e0b' : '#ef4444';
+      var barContainer = document.createElement('div');
+      barContainer.className = 'mt-1.5 flex items-center gap-2';
+      var bar = document.createElement('span');
+      bar.className = 'relevance-bar';
+      bar.style.width = Math.round(score * 60) + 'px';
+      bar.style.background = barColor;
+      var scoreText = document.createElement('span');
+      scoreText.className = 'text-xs font-semibold';
+      scoreText.style.color = barColor;
+      scoreText.textContent = Math.round(score * 100) + '%';
+      barContainer.appendChild(bar);
+      barContainer.appendChild(scoreText);
+
+      li.appendChild(topicDiv);
+      li.appendChild(snippetDiv);
+      li.appendChild(barContainer);
+      inlineSourcesList.appendChild(li);
+    });
+  }
+
+  // --- Feature 4: Confidence scoring ---
+  function renderConfidence(sources, t) {
+    while (confidenceContainer.firstChild) confidenceContainer.removeChild(confidenceContainer.firstChild);
+    confidenceWarning.classList.add('hidden');
+
+    var highSources = sources.filter(function(s) { return s.score && s.score > 0.8; });
+    var level, label, cls;
+    if (highSources.length >= 3) {
+      level = 'high'; label = t.confidence_high; cls = 'confidence-pill--high';
+    } else if (sources.length >= 1) {
+      level = 'medium'; label = t.confidence_medium; cls = 'confidence-pill--medium';
+    } else {
+      level = 'low'; label = t.confidence_low; cls = 'confidence-pill--low';
+    }
+
+    var pill = document.createElement('span');
+    pill.className = 'confidence-pill ' + cls;
+    pill.textContent = label;
+    pill.title = t.confidence_tooltip.replace('{n}', sources.length);
+    confidenceContainer.appendChild(pill);
+
+    if (level === 'low') {
+      confidenceWarning.textContent = t.confidence_warning;
+      confidenceWarning.classList.remove('hidden');
+    }
+  }
+
+  // --- Feature 2: Follow-up pills ---
+  function renderFollowupPills(t) {
+    while (followupContainer.firstChild) followupContainer.removeChild(followupContainer.firstChild);
+    var pills = t.followup_default;
+
+    pills.forEach(function(text) {
+      var btn = document.createElement('button');
+      btn.className = 'followup-pill';
+      btn.textContent = text;
+      btn.addEventListener('click', function() {
+        inputText.value = text;
+        handleSubmit();
+      });
+      followupContainer.appendChild(btn);
+    });
+  }
+
   function showResults() {
     resultsEl.classList.remove('hidden');
     resultsEl.classList.add('animate-fade-up');
     copyBtn.classList.remove('bg-green-50', 'text-green-600', 'border-green-200');
-    copyBtn.textContent = T[currentLang].copy;
+    var t = T[currentLang];
+    copyBtn.textContent = t.copy;
+    sourcesToggleLabel.textContent = sourcesToggleLabel.textContent || t.sources_toggle;
   }
 
   function resetButton() {
@@ -521,7 +866,7 @@ tailwind.config = {
 
   window.copyReply = function() {
     var t = T[currentLang];
-    var text = replyEl.textContent;
+    var text = replyEl.innerText || replyEl.textContent;
     navigator.clipboard.writeText(text).then(function() {
       copyBtn.textContent = t.copied;
       copyBtn.classList.add('bg-green-50', 'text-green-600', 'border-green-200');
