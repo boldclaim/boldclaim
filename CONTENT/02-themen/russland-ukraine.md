@@ -1,8 +1,8 @@
 ---
 title: Russland & Ukraine - Propaganda-Konter
 type: note
-last_updated: 2026-02-26
-LAST_CHECKED: 2026-02
+last_updated: 2026-04-07
+LAST_CHECKED: 2026-04
 tags: ["personal"]
 ---
 
@@ -29,6 +29,8 @@ tags: ["personal"]
 - [[#Russlands Wirtschaft Kriegsblase statt Boom]]
 - [[#Chinas Juniorpartner]]
 - [[#Ukraines Stärkung durch den Krieg]]
+- [[#Diplomatischer Stand April 2026]] *(neu)*
+- [[#Eventualzweig Waffenstillstand ohne Gebietsrückgabe]] *(neu)*
 
 ---
 
@@ -46,8 +48,15 @@ tags: ["personal"]
 - Baker/Genscher sprachen über NATO-Truppen in OST-DEUTSCHLAND (DDR-Gebiet)
 - Kontext: Wiedervereinigung, nicht Polen oder Baltikum
 - Zwei-plus-Vier-Vertrag regelte NUR Deutschland
+- Baker selbst sagte 1997: sein Satz bezog sich ausschließlich auf die Ex-DDR und wurde "schnell zurückgenommen"
 
-**3. Wer hat wirklich entschieden?**
+**3. Was die deklassifizierten Akten zeigen:**
+- Das National Security Archive (GWU) hat Dokumente aus US-, deutschen, britischen, sowjetischen und französischen Archiven veröffentlicht
+- Sie zeigen mündliche Signale und Erwartungen, aber **kein bindendes Abkommen**
+- Mary Sarotte (Yale, "Not One Inch", 2021): "not one inch" war ein flüchtiger diplomatischer Ausdruck, kein Versprechen — und wurde sofort von der Bush-Regierung korrigiert
+- Das Archiv dokumentiert ausdrücklich: kein schriftlicher Vertrag, keine Unterschrift, keine Verpflichtung für Länder außerhalb der DDR
+
+**4. Wer hat wirklich entschieden?**
 - Osteuropäische Länder BATEN um NATO-Mitgliedschaft
 - Nach Jahrhunderten russischer Besatzung wollten sie Schutz
 - Souveräne Nationen entscheiden selbst über Bündnisse
@@ -55,6 +64,9 @@ tags: ["personal"]
 **Quellen:**
 - [Der Spiegel: Gorbatschow-Interview 2014](https://www.spiegel.de/international/world/nato-expansion-did-the-west-break-its-promise-to-moscow-a-663315.html)
 - [Bundeszentrale: Zwei-plus-Vier-Vertrag](https://www.bpb.de/kurz-knapp/hintergrund-aktuell/148795/zwei-plus-vier-vertrag/)
+- [National Security Archive: "NATO Expansion: What Gorbachev Heard" — deklassifizierte Dokumente](https://nsarchive.gwu.edu/briefing-book/russia-programs/2017-12-12/nato-expansion-what-gorbachev-heard-western-leaders-early)
+- [Baker-Gorbatschow Gesprächsprotokoll (9. Feb. 1990), National Security Archive](https://nsarchive.gwu.edu/document/16116-document-05-memorandum-conversation-between)
+- [Sarotte, M.E.: "Not One Inch: America, Russia, and the Making of Post-Cold War Stalemate", Yale University Press, 2021](https://yalebooks.yale.edu/book/9780300268034/not-one-inch/)
 
 **Konter:**
 ```
@@ -66,8 +78,15 @@ Gorbatschow selbst sagt: "Wurde nie diskutiert."
 Was 1990 besprochen wurde: NATO-Truppen in der Ex-DDR.
 Nicht Polen. Nicht Baltikum. Nicht Ukraine.
 
+Das belegen deklassifizierte Dokumente aus US-, britischen
+und deutschen Archiven. Baker selbst sagte 1997:
+gemeint war nur die Ex-DDR, und auch das wurde "schnell zurückgenommen".
+
+Historikerin Mary Sarotte hat die Archive komplett ausgewertet:
+Kein bindendes Versprechen, keine Unterschrift, keine Verpflichtung.
+
 Und selbst wenn: Souveräne Länder entscheiden selbst über Bündnisse.
-Oder darf Russland bestimmen, was Estland unterschreiben darf?
+Oder darf Moskau bestimmen, was Estland unterschreibt?
 ```
 
 ---
@@ -431,30 +450,33 @@ Das ist kein 4D-Schach. Das ist ein Eigentor.
 
 **Kreml-Behauptung:** "Die Verluste sind minimal!" / "Westliche Zahlen sind Propaganda!"
 
-### Die Zahlen (Stand Ende 2025):
+### Die Zahlen (alle Angaben Schätzungen) [Stand: 2026-04]:
 
-| Quelle | Gesamtverluste (getötet, verwundet, vermisst) | Gefallene |
+| Quelle | Gesamtverluste (getötet + verwundet) | Gefallene (Schätzung) |
 |---|---|---|
-| **CSIS** (US-Thinktank) | ~1,2 Millionen | 275.000-325.000 |
-| **UK Ministry of Defence** | ~1 Million | bis 250.000 |
-| **Mediazona/BBC** (namentlich verifiziert) | - | 152.000+ (nur verifizierte Namen) |
-| **US-Außenminister Rubio** | - | ~100.000 (nur 1. Hälfte 2025) |
+| **UK Ministry of Defence** (Dez 2025) | ~1,168 Millionen | bis 300.000+ |
+| **Westliche Geheimdienstkreise** (Feb 2026) | ~1,25 Millionen | - |
+| **CSIS** (US-Thinktank, Feb 2026) | ~1,2 Millionen | 275.000-325.000 |
+| **Mediazona/BBC** (namentlich verifiziert, März 2026) | - | 155.000+ (Untergrenze, verifizierte Namen) |
+| **BBC-Schätzung** (April 2026) | - | 319.000-461.000 Gefallene (Range) |
 
 **Zum Vergleich:**
 - Mehr Verluste als jede Großmacht seit dem Zweiten Weltkrieg
 - 5x mehr Gefallene als in ALLEN russischen/sowjetischen Kriegen seit WW2 zusammen
 - Afghanistan (1979-89): ~15.000 Gefallene. Ukraine: 20x so viel.
-- Allein 2025: ~415.000 Verluste (~35.000/Monat)
+- Ab Nov 2025: Russland verliert ~40.000/Monat, rekrutiert nur ~35.000 (erstmals Negativbilanz)
 
-**Materialverluste:**
-- 3.000+ Panzer zerstört (mehr als der gesamte Vorkriegsbestand an aktiven Panzern)
-- 10.000+ Kampffahrzeuge
-- ~250 Flugzeuge und Hubschrauber
+**Materialverluste (Oryx, verifiziert mit Bildbeleg) [Stand: 2026-04]:**
+- 13.800+ Panzer und gepanzerte Fahrzeuge zerstört oder erbeutet
+- 361+ Flugzeuge und Hubschrauber
+- 29 Marineschiffe
 
 **Quellen:**
 - [CSIS: Russia's Grinding War in Ukraine (Feb 2026)](https://www.csis.org/analysis/russias-grinding-war-ukraine)
 - [Meduza: Analyse der CSIS-Zahlen (Jan 2026)](https://meduza.io/en/feature/2026/01/29/russia-s-military-losses-in-ukraine-surpass-any-major-power-since-wwii-yet-re-deployed-wounded-obscure-the-true-toll)
-- [Mediazona: Namentliche Verlustzählung](https://en.zona.media/article/2026/02/13/casualties_eng-trl)
+- [Mediazona: Namentliche Verlustzählung (März 2026)](https://en.zona.media/article/2026/03/27/casualties_eng-trl)
+- [Russia Matters: War Report Card April 2026](https://www.russiamatters.org/news/russia-ukraine-war-report-card/russia-ukraine-war-report-card-april-1-2026)
+- [UK Defence Journal: Russian casualties exceed 1.1m](https://ukdefencejournal.org.uk/russian-casualties-exceed-1-1m-since-invasion-says-britain/)
 - [Congress.gov: Russian Military Performance](https://www.congress.gov/crs-product/IF12606)
 
 **Konter:**
@@ -462,11 +484,14 @@ Das ist kein 4D-Schach. Das ist ein Eigentor.
 "Westliche Verlustzahlen sind Propaganda!"
 
 Mediazona und BBC Russian verifizieren jeden Toten namentlich.
-Stand heute: über 152.000 namentlich bestätigte russische Gefallene.
+Stand März 2026: über 155.000 namentlich bestätigte russische Gefallene.
 Das ist die UNTERGRENZE.
 
-CSIS schätzt 1,2 Millionen Gesamtverluste.
-Das ist mehr als jede Großmacht seit dem Zweiten Weltkrieg.
+UK MoD schätzt 1,168 Millionen Gesamtverluste.
+CSIS: 1,2 Millionen. Das ist mehr als jede Großmacht seit dem Zweiten Weltkrieg.
+
+Ab November 2025: Russland verliert 40.000 Soldaten pro Monat,
+rekrutiert aber nur 35.000. Erstmals negative Bilanz.
 
 Selbst Russlands Botschafter in London konnte die Zahlen
 nicht widerlegen - er weigerte sich nur, eigene zu nennen.
@@ -756,6 +781,105 @@ Mission accomplished?
 
 ---
 
+## Diplomatischer Stand April 2026
+
+**Kreml-Behauptung:** "Russland verhandelt in gutem Glauben!" / "Der Westen blockiert den Frieden!"
+
+### Was tatsächlich passiert:
+
+**Trumps Vermittlungsversuch:**
+- Trump hatte im Wahlkampf versprochen, den Krieg in "24 Stunden" zu beenden. Ergebnis: Kein Waffenstillstand.
+- Verhandlungsführer ist Steve Witkoff (Immobilienentwickler), der mehrfach nach Moskau gereist ist.
+- Bisherige Verhandlungsrunden in Genf und Abu Dhabi scheiterten.
+- Moskaus Kernforderung: formale Souveränität über weite Teile der Ukraine. Ukraine lehnt ab.
+
+**Das "Trump-Papier" (April 2026, Reuters-Leak):**
+Elemente des US-Plans: Einfrieren der Frontlinie als Waffenstillstand, faktische US-Anerkennung der Krim als russisch, Verzicht auf ukrainische NATO-Mitgliedschaft, Aufhebung von US-Sanktionen gegen Russland, US-Verwaltung des AKW Saporischschja. Sicherheitsgarantien für die Ukraine sollen an Europa delegiert werden.
+
+**Russlands Position** [Stand: 2026-04]:
+- Russland hat das ukrainische Angebot eines orthodoxen Oster-Waffenstillstands abgelehnt.
+- Moskau signalisiert: Kein Druck, schnell zu verhandeln. "Keine Fristen."
+- Russland verschärfte seine Bedingungen: ukrainischer Rückzug aus dem Donbas innerhalb von zwei Monaten.
+
+**EU-Position:**
+- Frankreich und UK bereiten "Military Hubs" in der Ukraine vor (als Teil eines möglichen Friedensplans).
+- EU unterstützt ukrainische Sicherheitsgarantien, lehnt eine Kapitulation ab.
+- Die meisten EU-Analysten sehen einen "eingefrorenen Konflikt" als wahrscheinlichstes Ergebnis 2026, keinen nachhaltigen Frieden.
+
+**Quellen:**
+- [Al Jazeera: Russia-Ukraine talks mediation efforts (Feb 2026)](https://www.aljazeera.com/news/2026/2/18/russia-ukraine-talks-all-the-mediation-efforts-and-where-they-stand)
+- [New Eastern Europe: Unsuccessful mediation attempts 2022-2026 (Apr 2026)](https://neweasterneurope.eu/2026/04/02/the-hunt-for-peace-unsuccessful-attempts-to-mediate-ukrainian-russian-peace-from-2022-to-2026/)
+- [CFR: Trump's Mediation on Ukraine](https://www.cfr.org/articles/trumps-mediation-ukraine)
+- [CBS News: Russia signals no rush for deal](https://www.cbsnews.com/news/russia-ukraine-war-no-rush-for-peace-moscow-says-despite-trump-push/)
+- [Russia Matters: War Report Card April 1, 2026](https://www.russiamatters.org/news/russia-ukraine-war-report-card/russia-ukraine-war-report-card-april-1-2026)
+
+**Konter gegen "Westen blockiert Frieden":**
+```
+"Der Westen sabotiert die Friedensverhandlungen!"
+
+Trump hat 14 Monate verhandelt. Kein Waffenstillstand.
+Nicht weil Europa blockiert - sondern weil Russland maximale Forderungen stellt:
+Souveränität über 20% der Ukraine, NATO-Verbot für immer,
+Sanktionen weg, ohne Gegenleistung.
+
+Russland hat sogar das Angebot eines Oster-Waffenstillstands abgelehnt.
+
+Wer verhandelt hier nicht in gutem Glauben?
+```
+
+---
+
+## Eventualzweig: Waffenstillstand ohne Gebietsrückgabe
+
+**Pro-Kreml-Argument:** "Ein Waffenstillstand beweist, dass Russland gewonnen hat!" / "Territoriale Kontrolle = Sieg!"
+
+### Warum das nicht stimmt:
+
+**Putins eigene Ausgangsziele (Februar 2022):**
+1. Regimewechsel in Kiew: Selenskyj stürzen
+2. Ukraine als souveränen Staat auslöschen
+3. NATO zurückdrängen
+4. Russlands Status als Großmacht festigen
+
+**Was ein "eingefrorener Konflikt" tatsächlich bedeutet:**
+
+Ein Waffenstillstand, der russische Gebietsgewinne einfriert, ist kein Beweis, dass die Invasion richtig war. Territoriale Kontrolle ist nicht dasselbe wie strategischer Erfolg.
+
+- Russland wollte Kiew in 3 Tagen einnehmen. Es hat ihn nie eingenommen.
+- Russland wollte Regime Change. Selenskyj regiert weiter.
+- Russland wollte NATO zurückdrängen. NATO hat sich verdoppelt.
+- Russland wollte Großmachtstatus. Es ist Chinas Juniorpartner.
+
+Ein Waffenstillstand, bei dem Russland 20% der Ukraine hält, bedeutet: Russland hat 80% seines eigentlichen Ziels verfehlt — und dafür über 1 Million Soldaten verloren, seine Wirtschaft zerrüttet, und sich dauerhaft in Abhängigkeit von Peking manövriert.
+
+**Historisches Parallelmuster:**
+- Korea 1953: Waffenstillstand entlang der alten Linie. Nordkorea hatte Seoul fast vollständig eingenommen — und hält es bis heute nicht. Das ist kein Sieg. Das ist Scheitern unter Waffenstillstand.
+
+**Konter:**
+```
+"Waffenstillstand = Russland gewinnt!"
+
+Putin wollte Kiew in 3 Tagen.
+Putin wollte Selenskyj stürzen.
+Putin wollte die NATO zurückdrängen.
+Putin wollte die Ukraine als Staat auflösen.
+
+Kein einziges dieser Ziele wurde erreicht.
+
+Ein Waffenstillstand, der ein paar Quadratkilometer einfriert,
+während Russland über 1 Million Soldaten verloren hat,
+seine Wirtschaft auf Kriegswirtschaft umgebaut ist
+und Westeuropa dauerhaft als Feind hat —
+
+— das ist kein Sieg. Das ist eine Niederlage mit Waffenstillstands-Aufkleber.
+
+Territoriale Kontrolle ≠ strategischer Erfolg.
+Clausewitz: Krieg ist Politik mit anderen Mitteln.
+Putin hat ALLE politischen Ziele verfehlt.
+```
+
+---
+
 ## Quellen-Shortcuts
 
 **Offizielle Dokumente:**
@@ -798,3 +922,27 @@ Mission accomplished?
 **Propaganda-Analyse:**
 - [EU vs Disinfo](https://euvsdisinfo.eu/) - EU-Datenbank für Desinformation
 - [StopFake](https://www.stopfake.org/en/news/) - Ukrainischer Faktencheck
+
+**NATO-Erweiterung / Quellen-Vertiefung:**
+- [National Security Archive: "NATO Expansion: What Gorbachev Heard" (deklassifiziert)](https://nsarchive.gwu.edu/briefing-book/russia-programs/2017-12-12/nato-expansion-what-gorbachev-heard-western-leaders-early)
+- [Baker-Gorbatschow Gesprächsprotokoll 9. Feb. 1990 (National Security Archive)](https://nsarchive.gwu.edu/document/16116-document-05-memorandum-conversation-between)
+- [Sarotte, M.E.: "Not One Inch" — Yale University Press 2021](https://yalebooks.yale.edu/book/9780300268034/not-one-inch/)
+
+**Diplomatischer Stand / Waffenstillstand:**
+- [Al Jazeera: Mediation efforts overview (Feb 2026)](https://www.aljazeera.com/news/2026/2/18/russia-ukraine-talks-all-the-mediation-efforts-and-where-they-stand)
+- [New Eastern Europe: Hunt for peace 2022-2026 (Apr 2026)](https://neweasterneurope.eu/2026/04/02/the-hunt-for-peace-unsuccessful-attempts-to-mediate-ukrainian-russian-peace-from-2022-to-2026/)
+- [Russia Matters: War Report Card April 1, 2026](https://www.russiamatters.org/news/russia-ukraine-war-report-card/russia-ukraine-war-report-card-april-1-2026)
+
+---
+
+## Update-Log
+
+| Was ergänzt | Wo | Quelle |
+|---|---|---|
+| Verlustszahlen aktualisiert (UK MoD 1,168 Mio., BBC-Range 319k-461k, Mediazona 155k+, neg. Rekrutierungsbilanz ab Nov 2025) | Russlands militärische Verluste | UK MoD, Russia Matters, Mediazona März 2026 |
+| Oryx-Materialverluste aktualisiert (13.800+ Fahrzeuge, 361 Flugzeuge) | Russlands militärische Verluste | Wikipedia Casualties, Oryx via Russia Matters |
+| Gorbatschow-Quelle verstärkt: NSA deklassifiziert, Baker-Protokoll, Sarotte-Buch | NATO-Osterweiterung Mythos | nsarchive.gwu.edu, Yale University Press |
+| Baker-Selbstkorrektur 1997 ergänzt | NATO-Osterweiterung Mythos | National Security Archive |
+| Neuer Abschnitt: Diplomatischer Stand April 2026 (Trump-Vermittlung, Witkoff, Scheitern Genf/Abu Dhabi, Reuters-Leak Trump-Papier, EU-Position) | Neu (vor Quellen-Shortcuts) | Al Jazeera, CFR, CBS News, New Eastern Europe |
+| Neuer Abschnitt: Eventualzweig Waffenstillstand ohne Gebietsrückgabe (Korea-Parallele, Clausewitz-Logik, 4 Punkte Putins Ziele vs. Ergebnis) | Neu (vor Quellen-Shortcuts) | Eigene Analyse auf Basis bestehender Quellen |
+| LAST_CHECKED auf 2026-04 gesetzt | Frontmatter | - |

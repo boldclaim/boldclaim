@@ -1,4 +1,4 @@
-# Counter-Speech Web Stack — Setup
+# Bold Claim Web Stack — Setup
 
 Kostenloser Stack: Pinecone (Vektor-Suche) + Gemini Flash (LLM) + Cloudflare Worker (API).
 
@@ -48,17 +48,17 @@ wrangler secret put GEMINI_API_KEY
 
 # Deployen
 cd web
-wrangler deploy worker.js --name counter-speech
+wrangler deploy worker.js --name bold-claim
 ```
 
-Die Worker-URL wird angezeigt (z.B. `https://counter-speech.<account>.workers.dev`).
+Die Worker-URL wird angezeigt (z.B. `https://bold-claim.<account>.workers.dev`).
 
 ## 5. Frontend verbinden
 
 In `web/index.html` die `API_URL` Variable setzen:
 
 ```javascript
-const API_URL = 'https://counter-speech.<dein-account>.workers.dev';
+const API_URL = 'https://bold-claim.<dein-account>.workers.dev';
 ```
 
 Dann `index.html` hosten (GitHub Pages, Cloudflare Pages, oder einfach lokal öffnen).

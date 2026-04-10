@@ -2,7 +2,7 @@
 title: AfD in drei Sätzen — Warum die unwählbar sind
 type: note
 last_updated: 2026-03-20
-tags: ["personal", "afd", "counter-speech", "stammtisch"]
+tags: ["personal", "afd", "bold-claim", "stammtisch"]
 ---
 
 # AfD in drei Sätzen

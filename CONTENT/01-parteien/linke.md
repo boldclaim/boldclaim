@@ -304,8 +304,6 @@ Die AfD will "Remigration" für Millionen.
 
 Die Linke saß in Regierungen.
 Die AfD wird vom Verfassungsschutz beobachtet.
-
-Das ist nicht dasselbe Extrem.
 ```
 
 ### One-Liner

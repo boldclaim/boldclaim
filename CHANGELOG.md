@@ -11,7 +11,86 @@ tags: ["personal"]
 
 ---
 
-## 2026-03 (Aktuell)
+## 2026-04 (Aktuell)
+
+### v2.1 — Sexualdelikte-CONTENT + Reddit Counter-Speech (2026-04-09/10)
+- **Added:** `sexualdelikte-taetergeschlecht.md` (108 Zeilen, 5 Konterwinkel, BKA PKS 2023, Inversionsaudits)
+- **Added:** 8 Apple Notes mit Reddit-Kontern (AfD-Wahl, Energiewende, Bot-Netzwerke, Flat Tax, Arbeitslose, 66%-Strohmann)
+- **Research:** Bot-Netzwerke (Reset Tech: 1.200 TikTok-Accounts, 57% Nigeria), AfD-Abstimmungsverhalten, Arbeitslose BTW 2025 (AfD 34%), Kontaktparadoxon
+
+### v2.0 — Pen-Test + Härtung + Neue Themen (2026-04-07 bis 2026-04-09)
+- **Added:** `frauenquote-gleichstellung.md` (306 Zeilen, 10 Reddit-Taktiken, 6 Debatten, 12 Gotchas)
+- **Added:** `rente-sozialstaat.md` (248 Zeilen, Rente + Bürgergeld konsolidiert, Gotchas)
+- **Added:** `antisemitismus.md` (179 Zeilen, PMK 2024, RIAS, rechts vs. islamistisch, IHRA 3D-Test)
+- **Added:** `verkehr-mobilitaet.md` (594 Zeilen, Merge aus verkehr-umwelt + verkehr-tempo30)
+- **Added:** `META/quellen-verteidigung.md` (9 Quellen: Correctiv, Mediendienst, AAS, ifo, IAB, KFN, DIW, IRENA, PKS)
+- **Added:** Gotcha-Register in migration-fakten, klima, afd-und-rechts (24 Einträge gesamt)
+- **Added:** Vetternwirtschaft-Sektion in afd-und-rechts (40+ Funktionäre, StA Hannover, Söder "Clan-Strukturen")
+- **Added:** Silvester Köln, Ostdeutschland-Perspektive, Abschiebungsquoten, Verwertungslogik-Korrektur in migration-fakten
+- **Added:** CO2-Preis-Debatte + Sprit-Staat-Counter in klima
+- **Added:** Waffenstillstand-Eventualzweig + NATO-Quellen verstärkt in russland-ukraine
+- **Added:** 11 Inline-Zeitstempel bei zeitgebundenen Claims
+- **Added:** Apple Notes BC44-BC50
+- **Fixed:** 13 Faktenfehler Schweregrad 3-4 (Tötungsrate, TVBZ-Quelle, offene Stellen, SV-Beiträge, Sellner-Zitat, CO2 DE>CN, Grid Strategies, Asylbewerberleistung, historischer CO2, Windkraft-Einbruch, etc.)
+- **Fixed:** Parteiverbotsverfahren "läuft beim BVerfG" → läuft nicht, müsste neu beantragt werden
+- **Fixed:** 10 TVBZ-Tabellen mit Inline-Caveats gegen Screenshot-Missbrauch geschützt
+- **Fixed:** 5 Amplification-gefährdete Formulierungen umgeschrieben
+- **Changed:** 3 moralisierende Closer entfernt (gender, verkehr-umwelt, linke)
+- **Changed:** "Klimaschutz ist Physik" → "Physik ist nicht links. Welche Maßnahmen folgen, ist Debatte."
+- **Removed:** `frauenquote.md` (ersetzt durch frauenquote-gleichstellung)
+- **Removed:** `verkehr-umwelt.md` + `verkehr-tempo30.md` (in verkehr-mobilitaet gemerged)
+- **Synced:** Pinecone 614 → 723 Vektoren (123 Records, 11 Dateien)
+
+### v1.8 — Dashboards + Sinti/Roma + Strategie + r/dezwo RIP (2026-04-06/07)
+- **Added:** `sinti-roma-antiziganismus.md` (Konter-Arsenal, Ursachenkette, Parteien-Vergleich Kinderporno)
+- **Added:** `tuerkische-diaspora-wahlverhalten.md` (SPD+AKP Paradox, Kurdish Split, DITIB)
+- **Added:** `META/reddit-strategie.md` (DE+EN Subs, Account-Strategie, Taktik)
+- **Added:** `META/reddit-account-namen.md` (27 Namen, 3 Panels, 2 Runden, ZitierDochMal Gewinner)
+- **Added:** `_internal/knowledge-base-viz.html` (3 Tabs: Overview, Growth, Methodik-Timeline)
+- **Added:** `_internal/dezwo-counter-dashboard.html` (6 aktuelle Opportunities, copy-paste, stress-tests)
+- **Fixed:** AfD-Verbotsverfahren: "läuft beim BVerfG" → Antrag durch Neuwahlen erledigt, kein Verfahren anhängig
+- **Fixed:** KI-Floskeln in dezwo-Dashboard eliminiert ("Wer X verkauft", "Das ist kein X das ist Y")
+- **Changed:** r/dezwo gebannt. Strategie-Update nötig (Migration zu r/de, r/armes_deutschland, r/FragReddit)
+- **Synced:** 7 Pinecone Records (sinti-roma), gesamt ~590
+- **Deployed:** VPS 89.147.109.248:8650 (knowledge-base-viz + dezwo-counter-dashboard)
+
+### v1.7 — Massive Content Expansion + Reddit Arsenal (2026-04-02 bis 2026-04-06)
+- **Added:** `afd-rechtsextremismus-referenz.md` (302 Zeilen, 8 Kategorien: Höcke BGH-bestätigt, Correctiv 28 Verurteilte, Korruption, VS-Klassifikationen, Potsdamer Treffen, Sylt, Kalbitz/Gedeon)
+- **Added:** `milei-marktradikalitaet.md` (INDEC Methodentrick, Inflationstrick, Obdachlose +57%)
+- **Added:** `wehrpflicht-verteidigung.md` (Eskalationsgeschichte 2008-2025, Skandinavien-Modelle, Zingers)
+- **Added:** `republikaner-partner.md` (Trump-Wähler Werte-Argument)
+- **Added:** `META/reddit-account-namen.md` (27 Namen, 3 Panels, 2 Runden)
+- **Changed:** `afd-und-rechts.md` (AfD hält ihr Wort, Verfassungsbruch, BVerfG, Kinderporno-Fälle, VS-Status korrigiert, 9 Debattenmuster)
+- **Changed:** `migration-fakten.md` (Steuerrechnung 12k, Totalverweigerer 0.4%, 50 Mrd brutto/netto, Bürgergeld 48%)
+- **Changed:** `one-liners.md` (6 AfD-Kriminalität-Zingers)
+- **Fixed:** VS-Status: "gesichert rechtsextrem" → "rechtskräftig Verdachtsfall" (VG Köln blockiert Hochstufung)
+- **Fixed:** Jens Maier Kinderporno-Claim entfernt (nicht belegt)
+- **Synced:** 81 Pinecone Records (8 Dateien)
+
+### Reddit Counter-Speech + AfD-Arsenal (2026-04-02/03)
+- 📝 r/Marcant ogremania: Torpfosten-Verschiebung exponiert (Kultur→Abschiebung→EU→Linke schuld), 1 Konter gepostet (t1_odwfnzn)
+- 📝 r/armes_deutschland "Syrische Tatverdächtige": 3 Konter-Entwürfe (Pro-Kopf, Strohmann, NULL-Forderung)
+- 📝 AfD "hält ihr Wort" Konter-Arsenal: COVID-Flip (afd.de Eigenquelle), Dexit, Mindestlohn, Korruption, Verfassungsbruch (6 Quellen)
+- 📝 "Kein Geld mehr / Dänemark" Konter: BVerfG Existenzminimum, Geduldete-Dilemma, Fachkräftemangel, Chancen-Aufenthaltsrecht (5 Quellen)
+- 📊 `CONTENT/01-parteien/afd-und-rechts.md` erweitert: Neue Sektion "AfD hält ihr Wort?" mit allen Quellen
+- 📊 `CONTENT/04-rhetorik-und-strategie/false-equivalence.md`: IAB-Daten aktualisiert (68%/76%/287k)
+- 🔑 Key: IAB 76% syrische Männer (über DE-Durchschnitt), BVerfG 1 BvL 10/10 (Ewigkeitsklausel), Chancen-Aufenthaltsrecht 66 AfD-Gegenstimmen
+
+### v1.6 — Full Rename + Blog Content Library + Strategy Research (2026-04-02)
+- **Renamed:** All "counter-speech" references → "Bold Claim" across project files, _internal docs, memory, skills
+- **Renamed:** 3 skill directories (`boldclaim-reddit`, `boldclaim-pinecone`, `boldclaim-wiki-updater`)
+- **Renamed:** `counter-speech-dashboard.html` → `boldclaim-dashboard.html`
+- **Added:** `blog/` subfolder with 23 English blog posts (26k words):
+  - 10 topic debunks (01-10): consent reform trick, 200 vs 5, Putin/NATO, school Islamisation, safety stats, solar costs, gas spiral, playbook, firehose, bot detection
+  - 5 methodology posts (11-15): escalation ladder, source boomerang, 10 moves, psychology, exit strategies
+  - 5 combat tactics (16-20): Mitleser principle, Stammtisch survival, prebunking, burnout, three sentences
+  - 3 reference pieces: pattern library, suppression-frame explainer, public mirror field guide
+- **Researched:** Design thinking workshops (5 analyst agents, 2 rounds) → stat card template as build-first artifact
+- **Researched:** Reddit bot architecture → Phase 1 monitoring tripwire recommended (PRAW + Telegram)
+
+---
+
+## 2026-03
 
 ### v1.4 — Pinecone Resync + Counter Drafts + Skill Upgrade (2026-03-29)
 - 🔧 Pinecone full resync: 960 → 508 Vektoren (clean, deterministic IDs, PKS 2024 verifiziert)
@@ -19,9 +98,9 @@ tags: ["personal"]
 - 🔫 Alle 12 Counter mit Taktik-Openers umgeschrieben (Eigenverantwortungsrhetorik, Sippenhaft-Logik, Topic-Hopping, Falsche Dichotomie, Institutionendelegitimierung, Selektives Zitieren)
 - 🔫 K4 Ortskräfte-Argument komplett zerlegt (6 rhetorische Schichten, Bundestag-Quellen)
 - 🔫 K6 Beknotze-Hammer: "Du hörst bei S.51 auf. Die Studie geht weiter." + Policy-Implikation
-- 📝 Counter-Speech Skill: Phase 10 (mandatory Dashboard), Phase 11 (mandatory Umlaut-Validierung mit `\S`-Regex), Exposure-Opener-Regel
+- 📝 Bold Claim Skill: Phase 10 (mandatory Dashboard), Phase 11 (mandatory Umlaut-Validierung mit `\S`-Regex), Exposure-Opener-Regel
 - 📊 Mode-Restructure-Analyse: 5-Modus-Vorschlag (reply, factcheck, Entlarvung, deescalation, prep), Entlarvung-Systemprompt entworfen (nicht implementiert)
-- 📝 Counter-Speech-Format als Feedback-Memory gespeichert (Taktik-Opener → Fakten → bare URLs)
+- 📝 Bold Claim Format als Feedback-Memory gespeichert (Taktik-Opener → Fakten → bare URLs)
 
 ### Frontend UX Upgrade (2026-03-27)
 - ✨ Inline citations: numbered superscripts in LLM responses, keyword-overlap matching to RAG sources, collapsible source panel with coloured relevance bars
@@ -30,18 +109,18 @@ tags: ["personal"]
 - ✨ Confidence scoring: computed from RAG source count + relevance, coloured pill (high/medium/low)
 - All changes in `docs/index.html`, bilingual DE/EN, no new dependencies
 
-### r/Marcant Counter-Speech Campaign + PKS 2024 Daten (2026-03-27/28)
+### r/Marcant Bold Claim Campaign + PKS 2024 Daten (2026-03-27/28)
 - 🔫 14 Konter geschrieben, stress-getestet, gepostet in 2 r/Marcant-Threads ("Männer sind das Problem" + "Zahlen zu Verurteilte")
-- ✨ `_internal/counter-speech-dashboard.html` — Neuer Tab "r/Marcant Männer (14)", 2 Thread-Summaries, NEU-Markierungen für offene Replies (1152→1732 Zeilen)
+- ✨ `_internal/boldclaim-dashboard.html` — Neuer Tab "r/Marcant Männer (14)", 2 Thread-Summaries, NEU-Markierungen für offene Replies (1152→1732 Zeilen)
 - ✨ `_internal/reddit-antworten-marcant-maenner-problem.md` — Thread-Analyse, Assertion Audit, 10 Konter-Entwürfe
 - 📊 PKS 2024 BKA-Tabellen T40/T50 ausgewertet: TVBZ nach Delikt (Mord 3,9x, Raub 5,6x, KV 3,4x), Pro-Kopf-Zeitreihe 2014-2024
 - 📝 `CONTENT/02-themen/migration-fakten.md` — Neue Sektion "PKS 2024: Pro-Kopf-Raten nach Delikt" (4 Datentabellen)
 - 📝 `META/techniques.md` — 8 neue Taktiken (Torpfosten-Verschiebung, Strohmann→Sarkasmus, Kultur-Eskalationsstufen, Modellminoritäten, Pro-Kopf-Trick, Bureau of Justice US-Import, Anekdoten-Widerlegung, Abschiebungs-Pragmatismus)
-- 📝 `QUICK/one-liners.md` — 6 neue One-Liner (Counter-Speech Taktiken)
+- 📝 `QUICK/one-liners.md` — 6 neue One-Liner (Bold Claim Taktiken)
 - 🔑 Key Finding: Pro-Kopf-Rate (ohne ausl. Verstöße) sinkt seit 2014 (-21%), ABER nach Delikt gemischt: Mord -13%, Vergewaltigung +18%, Raub +20%
 
 
-### r/armes_deutschland Counter-Speech + Thread-Viz (2026-03-20)
+### r/armes_deutschland Bold Claim + Thread-Viz (2026-03-20)
 - ✨ `_internal/reddit-antworten-armes-deutschland-wirtschaft.html` — Interaktive Thread-Visualisierung: Dark/Light Mode, Fraktions-Filter, Gegner-Profile, Konter-Labels, "Duelle"-Modus (3 Iterationen, Expert-Panel-Review)
 - 🔫 13 Konter gepostet (alle rechten Kommentare mit falsifizierbaren Claims gekontert)
 - 🔫 8 Gegner-Profile erstellt (Scheindebattierer, Ideologe, Fossil-Apologet, etc.)
@@ -56,17 +135,17 @@ tags: ["personal"]
 - 📝 `INDEX.md` — 9 neue Schnellsuche-Einträge (Energiepolitik)
 - Quelle: r/armes_deutschland Thread "Ölpreise 180$" (51 Kommentare, 13 eigene Konter)
 
-### r/Freiheitsfront Counter-Speech (2026-03-14)
+### r/Freiheitsfront Bold Claim (2026-03-14)
 - ✨ `_internal/reddit-antworten-freiheitsfront-afd-kinderschutz.md` — 3 Konter (Strafverschärfung vs Prävention, Verharmlosungsmuster, Grüne-Whataboutism), stress-getestet, quellenbelegt, gepostet
 - 🔧 Reddit JSON-API als Scraping-Fallback (Virtual Scrolling umgangen)
 - 🔧 Reddit `/api/comment` Posting via Playwright als REST-Proxy (Shadow DOM umgangen)
 
-### Counter-Speech Pipeline Sessions (2026-03-13/14)
+### Bold Claim Pipeline Sessions (2026-03-13/14)
 - ✨ `_internal/reddit-antworten-marcant-ip.md` — 3 Konter (Human Shields, Flugblätter/Genozid, 75%-Umfrage), nur Brigader
 - ✨ `_internal/reddit-antworten-tja-motra.md` — 4 Konter (MOTRA-Methodenkritik, Relativierung, 45% HEFTIG, Weltbild-Meta)
 - 🔧 Palästina-Item-Fehler korrigiert (existiert nicht in MOTRA-Skala)
 - 📝 `CONTENT/02-themen/islam-integration-religionsfreiheit.md` — Standardreferenzen, MOTRA Arsenal, VS-Zahl korrigiert
-- 📝 `.claude/skills/boldclaim-reddit-counter-speech/SKILL.md` — Brigader-Check, Studien-Debunking, Output-Template
+- 📝 `.claude/skills/boldclaim-reddit/SKILL.md` — Brigader-Check, Studien-Debunking, Output-Template
 
 ### KI-Gefahren Content (2026-03-10)
 - ✨ `CONTENT/02-themen/ki-gefahren.md` - Warum KI gefährlich ist ohne "böse" zu sein: Instrumentelle Konvergenz, Intent Gap, Alignment-Versagen, Deepfakes, autonome Waffen, Job-Displacement, Sicherheitswettlauf
@@ -91,14 +170,14 @@ tags: ["personal"]
 ## 2026-02
 
 ### Rebranding "Bold Claim" + UI-Redesign (2026-02-27)
-- 📂 Neuer Name: "Bold Claim" (vorher "Counter-Speech")
+- 📂 Neuer Name: "Bold Claim" (vorher "Bullshit-Bingo")
 - 🎨 Web-UI: Plattform/Ton/Ziel-Selektoren von Pill-Rows zu kompakten Dropdown-Selektoren (eine Zeile statt drei)
 - 🎨 Neue Fonts: Archivo Black (Brand), Sora (Display), DM Sans (Body) statt Newsreader + Inter
 - 🎨 Strafferes Layout, navy-farbener Submit-Button, reduzierte Abstände
 
 ### Repo-Umbau (2026-02-26)
-- 📂 Umgezogen: `90-personal/bullshit-bingo` → `01-projects/counter-speech`
-- 📂 Neuer Name: "Counter-Speech" statt "Bullshit-Bingo"
+- 📂 Umgezogen: `90-personal/bullshit-bingo` → `01-projects/boldclaim`
+- 📂 Neuer Name: "Bold Claim" statt "Bullshit-Bingo"
 
 ### Web-Stack (2026-02-26)
 - ✨ `web/index.html` - Öffentliches Frontend: 7 Modi (Reply, Thread, Prep, Drill, Red Team, De-eskalation, Faktencheck), Plattform/Ziel/Ton-Auswahl, Demo-Modus

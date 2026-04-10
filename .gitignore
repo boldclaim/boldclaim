@@ -4,3 +4,4 @@ archive/
 input/
 .wrangler/
 CLAUDE-PROJECT-INSTRUCTIONS.md
+.claude/

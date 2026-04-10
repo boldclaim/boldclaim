@@ -315,14 +315,14 @@ Die "Dominanz" existiert hauptsächlich
 in Schlagzeilen, nicht in Ergebnislisten.
 ```
 
-### Empathie-Closer
+### Suizidrisiko-Konter
 ```
 Trans-Menschen wollen nur in Ruhe leben.
 40% Suizidversuch-Rate bei Ablehnung.
 Normales Level bei Akzeptanz.
 
-Es kostet dich nichts, freundlich zu sein.
-Es kostet sie alles, wenn du es nicht bist.
+Der Unterschied ist Akzeptanz vs. Ablehnung.
+Das ist messbar.
 ```
 
 ---

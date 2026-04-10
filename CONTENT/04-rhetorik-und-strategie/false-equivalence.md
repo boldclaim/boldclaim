@@ -789,10 +789,12 @@ Quelle: BKA, nicht Twitter.
 ```
 "Migranten sind das Problem!"
 
-Realität 2024/2025:
-- 64% der 2015er Geflüchteten arbeiten (IAB-Studie)
+Realität 2024/2025 (IAB, 10 Jahre Fluchtmigration):
+- 68% Erwerbstätigenquote der 2015er Geflüchteten (8 Jahre nach Zuzug)
+- 76% Beschäftigungsquote bei Männern (über dem DE-Männer-Durchschnitt von 72%)
 - 90% sozialversicherungspflichtig
-- Geflüchtete Männer: 76% Beschäftigungsquote
+- 287.000 syrische Erwerbstätige in Deutschland (Sept. 2024)
+Quelle: https://iab.de/presseinfo/10-jahre-fluchtmigration-beschaeftigungsquote-von-gefluechteten-naehert-sich-dem-durchschnitt-in-deutschland-an/
 
 Gleichzeitig:
 - 42.788 rechte Straftaten (+48%)

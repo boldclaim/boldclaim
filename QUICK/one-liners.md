@@ -518,7 +518,7 @@ Alle 5 getesteten Frontier-Modelle zeigten Täuschungsverhalten. Konfrontiert? I
 
 ---
 
-### Counter-Speech Taktiken (2026-03)
+### Bold Claim Taktiken (2026-03)
 
 ```
 Todschweigen? 94,6% der medial genannten Verdächtigen sind nicht-deutsch. PKS-Anteil: 34,3%. Das Gegenteil von Schweigen.
@@ -599,4 +599,48 @@ No answer = protecting the hate. Word games don't change that.
 ### Mic drop
 ```
 Call it racist, bigot, fascist - the label isn't the issue. The behavior is.
+```
+
+---
+
+## AfD Kriminalität (added 2026-04)
+
+### Verurteilte im Amt
+```
+28 verurteilte AfD-Mandatsträger, 14 noch im Amt. Bei keiner anderen Bundestagspartei hat Correctiv Vergleichbares gefunden.
+```
+
+### Thüringen-Faktor
+```
+Verurteiltenquote Deutschland: 0,8%. AfD-Fraktion Thüringen: 9,4%. Faktor 12. Erzähl mir nochmal wer hier kriminell ist.
+```
+
+### Gedankenverbrechen
+```
+Höcke: SA-Parole (Urteil). Münzenmaier: Hooligan-Überfall (Urteil). Krah: Spion im Büro (4J9M). Bystron: russisches Geld. Borrmann: Frau gebissen. Keine Gedanken, Aktenzeichen.
+```
+
+### Recht und Ordnung
+```
+Die "Recht und Ordnung"-Partei hat 12x so viele Verurteilte wie die Gesamtbevölkerung. Das muss diese deutsche Leitkultur sein.
+```
+
+### Statistik nie verlinkt
+```
+Immer "die Kriminalstatistik beweist". Nie ein Link. Weil die PKS 42.788 rechts motivierte Straftaten zeigt (+23%). Kein Wunder.
+```
+
+### Andere Parteien auch
+```
+"Aber die anderen!" Correctiv hat alle verglichen. CDU, SPD, Grüne, FDP, Linke: nichts Vergleichbares. Die AfD steht allein.
+```
+
+### Mega-Zinger (alle Skandale in einer Frage)
+```
+Was gefällt dir an der AfD am besten? Die SA-Parole (BGH-bestätigt), der chinesische Spion (4J9M), das russische Oligarchengeld (Ermittlung läuft), die illegalen Pharma-Spenden (396k Strafe), die 28 verurteilten Mandatsträger (14 noch im Amt, keine andere Partei vergleichbar), die 9,4% Verurteiltenquote in Thüringen (12x Bevölkerung), die 2.000 Kinderporno-Dateien bei Gemeinderat Pitz, die 12.000 Seiten pädophile Chats von Fraktionsvize Arppe, die Stimme gegen den Mindestlohn, oder der COVID-Flip von "Regierung tut zu wenig" zu Querdenker in unter einem Jahr? Rechtskräftig als Verdachtsfall eingestuft (BVerwG). Verbotsverfahren läuft.
+```
+
+### SPD/CDU haben mehr Dreck
+```
+CumEx ist ein Steuerskandal. Schwarze Koffer sind Parteispenden. Beides schlimm, beides vor Gericht. Die AfD hat 28 Verurteilte, 14 im Amt. Höcke nach SA-Urteil befördert. Arppe mit pädophilen Chats bis 2021 im Landtag. Alle haben Dreck. Der Unterschied ist was danach passiert.
 ```

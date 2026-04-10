@@ -2,7 +2,7 @@
 title: AfD Stammtisch-Arsenal - 10 Kategorien, quellenbasiert
 type: note
 last_updated: 2026-03-20
-tags: ["personal", "stammtisch", "afd", "counter-speech"]
+tags: ["personal", "stammtisch", "afd", "bold-claim"]
 ---
 
 # AfD Stammtisch-Arsenal

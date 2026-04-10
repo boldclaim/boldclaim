@@ -1,7 +1,7 @@
 ---
 title: Klimawandel - Leugner-Konter
 type: note
-last_updated: 2026-03-05
+last_updated: 2026-04-07
 tags: ["personal"]
 ---
 
@@ -54,14 +54,14 @@ Das ist so sicher wie Schwerkraft.
 **Ja, aber:**
 - Natürliche Zyklen: Tausende Jahre
 - Aktuelle Erwärmung: 150 Jahre (seit Industrialisierung)
-- Geschwindigkeit: 10x schneller als jede natürliche Änderung
+- Geschwindigkeit: Laut IPCC AR6: "unprecedented in at least the last 2000 years"
 
 **Konter:**
 ```
 "Klima hat sich schon immer verändert!"
 
 Ja. Über Jahrtausende.
-Aktuell: 150 Jahre, 10x schneller.
+Aktuell: 150 Jahre. IPCC AR6: "unprecedented in at least the last 2000 years".
 
 Der Unterschied ist wie:
 - Natürlich: Treppe hochgehen
@@ -135,8 +135,8 @@ Das ist kein Zyklus. Das ist ein Trend.
 
 **Warum das Bullshit ist:**
 
-1. **Pro-Kopf-Emissionen:** Deutschland höher als China
-2. **Historische Schuld:** Industrieländer haben 80% des CO2 in der Atmosphäre verursacht
+1. **Pro-Kopf-Emissionen:** Deutschland und China liegen inzwischen auf ähnlichem Niveau (~8t CO2/Kopf); Deutschlands historischer Beitrag ist dabei überproportional
+2. **Historische Schuld:** Industrieländer haben ca. 60-70% des kumulierten CO2 in der Atmosphäre verursacht (Global Carbon Project)
 3. **Technologie-Export:** Deutsche Lösungen können weltweit skalieren
 4. **Moralische Führung:** Jemand muss anfangen
 
@@ -147,10 +147,10 @@ Das ist kein Zyklus. Das ist ein Trend.
 Stimmt. Und ein einzelner Nichtwähler ändert auch keine Wahl.
 Trotzdem gehst du wählen.
 
-Pro-Kopf stoßen Deutsche mehr aus als Chinesen.
-Historisch haben Industrieländer 80% verursacht.
+Deutschland und China liegen pro Kopf inzwischen auf ähnlichem Niveau (~8t CO2/Kopf). Deutschlands historischer Beitrag ist überproportional.
+Historisch haben Industrieländer ca. 60-70% des kumulierten CO2 verursacht (Global Carbon Project).
 
-"Warum soll ICH anfangen?" ist Kindergarten-Logik.
+"Warum soll ICH anfangen?" funktioniert nur, wenn jedes Land es macht. Keines würde anfangen.
 ```
 
 ---
@@ -163,7 +163,7 @@ Historisch haben Industrieländer 80% verursacht.
 - Neue Solar/Wind: Billiger als neue Kohle/Gas
 - **IRENA 2025:** Solar durchschnittlich 41% billiger als billigste fossile Alternative, Onshore-Wind 53% billiger
 - **91% aller neuen Erneuerbare-Projekte** 2024 billiger als jede fossile Alternative (IRENA)
-- Erneuerbare sparten 2024 weltweit $467 Mrd. an fossilen Brennstoffkosten
+- Erneuerbare sparten 2024 weltweit $467 Mrd. an fossilen Brennstoffkosten [PRÜFEN: IRENA 2025, genaue Berichtsnummer ausstehend]
 
 **Zuverlässigkeit:**
 - Speicher-Technologie entwickelt sich rasant
@@ -175,7 +175,7 @@ Historisch haben Industrieländer 80% verursacht.
 ```
 "Erneuerbare sind zu teuer!"
 
-IRENA 2025: Solar 41% billiger als fossile Alternativen.
+IRENA (internationale Energieagentur für Erneuerbare) 2025: Solar 41% billiger als fossile Alternativen.
 Wind 53% billiger. 91% aller neuen Projekte günstiger als Kohle/Gas.
 
 Erneuerbare sparten 2024 weltweit $467 Milliarden.
@@ -200,13 +200,13 @@ Erneuerbare können die Stromversorgung nicht sichern. Bei Dunkelflaute (kein Wi
 - Batterien lösen keine zweiwöchige Dunkelflaute (korrekt!). Aber sie sind auch nicht dafür gedacht — sie glätten tägliche Schwankungen. Für Dunkelflauten gibt es Gas-Backup.
 
 **Spanien-Blackout (April 2025):**
-- Der offizielle Untersuchungsbericht der spanischen Regierung (Juni 2025) und der Bericht des Netzbetreibers Red Eléctrica kommen zum gleichen Ergebnis: Die Ursache war das Versagen konventioneller Kraftwerke bei der Spannungsregulierung. Nicht die Erneuerbaren.
-- Grid Strategies Analyse: "Renewable generators were not the cause of the blackout. Both reports recommend that renewable and battery resources be a primary solution to prevent such events in the future."
+- Der Bericht des Netzbetreibers Red Eléctrica und der offizielle spanische Regierungsbericht (Juni 2025) kommen zum gleichen Ergebnis: Die Ursache war das Versagen konventioneller Kraftwerke bei der Spannungsregulierung. Nicht die Erneuerbaren.
+- Grid Strategies (US-Energieberatung) hat beide Primärberichte ausgewertet: "Renewable generators were not the cause of the blackout. Both reports recommend that renewable and battery resources be a primary solution to prevent such events in the future."
 - [Grid Strategies: A review of reports on Spanish blackout causes and solutions](https://gridstrategiesllc.com/project/a-review-of-reports-on-spanish-blackout-causes-and-solutions/) ✅ Verifiziert 2026-03
 
 #### Konter:
 ```
-Spanien-Blackout: Der offizielle Untersuchungsbericht sagt das Gegenteil von dem was du behauptest. Konventionelle Kraftwerke haben bei der Spannungsregulierung versagt. Nicht die Erneuerbaren. Grid Strategies hat beide Berichte ausgewertet: "Renewable generators were not the cause."
+Spanien-Blackout: Red Eléctrica und der spanische Regierungsbericht sagen das Gegenteil von dem was du behauptest. Konventionelle Kraftwerke haben bei der Spannungsregulierung versagt. Nicht die Erneuerbaren. Grid Strategies (US-Energieberatung) hat beide Primärberichte ausgewertet: "Renewable generators were not the cause."
 
 Und Dunkelflaute: Ja, Batterien lösen keine zweiwöchige Flaute. Hat auch niemand behauptet. Dafür gibt es Gaskraftwerke als Backup. Habeck wollte 10 GW, Reiche baut 12. Das ist Teil der Energiewende, nicht ihr Widerspruch.
 
@@ -231,7 +231,7 @@ Häufiger Begleit-Claim: "Rot-Grün hat massiv auf russisches Pipeline-Gas geset
 - Nord Stream 2 wurde unter Merkel vorangetrieben. Die Grünen haben NS2 aktiv bekämpft.
 - 16 Jahre CDU-Kanzlerschaft haben die Gasabhängigkeit zementiert, nicht vier Jahre Ampel.
 - Der Atomausstieg wurde 2011 von Angela Merkel (CDU) beschleunigt.
-- Der EE-Ausbau wurde unter Merkel mit der 1000m-Abstandsregel systematisch gebremst. Windkraft-Zubau brach unter CDU-Führung um 82% ein (2019).
+- Der EE-Ausbau wurde unter Merkel mit der 1000m-Abstandsregel systematisch gebremst. Windkraft-Zubau brach unter CDU-Führung um 82% ein (2019 vs. 2017; Quelle: Bundesnetzagentur / Deutsche WindGuard).
 
 #### Quellen:
 - [Agora Energiewende: Erneuerbare Energien senken Strompreise](https://www.agora-energiewende.de/publikationen/erneuerbare-energien-senken-strompreise-unabhaengig-von-der-nachfrage) ✅ Verifiziert 2026-03
@@ -277,7 +277,7 @@ AfD-Plan: Kohle fördern, Windräder stoppen,
 Pariser Abkommen verlassen.
 
 Das ist keine "realistische Alternative".
-Das ist Kopf-in-den-Sand während das Haus brennt.
+Das ist Realitätsverweigerung, während die Schäden skalieren.
 ```
 
 ---
@@ -382,7 +382,7 @@ die das widerlegt. Eine.
 "Klima hat sich schon immer verändert!"
 
 Über Jahrtausende. Nicht Jahrzehnte.
-10x schneller als je zuvor.
+IPCC AR6: "unprecedented in at least the last 2000 years".
 
 Der Unterschied zwischen Treppe und Aufprall.
 ```
@@ -391,8 +391,8 @@ Der Unterschied zwischen Treppe und Aufprall.
 ```
 "Deutschland allein ändert nichts!"
 
-Pro-Kopf: Deutsche > Chinesen.
-Historisch: 80% von Industrieländern.
+Pro-Kopf: Deutschland und China ~8t CO2/Kopf (ähnliches Niveau, Stand 2024).
+Historisch: ~60-70% kumuliertes CO2 aus Industrieländern (Global Carbon Project).
 
 "Warum soll ICH anfangen?"
 ist keine Klimapolitik. Das ist Ausrede.
@@ -403,7 +403,7 @@ ist keine Klimapolitik. Das ist Ausrede.
 "Zu teuer!"
 
 Ahrtal: 30 Mrd. Ein Event. Valencia 2024: 200+ Tote.
-Solar 41% billiger als fossile Alternativen (IRENA 2025).
+Solar 41% billiger als fossile Alternativen (IRENA 2025, internationale Energieagentur für Erneuerbare).
 91% aller neuen Erneuerbare-Projekte billiger als Kohle/Gas.
 
 Klimaschutz kostet.
@@ -442,3 +442,57 @@ Das ist Realitätsverweigerung mit Parteibuch.
 - [DIW Berlin](https://www.diw.de/)
 - [Agora Energiewende](https://www.agora-energiewende.de/)
 - [IRENA: 91% of renewables cheaper than fossil fuels (2025)](https://www.irena.org/News/pressreleases/2025/Jul/91-Percent-of-New-Renewable-Projects-Now-Cheaper-Than-Fossil-Fuels-Alternatives) ✅
+
+---
+
+## CO2-Preis: "Arbeiterklasse wird gefickt"
+
+**Muster:** "Egal ob CO2-Steuer oder Ölpreis, die Arbeiterklasse zahlt immer."
+
+**Konter:** CO2-Preis und Ölpreis sind nicht dasselbe. CO2-Preis: steuerbar, Einnahmen bleiben im Land, können als Klimageld zurückfließen. Ölpreis: nicht steuerbar, Geld geht an Shell und Saudi-Arabien, null Rückverteilung.
+
+**Problem Deutschland:** 55€/Tonne, 18 Mrd Einnahmen, null Klimageld zurück. Das Klimageld war im Koalitionsvertrag vorgesehen, wurde aber nicht umgesetzt. Das ist ein Umsetzungsfehler der Ampel, kein Designfehler des CO2-Preises. Der Mechanismus funktioniert — er wurde politisch nicht aktiviert.
+
+**Funktioniert anderswo:** Schweiz: CO2-Abgabe, zwei Drittel fließen als Pauschale pro Kopf zurück über die Krankenkasse. Kanada: 90% zurück als Climate Action Incentive. Wer wenig verbraucht kriegt mehr zurück als er zahlt. Umverteilung von oben nach unten.
+
+**Ohne CO2-Preis zahlst du trotzdem.** Nur geht das Geld an Shell (28 Mrd $ Gewinn 2023) und Saudi Aramco (121 Mrd $) statt zurück an dich. Energiesteuer bleibt im Land (Straßen, Rettungswagen, Pendlerpauschale), Ölpreis nicht.
+
+## "Der Staat ist der Großverdiener am Sprit"
+
+**Muster:** "Der Staat nimmt am meisten, nicht die Ölkonzerne. Und verschenkt Milliarden ins Ausland."
+
+**Konter:** Ca. 65 Cent Energiesteuer + 19% MwSt pro Liter. Davon Straßen, Rettungswagen, Pendlerpauschale. Das Geld verschwindet nicht, du fährst jeden Tag drauf. Shell 28 Mrd, Aramco 121 Mrd Gewinn: das fließt ab und kommt nie wieder.
+
+Entwicklungshilfe 2024: 0,76% des BNE. Großteil fließt an deutsche Durchführungsorganisationen (GIZ, KfW) zurück. Weniger verschenkt als gedacht, mehr Rücklauf als sichtbar (Handelsabkommen, Lieferketten, Fluchtursachenbekämpfung).
+
+---
+
+## Änderungsprotokoll (2026-04-07)
+
+| Was geändert | Vorher | Nachher |
+|---|---|---|
+| Pro-Kopf DE/CN (Fließtext, Konter, Arsenal) | "Deutschland höher als China" / "Deutsche mehr als Chinesen" | "Deutschland und China ~8t CO2/Kopf, ähnliches Niveau (Stand 2024); historischer Beitrag DE überproportional" |
+| Grid Strategies Quelle (Spanien-Blackout) | "offizielle Untersuchungsbericht" / ohne Einordnung | Klargestellt als "US-Energieberatung Grid Strategies hat beide Primärberichte ausgewertet"; Red Eléctrica als Primärquelle benannt |
+| Historischer CO2-Anteil Industrieländer (Fließtext, Konter, Arsenal) | "80%" | "ca. 60-70% (Global Carbon Project)" |
+| Windkraft-82%-Einbruch | "82% ein (2019)" ohne Referenzjahr oder Quelle | "82% ein (2019 vs. 2017; Quelle: Bundesnetzagentur / Deutsche WindGuard)" |
+| Erwärmungsgeschwindigkeit (Fließtext, Konter, Arsenal) | "10x schneller als jede natürliche Änderung" | IPCC AR6-Formulierung: "unprecedented in at least the last 2000 years" |
+| Erneuerbare $467 Mrd. Ersparnis | Keine Quellenangabe | [PRÜFEN: IRENA 2025, genaue Berichtsnummer ausstehend] |
+
+---
+
+## Gotcha-Register
+
+### Fallen für unsere Seite
+
+1. **97% Konsens als Argument für Maßnahmen nutzen** → Der Konsens bezieht sich auf "menschengemachte Erwärmung", nicht auf spezifische Klimapolitik. Wer ihn für konkrete Maßnahmen (CO2-Preis, Wärmepumpe) zitiert, überdehnt ihn.
+2. **LCOE mit Systemkosten gleichsetzen** → LCOE (Stromgestehungskosten) misst nur die Erzeugungskosten. Netzausbau, Speicher und Backup-Kapazität für Dunkelflauten kommen oben drauf. Gegner der das wissen, warten darauf.
+3. **McKinsey oder IRENA als neutrale Quellen darstellen** → McKinsey hat Geschäftsinteresse an der Energiewende (Consulting-Aufträge). IRENA hat ein strukturelles Mandat für erneuerbare Energien. Beide als Tendenzquellen einordnen, nicht als unabhängige Forschung.
+4. **Skandinavien als Beweis ohne Infrastruktur-Kontext** → Schweden und Norwegen hatten vor dem EE-Ausbau bereits massiven Wasserkraft-Anteil als Grundlast-Backup. Das ist kein übertragbares Modell ohne diesen Kontext.
+
+### Fallen für Gegner
+
+1. **"Deutschland allein ändert nichts" sagen** → Ignoriert EU-weite Regulierung (ETS, Green Deal, Taxonomie). Deutschland als größte EU-Volkswirtschaft setzt de facto EU-Standards mit. Das "allein" ist falsch.
+2. **Kernkraft als günstige Alternative darstellen** → Lazard LCOE: Neue Kernkraft kostet 3-4x mehr als neue Solar- und Windkapazität. Wer Kernkraft fordert, argumentiert gegen Kosteneffizienz.
+3. **"Jobs gehen verloren" als Klimaschutz-Gegenargument** → 300k+ Arbeitsplätze in erneuerbaren Energien in Deutschland vs. ~20k in der Kohle. Nettobilanz ist eindeutig positiv.
+
+[LAST_CHECKED: 2026-04]

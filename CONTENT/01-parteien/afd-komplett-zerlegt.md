@@ -2,7 +2,7 @@
 title: AfD komplett zerlegt — Zitate, Fakten, Abstimmungen, Korruption
 type: note
 last_updated: 2026-03-20
-tags: ["personal", "afd", "counter-speech", "stammtisch"]
+tags: ["personal", "afd", "bold-claim", "stammtisch"]
 ---
 
 # AfD komplett zerlegt

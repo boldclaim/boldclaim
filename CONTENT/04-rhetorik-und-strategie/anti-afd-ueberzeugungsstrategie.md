@@ -2,7 +2,7 @@
 title: Anti-AfD Überzeugungsstrategie — Was bei wem wirkt
 type: note
 last_updated: 2026-03-20
-tags: ["personal", "strategie", "afd", "counter-speech"]
+tags: ["personal", "strategie", "afd", "bold-claim"]
 ---
 
 # Anti-AfD Überzeugungsstrategie
