@@ -543,6 +543,31 @@ body {
   line-height: 1.5;
 }
 
+/* ---- hook layer ---- */
+.b-hook-layer {
+  padding: 22px 20px 18px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  animation: fadeUp 0.2s ease-out both;
+}
+
+.b-hook-text {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text-muted);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+/* ---- betrayal layer variant ---- */
+.b-evidence-layer.layer-betrayal {
+  background: rgba(185,28,28,0.04);
+  border-left: 3px solid var(--accent-vote-no);
+  border-bottom: 1px solid var(--border);
+  padding-left: 17px;
+}
+
 /* ---- source link ---- */
 a.b-source {
   font-size: 12px;
@@ -701,7 +726,6 @@ function showLanding() {
 function showCascade(index) {
   currentIndex = index;
   var topic = GUIDE_DATA[index];
-  var layers = topic.layers;
 
   document.getElementById('landing').classList.remove('active');
   document.getElementById('cascade').classList.add('active');
@@ -719,117 +743,71 @@ function showCascade(index) {
 
   var parts = [];
 
-  // 1. Promise
+  // 1. Hook (Du-Frage) — large, center-aligned, warm opener
+  parts.push(
+    '<div class="b-hook-layer">' +
+      '<p class="b-hook-text">' + topic.hook + '</p>' +
+    '</div>'
+  );
+
+  // 2. Promise
   parts.push(
     '<div class="b-evidence-layer">' +
       '<div class="b-layer-label">' +
         '<div class="b-layer-icon" aria-hidden="true">&#x1F4CB;</div>' +
-        '<span class="b-layer-tag tag-promise">Versprechen</span>' +
+        '<span class="b-layer-tag tag-promise">Das Versprechen</span>' +
       '</div>' +
-      '<p class="b-layer-body">' + layers.promise.text + '</p>' +
+      '<p class="b-layer-body">' + topic.promise + '</p>' +
     '</div>'
   );
 
-  // 2. Quotes
-  var quoteParts = layers.quotes.map(function(q) {
-    return (
-      '<blockquote class="b-blockquote">' +
-        '\u201E' + q.text + '\u201C' +
-        '<p class="b-quote-attr">' + q.person + ', <a href="' + q.url + '" target="_blank" rel="noopener" class="b-source">' + q.source + '</a></p>' +
-      '</blockquote>'
-    );
-  }).join('');
+  // 3. Betrayal — red-tinted, more visual weight
+  parts.push(
+    '<div class="b-evidence-layer layer-betrayal">' +
+      '<div class="b-layer-label">' +
+        '<div class="b-layer-icon" style="background: rgba(185,28,28,0.1);" aria-hidden="true">&#x26A1;</div>' +
+        '<span class="b-layer-tag" style="color: var(--accent-vote-no);">Die Realit\u00E4t</span>' +
+      '</div>' +
+      '<p class="b-layer-body">' + topic.betrayal + '</p>' +
+    '</div>'
+  );
 
+  // 4. Consequence
   parts.push(
     '<div class="b-evidence-layer">' +
       '<div class="b-layer-label">' +
-        '<div class="b-layer-icon" aria-hidden="true">&#x1F4AC;</div>' +
-        '<span class="b-layer-tag tag-quote">Originalzitat</span>' +
+        '<div class="b-layer-icon" aria-hidden="true">&#x1F464;</div>' +
+        '<span class="b-layer-tag tag-promise">F\u00FCr dich</span>' +
       '</div>' +
-      quoteParts +
+      '<p class="b-layer-body">' + topic.consequence + '</p>' +
     '</div>'
   );
 
-  // 3. Votes
-  var voteParts = layers.votes.map(function(v) {
-    var total = v.total_for + v.total_against;
-    var pctFor = total > 0 ? Math.round((v.total_for / total) * 100) : 0;
-    var pctAgainst = 100 - pctFor;
-
-    return (
-      '<div class="b-vote-bill">' +
-        '<p class="b-vote-title">' + v.bill + ' (' + v.year + ')</p>' +
-        '<div class="b-vote-row">' +
-          '<div class="b-vote-row-label">' +
-            '<span style="color: var(--accent-vote-yes);">Daf\u00FCr</span>' +
-            '<span style="color: var(--text-muted);">' + v.total_for + ' Abgeordnete</span>' +
-          '</div>' +
-          '<div class="b-vote-bar-track">' +
-            '<div class="b-vote-bar-fill fill-yes" style="width:' + pctFor + '%"></div>' +
-          '</div>' +
-        '</div>' +
-        '<div class="b-vote-row">' +
-          '<div class="b-vote-row-label">' +
-            '<span style="color: var(--accent-vote-no);">Dagegen</span>' +
-            '<span style="color: var(--text-muted);">' + v.total_against + ' Abgeordnete</span>' +
-          '</div>' +
-          '<div class="b-vote-bar-track">' +
-            '<div class="b-vote-bar-fill fill-no" style="width:' + pctAgainst + '%"></div>' +
-          '</div>' +
-        '</div>' +
-        '<div class="b-afd-note">AfD: ' + v.afd_for + ' daf\u00FCr, ' + v.afd_against + ' dagegen</div>' +
-        '<div style="margin-top:10px;"><a href="' + v.url + '" target="_blank" rel="noopener" class="b-source">Quelle: Abgeordnetenwatch &#8599;</a></div>' +
-      '</div>'
-    );
-  }).join('');
-
+  // 5. Source — compact, small font
   parts.push(
     '<div class="b-evidence-layer">' +
       '<div class="b-layer-label">' +
-        '<div class="b-layer-icon" aria-hidden="true">&#x1F5F3;&#xFE0F;</div>' +
-        '<span class="b-layer-tag tag-vote">Abstimmung im Bundestag</span>' +
+        '<div class="b-layer-icon" style="background: var(--bg);" aria-hidden="true">&#x1F517;</div>' +
+        '<span class="b-layer-tag" style="color: var(--text-muted);">Quelle</span>' +
       '</div>' +
-      voteParts +
+      '<p style="font-size:12px; color: var(--text-muted); line-height: 1.5;">' +
+        '<a href="' + topic.source.url + '" target="_blank" rel="noopener" class="b-source">' + topic.source.text + ' &#8599;</a>' +
+      '</p>' +
     '</div>'
   );
 
-  // 4. Data
-  var dataParts = layers.data.map(function(d, i) {
-    var statClass = i === 0 ? 'b-stat-big' : 'b-stat-small';
-    var sourceHtml = d.url
-      ? '<a href="' + d.url + '" target="_blank" rel="noopener" class="b-source">' + d.source + '</a>'
-      : '<span style="font-size:11px; color: var(--text-muted);">' + d.source + '</span>';
-    return (
-      '<div class="b-stat-entry">' +
-        '<div class="' + statClass + '">' + d.value + '</div>' +
-        '<p class="b-stat-desc">' + d.label + '</p>' +
-        '<p class="b-stat-desc" style="margin-top:3px;">' + sourceHtml + '</p>' +
-      '</div>'
-    );
-  }).join('');
-
+  // 6. Pattern + Question
   parts.push(
-    '<div class="b-evidence-layer">' +
-      '<div class="b-layer-label">' +
-        '<div class="b-layer-icon" aria-hidden="true">&#x1F4CA;</div>' +
-        '<span class="b-layer-tag tag-stat">Zahlen</span>' +
-      '</div>' +
-      dataParts +
-    '</div>'
-  );
-
-  // 5. Pattern + Frag mal
-  parts.push(
-    '<div class="b-evidence-layer" style="background: transparent; padding-bottom: 22px;">' +
+    '<div class="b-evidence-layer" style="background: var(--accent-pattern); padding-bottom: 22px;">' +
       '<div class="b-layer-label">' +
         '<div class="b-layer-icon" aria-hidden="true">&#x1F9E9;</div>' +
         '<span class="b-layer-tag tag-pattern">Das Muster</span>' +
       '</div>' +
-      '<div class="b-pattern-box">' + layers.pattern.text + '</div>' +
+      '<div class="b-pattern-box">' + topic.pattern + '</div>' +
       '<div style="height:12px;"></div>' +
       '<div class="b-fragmal-bubble">' +
         '<p class="b-fragmal-tag">Frag mal</p>' +
-        '<p class="b-fragmal-text">' + layers.pattern.question + '</p>' +
+        '<p class="b-fragmal-text">' + topic.question + '</p>' +
       '</div>' +
     '</div>'
   );
