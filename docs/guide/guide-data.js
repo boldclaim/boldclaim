@@ -69,19 +69,19 @@ const GUIDE_DATA = [
     layers: {
       promise: { text: "Die AfD inszeniert sich als Anti-Establishment-Partei. Gegen „die da oben“, für „das Volk“. Aber ihre Abstimmungen und ihr Führungspersonal erzählen eine andere Geschichte." },
       quotes: [
-        { text: "Sozialstaatliche Absicherung soll zu allererst den eigenen Staatsangehörigen zugutekommen.", person: "AfD Grundsatzprogramm", source: "Kapitel 11, Sozialpolitik", url: "https://www.afd.de/grundsatzprogramm/" },
-        { text: "Der Mindestlohn ist ein Eingriff in die Vertragsfreiheit.", person: "AfD Wahlprogramm 2017", source: "Programm zur Bundestagswahl 2017, S. 51", url: "https://www.afd.de/wahlprogramm-2017/" }
+        { text: "Wir lehnen die Wiedereinführung der Vermögensteuer und die Verschärfung der Erbschaftsteuer ab.", person: "AfD Grundsatzprogramm", source: "Kapitel 10, Steuern und Finanzen", url: "https://www.afd.de/grundsatzprogramm/" },
+        { text: "Sozialstaatliche Absicherung soll zu allererst den eigenen Staatsangehörigen zugutekommen.", person: "AfD Grundsatzprogramm", source: "Kapitel 11, Sozialpolitik", url: "https://www.afd.de/grundsatzprogramm/" }
       ],
       votes: [
-        { bill: "Mindestlohnerhöhung auf 12 Euro", description: "Anhebung des Mindestlohns von 9,82€ auf 12€ pro Stunde — betrifft vor allem Geringverdiener.", year: 2022, total_for: 399, total_against: 201, afd_for: 0, afd_against: 75, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/mindestlohn-auf-12-euro" },
+        { bill: "Mindestlohnerhöhung auf 12 Euro", description: "Anhebung des Mindestlohns von 9,82€ auf 12€ — betrifft vor allem Geringverdiener.", year: 2022, total_for: 399, total_against: 201, afd_for: 0, afd_against: 75, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/mindestlohn-auf-12-euro" },
         { bill: "Bürgergeld-Einführung", description: "Ablösung von Hartz IV mit höheren Regelsätzen und weniger Sanktionen.", year: 2022, total_for: 385, total_against: 232, afd_for: 0, afd_against: 76, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/buergergeld" }
       ],
       data: [
-        { value: "396.000€", label: "Strafzahlung Alice Weidels wegen illegaler Schweizer Parteispenden", source: "Bundestagsverwaltung, 2021", url: "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_90849792/afd-spendenaffaere-alice-weidel-muss-fast-400-000-euro-zahlen.html" },
-        { value: "134.000€", label: "Jährliches Abgeordnetengehalt + Pauschale. AfD-Abgeordnete verdienen mehr als 99% der „kleinen Leute“.", source: "Bundestag Diätenregelung" },
-        { value: "2 von 7", label: "AfD-Vorsitzende mit Verbindungen zu ausländischem Geld (Weidel: Schweiz, Meuthen: Schweiz)", source: "Diverse Quellen" }
+        { value: "Nein", label: "Vermögensteuer: Die AfD lehnt sie ab. Betroffen wären nur Vermögen über ~2 Mio. Euro. Die Partei schützt die Reichsten, nicht den kleinen Mann.", source: "AfD Grundsatzprogramm, Kap. 10" },
+        { value: "Nein", label: "Erbschaftsteuer-Reform: Die AfD will sie abschaffen. 2022 wurden 100+ Mrd. Euro steuerfrei vererbt. Davon profitiert nicht der Handwerker, sondern das Top-1%.", source: "Bundesfinanzministerium / DIW Wochenbericht" },
+        { value: "396.000€", label: "Strafzahlung Alice Weidels wegen illegaler Schweizer Parteispenden.", source: "Bundestagsverwaltung, 2021", url: "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_90849792/afd-spendenaffaere-alice-weidel-muss-fast-400-000-euro-zahlen.html" }
       ],
-      pattern: { text: "Die AfD stimmt gegen höheren Mindestlohn, gegen bessere Sozialleistungen, gegen Arbeitnehmerrechte. Ihre Führung kassiert illegale Auslandsspenden. „Für den kleinen Mann“ ist die Verpackung — der Inhalt ist eine Partei, die wirtschaftspolitisch gegen die Interessen ihrer eigenen Wähler stimmt.", question: "Wenn die AfD für den kleinen Mann ist — warum stimmt sie gegen Mindestlohnerhöhung und gegen besseres Bürgergeld?" }
+      pattern: { text: "Die AfD will keine Vermögensteuer, keine Erbschaftsteuer-Reform und stimmte gegen Mindestlohnerhöhung. Ihre Steuerpolitik schützt Millionenvermögen und Großerben. Gleichzeitig kassiert ihre Führung illegale Auslandsspenden. Die Verpackung sagt: für den kleinen Mann. Der Inhalt ist eine Partei, die wirtschaftspolitisch die Interessen der Reichsten vertritt.", question: "Wenn die AfD für den kleinen Mann ist — warum will sie keine Vermögensteuer für Millionäre, sondern schafft lieber die Erbschaftsteuer ab?" }
     }
   },
   {
