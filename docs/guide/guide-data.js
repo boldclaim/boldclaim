@@ -4,221 +4,127 @@ const GUIDE_DATA = [
     statement: "Die sind die Einzigen, die das Migrationsproblem ernst nehmen",
     shortLabel: "Migration",
     icon: "🔒",
-    intro: "Migration ist ein berechtigtes Thema. Schauen wir uns an, was die AfD konkret tut. Und was nicht.",
-    layers: {
-      promise: {
-        text: "Massenabschiebungen, Grenzschließungen, Austritt aus EU-Asylabkommen. Die AfD positioniert sich als einzige Partei, die durchgreift."
-      },
-      quotes: [
-        {
-          text: "Wir fordern eine wohltemperierte Grausamkeit bei der Durchführung eines großangelegten Remigrationsprojekts.",
-          person: "Björn Höcke",
-          source: "\"Nie zweimal in denselben Fluss\", 2018",
-          url: "https://www.riffreporter.de/de/gesellschaft/remigration-afd-plane-das-schrieb-bjoern-hoecke-schon-vor-jahren"
-        },
-        {
-          text: "Burkas, Kopftuchmädchen, alimentierte Messermänner und sonstige Taugenichtse werden unseren Wohlstand nicht sichern.",
-          person: "Alice Weidel",
-          source: "Bundestagsrede, 16. Mai 2018",
-          url: "https://www.bundestag.de/blueprint/servlet/content/553614/asAppNewsarticleXml"
-        }
-      ],
-      votes: [
-        {
-          bill: "Chancen-Aufenthaltsrecht",
-          description: "Hätte Abschiebung von Straftätern beschleunigt und integrierte Flüchtlinge in Arbeit gebracht.",
-          year: 2022,
-          total_for: 371,
-          total_against: 152,
-          afd_for: 0,
-          afd_against: 66,
-          url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/chancen-aufenthaltsrecht"
-        }
-      ],
-      data: [
-        {
-          value: "0",
-          label: "Abschiebungs-Gesetzentwürfe der AfD im Bundestag. Jemals.",
-          source: "Bundestag Dokumentation"
-        },
-        {
-          value: "179.000",
-          label: "Geduldete Ende 2024 (niedrigster Stand seit 2016).",
-          source: "Mediendienst Integration",
-          url: "https://mediendienst-integration.de"
-        },
-        {
-          value: "68%",
-          label: "Erwerbstätigenquote der 2015er-Geflüchteten. Männer: 76%, über dem deutschen Schnitt (72%).",
-          source: "IAB, 10 Jahre Fluchtmigration, 2024",
-          url: "https://www.iab.de"
-        }
-      ],
-      pattern: {
-        text: "Die AfD blockiert Lösungen, die sie selbst fordert. Das ist die Strategie: Wenn das Migrationsproblem gelöst wäre, fiele ihr wichtigstes Thema weg. Sie brauchen das Problem mehr als die Lösung.",
-        question: "Wenn die AfD Migration wirklich lösen will, warum stimmt sie gegen jedes Gesetz, das Abschiebungen beschleunigt?"
-      }
-    }
+    hook: "Du willst Politiker, die das Migrationsproblem wirklich loesen. Nicht nur darueber reden.",
+    promise: "Die AfD verspricht Massenabschiebungen, geschlossene Grenzen, hartes Durchgreifen. Kein anderer traut sich das, sagen sie.",
+    betrayal: "Im Bundestag hat die AfD gegen das Chancen-Aufenthaltsrecht gestimmt. Alle 66 Abgeordneten. Dieses Gesetz haette die Abschiebung von Straftaetern beschleunigt. Null eigene Abschiebungsgesetze hat die AfD jemals eingebracht. Nicht eins.",
+    consequence: "Das Problem bleibt ungeloest. Genau das ist der Plan. Deine Frustration ist ihr Geschaeftsmodell.",
+    source: {
+      text: "Abgeordnetenwatch: Abstimmung Chancen-Aufenthaltsrecht, 2022",
+      url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/chancen-aufenthaltsrecht"
+    },
+    pattern: "Sie blockieren Loesungen, die sie selbst fordern. Geloeste Probleme bringen keine Stimmen.",
+    question: "Frag mal: Wenn die AfD Abschiebungen will, warum stimmt sie gegen jedes Gesetz, das Abschiebungen beschleunigt?"
   },
   {
     id: "establishment",
-    statement: "Die stehen für den kleinen Mann und gegen die Eliten",
+    statement: "Die stehen fuer den kleinen Mann und gegen die Eliten",
     shortLabel: "Eliten",
     icon: "💶",
-    intro: "Der Wunsch nach einer Partei, die sich für normale Leute einsetzt, ist verständlich. Schauen wir, wofür die AfD tatsächlich stimmt.",
-    layers: {
-      promise: { text: "Die AfD inszeniert sich als Anti-Establishment-Partei: gegen die da oben, für das Volk. Ihre Abstimmungen und ihr Führungspersonal erzählen eine andere Geschichte." },
-      quotes: [
-        { text: "Wir lehnen die Wiedereinführung der Vermögensteuer und die Verschärfung der Erbschaftsteuer ab.", person: "AfD Grundsatzprogramm", source: "Kapitel 10, Steuern und Finanzen", url: "https://www.afd.de/grundsatzprogramm/" },
-        { text: "Wir wollen einen Stufentarif mit drei Stufen (25%, 35%, Spitze bei 42% statt 45%).", person: "AfD Wahlprogramm 2025", source: "Wahlprogramm zur Bundestagswahl 2025", url: "https://www.afd.de/wahlprogramm/" }
-      ],
-      votes: [
-        { bill: "Mindestlohnerhöhung auf 12 Euro", description: "Anhebung des Mindestlohns von 9,82\u20AC auf 12\u20AC. Betrifft vor allem Geringverdiener.", year: 2022, total_for: 399, total_against: 201, afd_for: 0, afd_against: 75, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/mindestlohn-auf-12-euro" },
-        { bill: "Buergergeld-Einfuehrung", description: "Abloesung von Hartz IV mit hoeheren Regelsaetzen und weniger Sanktionen.", year: 2022, total_for: 385, total_against: 232, afd_for: 0, afd_against: 76, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/buergergeld" }
-      ],
-      data: [
-        { value: "~600\u20AC/Jahr", label: "So viel spart ein Durchschnittsverdiener (45.000\u20AC brutto) durch den AfD-Stufentarif. Klingt gut?", source: "Eigene Berechnung auf Basis AfD-Stufentarif vs. geltendem EStG-Tarif" },
-        { value: "~15.000\u20AC/Jahr", label: "So viel spart ein Spitzenverdiener (250.000\u20AC brutto) durch denselben Tarif. 25x mehr Ersparnis, obwohl nur 5,5x mehr Gehalt.", source: "Eigene Berechnung: Senkung des Spitzensteuersatzes von 45% auf 42% + Stufeneffekte" },
-        { value: "Nein", label: "Vermoegensteuer: Die AfD lehnt sie ab. Betroffen waeren nur Vermoegen ueber ~2 Mio. Euro.", source: "AfD Grundsatzprogramm, Kap. 10" },
-        { value: "Nein", label: "Erbschaftsteuer-Reform: Die AfD will sie abschaffen. 2022 wurden 100+ Mrd. Euro steuerfrei vererbt. Davon profitiert das Top-1%, nicht der Handwerker.", source: "Bundesfinanzministerium / DIW Wochenbericht" },
-        { value: "396.000\u20AC", label: "Strafzahlung Alice Weidels wegen illegaler Schweizer Parteispenden.", source: "Bundestagsverwaltung, 2021", url: "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_90849792/afd-spendenaffaere-alice-weidel-muss-fast-400-000-euro-zahlen.html" }
-      ],
-      pattern: { text: "Die AfD-Steuervorschlaege sehen auf den ersten Blick fair aus: weniger Steuern fuer alle. Die Rechnung zeigt das Gegenteil. Ein Durchschnittsverdiener spart 600 Euro im Jahr, ein Spitzenverdiener 15.000 Euro. Dazu: keine Vermoegensteuer, keine Erbschaftsteuer. Die Entlastung fliesst nach oben, nicht nach unten.", question: "Die AfD will Steuern senken. Wem nutzt das am meisten? Rechne es durch: 600 Euro fuer dich, 15.000 Euro fuer deinen Chef." }
-    }
+    hook: "Du willst mehr Geld am Ende des Monats. Das ist kein politisches Statement, das ist Alltag.",
+    promise: "Die AfD sagt: Wir kaempfen fuer die kleinen Leute. Gegen die da oben. Fuer dich.",
+    betrayal: "Die AfD hat gegen die Mindestlohnerhoehung auf 12 Euro gestimmt. Alle 75 dagegen. Sie lehnt die Vermoegensteuer ab. Die trifft nur Vermoegen ueber 2 Millionen. Sie will die Erbschaftsteuer abschaffen. Davon profitiert das oberste Prozent.",
+    consequence: "Ihr Steuertarif spart dir etwa 600 Euro im Jahr. Ein Spitzenverdiener spart 15.000 Euro. 25-mal mehr Ersparnis bei 5,5-mal mehr Gehalt.",
+    source: {
+      text: "Abgeordnetenwatch: Mindestlohn-Abstimmung 2022 + AfD Grundsatzprogramm Kapitel 10",
+      url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/mindestlohn-auf-12-euro"
+    },
+    pattern: "Die Entlastung fliesst nach oben. Immer.",
+    question: "Frag mal: Wessen Steuern senkt die AfD eigentlich? Deine oder die von deinem Chef?"
   },
   {
     id: "energy",
     statement: "Die Energiepolitik der anderen Parteien ist gescheitert",
     shortLabel: "Energie",
-    icon: "\u26A1",
-    intro: "Energiepreise und Versorgungssicherheit sind echte Sorgen. Schauen wir, was die AfD dazu vorschlägt und was das kosten würde.",
-    layers: {
-      promise: { text: "Zurück zu Kohle und Kernkraft, Ausstieg aus dem Pariser Klimaabkommen, Abschaffung des EEG. Die AfD verkauft fossile Energie als günstige Alternative." },
-      quotes: [
-        { text: "CO\u2082 ist kein Schadstoff, sondern ein unverzichtbarer Bestandteil allen Lebens.", person: "AfD Grundsatzprogramm", source: "Kapitel 12: Energiepolitik", url: "https://www.afd.de/grundsatzprogramm/" },
-        { text: "Wir fordern, das Pariser Klimaschutzabkommen zu kündigen.", person: "AfD Wahlprogramm 2021", source: "Programm zur Bundestagswahl 2021", url: "https://www.afd.de/wahlprogramm-2021/" }
-      ],
-      votes: [
-        { bill: "Erneuerbare-Energien-Gesetz (EEG) Novelle", description: "Ausbau von Wind- und Solarenergie als überragendes öffentliches Interesse.", year: 2022, total_for: 378, total_against: 198, afd_for: 0, afd_against: 72, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/eeg-novelle-2023" }
-      ],
-      data: [
-        { value: "4,7 ct/kWh", label: "Gestehungskosten Solar (2024). Kohle: 11-15 ct/kWh. Wind onshore: 4-8 ct/kWh.", source: "Fraunhofer ISE, Stromgestehungskosten 2024", url: "https://www.ise.fraunhofer.de/de/veroeffentlichungen/studien/studie-stromgestehungskosten-erneuerbare-energien.html" },
-        { value: "59%", label: "Anteil erneuerbarer Energien am Bruttostromverbrauch 2024. Rekord.", source: "Umweltbundesamt, 2024", url: "https://www.umweltbundesamt.de/daten/energie/erneuerbare-energien" },
-        { value: "0", label: "Eigene Energiegesetzentwürfe der AfD im Bundestag.", source: "Bundestag Dokumentation" }
-      ],
-      pattern: { text: "Solar ist heute billiger als Kohle. Physik und Markt, keine Ideologie. Die AfD will Deutschland an die teuerste Energieform binden und vom Pariser Abkommen isolieren. Kein eigener Gesetzentwurf, kein Plan. Nur: zurück zu dem, was schon teurer ist.", question: "Wenn Solar halb so viel kostet wie Kohle, warum will die AfD Deutschland an die teurere Energie binden?" }
-    }
+    icon: "⚡",
+    hook: "Du aergerst dich ueber hohe Strompreise. Zurecht. Das ist ein echtes Problem.",
+    promise: "Die AfD sagt: Zurueck zu Kohle und Kernkraft. Dann wird Strom wieder billig.",
+    betrayal: "Solar kostet heute 4,7 Cent pro Kilowattstunde. Kohle kostet 11 bis 15 Cent. Solar ist halb so teuer. Die AfD hat gegen den Ausbau erneuerbarer Energien gestimmt. Null eigene Energiegesetze eingebracht.",
+    consequence: "Ihr Plan bedeutet teureren Strom, nicht billigeren. Du wuerdest mehr zahlen.",
+    source: {
+      text: "Fraunhofer ISE Stromgestehungskosten 2024 + Abgeordnetenwatch EEG-Novelle 2022",
+      url: "https://www.ise.fraunhofer.de/de/veroeffentlichungen/studien/studie-stromgestehungskosten-erneuerbare-energien.html"
+    },
+    pattern: "Sie versprechen guenstige Energie und kaempfen fuer die teurere Option.",
+    question: "Frag mal: Wenn Solar halb so viel kostet wie Kohle, warum will die AfD die teurere Variante?"
   },
   {
     id: "corruption",
     statement: "Die anderen Parteien sind alle gleich korrupt",
     shortLabel: "Korruption",
-    icon: "\u{1F3DB}\uFE0F",
-    intro: "Das Misstrauen gegenüber etablierten Parteien ist nachvollziehbar. Ist die AfD wirklich sauberer? Ein Blick auf die Akten.",
-    layers: {
-      promise: { text: "Die AfD verspricht Null Toleranz bei Korruption und inszeniert sich als Aufräumer-Partei gegen ein korruptes System." },
-      quotes: [
-        { text: "In einer Mail von 2013 bezeichnete Weidel die Regierung als Schweine und Marionetten und schrieb von Bürgerkriegen durch Überfremdung.", person: "Alice Weidel", source: "Private E-Mail, 2013 (Echtheit bestätigt durch Empfänger)", url: "https://correctiv.org/faktencheck/artikel-faktencheck/2017/09/11/alice-weidel-und-ihre-rassistische-mail/" }
-      ],
-      votes: [
-        { bill: "Lobbyregister-Verschärfung", description: "Verpflichtende Offenlegung von Lobbyisten-Kontakten für Abgeordnete.", year: 2021, total_for: 373, total_against: 225, afd_for: 0, afd_against: 68, url: "https://www.abgeordnetenwatch.de/bundestag/19/abstimmungen/lobbyregister" }
-      ],
-      data: [
-        { value: "396.000\u20AC", label: "Strafe für illegale Spenden an Alice Weidel aus der Schweiz.", source: "Bundestagsverwaltung", url: "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_90849792/afd-spendenaffaere-alice-weidel-muss-fast-400-000-euro-zahlen.html" },
-        { value: "Ermittlungen", label: "Petr Bystron: Bestechlichkeit und Geldwäsche (Voice of Europe, russisches Geld).", source: "Abgeordnetenwatch / Generalstaatsanwaltschaft München", url: "https://www.abgeordnetenwatch.de/recherchen/informationsfreiheit/geld-aus-russland-die-affaere-um-petr-bystron" },
-        { value: "4 Jahre 9 Monate", label: "Urteil gegen Jian G. (Krah-Mitarbeiter): China-Spionage im EU-Parlament.", source: "ZDF heute", url: "https://www.zdfheute.de/politik/ausland/maximilian-krah-spionage-china-jian-guo-100.html" }
-      ],
-      pattern: { text: "Die AfD wird seltener geprüft, weil sie nie regiert hat. Die Bilanz trotzdem: illegale Auslandsspenden, russische Zahlungen, China-Spionage direkt im EU-Büro. Und als der Bundestag mehr Transparenz wollte (Lobbyregister), hat die AfD dagegen gestimmt.", question: "Wenn die AfD gegen Korruption ist, warum stimmt sie gegen das Lobbyregister und kassiert gleichzeitig illegale Auslandsspenden?" }
-    }
+    icon: "🏛️",
+    hook: "Du hast die Nase voll von korrupten Politikern. Wer hat das nicht.",
+    promise: "Die AfD sagt: Null Toleranz bei Korruption. Wir raeumen auf.",
+    betrayal: "Alice Weidel: 396.000 Euro Strafe fuer illegale Spenden aus der Schweiz. Petr Bystron: Ermittlungen wegen russischem Geld. Maximilian Krahs Mitarbeiter: verurteilt als chinesischer Spion im EU-Parlament. Und die AfD hat gegen das Lobbyregister gestimmt.",
+    consequence: "Sie bekaempfen nicht Korruption. Sie bekaempfen Transparenz.",
+    source: {
+      text: "Bundestagsverwaltung (Weidel) + Abgeordnetenwatch (Bystron) + ZDF heute (Krah)",
+      url: "https://www.abgeordnetenwatch.de/recherchen/informationsfreiheit/geld-aus-russland-die-affaere-um-petr-bystron"
+    },
+    pattern: "Gegen Transparenz stimmen und gleichzeitig Auslandsgeld kassieren. Das ist kein Widerspruch. Das ist System.",
+    question: "Frag mal: Warum stimmt die AfD gegen das Lobbyregister, waehrend ihre Leute illegales Geld aus dem Ausland nehmen?"
   },
   {
     id: "security",
-    statement: "Wir brauchen mehr Sicherheit und härtere Strafen",
+    statement: "Wir brauchen mehr Sicherheit und haertere Strafen",
     shortLabel: "Sicherheit",
-    icon: "\u{1F6E1}\uFE0F",
-    intro: "Sicherheit ist ein Grundbedürfnis. Löst die AfD-Politik Sicherheitsprobleme, oder verschärft sie sie?",
-    layers: {
-      promise: { text: "Mehr Polizei, härtere Strafen, konsequente Abschiebung krimineller Ausländer. Die AfD positioniert sich als Partei der inneren Sicherheit." },
-      quotes: [
-        { text: "Deutschland wird unsicherer. Die offenen Grenzen haben eine Welle der Kriminalität ausgelöst.", person: "AfD Fraktion", source: "Regelmäßige Pressemitteilungen, 2023-2025", url: "https://www.afdbundestag.de/themen/innere-sicherheit/" }
-      ],
-      votes: [
-        { bill: "Stärkung der Bundespolizei", description: "Mehr Befugnisse und Personal für Grenzkontrollen und Schleuserkriminalität.", year: 2023, total_for: 396, total_against: 184, afd_for: 0, afd_against: 71, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen" }
-      ],
-      data: [
-        { value: "-21%", label: "Rückgang der Tatverdächtigenbelastungszahl bei Nichtdeutschen 2014-2024 (von ~6.260 auf ~4.960 pro 100.000).", source: "BKA PKS 2024, eigene Berechnung", url: "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/pks_node.html" },
-        { value: "5,2 Mio.", label: "Straftaten 2024. 2016 waren es 6,4 Mio. Deutschland ist sicherer als vor 8 Jahren.", source: "BKA PKS 2024" },
-        { value: "~5,5x", label: "Überrepräsentation bei Gruppenvergewaltigung. Real, muss anerkannt werden. Die Kriminologie zeigt: Aufenthaltsstatus, Alter und Geschlecht erklären den Großteil, nicht Herkunft.", source: "KFN Forschungsbericht 161 (Glaubitz/Bliesener), SVR-Expertise 2024", url: "https://kfn.de/publikationen/kfn-forschungsberichte/" }
-      ],
-      pattern: { text: "Deutschland ist objektiv sicherer als vor 10 Jahren. Die Überrepräsentation bei bestimmten Delikten ist real. Die Kriminologie zeigt: Aufenthaltsstatus (Geduldete vs. Anerkannte), Alter und Geschlecht sind die Treiber, nicht Herkunft. Die AfD stimmt gegen Gesetze, die genau diese Differenzierung ermöglichen würden.", question: "Wenn Deutschland unsicherer wäre, warum sind die Gesamtstraftaten seit 2016 um fast 20% gesunken?" }
-    }
+    icon: "🛡️",
+    hook: "Du willst dich sicher fuehlen. In deiner Stadt, in deiner Nachbarschaft. Das ist dein Recht.",
+    promise: "Die AfD sagt: Mehr Polizei, haertere Strafen, konsequent abschieben.",
+    betrayal: "Deutschland hat weniger Straftaten als vor 8 Jahren. 5,2 Millionen statt 6,4 Millionen. Die Kriminalitaetsrate bei Nichtdeutschen ist seit 2014 um 21 Prozent gesunken. Die Ueberrepraesentation bei bestimmten Delikten ist real. Aber die Kriminologie zeigt: Alter, Geschlecht und Aufenthaltsstatus erklaeren den Grossteil. Nicht Herkunft.",
+    consequence: "Die AfD stimmt gegen Gesetze, die genau diese Ursachen angehen wuerden. Sie brauchen die Angst. Nicht die Loesung.",
+    source: {
+      text: "BKA Polizeiliche Kriminalstatistik 2024 + KFN Forschungsbericht 161",
+      url: "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/pks_node.html"
+    },
+    pattern: "Angst verkauft Stimmen. Sicherheit loest das Problem. Nur eins davon hilft der AfD.",
+    question: "Frag mal: Warum sagt die AfD, es wird immer gefaehrlicher, wenn die Zahlen seit Jahren runtergehen?"
   },
   {
     id: "patriotism",
     statement: "Man wird ja als Patriot sofort in die rechte Ecke gestellt",
     shortLabel: "Patriotismus",
-    icon: "\u{1F1E9}\u{1F1EA}",
-    intro: "Stolz auf sein Land zu sein ist völlig in Ordnung. Die Frage ist: Was meint die AfD mit Patriotismus, und wo zieht sie die Grenze?",
-    layers: {
-      promise: { text: "Die AfD sagt: Wir sind die einzigen echten Patrioten. Alle anderen schämen sich für Deutschland. Wer das kritisiert, unterdrückt normale Vaterlandsliebe." },
-      quotes: [
-        { text: "Wir brauchen nichts anderes als eine erinnerungspolitische Wende um 180 Grad.", person: "Björn Höcke", source: "Rede vor der Dresdner Frauenkirche, 17. Januar 2017", url: "https://www.mdr.de/nachrichten/politik/inland/hoecke-rede-im-wortlaut-100.html" },
-        { text: "Hitler und die Nazis sind nur ein Vogelschiss in über tausend Jahren erfolgreicher deutscher Geschichte.", person: "Alexander Gauland", source: "Rede in Seebach, 2. Juni 2018", url: "https://www.tagesspiegel.de/politik/alexander-gauland-und-der-vogelschiss-3958210.html" },
-        { text: "Alles für unsere Heimat, alles für Sachsen-Anhalt, alles für Deutschland!", person: "Björn Höcke", source: "2021 Merseburg, 2023 Gera. BGH bestätigt: SA-Parole. Rechtskräftig verurteilt.", url: "https://www.bundesgerichtshof.de/SharedDocs/Pressemitteilungen/DE/2025/2025168.html" }
-      ],
-      votes: [
-        { bill: "Demokratiefördergesetz", description: "Dauerhafte Förderung von Initiativen gegen Extremismus und für demokratische Bildung.", year: 2023, total_for: 382, total_against: 209, afd_for: 0, afd_against: 73, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen" }
-      ],
-      data: [
-        { value: "2x rechtskräftig", label: "Björn Höcke für Verwendung der SA-Parole verurteilt. BGH bestätigt August 2025.", source: "BGH Pressemitteilung 2025", url: "https://www.bundesgerichtshof.de/SharedDocs/Pressemitteilungen/DE/2025/2025168.html" },
-        { value: "Gesichert rechtsextrem", label: "Thüringer AfD (Höcke), Sachsen-Anhalt, Sachsen: alle vom Verfassungsschutz als gesichert rechtsextrem eingestuft.", source: "Bundesamt für Verfassungsschutz, 2024" },
-        { value: "Verdachtsfall", label: "Die Gesamtpartei AfD ist vom Verfassungsschutz als rechtsextremistischer Verdachtsfall eingestuft.", source: "OVG Münster, Mai 2024", url: "https://www.ovg.nrw.de/behoerde/presse/pressemitteilungen/19_240513/index.php" }
-      ],
-      pattern: { text: "Patriotismus und Rechtsextremismus sind nicht dasselbe. Die AfD-Führung benutzt Patriotismus als Schutzschild für Positionen, die Gerichte als rechtsextrem einstufen. Wer die SA-Parole ruft, Holocaust-Gedenken als Denkmal der Schande bezeichnet und die Nazi-Zeit als Vogelschiss verharmlost, betreibt Geschichtsrevisionismus.", question: "Kann eine Partei patriotisch sein, deren Spitzenpolitiker für Nazi-Parolen verurteilt werden und den Holocaust relativieren?" }
-    }
+    icon: "🇩🇪",
+    hook: "Du willst stolz auf dein Land sein. Ohne dass jemand dich gleich Nazi nennt. Kann man verstehen.",
+    promise: "Die AfD sagt: Wir sind die echten Patrioten. Alle anderen schaemen sich fuer Deutschland.",
+    betrayal: "Ihr Spitzenmann Hoecke wurde verurteilt. Fuer eine SA-Parole. Zweimal. Der BGH hat es bestaetigt. Gauland nannte die Nazi-Zeit einen Vogelschiss. Drei Landesverbaende sind vom Verfassungsschutz als gesichert rechtsextrem eingestuft.",
+    consequence: "Sie haben Patriotismus nicht neu definiert. Sie haben Extremismus dahinter versteckt.",
+    source: {
+      text: "BGH Pressemitteilung 2025 + Bundesamt fuer Verfassungsschutz",
+      url: "https://www.bundesgerichtshof.de/SharedDocs/Pressemitteilungen/DE/2025/2025168.html"
+    },
+    pattern: "Patriotismus als Schutzschild fuer Positionen, die Gerichte als rechtsextrem einstufen.",
+    question: "Frag mal: Kann eine Partei patriotisch sein, deren Vorsitzender fuer eine Nazi-Parole verurteilt wurde?"
   },
   {
     id: "eu",
-    statement: "Die EU bestimmt zu viel über Deutschland",
+    statement: "Die EU bestimmt zu viel ueber Deutschland",
     shortLabel: "EU",
-    icon: "\u{1F30D}",
-    intro: "EU-Bürokratie nervt viele Leute. Was wäre die Alternative, und was hat die AfD im EU-Parlament eigentlich getan?",
-    layers: {
-      promise: { text: "Die AfD will Dexit (EU-Austritt oder radikale Rückführung von Kompetenzen), Abschaffung des Euro, Wiederherstellung nationaler Souveränität." },
-      quotes: [
-        { text: "Wir halten einen Austritt Deutschlands aus der Europäischen Union für notwendig.", person: "AfD Wahlprogramm 2017", source: "Programm zur Bundestagswahl 2017", url: "https://www.afd.de/wahlprogramm-2017/" }
-      ],
-      votes: [
-        { bill: "EU-Wiederaufbaufonds (NextGenerationEU)", description: "750 Mrd. Euro Konjunkturpaket nach COVID, davon profitiert auch deutsche Exportwirtschaft.", year: 2021, total_for: 389, total_against: 210, afd_for: 0, afd_against: 67, url: "https://www.abgeordnetenwatch.de/bundestag/19/abstimmungen" }
-      ],
-      data: [
-        { value: "1,4 Bio. \u20AC", label: "Deutscher Warenexport 2024. Über 60% geht in die EU. Binnenmarkt-Zugang ist existenziell.", source: "Destatis Außenhandel 2024", url: "https://www.destatis.de/DE/Themen/Wirtschaft/Aussenhandel/_inhalt.html" },
-        { value: "China-Spionage", label: "Krah-Mitarbeiter Jian G. wegen Spionage für China verurteilt, direkt im AfD-Büro im EU-Parlament.", source: "ZDF heute, 2024", url: "https://www.zdfheute.de/politik/ausland/maximilian-krah-spionage-china-jian-guo-100.html" },
-        { value: "Voice of Europe", label: "Bystron: Ermittlungen wegen russischem Geld über Voice of Europe. Die AfD im EU-Parlament arbeitet nachweislich mit Russland und China zusammen.", source: "Abgeordnetenwatch", url: "https://www.abgeordnetenwatch.de/recherchen/informationsfreiheit/geld-aus-russland-die-affaere-um-petr-bystron" }
-      ],
-      pattern: { text: "60% des deutschen Exports geht in die EU. Ein EU-Austritt wäre wirtschaftlicher Selbstmord (der Brexit hat es gezeigt). Statt im EU-Parlament für deutsche Interessen zu kämpfen, lassen sich AfD-Abgeordnete von Russland und China bezahlen. Abhängigkeit von autoritären Regimen statt von demokratischen Partnern.", question: "Wenn die AfD deutsche Souveränität will, warum nehmen ihre EU-Abgeordneten Geld aus Russland und China?" }
-    }
+    icon: "🌍",
+    hook: "Du aergerst dich ueber EU-Buerokratie. Zu viele Regeln, zu wenig Mitsprache. Geht vielen so.",
+    promise: "Die AfD will den Dexit. Oder zumindest eine radikale EU-Reform. Zurueck zur nationalen Souveraenitaet.",
+    betrayal: "60 Prozent der deutschen Exporte gehen in die EU. Der Brexit hat gezeigt, was ein Austritt kostet. Und was machen AfD-Abgeordnete im EU-Parlament? Bystron nimmt russisches Geld ueber Voice of Europe. Krahs Mitarbeiter spioniert fuer China.",
+    consequence: "Ihre Version von Souveraenitaet heisst: abhaengig von Putin und Xi statt von demokratischen Partnern.",
+    source: {
+      text: "Destatis Aussenhandel 2024 + Abgeordnetenwatch (Bystron) + ZDF heute (Krah)",
+      url: "https://www.destatis.de/DE/Themen/Wirtschaft/Aussenhandel/_inhalt.html"
+    },
+    pattern: "Souveraenitaet predigen und von autoritaeren Regimen kassieren.",
+    question: "Frag mal: Wenn die AfD deutsche Souveraenitaet will, warum nehmen ihre EU-Abgeordneten Geld aus Russland und China?"
   },
   {
     id: "gender",
     statement: "Der Gender-Wahnsinn geht zu weit",
     shortLabel: "Gender",
-    icon: "\u{1F468}\u200D\u{1F469}\u200D\u{1F467}",
-    intro: "Gendern nervt viele Leute, auch solche die politisch nicht rechts stehen. Was genau will die AfD hier verhindern, und was steckt dahinter?",
-    layers: {
-      promise: { text: "Die AfD will Gendern verbieten, das Selbstbestimmungsgesetz abschaffen und Genderideologie aus Schulen entfernen. Sie verkauft sich als Verteidigerin des gesunden Menschenverstands." },
-      quotes: [
-        { text: "Gender-Mainstreaming bezeichnet die politische Geschlechtsumwandlung der Gesellschaft.", person: "AfD Grundsatzprogramm", source: "Kapitel 7: Kultur und Medien", url: "https://www.afd.de/grundsatzprogramm/" }
-      ],
-      votes: [
-        { bill: "Selbstbestimmungsgesetz (SBGG)", description: "Vereinfachung der Änderung von Geschlechtseintrag und Vornamen beim Standesamt.", year: 2024, total_for: 374, total_against: 251, afd_for: 0, afd_against: 75, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/selbstbestimmungsgesetz" }
-      ],
-      data: [
-        { value: "~4.000", label: "Anträge auf Geschlechtsänderung pro Jahr in Deutschland (80 Mio. Einwohner). 0,005% der Bevölkerung.", source: "Bundesjustizamt, 2023" },
-        { value: "0,6%", label: "Anteil der Bevölkerung, der sich als trans identifiziert. Die AfD macht aus einer winzigen Minderheit ein Kulturkampf-Thema.", source: "DALIA Research / Ipsos 2023" },
-        { value: "WHO", label: "Die Weltgesundheitsorganisation hat Transidentität 2019 aus der Liste psychischer Störungen gestrichen (ICD-11).", source: "WHO ICD-11, 2019", url: "https://icd.who.int/en" }
-      ],
-      pattern: { text: "0,005% der Bevölkerung beantragt eine Geschlechtsänderung. Die AfD macht daraus ein zentrales Wahlkampfthema. Kulturkämpfe lenken von den Themen ab, bei denen die AfD keine Lösungen hat: Rente, Pflege, Wohnen, Löhne. Gender ist das günstigste Feindbild, es kostet nichts und mobilisiert zuverlässig.", question: "Betrifft dich das Gendern persönlich stärker als Rente, Miete oder Mindestlohn? Warum macht die AfD es dann zum Hauptthema?" }
-    }
+    icon: "👨‍👩‍👧",
+    hook: "Du findest Gendern nervig. Das geht vielen so. Auch Leuten, die nicht rechts sind.",
+    promise: "Die AfD will Gendern verbieten. Schluss mit dem Gender-Wahnsinn, sagen sie.",
+    betrayal: "0,005 Prozent der Bevoelkerung aendern ihren Geschlechtseintrag. Das ist der ganze Wahnsinn. Gleichzeitig hat die AfD keinen Plan fuer Mieten, Renten oder Pflege.",
+    consequence: "Gender ist ihre billigste Ablenkung. Kostet nichts, mobilisiert zuverlaessig. Haelt dich wuetend ueber etwas, das dein Leben nicht betrifft. Waehrend sie ignorieren, was es tut.",
+    source: {
+      text: "Bundesjustizamt 2023 + AfD Grundsatzprogramm",
+      url: "https://icd.who.int/en"
+    },
+    pattern: "Kulturkampf statt Sachpolitik. Emotion statt Loesung.",
+    question: "Frag mal: Betrifft dich Gendern mehr als deine Miete oder deine Rente?"
   }
 ];
