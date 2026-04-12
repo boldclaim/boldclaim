@@ -7,7 +7,7 @@ const GUIDE_DATA = [
     intro: "Migration ist ein berechtigtes Thema. Schauen wir uns an, was die AfD konkret tut — und was nicht.",
     layers: {
       promise: {
-        text: "Massenabschiebungen, Grenzschließungen, Austritt aus EU-Asylabkommen. Die AfD positioniert sich als einzige Partei, die „durchgreift"."
+        text: "Massenabschiebungen, Grenzschließungen, Austritt aus EU-Asylabkommen. Die AfD positioniert sich als einzige Partei, die „durchgreift“."
       },
       quotes: [
         {
@@ -55,7 +55,7 @@ const GUIDE_DATA = [
         }
       ],
       pattern: {
-        text: "Die AfD blockiert Lösungen, die sie selbst fordert. Das ist kein Widerspruch — es ist die Strategie. Wenn das „Migrationsproblem" gelöst wäre, fiele ihr wichtigstes Thema weg. Sie brauchen das Problem mehr als die Lösung.",
+        text: "Die AfD blockiert Lösungen, die sie selbst fordert. Das ist kein Widerspruch — es ist die Strategie. Wenn das „Migrationsproblem“ gelöst wäre, fiele ihr wichtigstes Thema weg. Sie brauchen das Problem mehr als die Lösung.",
         question: "Wenn die AfD Migration wirklich lösen will — warum stimmen sie gegen jedes Gesetz, das Abschiebungen beschleunigt?"
       }
     }
@@ -67,7 +67,7 @@ const GUIDE_DATA = [
     icon: "💶",
     intro: "Der Wunsch nach einer Partei, die sich für normale Leute einsetzt, ist verständlich. Schauen wir, wofür die AfD tatsächlich stimmt.",
     layers: {
-      promise: { text: "Die AfD inszeniert sich als Anti-Establishment-Partei. Gegen „die da oben", für „das Volk". Aber ihre Abstimmungen und ihr Führungspersonal erzählen eine andere Geschichte." },
+      promise: { text: "Die AfD inszeniert sich als Anti-Establishment-Partei. Gegen „die da oben“, für „das Volk“. Aber ihre Abstimmungen und ihr Führungspersonal erzählen eine andere Geschichte." },
       quotes: [
         { text: "Sozialstaatliche Absicherung soll zu allererst den eigenen Staatsangehörigen zugutekommen.", person: "AfD Grundsatzprogramm", source: "Kapitel 11, Sozialpolitik", url: "https://www.afd.de/grundsatzprogramm/" },
         { text: "Der Mindestlohn ist ein Eingriff in die Vertragsfreiheit.", person: "AfD Wahlprogramm 2017", source: "Programm zur Bundestagswahl 2017, S. 51", url: "https://www.afd.de/wahlprogramm-2017/" }
@@ -78,10 +78,10 @@ const GUIDE_DATA = [
       ],
       data: [
         { value: "396.000€", label: "Strafzahlung Alice Weidels wegen illegaler Schweizer Parteispenden", source: "Bundestagsverwaltung, 2021", url: "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_90849792/afd-spendenaffaere-alice-weidel-muss-fast-400-000-euro-zahlen.html" },
-        { value: "134.000€", label: "Jährliches Abgeordnetengehalt + Pauschale. AfD-Abgeordnete verdienen mehr als 99% der „kleinen Leute".", source: "Bundestag Diätenregelung" },
+        { value: "134.000€", label: "Jährliches Abgeordnetengehalt + Pauschale. AfD-Abgeordnete verdienen mehr als 99% der „kleinen Leute“.", source: "Bundestag Diätenregelung" },
         { value: "2 von 7", label: "AfD-Vorsitzende mit Verbindungen zu ausländischem Geld (Weidel: Schweiz, Meuthen: Schweiz)", source: "Diverse Quellen" }
       ],
-      pattern: { text: "Die AfD stimmt gegen höheren Mindestlohn, gegen bessere Sozialleistungen, gegen Arbeitnehmerrechte. Ihre Führung kassiert illegale Auslandsspenden. „Für den kleinen Mann" ist die Verpackung — der Inhalt ist eine Partei, die wirtschaftspolitisch gegen die Interessen ihrer eigenen Wähler stimmt.", question: "Wenn die AfD für den kleinen Mann ist — warum stimmt sie gegen Mindestlohnerhöhung und gegen besseres Bürgergeld?" }
+      pattern: { text: "Die AfD stimmt gegen höheren Mindestlohn, gegen bessere Sozialleistungen, gegen Arbeitnehmerrechte. Ihre Führung kassiert illegale Auslandsspenden. „Für den kleinen Mann“ ist die Verpackung — der Inhalt ist eine Partei, die wirtschaftspolitisch gegen die Interessen ihrer eigenen Wähler stimmt.", question: "Wenn die AfD für den kleinen Mann ist — warum stimmt sie gegen Mindestlohnerhöhung und gegen besseres Bürgergeld?" }
     }
   },
   {
@@ -97,14 +97,14 @@ const GUIDE_DATA = [
         { text: "Wir fordern, das Pariser Klimaschutzabkommen zu kündigen.", person: "AfD Wahlprogramm 2021", source: "Programm zur Bundestagswahl 2021", url: "https://www.afd.de/wahlprogramm-2021/" }
       ],
       votes: [
-        { bill: "Erneuerbare-Energien-Gesetz (EEG) Novelle", description: "Ausbau von Wind- und Solarenergie als „überragendes öffentliches Interesse".", year: 2022, total_for: 378, total_against: 198, afd_for: 0, afd_against: 72, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/eeg-novelle-2023" }
+        { bill: "Erneuerbare-Energien-Gesetz (EEG) Novelle", description: "Ausbau von Wind- und Solarenergie als „überragendes öffentliches Interesse“.", year: 2022, total_for: 378, total_against: 198, afd_for: 0, afd_against: 72, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/eeg-novelle-2023" }
       ],
       data: [
         { value: "4,7 ct/kWh", label: "Gestehungskosten Solar (2024). Kohle: 11-15 ct/kWh. Wind onshore: 4-8 ct/kWh.", source: "Fraunhofer ISE, Stromgestehungskosten 2024", url: "https://www.ise.fraunhofer.de/de/veroeffentlichungen/studien/studie-stromgestehungskosten-erneuerbare-energien.html" },
         { value: "59%", label: "Anteil erneuerbarer Energien am Bruttostromverbrauch 2024 — Rekord.", source: "Umweltbundesamt, 2024", url: "https://www.umweltbundesamt.de/daten/energie/erneuerbare-energien" },
         { value: "0", label: "Eigene Energiegesetzentwürfe der AfD im Bundestag. Keine Alternative zur Alternative.", source: "Bundestag Dokumentation" }
       ],
-      pattern: { text: "Solar ist heute billiger als Kohle — das ist keine Ideologie, das ist Physik und Markt. Die AfD will Deutschland an die teuerste Energieform binden und vom Pariser Abkommen isolieren. Ihr einziger „Plan" ist: zurück zu dem, was schon teurer ist. Kein eigener Gesetzentwurf, keine Alternative.", question: "Wenn Solar halb so viel kostet wie Kohle — warum will die AfD Deutschland an die teurere Energie binden?" }
+      pattern: { text: "Solar ist heute billiger als Kohle — das ist keine Ideologie, das ist Physik und Markt. Die AfD will Deutschland an die teuerste Energieform binden und vom Pariser Abkommen isolieren. Ihr einziger „Plan“ ist: zurück zu dem, was schon teurer ist. Kein eigener Gesetzentwurf, keine Alternative.", question: "Wenn Solar halb so viel kostet wie Kohle — warum will die AfD Deutschland an die teurere Energie binden?" }
     }
   },
   {
@@ -114,9 +114,9 @@ const GUIDE_DATA = [
     icon: "🏛️",
     intro: "Das Misstrauen gegenüber etablierten Parteien ist nachvollziehbar. Aber ist die AfD wirklich sauberer? Ein Blick auf die Akten.",
     layers: {
-      promise: { text: "Die AfD verspricht „Null Toleranz bei Korruption" und inszeniert sich als Aufräumer-Partei gegen ein korruptes System." },
+      promise: { text: "Die AfD verspricht „Null Toleranz bei Korruption“ und inszeniert sich als Aufräumer-Partei gegen ein korruptes System." },
       quotes: [
-        { text: "In einer Mail von 2013 bezeichnete Weidel die Regierung als „Schweine" und „Marionetten" und schrieb von „Bürgerkriegen durch Überfremdung".", person: "Alice Weidel", source: "Private E-Mail, 2013 (Echtheit bestätigt durch Empfänger)", url: "https://correctiv.org/faktencheck/artikel-faktencheck/2017/09/11/alice-weidel-und-ihre-rassistische-mail/" }
+        { text: "In einer Mail von 2013 bezeichnete Weidel die Regierung als „Schweine“ und „Marionetten“ und schrieb von „Bürgerkriegen durch Überfremdung“.", person: "Alice Weidel", source: "Private E-Mail, 2013 (Echtheit bestätigt durch Empfänger)", url: "https://correctiv.org/faktencheck/artikel-faktencheck/2017/09/11/alice-weidel-und-ihre-rassistische-mail/" }
       ],
       votes: [
         { bill: "Lobbyregister-Verschärfung", description: "Verpflichtende Offenlegung von Lobbyisten-Kontakten für Abgeordnete.", year: 2021, total_for: 373, total_against: 225, afd_for: 0, afd_against: 68, url: "https://www.abgeordnetenwatch.de/bundestag/19/abstimmungen/lobbyregister" }
@@ -146,7 +146,7 @@ const GUIDE_DATA = [
       data: [
         { value: "-21%", label: "Rückgang der Tatverdächtigenbelastungszahl bei Nichtdeutschen 2014-2024 (von ~6.260 auf ~4.960 pro 100.000)", source: "BKA PKS 2024, eigene Berechnung", url: "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/pks_node.html" },
         { value: "5,2 Mio.", label: "Straftaten 2024. 2016: 6,4 Mio. Deutschland ist sicherer als vor 8 Jahren.", source: "BKA PKS 2024" },
-        { value: "~5,5x", label: "Überrepräsentation bei Gruppenvergewaltigung. Real, muss anerkannt werden. Aber: Aufenthaltsstatus, Alter und Geschlecht erklären den Großteil — nicht „Herkunft".", source: "KFN Forschungsbericht 161 (Glaubitz/Bliesener), SVR-Expertise 2024", url: "https://kfn.de/publikationen/kfn-forschungsberichte/" }
+        { value: "~5,5x", label: "Überrepräsentation bei Gruppenvergewaltigung. Real, muss anerkannt werden. Aber: Aufenthaltsstatus, Alter und Geschlecht erklären den Großteil — nicht „Herkunft“.", source: "KFN Forschungsbericht 161 (Glaubitz/Bliesener), SVR-Expertise 2024", url: "https://kfn.de/publikationen/kfn-forschungsberichte/" }
       ],
       pattern: { text: "Deutschland ist objektiv sicherer als vor 10 Jahren. Die Überrepräsentation bei bestimmten Delikten ist real — aber die Kriminologie zeigt: Aufenthaltsstatus (Geduldete vs. Anerkannte), Alter und Geschlecht sind die Treiber, nicht Herkunft. Die AfD stimmt gegen Gesetze, die genau diese Differenzierung ermöglichen würden.", question: "Wenn Deutschland unsicherer wäre — warum sind die Gesamtstraftaten seit 2016 um fast 20% gesunken?" }
     }
@@ -156,7 +156,7 @@ const GUIDE_DATA = [
     statement: "Man wird ja als Patriot sofort in die rechte Ecke gestellt",
     shortLabel: "Patriotismus",
     icon: "🇩🇪",
-    intro: "Stolz auf sein Land zu sein ist völlig in Ordnung. Die Frage ist: Was meint die AfD mit „Patriotismus" — und wo zieht sie die Grenze?",
+    intro: "Stolz auf sein Land zu sein ist völlig in Ordnung. Die Frage ist: Was meint die AfD mit „Patriotismus“ — und wo zieht sie die Grenze?",
     layers: {
       promise: { text: "Die AfD sagt: Wir sind die einzigen echten Patrioten. Alle anderen schämen sich für Deutschland. Wer das kritisiert, unterdrückt normale Vaterlandsliebe." },
       quotes: [
@@ -168,11 +168,11 @@ const GUIDE_DATA = [
         { bill: "Demokratiefördergesetz", description: "Dauerhafte Förderung von Initiativen gegen Extremismus und für demokratische Bildung.", year: 2023, total_for: 382, total_against: 209, afd_for: 0, afd_against: 73, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen" }
       ],
       data: [
-        { value: "2x rechtskräftig", label: "Björn Höcke für Verwendung der SA-Parole „Alles für Deutschland" verurteilt. BGH bestätigt August 2025.", source: "BGH Pressemitteilung 2025", url: "https://www.bundesgerichtshof.de/SharedDocs/Pressemitteilungen/DE/2025/2025168.html" },
+        { value: "2x rechtskräftig", label: "Björn Höcke für Verwendung der SA-Parole „Alles für Deutschland“ verurteilt. BGH bestätigt August 2025.", source: "BGH Pressemitteilung 2025", url: "https://www.bundesgerichtshof.de/SharedDocs/Pressemitteilungen/DE/2025/2025168.html" },
         { value: "Gesichert rechtsextrem", label: "Thüringer AfD (Höcke), Sachsen-Anhalt, Sachsen — alle vom Verfassungsschutz als gesichert rechtsextrem eingestuft.", source: "Bundesamt für Verfassungsschutz, 2024" },
         { value: "Verdachtsfall", label: "Die Gesamtpartei AfD ist vom Verfassungsschutz als rechtsextremistischer Verdachtsfall eingestuft.", source: "OVG Münster, Mai 2024", url: "https://www.ovg.nrw.de/behoerde/presse/pressemitteilungen/19_240513/index.php" }
       ],
-      pattern: { text: "Patriotismus und Rechtsextremismus sind nicht dasselbe. Aber die AfD-Führung benutzt „Patriotismus" als Schutzschild für Positionen, die Gerichte als rechtsextrem einstufen. Wer die SA-Parole ruft, Holocaust-Gedenken „Denkmal der Schande" nennt und Nazi-Zeit als „Vogelschiss" verharmlost, betreibt keinen Patriotismus — sondern Geschichtsrevisionismus.", question: "Kann eine Partei patriotisch sein, deren Spitzenpolitiker für Nazi-Parolen verurteilt werden und den Holocaust relativieren?" }
+      pattern: { text: "Patriotismus und Rechtsextremismus sind nicht dasselbe. Aber die AfD-Führung benutzt „Patriotismus“ als Schutzschild für Positionen, die Gerichte als rechtsextrem einstufen. Wer die SA-Parole ruft, Holocaust-Gedenken „Denkmal der Schande“ nennt und Nazi-Zeit als „Vogelschiss“ verharmlost, betreibt keinen Patriotismus — sondern Geschichtsrevisionismus.", question: "Kann eine Partei patriotisch sein, deren Spitzenpolitiker für Nazi-Parolen verurteilt werden und den Holocaust relativieren?" }
     }
   },
   {
@@ -182,7 +182,7 @@ const GUIDE_DATA = [
     icon: "🌍",
     intro: "EU-Bürokratie nervt viele Leute. Aber was wäre die Alternative — und was hat die AfD im EU-Parlament eigentlich getan?",
     layers: {
-      promise: { text: "Die AfD will „Dexit" (EU-Austritt oder radikale Rückführung von Kompetenzen), Abschaffung des Euro, Wiederherstellung „nationaler Souveränität"." },
+      promise: { text: "Die AfD will „Dexit“ (EU-Austritt oder radikale Rückführung von Kompetenzen), Abschaffung des Euro, Wiederherstellung „nationaler Souveränität“." },
       quotes: [
         { text: "Wir halten einen Austritt Deutschlands aus der Europäischen Union für notwendig.", person: "AfD Wahlprogramm 2017", source: "Programm zur Bundestagswahl 2017", url: "https://www.afd.de/wahlprogramm-2017/" }
       ],
@@ -204,7 +204,7 @@ const GUIDE_DATA = [
     icon: "👨‍👩‍👧",
     intro: "Gendern nervt viele Leute — auch solche, die politisch nicht rechts stehen. Aber was genau will die AfD hier verhindern, und was steckt dahinter?",
     layers: {
-      promise: { text: "Die AfD will Gendern verbieten, das Selbstbestimmungsgesetz abschaffen, und „Genderideologie" aus Schulen entfernen. Sie verkauft sich als Verteidigerin des „gesunden Menschenverstands"." },
+      promise: { text: "Die AfD will Gendern verbieten, das Selbstbestimmungsgesetz abschaffen, und „Genderideologie“ aus Schulen entfernen. Sie verkauft sich als Verteidigerin des „gesunden Menschenverstands“." },
       quotes: [
         { text: "Gender-Mainstreaming bezeichnet die politische Geschlechtsumwandlung der Gesellschaft.", person: "AfD Grundsatzprogramm", source: "Kapitel 7: Kultur und Medien", url: "https://www.afd.de/grundsatzprogramm/" }
       ],
@@ -216,7 +216,7 @@ const GUIDE_DATA = [
         { value: "0,6%", label: "Anteil der Bevölkerung, der sich als trans identifiziert. Die AfD macht aus einer winzigen Minderheit ein Kulturkampf-Thema.", source: "DALIA Research / Ipsos 2023" },
         { value: "WHO", label: "Die Weltgesundheitsorganisation hat Transidentität 2019 aus der Liste psychischer Störungen gestrichen (ICD-11).", source: "WHO ICD-11, 2019", url: "https://icd.who.int/en" }
       ],
-      pattern: { text: "0,005% der Bevölkerung beantragt eine Geschlechtsänderung. Die AfD macht daraus ein zentrales Wahlkampfthema. Warum? Weil Kulturkämpfe von den Themen ablenken, bei denen die AfD keine Lösungen hat: Rente, Pflege, Wohnen, Löhne. „Gender" ist das günstigste Feindbild — es kostet nichts und mobilisiert zuverlässig.", question: "Betrifft dich das Gendern persönlich stärker als Rente, Miete oder Mindestlohn? Warum macht die AfD es dann zum Hauptthema?" }
+      pattern: { text: "0,005% der Bevölkerung beantragt eine Geschlechtsänderung. Die AfD macht daraus ein zentrales Wahlkampfthema. Warum? Weil Kulturkämpfe von den Themen ablenken, bei denen die AfD keine Lösungen hat: Rente, Pflege, Wohnen, Löhne. „Gender“ ist das günstigste Feindbild — es kostet nichts und mobilisiert zuverlässig.", question: "Betrifft dich das Gendern persönlich stärker als Rente, Miete oder Mindestlohn? Warum macht die AfD es dann zum Hauptthema?" }
     }
   }
 ];
