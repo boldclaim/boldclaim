@@ -11,387 +11,569 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
-  body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #FAFAF7;
-    color: #18181B;
-    font-size: 15px;
-    -webkit-font-smoothing: antialiased;
-  }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #F0FFFE;
+  color: #0F172A;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
 
-  /* ---- screens ---- */
-  .screen { display: none; }
-  .screen.active { display: block; }
+/* ---- screens ---- */
+.screen { display: none; }
+.screen.active { display: block; }
 
-  /* ---- landing header glassmorphism ---- */
-  .landing-header {
-    background: linear-gradient(135deg, #0D9488 0%, #4F46E5 100%);
-    padding: 40px 20px 48px;
-  }
-  .landing-header-glass {
-    background: rgba(255, 255, 255, 0.14);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 16px;
-    padding: 24px;
-    max-width: 580px;
-    margin: 0 auto;
-  }
+/* ---- nav bar ---- */
+.b-nav {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(13,148,136,0.12);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-  /* ---- sympathiser quotes ---- */
-  .sympathy-block {
-    max-width: 580px;
-    margin: 0 auto;
-    padding: 28px 20px 8px;
-  }
-  .sympathy-quote {
-    font-style: italic;
-    color: #52525B;
-    font-size: 14px;
-    padding: 6px 0;
-  }
-  .sympathy-cta {
-    font-size: 13px;
-    font-weight: 600;
-    color: #0D9488;
-    margin-top: 16px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
+.b-logo {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.03em;
+}
 
-  /* ---- card grid ---- */
-  #card-grid {
-    max-width: 580px;
-    margin: 0 auto;
-    padding: 16px 20px 32px;
-  }
+.b-logo span { color: #0D9488; }
 
-  .statement-card {
-    background: #FFFFFF;
-    border-left: 3px solid #E8A838;
-    border-radius: 14px;
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-align: left;
-    width: 100%;
-    cursor: pointer;
-    transition: border-color 0.18s, box-shadow 0.18s;
-    border-top: 1px solid #EBEBEB;
-    border-right: 1px solid #EBEBEB;
-    border-bottom: 1px solid #EBEBEB;
-  }
-  .statement-card:hover {
-    border-left-color: #0D9488;
-    box-shadow: 0 4px 16px rgba(13, 148, 136, 0.12);
-  }
-  .statement-card.featured {
-    grid-column: 1 / -1;
-  }
-  .card-icon {
-    font-size: 22px;
-    flex-shrink: 0;
-    line-height: 1;
-  }
-  .card-text {
-    flex: 1;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.45;
-    color: #18181B;
-  }
-  .card-chevron {
-    font-size: 16px;
-    color: #D4D4D8;
-    flex-shrink: 0;
-    font-weight: 400;
-  }
+/* ---- landing hero ---- */
+.b-hero {
+  padding: 28px 20px 0;
+  background: linear-gradient(160deg, #F0FFFE 0%, #FFFFFF 60%, #FFF7F0 100%);
+}
 
-  /* ---- topic pills ---- */
-  .pills-wrap {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    padding: 0 20px 12px;
-    flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .pills-wrap::-webkit-scrollbar { display: none; }
+.b-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0D9488;
+  background: rgba(13,148,136,0.1);
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
 
-  .topic-pill {
-    flex-shrink: 0;
-    padding: 7px 16px;
-    border-radius: 9999px;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: background 0.18s, color 0.18s;
-    border: none;
-  }
-  .topic-pill.active {
-    background: #0D9488;
-    color: #FFFFFF;
-  }
-  .topic-pill:not(.active) {
-    background: #F5F3EE;
-    color: #3F3F46;
-  }
-  .topic-pill:not(.active):hover {
-    background: #E8E5DF;
-  }
+.b-hero-eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0D9488;
+  animation: bpulse 2s infinite;
+}
 
-  /* ---- cascade header ---- */
-  .cascade-header {
-    background: linear-gradient(135deg, #0D9488 0%, #4F46E5 100%);
-    padding: 24px 20px 28px;
-  }
-  .cascade-header-glass {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    border-radius: 16px;
-    padding: 20px;
-    max-width: 580px;
-    margin: 0 auto;
-  }
-  .faktencheck-tag {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.75);
-    margin-bottom: 10px;
-  }
-  .cascade-statement {
-    font-size: 17px;
-    font-weight: 600;
-    line-height: 1.4;
-    color: #FFFFFF;
-    margin-bottom: 8px;
-  }
-  .cascade-intro {
-    font-size: 13px;
-    color: rgba(255,255,255,0.82);
-    line-height: 1.5;
-  }
+@keyframes bpulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
 
-  /* ---- cascade controls bar ---- */
-  .cascade-controls {
-    max-width: 580px;
-    margin: 0 auto;
-    padding: 16px 20px 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .back-btn {
-    font-size: 13px;
-    font-weight: 500;
-    color: #0D9488;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .back-btn:hover { text-decoration: underline; }
+.b-hero h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  letter-spacing: -0.04em;
+}
 
-  /* ---- cascade layers ---- */
-  #cascade-content {
-    max-width: 580px;
-    margin: 0 auto;
-    padding: 12px 20px 0;
-  }
+.b-hero p {
+  font-size: 14px;
+  color: #64748B;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+/* ---- bento grid ---- */
+.b-bento {
+  padding: 16px 16px 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
 
-  .cascade-layer {
-    animation: fadeUp 0.38s ease both;
-    border-bottom: 1px solid #EBEBEB;
-    padding: 20px 0;
-  }
-  .cascade-layer:last-child { border-bottom: none; }
-  .cascade-layer:nth-child(2) { animation-delay: 0.06s; }
-  .cascade-layer:nth-child(3) { animation-delay: 0.12s; }
-  .cascade-layer:nth-child(4) { animation-delay: 0.18s; }
-  .cascade-layer:nth-child(5) { animation-delay: 0.24s; }
-  .cascade-layer:nth-child(6) { animation-delay: 0.30s; }
+.b-bento-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(15,23,42,0.06), 0 0 0 1px rgba(15,23,42,0.04);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  border: none;
+  display: block;
+  width: 100%;
+}
 
-  .layer-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-  }
-  .layer-body {
-    font-size: 14px;
-    line-height: 1.65;
-    color: #27272A;
-  }
+.b-bento-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 100% 0%, rgba(255,255,255,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
 
-  /* ---- quote style ---- */
-  .quote-block {
-    border-left: 3px solid #AF52DE;
-    padding-left: 14px;
-    margin: 12px 0 6px;
-    font-style: italic;
-    color: #3F3F46;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  .quote-attribution {
-    font-size: 12px;
-    color: #71717A;
-    margin-bottom: 16px;
-    padding-left: 17px;
-  }
+.b-bento-card:hover {
+  box-shadow: 0 8px 32px rgba(15,23,42,0.12), 0 0 0 1px rgba(15,23,42,0.06);
+  transform: translateY(-2px);
+}
 
-  /* ---- vote grid ---- */
-  .vote-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 1.5px solid #27272A;
-    margin-top: 12px;
-    margin-bottom: 8px;
-  }
-  .vote-cell {
-    padding: 14px 12px;
-    border: 0.75px solid #D4D4D8;
-  }
-  .vote-cell-num {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .vote-cell-label {
-    font-size: 11px;
-    color: #71717A;
-    line-height: 1.3;
-  }
-  .vote-cell.afd-cell {
-    background: #FFF1F0;
-  }
-  .vote-cell.afd-cell .vote-cell-num {
-    color: #FF3B30;
-  }
+.b-bento-card.wide {
+  grid-column: 1 / -1;
+}
 
-  /* ---- data stats ---- */
-  .stat-block {
-    margin-bottom: 16px;
-  }
-  .stat-value {
-    font-size: 44px;
-    font-weight: 700;
-    line-height: 1;
-    color: #18181B;
-    margin-bottom: 4px;
-    letter-spacing: -0.02em;
-  }
-  .stat-value.stat-sm {
-    font-size: 30px;
-  }
-  .stat-label {
-    font-size: 13px;
-    color: #52525B;
-    line-height: 1.4;
-    margin-bottom: 4px;
-  }
+.b-bento-card.featured {
+  background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
+}
 
-  /* ---- pattern layer ---- */
-  .pattern-section {
-    background: rgba(52, 199, 89, 0.07);
-    border-radius: 12px;
-    padding: 16px;
-    margin-top: 4px;
-  }
-  .frag-box {
-    border-left: 3px solid #2563EB;
-    background: rgba(37, 99, 235, 0.06);
-    border-radius: 0 8px 8px 0;
-    padding: 12px 14px;
-    margin-top: 12px;
-    font-size: 14px;
-    color: #1E3A8A;
-    line-height: 1.55;
-  }
-  .frag-label {
-    font-weight: 600;
-    color: #2563EB;
-  }
+.b-card-topic {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0D9488;
+  margin-bottom: 8px;
+}
 
-  /* ---- next topic ---- */
-  .next-wrap {
-    max-width: 580px;
-    margin: 0 auto;
-    padding: 24px 20px 48px;
-    text-align: center;
-  }
-  .next-btn {
-    background: #0D9488;
-    color: #FFFFFF;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 12px 28px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.18s;
-  }
-  .next-btn:hover { background: #0F766E; }
+.b-bento-card.featured .b-card-topic {
+  color: rgba(255,255,255,0.7);
+}
 
-  /* ---- footer ---- */
-  footer {
-    text-align: center;
-    font-size: 12px;
-    color: #A1A1AA;
-    padding: 28px 20px;
-    border-top: 1px solid #EBEBEB;
-    max-width: 580px;
-    margin: 0 auto;
-  }
+.b-card-statement {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F172A;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
 
-  /* ---- source link ---- */
-  a.source-link {
-    font-size: 12px;
-    color: #2563EB;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-  a.source-link:hover { color: #1D4ED8; }
+.b-bento-card.featured .b-card-statement {
+  color: #FFFFFF;
+  font-size: 14px;
+}
 
-  /* ---- bill header ---- */
-  .bill-title {
-    font-size: 14px;
-    font-weight: 600;
-    color: #18181B;
-    margin-bottom: 4px;
-  }
-  .bill-desc {
-    font-size: 13px;
-    color: #71717A;
-    margin-bottom: 12px;
-    line-height: 1.45;
-  }
+.b-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.b-card-arrow {
+  font-size: 16px;
+  color: #CBD5E1;
+}
+
+.b-bento-card.featured .b-card-arrow {
+  color: rgba(255,255,255,0.5);
+}
+
+/* ---- stats bar ---- */
+.b-stats-bar {
+  padding: 8px 16px 24px;
+  display: flex;
+  gap: 10px;
+}
+
+.b-stat-item {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 12px 10px;
+  border: 1px solid #E2E8F0;
+  text-align: center;
+}
+
+.b-stat-num {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.b-stat-label {
+  font-size: 10px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+/* ---- cascade screen ---- */
+.b-cascade-header {
+  background: rgba(13,148,136,0.06);
+  backdrop-filter: blur(8px);
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid rgba(13,148,136,0.12);
+}
+
+.b-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0D9488;
+  cursor: pointer;
+  margin-bottom: 16px;
+  background: none;
+  border: none;
+}
+
+.b-back-btn:hover { text-decoration: underline; }
+
+.b-cascade-glass {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 24px rgba(13,148,136,0.08);
+}
+
+.b-cascade-glass h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.b-glass-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.b-topic-chip {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #0D9488;
+  background: rgba(13,148,136,0.1);
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+/* ---- topic pills (cascade nav) ---- */
+.b-pills-wrap {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 12px 20px 8px;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.b-pills-wrap::-webkit-scrollbar { display: none; }
+
+.b-topic-pill {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+  border: none;
+}
+
+.b-topic-pill.active {
+  background: #0D9488;
+  color: #FFFFFF;
+}
+
+.b-topic-pill:not(.active) {
+  background: #FFFFFF;
+  color: #64748B;
+  border: 1px solid #E2E8F0;
+}
+
+.b-topic-pill:not(.active):hover {
+  background: #F0FFFE;
+}
+
+/* ---- cascade body ---- */
+.b-cascade-body {
+  padding: 16px 16px 0;
+  background: #F8FFFE;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ---- step cards ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.b-step-card {
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.04);
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.2s ease-out both;
+}
+
+.b-step-card:nth-child(1) { animation-delay: 0.00s; }
+.b-step-card:nth-child(2) { animation-delay: 0.05s; }
+.b-step-card:nth-child(3) { animation-delay: 0.10s; }
+.b-step-card:nth-child(4) { animation-delay: 0.15s; }
+.b-step-card:nth-child(5) { animation-delay: 0.20s; }
+
+.b-step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 14px 14px 0 0;
+}
+
+.b-step-card.promise::before { background: #0D9488; }
+.b-step-card.quote::before   { background: #8B5CF6; }
+.b-step-card.vote::before    { background: #F97316; }
+.b-step-card.data::before    { background: #DC2626; }
+
+.b-step-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.b-step-label.promise { color: #0D9488; }
+.b-step-label.quote   { color: #8B5CF6; }
+.b-step-label.vote    { color: #F97316; }
+.b-step-label.data    { color: #DC2626; }
+
+.b-step-text {
+  font-size: 14px;
+  color: #0F172A;
+  line-height: 1.55;
+}
+
+/* ---- quote style ---- */
+.b-quote-text {
+  font-style: italic;
+  color: #6D28D9;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.b-quote-attr {
+  font-size: 12px;
+  color: #64748B;
+}
+
+/* ---- vote bars ---- */
+.b-vote-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.b-vote-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.b-vote-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.b-vote-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.b-vote-num {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.b-vote-track {
+  height: 8px;
+  background: #F1F5F9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.b-vote-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+/* ---- big stat ---- */
+.b-big-stat {
+  font-size: 48px;
+  font-weight: 800;
+  color: #DC2626;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.b-stat-sublabel {
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.4;
+}
+
+.b-stat-sublabel + .b-stat-sublabel {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #94A3B8;
+}
+
+/* ---- pattern card ---- */
+.b-pattern-card {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  border-radius: 14px;
+  padding: 20px;
+  animation: fadeUp 0.2s ease-out 0.20s both;
+}
+
+.b-pattern-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0D9488;
+  margin-bottom: 10px;
+}
+
+.b-pattern-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.b-pattern-question {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* ---- source link ---- */
+a.b-source {
+  font-size: 12px;
+  color: #0D9488;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a.b-source:hover { color: #0F766E; }
+
+/* ---- bill header ---- */
+.b-bill-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F172A;
+  margin-bottom: 3px;
+}
+
+.b-bill-desc {
+  font-size: 13px;
+  color: #64748B;
+  margin-bottom: 10px;
+  line-height: 1.45;
+}
+
+/* ---- next topic button ---- */
+.b-next-wrap {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 20px 16px 48px;
+  text-align: center;
+  background: #F8FFFE;
+}
+
+.b-next-btn {
+  background: #0D9488;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.b-next-btn:hover { background: #0F766E; }
+
+/* ---- footer ---- */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #94A3B8;
+  padding: 24px 20px;
+  border-top: 1px solid #E2E8F0;
+  background: #FFFFFF;
+}
+
+/* ---- outer container ---- */
+.b-container {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* ---- small stat in data layer (non-primary) ---- */
+.b-small-stat {
+  font-size: 30px;
+  font-weight: 800;
+  color: #DC2626;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
 </style>
 </head>
 <body>
@@ -399,65 +581,82 @@
 <!-- ===================== LANDING SCREEN ===================== -->
 <div id="landing" class="screen active">
 
-  <!-- Glassmorphism header -->
-  <div class="landing-header">
-    <div class="landing-header-glass">
-      <h1 style="font-size: clamp(22px, 5vw, 32px); font-weight: 600; color: #FFFFFF; line-height: 1.3; margin-bottom: 10px;">
-        Was die AfD verspricht, und wie sie abstimmt
-      </h1>
-      <p style="font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.55;">
-        Wähl ein Thema. Wir zeigen dir Zitate, Abstimmungen und Zahlen, alle mit Originalquellen.
-      </p>
+  <!-- Nav -->
+  <nav class="b-nav">
+    <div class="b-logo">afd-<span>check</span></div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="b-container">
+    <div class="b-hero">
+      <div class="b-hero-eyebrow">FAKTENCHECK</div>
+      <h1>Was die AfD verspricht, und wie sie abstimmt</h1>
+      <p>Wähl ein Thema. Wir zeigen dir Zitate, Abstimmungen und Zahlen.</p>
+    </div>
+
+    <!-- Bento grid -->
+    <div class="b-bento" id="card-grid"></div>
+
+    <!-- Stats bar -->
+    <div class="b-stats-bar">
+      <div class="b-stat-item">
+        <div class="b-stat-num" style="color:#0D9488;">8</div>
+        <div class="b-stat-label">Themen</div>
+      </div>
+      <div class="b-stat-item">
+        <div class="b-stat-num" style="color:#F97316;">30+</div>
+        <div class="b-stat-label">Quellen</div>
+      </div>
+      <div class="b-stat-item">
+        <div class="b-stat-num" style="color:#DC2626;">0</div>
+        <div class="b-stat-label">AfD Ja-Stimmen</div>
+      </div>
     </div>
   </div>
-
-  <!-- Sympathiser quotes intro -->
-  <div class="sympathy-block">
-    <p class="sympathy-quote">"Die einzigen, die das wirklich ansprechen."</p>
-    <p class="sympathy-quote">"Die anderen sind doch alle gleich."</p>
-    <p class="sympathy-quote">"Man wird sofort in die rechte Ecke gestellt."</p>
-    <p class="sympathy-cta">Wähl die Aussage, die du kennst.</p>
-  </div>
-
-  <!-- Card grid -->
-  <div id="card-grid"></div>
 
 </div>
 
 <!-- ===================== CASCADE SCREEN ===================== -->
 <div id="cascade" class="screen">
 
+  <!-- Nav -->
+  <nav class="b-nav">
+    <div class="b-logo">afd-<span>check</span></div>
+  </nav>
+
   <!-- Topic pills -->
-  <div class="pills-wrap" id="topic-pills"></div>
+  <div class="b-pills-wrap" id="topic-pills"></div>
 
-  <!-- Cascade glassmorphism header -->
-  <div class="cascade-header" id="cascade-header-wrap">
-    <div class="cascade-header-glass">
-      <span class="faktencheck-tag">Faktencheck</span>
-      <div class="cascade-statement" id="cascade-statement"></div>
-      <div class="cascade-intro" id="cascade-intro"></div>
+  <!-- Cascade header -->
+  <div class="b-container">
+    <div class="b-cascade-header">
+      <button class="b-back-btn" onclick="showLanding()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Alle Themen
+      </button>
+      <div class="b-cascade-glass">
+        <h2 id="cascade-statement"></h2>
+        <div class="b-glass-meta">
+          <span class="b-topic-chip" id="cascade-topic-chip"></span>
+          <span id="cascade-layer-count" style="font-size:11px; color:#64748B; margin-left:auto;"></span>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- Controls: back -->
-  <div class="cascade-controls">
-    <button class="back-btn" onclick="showLanding()">← Alle Themen</button>
-  </div>
+    <!-- Cascade layers -->
+    <div class="b-cascade-body" id="cascade-content"></div>
 
-  <!-- Layers -->
-  <div id="cascade-content"></div>
-
-  <!-- Next topic -->
-  <div id="next-topic-wrap" class="next-wrap">
-    <button class="next-btn" onclick="showNextTopic()">Nächstes Thema →</button>
+    <!-- Next topic -->
+    <div class="b-next-wrap" id="next-topic-wrap">
+      <button class="b-next-btn" onclick="showNextTopic()">Nächstes Thema &rarr;</button>
+    </div>
   </div>
 
 </div>
 
-<!-- Footer (always visible in landing; hidden in cascade via JS) -->
+<!-- Footer -->
 <footer id="site-footer">
-  Alle Quellen verlinkt. Kein Tracking. Kein Cookie. Kein Backend.
-  <!-- Impressum: placeholder -->
+  Alle Quellen verlinkt. Kein Tracking. Kein Cookie.
 </footer>
 
 <script src="guide-data.js"></script>
@@ -468,41 +667,33 @@
 
 let currentIndex = 0;
 
-const COLORS = {
-  promise: '#FF9500',
-  quotes:  '#AF52DE',
-  votes:   '#FF3B30',
-  data:    '#007AFF',
-  pattern: '#34C759'
-};
-
 const LABELS = {
-  promise: 'Was sie versprechen',
-  quotes:  'Was sie sagen',
-  votes:   'Wie sie abstimmen',
-  data:    'Was die Zahlen sagen',
+  promise: 'Das Versprechen',
+  quotes:  'Eigene Worte',
+  votes:   'Abstimmungsrekord',
+  data:    'Die Zahlen',
   pattern: 'Das Muster'
 };
 
 function renderLanding() {
-  const grid = document.getElementById('card-grid');
+  var grid = document.getElementById('card-grid');
 
-  const cards = GUIDE_DATA.map(function(topic, i) {
-    var featuredClass = i === 0 ? ' featured' : '';
+  var cards = GUIDE_DATA.map(function(topic, i) {
+    var isFeatured = i === 0;
+    var cardClass = 'b-bento-card' + (isFeatured ? ' featured wide' : '');
     return (
-      '<button onclick="showCascade(' + i + ')" class="statement-card' + featuredClass + '">' +
-        '<span class="card-icon">' + topic.icon + '</span>' +
-        '<span class="card-text">' + topic.statement + '</span>' +
-        '<span class="card-chevron">›</span>' +
+      '<button onclick="showCascade(' + i + ')" class="' + cardClass + '">' +
+        '<p class="b-card-topic">' + topic.shortLabel + '</p>' +
+        '<p class="b-card-statement">\u201E' + topic.statement + '\u201C</p>' +
+        '<div class="b-card-bottom">' +
+          '<span></span>' +
+          '<span class="b-card-arrow">\u2192</span>' +
+        '</div>' +
       '</button>'
     );
   }).join('');
 
-  grid.innerHTML = (
-    '<div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">' +
-      cards +
-    '</div>'
-  );
+  grid.innerHTML = cards;
 }
 
 function showLanding() {
@@ -521,95 +712,96 @@ function showCascade(index) {
   document.getElementById('cascade').classList.add('active');
   document.getElementById('site-footer').style.display = 'none';
 
-  // Populate cascade header
+  // Header
   document.getElementById('cascade-statement').textContent = '\u201E' + topic.statement + '\u201C';
-  document.getElementById('cascade-intro').textContent = topic.intro;
+  document.getElementById('cascade-topic-chip').textContent = topic.shortLabel;
+  document.getElementById('cascade-layer-count').textContent = '5 Belege';
 
-  // Render pills
+  // Pills
   document.getElementById('topic-pills').innerHTML = GUIDE_DATA.map(function(t, i) {
-    var cls = i === index ? 'topic-pill active' : 'topic-pill';
+    var cls = i === index ? 'b-topic-pill active' : 'b-topic-pill';
     return '<button onclick="showCascade(' + i + ')" class="' + cls + '">' + t.icon + '\u00A0' + t.shortLabel + '</button>';
   }).join('');
 
-  // Build layers
   var parts = [];
 
-  // Promise layer
+  // 1. Promise
   parts.push(layerHTML('promise',
-    '<p>' + layers.promise.text + '</p>'
+    '<p class="b-step-text">' + layers.promise.text + '</p>'
   ));
 
-  // Quotes layer
+  // 2. Quotes
   var quoteBody = layers.quotes.map(function(q) {
     return (
-      '<div class="quote-block">\u201E' + q.text + '\u201C</div>' +
-      '<div class="quote-attribution">' +
-        q.person + ', <a href="' + q.url + '" target="_blank" rel="noopener" class="source-link">' + q.source + '</a>' +
-      '</div>'
+      '<p class="b-quote-text">\u201E' + q.text + '\u201C</p>' +
+      '<p class="b-quote-attr">' + q.person + ', <a href="' + q.url + '" target="_blank" rel="noopener" class="b-source">' + q.source + '</a></p>'
     );
-  }).join('');
-  parts.push(layerHTML('quotes', quoteBody));
+  }).join('<div style="height:10px;"></div>');
+  parts.push(layerHTML('quote', quoteBody));
 
-  // Votes layer
+  // 3. Votes
   var votesBody = layers.votes.map(function(v) {
+    var total = v.total_for + v.total_against;
+    var pctFor = total > 0 ? Math.round((v.total_for / total) * 100) : 0;
     var afdTotal = v.afd_for + v.afd_against;
+    var afdPctAgainst = afdTotal > 0 ? Math.round((v.afd_against / afdTotal) * 100) : 0;
+
     return (
-      '<div class="bill-title">' + v.bill + ' (' + v.year + ')</div>' +
-      '<div class="bill-desc">' + v.description + '</div>' +
-      '<div class="vote-grid">' +
-        '<div class="vote-cell">' +
-          '<div class="vote-cell-num" style="color: #34C759;">' + v.total_for + '</div>' +
-          '<div class="vote-cell-label">Gesamt Daf\u00FCr</div>' +
+      '<p class="b-bill-title">' + v.bill + ' (' + v.year + ')</p>' +
+      '<p class="b-bill-desc">' + v.description + '</p>' +
+      '<div class="b-vote-row">' +
+        '<div class="b-vote-item">' +
+          '<div class="b-vote-header">' +
+            '<span class="b-vote-name">Parlament gesamt</span>' +
+            '<span class="b-vote-num" style="color:#0D9488;">' + v.total_for + ' daf\u00FCr</span>' +
+          '</div>' +
+          '<div class="b-vote-track">' +
+            '<div class="b-vote-fill" style="width:' + pctFor + '%; background:#0D9488;"></div>' +
+          '</div>' +
         '</div>' +
-        '<div class="vote-cell">' +
-          '<div class="vote-cell-num" style="color: #FF3B30;">' + v.total_against + '</div>' +
-          '<div class="vote-cell-label">Gesamt Dagegen</div>' +
-        '</div>' +
-        '<div class="vote-cell afd-cell">' +
-          '<div class="vote-cell-num">' + v.afd_for + '</div>' +
-          '<div class="vote-cell-label">AfD Daf\u00FCr</div>' +
-        '</div>' +
-        '<div class="vote-cell afd-cell">' +
-          '<div class="vote-cell-num">' + v.afd_against + '</div>' +
-          '<div class="vote-cell-label">AfD Dagegen</div>' +
+        '<div class="b-vote-item">' +
+          '<div class="b-vote-header">' +
+            '<span class="b-vote-name">AfD</span>' +
+            '<span class="b-vote-num" style="color:#DC2626;">' + v.afd_against + ' dagegen, ' + v.afd_for + ' daf\u00FCr</span>' +
+          '</div>' +
+          '<div class="b-vote-track">' +
+            '<div class="b-vote-fill" style="width:' + afdPctAgainst + '%; background:#DC2626;"></div>' +
+          '</div>' +
         '</div>' +
       '</div>' +
-      '<a href="' + v.url + '" target="_blank" rel="noopener" class="source-link">Quelle: Abgeordnetenwatch</a>'
+      '<div style="margin-top:10px;"><a href="' + v.url + '" target="_blank" rel="noopener" class="b-source">Quelle: Abgeordnetenwatch \u2197</a></div>'
     );
-  }).join('');
-  parts.push(layerHTML('votes', votesBody));
+  }).join('<div style="height:12px;"></div>');
+  parts.push(layerHTML('vote', votesBody));
 
-  // Data layer
+  // 4. Data
   var dataBody = layers.data.map(function(d, i) {
-    var isBig = i === 0;
-    var sizeClass = isBig ? 'stat-value' : 'stat-value stat-sm';
+    var statClass = i === 0 ? 'b-big-stat' : 'b-small-stat';
     var sourceHtml = d.url
-      ? '<a href="' + d.url + '" target="_blank" rel="noopener" class="source-link">' + d.source + '</a>'
-      : '<span style="font-size:12px; color:#A1A1AA;">' + d.source + '</span>';
+      ? '<a href="' + d.url + '" target="_blank" rel="noopener" class="b-source">' + d.source + '</a>'
+      : '<span style="font-size:11px; color:#94A3B8;">' + d.source + '</span>';
     return (
-      '<div class="stat-block">' +
-        '<div class="' + sizeClass + '">' + d.value + '</div>' +
-        '<div class="stat-label">' + d.label + '</div>' +
-        sourceHtml +
+      '<div style="' + (i > 0 ? 'margin-top:14px; padding-top:14px; border-top:1px solid #F1F5F9;' : '') + '">' +
+        '<div class="' + statClass + '">' + d.value + '</div>' +
+        '<p class="b-stat-sublabel">' + d.label + '</p>' +
+        '<p class="b-stat-sublabel" style="margin-top:3px;">' + sourceHtml + '</p>' +
       '</div>'
     );
   }).join('');
   parts.push(layerHTML('data', dataBody));
 
-  // Pattern layer
-  var patternBody = (
-    '<div class="pattern-section">' +
-      '<p style="font-size:14px; line-height:1.65; color:#27272A; margin-bottom:0;">' + layers.pattern.text + '</p>' +
-    '</div>' +
-    '<div class="frag-box">' +
-      '<span class="frag-label">Frag mal:</span> ' + layers.pattern.question +
+  // 5. Pattern (dark gradient card, not a step-card)
+  parts.push(
+    '<div class="b-pattern-card">' +
+      '<p class="b-pattern-label">Das Muster</p>' +
+      '<p class="b-pattern-text">' + layers.pattern.text + '</p>' +
+      '<p class="b-pattern-question">' + layers.pattern.question + '</p>' +
     '</div>'
   );
-  parts.push(layerHTML('pattern', patternBody));
 
   document.getElementById('cascade-content').innerHTML = parts.join('');
 
-  // Next topic button
+  // Next button
   document.getElementById('next-topic-wrap').style.display =
     index < GUIDE_DATA.length - 1 ? '' : 'none';
 
@@ -624,9 +816,9 @@ function showNextTopic() {
 
 function layerHTML(key, content) {
   return (
-    '<div class="cascade-layer">' +
-      '<div class="layer-label" style="color:' + COLORS[key] + ';">' + LABELS[key] + '</div>' +
-      '<div class="layer-body">' + content + '</div>' +
+    '<div class="b-step-card ' + key + '">' +
+      '<p class="b-step-label ' + key + '">' + LABELS[key] + '</p>' +
+      content +
     '</div>'
   );
 }
