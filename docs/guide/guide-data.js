@@ -70,18 +70,20 @@ const GUIDE_DATA = [
       promise: { text: "Die AfD inszeniert sich als Anti-Establishment-Partei: gegen die da oben, für das Volk. Ihre Abstimmungen und ihr Führungspersonal erzählen eine andere Geschichte." },
       quotes: [
         { text: "Wir lehnen die Wiedereinführung der Vermögensteuer und die Verschärfung der Erbschaftsteuer ab.", person: "AfD Grundsatzprogramm", source: "Kapitel 10, Steuern und Finanzen", url: "https://www.afd.de/grundsatzprogramm/" },
-        { text: "Sozialstaatliche Absicherung soll zu allererst den eigenen Staatsangehörigen zugutekommen.", person: "AfD Grundsatzprogramm", source: "Kapitel 11, Sozialpolitik", url: "https://www.afd.de/grundsatzprogramm/" }
+        { text: "Wir wollen einen Stufentarif mit drei Stufen (25%, 35%, Spitze bei 42% statt 45%).", person: "AfD Wahlprogramm 2025", source: "Wahlprogramm zur Bundestagswahl 2025", url: "https://www.afd.de/wahlprogramm/" }
       ],
       votes: [
         { bill: "Mindestlohnerhöhung auf 12 Euro", description: "Anhebung des Mindestlohns von 9,82\u20AC auf 12\u20AC. Betrifft vor allem Geringverdiener.", year: 2022, total_for: 399, total_against: 201, afd_for: 0, afd_against: 75, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/mindestlohn-auf-12-euro" },
-        { bill: "Bürgergeld-Einführung", description: "Ablösung von Hartz IV mit höheren Regelsätzen und weniger Sanktionen.", year: 2022, total_for: 385, total_against: 232, afd_for: 0, afd_against: 76, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/buergergeld" }
+        { bill: "Buergergeld-Einfuehrung", description: "Abloesung von Hartz IV mit hoeheren Regelsaetzen und weniger Sanktionen.", year: 2022, total_for: 385, total_against: 232, afd_for: 0, afd_against: 76, url: "https://www.abgeordnetenwatch.de/bundestag/20/abstimmungen/buergergeld" }
       ],
       data: [
-        { value: "Nein", label: "Vermögensteuer: Die AfD lehnt sie ab. Betroffen wären nur Vermögen über ~2 Mio. Euro. Die Partei schützt die Reichsten, nicht den kleinen Mann.", source: "AfD Grundsatzprogramm, Kap. 10" },
-        { value: "Nein", label: "Erbschaftsteuer-Reform: Die AfD will sie abschaffen. 2022 wurden 100+ Mrd. Euro steuerfrei vererbt. Davon profitiert nicht der Handwerker, sondern das Top-1%.", source: "Bundesfinanzministerium / DIW Wochenbericht" },
+        { value: "~600\u20AC/Jahr", label: "So viel spart ein Durchschnittsverdiener (45.000\u20AC brutto) durch den AfD-Stufentarif. Klingt gut?", source: "Eigene Berechnung auf Basis AfD-Stufentarif vs. geltendem EStG-Tarif" },
+        { value: "~15.000\u20AC/Jahr", label: "So viel spart ein Spitzenverdiener (250.000\u20AC brutto) durch denselben Tarif. 25x mehr Ersparnis, obwohl nur 5,5x mehr Gehalt.", source: "Eigene Berechnung: Senkung des Spitzensteuersatzes von 45% auf 42% + Stufeneffekte" },
+        { value: "Nein", label: "Vermoegensteuer: Die AfD lehnt sie ab. Betroffen waeren nur Vermoegen ueber ~2 Mio. Euro.", source: "AfD Grundsatzprogramm, Kap. 10" },
+        { value: "Nein", label: "Erbschaftsteuer-Reform: Die AfD will sie abschaffen. 2022 wurden 100+ Mrd. Euro steuerfrei vererbt. Davon profitiert das Top-1%, nicht der Handwerker.", source: "Bundesfinanzministerium / DIW Wochenbericht" },
         { value: "396.000\u20AC", label: "Strafzahlung Alice Weidels wegen illegaler Schweizer Parteispenden.", source: "Bundestagsverwaltung, 2021", url: "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_90849792/afd-spendenaffaere-alice-weidel-muss-fast-400-000-euro-zahlen.html" }
       ],
-      pattern: { text: "Keine Vermögensteuer, keine Erbschaftsteuer-Reform, gegen Mindestlohnerhöhung. Die AfD-Steuerpolitik schützt Millionenvermögen und Großerben. Ihre Führung kassiert illegale Auslandsspenden. Die Verpackung sagt: für den kleinen Mann. Der Inhalt ist eine Partei, die wirtschaftspolitisch die Interessen der Reichsten vertritt.", question: "Wenn die AfD für den kleinen Mann ist, warum will sie keine Vermögensteuer für Millionäre, sondern schafft lieber die Erbschaftsteuer ab?" }
+      pattern: { text: "Die AfD-Steuervorschlaege sehen auf den ersten Blick fair aus: weniger Steuern fuer alle. Die Rechnung zeigt das Gegenteil. Ein Durchschnittsverdiener spart 600 Euro im Jahr, ein Spitzenverdiener 15.000 Euro. Dazu: keine Vermoegensteuer, keine Erbschaftsteuer. Die Entlastung fliesst nach oben, nicht nach unten.", question: "Die AfD will Steuern senken. Wem nutzt das am meisten? Rechne es durch: 600 Euro fuer dich, 15.000 Euro fuer deinen Chef." }
     }
   },
   {
