@@ -3,139 +3,477 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Was wählt die AfD wirklich?</title>
-<meta name="description" content="Was die AfD verspricht — und wie sie abstimmt. Faktencheck mit Originalquellen.">
-<meta property="og:title" content="Was wählt die AfD wirklich?">
-<meta property="og:description" content="Wähl die Themen, die dir wichtig sind. Wir zeigen dir Zitate, Abstimmungen und Zahlen.">
+<title>Was die AfD verspricht, und wie sie abstimmt</title>
+<meta name="description" content="Was die AfD verspricht, und wie sie abstimmt. Faktencheck mit Originalquellen.">
+<meta property="og:title" content="Was die AfD verspricht, und wie sie abstimmt">
+<meta property="og:description" content="Wähl ein Thema. Wir zeigen dir Zitate, Abstimmungen und Zahlen, alle mit Originalquellen.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
+  *, *::before, *::after { box-sizing: border-box; }
+
   html { scroll-behavior: smooth; }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #f5f5f7;
-    color: #1d1d1f;
-    font-size: 14px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #FAFAF7;
+    color: #18181B;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
   }
 
+  /* ---- screens ---- */
   .screen { display: none; }
   .screen.active { display: block; }
 
+  /* ---- landing header glassmorphism ---- */
+  .landing-header {
+    background: linear-gradient(135deg, #0D9488 0%, #4F46E5 100%);
+    padding: 40px 20px 48px;
+  }
+  .landing-header-glass {
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  /* ---- sympathiser quotes ---- */
+  .sympathy-block {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 28px 20px 8px;
+  }
+  .sympathy-quote {
+    font-style: italic;
+    color: #52525B;
+    font-size: 14px;
+    padding: 6px 0;
+  }
+  .sympathy-cta {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0D9488;
+    margin-top: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ---- card grid ---- */
+  #card-grid {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 16px 20px 32px;
+  }
+
   .statement-card {
-    transition: all 0.2s;
-    border: 1.5px solid #e5e7eb;
+    background: #FFFFFF;
+    border-left: 3px solid #E8A838;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: border-color 0.18s, box-shadow 0.18s;
+    border-top: 1px solid #EBEBEB;
+    border-right: 1px solid #EBEBEB;
+    border-bottom: 1px solid #EBEBEB;
   }
   .statement-card:hover {
-    border-color: #0071e3;
-    background: #f0f5ff;
+    border-left-color: #0D9488;
+    box-shadow: 0 4px 16px rgba(13, 148, 136, 0.12);
+  }
+  .statement-card.featured {
+    grid-column: 1 / -1;
+  }
+  .card-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .card-text {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45;
+    color: #18181B;
+  }
+  .card-chevron {
+    font-size: 16px;
+    color: #D4D4D8;
+    flex-shrink: 0;
+    font-weight: 400;
   }
 
-  .vote-bar {
+  /* ---- topic pills ---- */
+  .pills-wrap {
     display: flex;
-    height: 32px;
-    border-radius: 8px;
-    overflow: hidden;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 20px 12px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
-  .vote-for {
-    background: #34c759;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: white;
-    font-weight: 600;
-  }
-  .vote-against {
-    background: #ff3b30;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: white;
-    font-weight: 600;
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .cascade-layer {
-    animation: fadeUp 0.4s ease both;
-  }
-  .cascade-layer:nth-child(2) { animation-delay: 0.05s; }
-  .cascade-layer:nth-child(3) { animation-delay: 0.10s; }
-  .cascade-layer:nth-child(4) { animation-delay: 0.15s; }
-  .cascade-layer:nth-child(5) { animation-delay: 0.20s; }
-  .cascade-layer:nth-child(6) { animation-delay: 0.25s; }
-  .cascade-layer:nth-child(7) { animation-delay: 0.30s; }
+  .pills-wrap::-webkit-scrollbar { display: none; }
 
   .topic-pill {
     flex-shrink: 0;
-    padding: 6px 14px;
+    padding: 7px 16px;
     border-radius: 9999px;
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
     white-space: nowrap;
-    transition: all 0.2s;
+    transition: background 0.18s, color 0.18s;
+    border: none;
   }
   .topic-pill.active {
-    background: #0071e3;
-    color: white;
+    background: #0D9488;
+    color: #FFFFFF;
   }
   .topic-pill:not(.active) {
-    background: #f0f0f2;
-    color: #1d1d1f;
+    background: #F5F3EE;
+    color: #3F3F46;
+  }
+  .topic-pill:not(.active):hover {
+    background: #E8E5DF;
+  }
+
+  /* ---- cascade header ---- */
+  .cascade-header {
+    background: linear-gradient(135deg, #0D9488 0%, #4F46E5 100%);
+    padding: 24px 20px 28px;
+  }
+  .cascade-header-glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .faktencheck-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 10px;
+  }
+  .cascade-statement {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+  .cascade-intro {
+    font-size: 13px;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.5;
+  }
+
+  /* ---- cascade controls bar ---- */
+  .cascade-controls {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 16px 20px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .back-btn {
+    font-size: 13px;
+    font-weight: 500;
+    color: #0D9488;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .back-btn:hover { text-decoration: underline; }
+
+  /* ---- cascade layers ---- */
+  #cascade-content {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 12px 20px 0;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .cascade-layer {
+    animation: fadeUp 0.38s ease both;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 20px 0;
+  }
+  .cascade-layer:last-child { border-bottom: none; }
+  .cascade-layer:nth-child(2) { animation-delay: 0.06s; }
+  .cascade-layer:nth-child(3) { animation-delay: 0.12s; }
+  .cascade-layer:nth-child(4) { animation-delay: 0.18s; }
+  .cascade-layer:nth-child(5) { animation-delay: 0.24s; }
+  .cascade-layer:nth-child(6) { animation-delay: 0.30s; }
+
+  .layer-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .layer-body {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #27272A;
+  }
+
+  /* ---- quote style ---- */
+  .quote-block {
+    border-left: 3px solid #AF52DE;
+    padding-left: 14px;
+    margin: 12px 0 6px;
+    font-style: italic;
+    color: #3F3F46;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .quote-attribution {
+    font-size: 12px;
+    color: #71717A;
+    margin-bottom: 16px;
+    padding-left: 17px;
+  }
+
+  /* ---- vote grid ---- */
+  .vote-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1.5px solid #27272A;
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+  .vote-cell {
+    padding: 14px 12px;
+    border: 0.75px solid #D4D4D8;
+  }
+  .vote-cell-num {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .vote-cell-label {
+    font-size: 11px;
+    color: #71717A;
+    line-height: 1.3;
+  }
+  .vote-cell.afd-cell {
+    background: #FFF1F0;
+  }
+  .vote-cell.afd-cell .vote-cell-num {
+    color: #FF3B30;
+  }
+
+  /* ---- data stats ---- */
+  .stat-block {
+    margin-bottom: 16px;
+  }
+  .stat-value {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1;
+    color: #18181B;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+  }
+  .stat-value.stat-sm {
+    font-size: 30px;
+  }
+  .stat-label {
+    font-size: 13px;
+    color: #52525B;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  /* ---- pattern layer ---- */
+  .pattern-section {
+    background: rgba(52, 199, 89, 0.07);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 4px;
+  }
+  .frag-box {
+    border-left: 3px solid #2563EB;
+    background: rgba(37, 99, 235, 0.06);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 14px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #1E3A8A;
+    line-height: 1.55;
+  }
+  .frag-label {
+    font-weight: 600;
+    color: #2563EB;
+  }
+
+  /* ---- next topic ---- */
+  .next-wrap {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 24px 20px 48px;
+    text-align: center;
+  }
+  .next-btn {
+    background: #0D9488;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.18s;
+  }
+  .next-btn:hover { background: #0F766E; }
+
+  /* ---- footer ---- */
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: #A1A1AA;
+    padding: 28px 20px;
+    border-top: 1px solid #EBEBEB;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  /* ---- source link ---- */
+  a.source-link {
+    font-size: 12px;
+    color: #2563EB;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  a.source-link:hover { color: #1D4ED8; }
+
+  /* ---- bill header ---- */
+  .bill-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #18181B;
+    margin-bottom: 4px;
+  }
+  .bill-desc {
+    font-size: 13px;
+    color: #71717A;
+    margin-bottom: 12px;
+    line-height: 1.45;
   }
 </style>
 </head>
 <body>
 
-<!-- Landing Screen -->
+<!-- ===================== LANDING SCREEN ===================== -->
 <div id="landing" class="screen active">
-  <div class="max-w-2xl mx-auto px-4 py-10">
-    <div class="text-center mb-8">
-      <h1 class="text-2xl font-bold mb-2">Was gefällt dir an der AfD?</h1>
-      <p class="text-sm" style="color: #6e6e73; line-height: 1.5;">Wähl die Aussagen, die dir wichtig sind. Wir zeigen dir, was die AfD wirklich dazu sagt, tut und abstimmt.</p>
+
+  <!-- Glassmorphism header -->
+  <div class="landing-header">
+    <div class="landing-header-glass">
+      <h1 style="font-size: clamp(22px, 5vw, 32px); font-weight: 600; color: #FFFFFF; line-height: 1.3; margin-bottom: 10px;">
+        Was die AfD verspricht, und wie sie abstimmt
+      </h1>
+      <p style="font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.55;">
+        Wähl ein Thema. Wir zeigen dir Zitate, Abstimmungen und Zahlen, alle mit Originalquellen.
+      </p>
     </div>
-    <div id="card-grid"></div>
   </div>
+
+  <!-- Sympathiser quotes intro -->
+  <div class="sympathy-block">
+    <p class="sympathy-quote">"Die einzigen, die das wirklich ansprechen."</p>
+    <p class="sympathy-quote">"Die anderen sind doch alle gleich."</p>
+    <p class="sympathy-quote">"Man wird sofort in die rechte Ecke gestellt."</p>
+    <p class="sympathy-cta">Wähl die Aussage, die du kennst.</p>
+  </div>
+
+  <!-- Card grid -->
+  <div id="card-grid"></div>
+
 </div>
 
-<!-- Cascade Screen -->
+<!-- ===================== CASCADE SCREEN ===================== -->
 <div id="cascade" class="screen">
-  <div class="max-w-2xl mx-auto px-4 py-6">
-    <!-- Topic pills -->
-    <div id="topic-pills" class="flex gap-2 overflow-x-auto pb-3 mb-4" style="flex-wrap: nowrap; -webkit-overflow-scrolling: touch;"></div>
 
-    <!-- Back button -->
-    <button onclick="showLanding()" class="text-sm font-medium mb-4 hover:underline" style="color: #0071e3;">← Zurück</button>
+  <!-- Topic pills -->
+  <div class="pills-wrap" id="topic-pills"></div>
 
-    <!-- Cascade content -->
-    <div id="cascade-content"></div>
-
-    <!-- Next topic button -->
-    <div id="next-topic-wrap" class="mt-6 mb-10 text-center">
-      <button onclick="showNextTopic()" class="px-6 py-3 rounded-xl text-white font-semibold text-sm" style="background: #0071e3;">Nächstes Thema →</button>
+  <!-- Cascade glassmorphism header -->
+  <div class="cascade-header" id="cascade-header-wrap">
+    <div class="cascade-header-glass">
+      <span class="faktencheck-tag">Faktencheck</span>
+      <div class="cascade-statement" id="cascade-statement"></div>
+      <div class="cascade-intro" id="cascade-intro"></div>
     </div>
   </div>
+
+  <!-- Controls: back -->
+  <div class="cascade-controls">
+    <button class="back-btn" onclick="showLanding()">← Alle Themen</button>
+  </div>
+
+  <!-- Layers -->
+  <div id="cascade-content"></div>
+
+  <!-- Next topic -->
+  <div id="next-topic-wrap" class="next-wrap">
+    <button class="next-btn" onclick="showNextTopic()">Nächstes Thema →</button>
+  </div>
+
 </div>
+
+<!-- Footer (always visible in landing; hidden in cascade via JS) -->
+<footer id="site-footer">
+  Alle Quellen verlinkt. Kein Tracking. Kein Cookie. Kein Backend.
+  <!-- Impressum: placeholder -->
+</footer>
 
 <script src="guide-data.js"></script>
 <script>
-// XSS note: This is a fully static site with zero user input.
-// All DOM content comes from the author-controlled guide-data.js.
-// Using template literals to build DOM is safe by design.
+// XSS note: fully static site, zero user input.
+// All DOM content comes from author-controlled guide-data.js.
+// Template literals are safe by design.
 
 let currentIndex = 0;
 
 const COLORS = {
-  promise: '#ff9500',
-  quotes:  '#af52de',
-  votes:   '#ff3b30',
-  data:    '#007aff',
-  pattern: '#34c759'
+  promise: '#FF9500',
+  quotes:  '#AF52DE',
+  votes:   '#FF3B30',
+  data:    '#007AFF',
+  pattern: '#34C759'
 };
 
 const LABELS = {
@@ -148,102 +486,132 @@ const LABELS = {
 
 function renderLanding() {
   const grid = document.getElementById('card-grid');
-  const cols = GUIDE_DATA.length === 1 ? '' : 'sm:grid-cols-2';
-  const cards = GUIDE_DATA.map((topic, i) =>
-    '<button onclick="showCascade(' + i + ')" class="statement-card bg-white rounded-2xl px-4 py-3.5 flex items-center gap-3 text-left w-full">' +
-      '<span class="text-xl flex-shrink-0">' + topic.icon + '</span>' +
-      '<span class="flex-1 text-sm leading-snug">' + topic.statement + '</span>' +
-      '<span class="text-gray-300 text-lg flex-shrink-0">›</span>' +
-    '</button>'
-  ).join('');
-  grid.innerHTML = '<div class="grid grid-cols-1 ' + cols + ' gap-3">' + cards + '</div>';
+
+  const cards = GUIDE_DATA.map(function(topic, i) {
+    var featuredClass = i === 0 ? ' featured' : '';
+    return (
+      '<button onclick="showCascade(' + i + ')" class="statement-card' + featuredClass + '">' +
+        '<span class="card-icon">' + topic.icon + '</span>' +
+        '<span class="card-text">' + topic.statement + '</span>' +
+        '<span class="card-chevron">›</span>' +
+      '</button>'
+    );
+  }).join('');
+
+  grid.innerHTML = (
+    '<div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">' +
+      cards +
+    '</div>'
+  );
 }
 
 function showLanding() {
   document.getElementById('cascade').classList.remove('active');
   document.getElementById('landing').classList.add('active');
+  document.getElementById('site-footer').style.display = '';
+  window.scrollTo(0, 0);
 }
 
 function showCascade(index) {
   currentIndex = index;
-  const topic = GUIDE_DATA[index];
-  const layers = topic.layers;
+  var topic = GUIDE_DATA[index];
+  var layers = topic.layers;
 
   document.getElementById('landing').classList.remove('active');
   document.getElementById('cascade').classList.add('active');
+  document.getElementById('site-footer').style.display = 'none';
+
+  // Populate cascade header
+  document.getElementById('cascade-statement').textContent = '\u201E' + topic.statement + '\u201C';
+  document.getElementById('cascade-intro').textContent = topic.intro;
 
   // Render pills
-  const pillsEl = document.getElementById('topic-pills');
-  pillsEl.innerHTML = GUIDE_DATA.map(function(t, i) {
+  document.getElementById('topic-pills').innerHTML = GUIDE_DATA.map(function(t, i) {
     var cls = i === index ? 'topic-pill active' : 'topic-pill';
-    return '<button onclick="showCascade(' + i + ')" class="' + cls + '">' + t.icon + ' ' + t.shortLabel + '</button>';
+    return '<button onclick="showCascade(' + i + ')" class="' + cls + '">' + t.icon + '\u00A0' + t.shortLabel + '</button>';
   }).join('');
 
-  // Build cascade
+  // Build layers
   var parts = [];
 
-  // Header
-  parts.push(
-    '<div class="rounded-2xl p-6 mb-4 text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">' +
-      '<div class="text-xs uppercase tracking-wider opacity-80 mb-2">Faktencheck</div>' +
-      '<h2 class="text-lg font-semibold leading-snug mb-1">\u201E' + topic.statement + '\u201C</h2>' +
-      '<p class="text-sm opacity-85">' + topic.intro + '</p>' +
-    '</div>'
-  );
-
   // Promise layer
-  parts.push(layerHTML('promise', '<p>' + layers.promise.text + '</p>'));
+  parts.push(layerHTML('promise',
+    '<p>' + layers.promise.text + '</p>'
+  ));
 
   // Quotes layer
-  var quoteParts = layers.quotes.map(function(q) {
-    return '<blockquote class="pl-3 my-3 italic" style="border-left: 3px solid #af52de; color: #3a3a3c;">' +
-        '\u201E' + q.text + '\u201C' +
-      '</blockquote>' +
-      '<div class="text-xs" style="color: #6e6e73;">' + q.person + ', <a href="' + q.url + '" target="_blank" rel="noopener" class="underline" style="color: #007aff;">' + q.source + '</a></div>';
+  var quoteBody = layers.quotes.map(function(q) {
+    return (
+      '<div class="quote-block">\u201E' + q.text + '\u201C</div>' +
+      '<div class="quote-attribution">' +
+        q.person + ', <a href="' + q.url + '" target="_blank" rel="noopener" class="source-link">' + q.source + '</a>' +
+      '</div>'
+    );
   }).join('');
-  parts.push(layerHTML('quotes', quoteParts));
+  parts.push(layerHTML('quotes', quoteBody));
 
   // Votes layer
-  var voteParts = layers.votes.map(function(v) {
-    var total = v.total_for + v.total_against;
-    var forPct = (v.total_for / total * 100).toFixed(1);
-    var againstPct = (v.total_against / total * 100).toFixed(1);
-    return '<div class="font-semibold text-sm mb-1">' + v.bill + ' (' + v.year + ')</div>' +
-      '<p class="text-sm mb-3" style="color: #6e6e73;">' + v.description + '</p>' +
-      '<div class="vote-bar mb-2">' +
-        '<div class="vote-for" style="width: ' + forPct + '%;">Dafür: ' + v.total_for + '</div>' +
-        '<div class="vote-against" style="width: ' + againstPct + '%;">Dagegen: ' + v.total_against + '</div>' +
+  var votesBody = layers.votes.map(function(v) {
+    var afdTotal = v.afd_for + v.afd_against;
+    return (
+      '<div class="bill-title">' + v.bill + ' (' + v.year + ')</div>' +
+      '<div class="bill-desc">' + v.description + '</div>' +
+      '<div class="vote-grid">' +
+        '<div class="vote-cell">' +
+          '<div class="vote-cell-num" style="color: #34C759;">' + v.total_for + '</div>' +
+          '<div class="vote-cell-label">Gesamt Daf\u00FCr</div>' +
+        '</div>' +
+        '<div class="vote-cell">' +
+          '<div class="vote-cell-num" style="color: #FF3B30;">' + v.total_against + '</div>' +
+          '<div class="vote-cell-label">Gesamt Dagegen</div>' +
+        '</div>' +
+        '<div class="vote-cell afd-cell">' +
+          '<div class="vote-cell-num">' + v.afd_for + '</div>' +
+          '<div class="vote-cell-label">AfD Daf\u00FCr</div>' +
+        '</div>' +
+        '<div class="vote-cell afd-cell">' +
+          '<div class="vote-cell-num">' + v.afd_against + '</div>' +
+          '<div class="vote-cell-label">AfD Dagegen</div>' +
+        '</div>' +
       '</div>' +
-      '<div class="text-xs font-semibold mb-1" style="color: #ff3b30;">AfD: ' + v.afd_against + ' von ' + (v.afd_for + v.afd_against) + ' Abgeordneten dagegen</div>' +
-      '<a href="' + v.url + '" target="_blank" rel="noopener" class="text-xs underline" style="color: #007aff;">Abgeordnetenwatch</a>';
+      '<a href="' + v.url + '" target="_blank" rel="noopener" class="source-link">Quelle: Abgeordnetenwatch</a>'
+    );
   }).join('');
-  parts.push(layerHTML('votes', voteParts));
+  parts.push(layerHTML('votes', votesBody));
 
   // Data layer
-  var dataParts = layers.data.map(function(d, i) {
-    var big = i === 0;
+  var dataBody = layers.data.map(function(d, i) {
+    var isBig = i === 0;
+    var sizeClass = isBig ? 'stat-value' : 'stat-value stat-sm';
     var sourceHtml = d.url
-      ? '<a href="' + d.url + '" target="_blank" rel="noopener" class="text-xs underline" style="color: #007aff;">' + d.source + '</a>'
-      : '<div class="text-xs" style="color: #86868b;">' + d.source + '</div>';
-    return '<div class="' + (i > 0 ? 'mt-4' : '') + '">' +
-      '<div class="font-bold ' + (big ? 'text-2xl' : 'text-lg') + '" style="color: #1d1d1f;">' + d.value + '</div>' +
-      '<div class="text-xs" style="color: #6e6e73;">' + d.label + '</div>' +
-      sourceHtml +
-    '</div>';
+      ? '<a href="' + d.url + '" target="_blank" rel="noopener" class="source-link">' + d.source + '</a>'
+      : '<span style="font-size:12px; color:#A1A1AA;">' + d.source + '</span>';
+    return (
+      '<div class="stat-block">' +
+        '<div class="' + sizeClass + '">' + d.value + '</div>' +
+        '<div class="stat-label">' + d.label + '</div>' +
+        sourceHtml +
+      '</div>'
+    );
   }).join('');
-  parts.push(layerHTML('data', dataParts));
+  parts.push(layerHTML('data', dataBody));
 
   // Pattern layer
-  var patternBody = '<p class="mb-3">' + layers.pattern.text + '</p>' +
-    '<div class="rounded-lg p-3 text-sm" style="background: rgba(52,199,89,0.08); border-left: 3px solid #34c759;">' +
-      '<span class="font-semibold" style="color: #34c759;">Frag mal:</span> ' + layers.pattern.question +
-    '</div>';
+  var patternBody = (
+    '<div class="pattern-section">' +
+      '<p style="font-size:14px; line-height:1.65; color:#27272A; margin-bottom:0;">' + layers.pattern.text + '</p>' +
+    '</div>' +
+    '<div class="frag-box">' +
+      '<span class="frag-label">Frag mal:</span> ' + layers.pattern.question +
+    '</div>'
+  );
   parts.push(layerHTML('pattern', patternBody));
 
   document.getElementById('cascade-content').innerHTML = parts.join('');
 
-  // Show/hide next button
-  document.getElementById('next-topic-wrap').style.display = index < GUIDE_DATA.length - 1 ? '' : 'none';
+  // Next topic button
+  document.getElementById('next-topic-wrap').style.display =
+    index < GUIDE_DATA.length - 1 ? '' : 'none';
 
   window.scrollTo(0, 0);
 }
@@ -255,17 +623,16 @@ function showNextTopic() {
 }
 
 function layerHTML(key, content) {
-  return '<div class="cascade-layer bg-white rounded-2xl p-5 mb-3 border border-gray-200">' +
-    '<div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: ' + COLORS[key] + ';">' + LABELS[key] + '</div>' +
-    '<div class="text-sm leading-relaxed">' + content + '</div>' +
-  '</div>';
+  return (
+    '<div class="cascade-layer">' +
+      '<div class="layer-label" style="color:' + COLORS[key] + ';">' + LABELS[key] + '</div>' +
+      '<div class="layer-body">' + content + '</div>' +
+    '</div>'
+  );
 }
 
 // Init
 renderLanding();
 </script>
-<footer class="text-center text-xs text-gray-300 py-8">
-  Alle Quellen verlinkt. Kein Tracking. Kein Cookie. Kein Backend.
-</footer>
 </body>
 </html>
