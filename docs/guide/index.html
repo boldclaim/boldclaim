@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Was gefällt dir an der AfD?</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f5f7;
+    color: #1d1d1f;
+    font-size: 14px;
+  }
+
+  .screen { display: none; }
+  .screen.active { display: block; }
+
+  .statement-card {
+    transition: all 0.2s;
+    border: 1.5px solid #e5e7eb;
+  }
+  .statement-card:hover {
+    border-color: #0071e3;
+    background: #f0f5ff;
+  }
+
+  .vote-bar {
+    display: flex;
+    height: 32px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .vote-for {
+    background: #34c759;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+  }
+  .vote-against {
+    background: #ff3b30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .cascade-layer {
+    animation: fadeUp 0.4s ease both;
+  }
+  .cascade-layer:nth-child(2) { animation-delay: 0.05s; }
+  .cascade-layer:nth-child(3) { animation-delay: 0.10s; }
+  .cascade-layer:nth-child(4) { animation-delay: 0.15s; }
+  .cascade-layer:nth-child(5) { animation-delay: 0.20s; }
+  .cascade-layer:nth-child(6) { animation-delay: 0.25s; }
+  .cascade-layer:nth-child(7) { animation-delay: 0.30s; }
+
+  .topic-pill {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .topic-pill.active {
+    background: #0071e3;
+    color: white;
+  }
+  .topic-pill:not(.active) {
+    background: #f0f0f2;
+    color: #1d1d1f;
+  }
+</style>
+</head>
+<body>
+
+<!-- Landing Screen -->
+<div id="landing" class="screen active">
+  <div class="max-w-2xl mx-auto px-4 py-10">
+    <div class="text-center mb-8">
+      <h1 class="text-2xl font-bold mb-2">Was gefällt dir an der AfD?</h1>
+      <p class="text-sm" style="color: #6e6e73; line-height: 1.5;">Wähl die Aussagen, die dir wichtig sind. Wir zeigen dir, was die AfD wirklich dazu sagt, tut und abstimmt.</p>
+    </div>
+    <div id="card-grid"></div>
+  </div>
+</div>
+
+<!-- Cascade Screen -->
+<div id="cascade" class="screen">
+  <div class="max-w-2xl mx-auto px-4 py-6">
+    <!-- Topic pills -->
+    <div id="topic-pills" class="flex gap-2 overflow-x-auto pb-3 mb-4" style="flex-wrap: nowrap; -webkit-overflow-scrolling: touch;"></div>
+
+    <!-- Back button -->
+    <button onclick="showLanding()" class="text-sm font-medium mb-4 hover:underline" style="color: #0071e3;">← Zurück</button>
+
+    <!-- Cascade content -->
+    <div id="cascade-content"></div>
+
+    <!-- Next topic button -->
+    <div id="next-topic-wrap" class="mt-6 mb-10 text-center">
+      <button onclick="showNextTopic()" class="px-6 py-3 rounded-xl text-white font-semibold text-sm" style="background: #0071e3;">Nächstes Thema →</button>
+    </div>
+  </div>
+</div>
+
+<script src="guide-data.js"></script>
+<script>
+// XSS note: This is a fully static site with zero user input.
+// All DOM content comes from the author-controlled guide-data.js.
+// Using template literals to build DOM is safe by design.
+
+let currentIndex = 0;
+
+const COLORS = {
+  promise: '#ff9500',
+  quotes:  '#af52de',
+  votes:   '#ff3b30',
+  data:    '#007aff',
+  pattern: '#34c759'
+};
+
+const LABELS = {
+  promise: 'Was sie versprechen',
+  quotes:  'Was sie sagen',
+  votes:   'Wie sie abstimmen',
+  data:    'Was die Zahlen sagen',
+  pattern: 'Das Muster'
+};
+
+function renderLanding() {
+  const grid = document.getElementById('card-grid');
+  const cols = GUIDE_DATA.length === 1 ? '' : 'sm:grid-cols-2';
+  const cards = GUIDE_DATA.map((topic, i) =>
+    '<button onclick="showCascade(' + i + ')" class="statement-card bg-white rounded-2xl px-4 py-3.5 flex items-center gap-3 text-left w-full">' +
+      '<span class="text-xl flex-shrink-0">' + topic.icon + '</span>' +
+      '<span class="flex-1 text-sm leading-snug">' + topic.statement + '</span>' +
+      '<span class="text-gray-300 text-lg flex-shrink-0">›</span>' +
+    '</button>'
+  ).join('');
+  grid.innerHTML = '<div class="grid grid-cols-1 ' + cols + ' gap-3">' + cards + '</div>';
+}
+
+function showLanding() {
+  document.getElementById('cascade').classList.remove('active');
+  document.getElementById('landing').classList.add('active');
+}
+
+function showCascade(index) {
+  currentIndex = index;
+  const topic = GUIDE_DATA[index];
+  const layers = topic.layers;
+
+  document.getElementById('landing').classList.remove('active');
+  document.getElementById('cascade').classList.add('active');
+
+  // Render pills
+  const pillsEl = document.getElementById('topic-pills');
+  pillsEl.innerHTML = GUIDE_DATA.map(function(t, i) {
+    var cls = i === index ? 'topic-pill active' : 'topic-pill';
+    return '<button onclick="showCascade(' + i + ')" class="' + cls + '">' + t.icon + ' ' + t.shortLabel + '</button>';
+  }).join('');
+
+  // Build cascade
+  var parts = [];
+
+  // Header
+  parts.push(
+    '<div class="rounded-2xl p-6 mb-4 text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">' +
+      '<div class="text-xs uppercase tracking-wider opacity-80 mb-2">Faktencheck</div>' +
+      '<h2 class="text-lg font-semibold leading-snug mb-1">\u201E' + topic.statement + '\u201C</h2>' +
+      '<p class="text-sm opacity-85">' + topic.intro + '</p>' +
+    '</div>'
+  );
+
+  // Promise layer
+  parts.push(layerHTML('promise', '<p>' + layers.promise.text + '</p>'));
+
+  // Quotes layer
+  var quoteParts = layers.quotes.map(function(q) {
+    return '<blockquote class="pl-3 my-3 italic" style="border-left: 3px solid #af52de; color: #3a3a3c;">' +
+        '\u201E' + q.text + '\u201C' +
+      '</blockquote>' +
+      '<div class="text-xs" style="color: #6e6e73;">' + q.person + ', <a href="' + q.url + '" target="_blank" rel="noopener" class="underline" style="color: #007aff;">' + q.source + '</a></div>';
+  }).join('');
+  parts.push(layerHTML('quotes', quoteParts));
+
+  // Votes layer
+  var voteParts = layers.votes.map(function(v) {
+    var total = v.total_for + v.total_against;
+    var forPct = (v.total_for / total * 100).toFixed(1);
+    var againstPct = (v.total_against / total * 100).toFixed(1);
+    return '<div class="font-semibold text-sm mb-1">' + v.bill + ' (' + v.year + ')</div>' +
+      '<p class="text-sm mb-3" style="color: #6e6e73;">' + v.description + '</p>' +
+      '<div class="vote-bar mb-2">' +
+        '<div class="vote-for" style="width: ' + forPct + '%;">Dafür: ' + v.total_for + '</div>' +
+        '<div class="vote-against" style="width: ' + againstPct + '%;">Dagegen: ' + v.total_against + '</div>' +
+      '</div>' +
+      '<div class="text-xs font-semibold mb-1" style="color: #ff3b30;">AfD: ' + v.afd_against + ' von ' + (v.afd_for + v.afd_against) + ' Abgeordneten dagegen</div>' +
+      '<a href="' + v.url + '" target="_blank" rel="noopener" class="text-xs underline" style="color: #007aff;">Abgeordnetenwatch</a>';
+  }).join('');
+  parts.push(layerHTML('votes', voteParts));
+
+  // Data layer
+  var dataParts = layers.data.map(function(d, i) {
+    var big = i === 0;
+    var sourceHtml = d.url
+      ? '<a href="' + d.url + '" target="_blank" rel="noopener" class="text-xs underline" style="color: #007aff;">' + d.source + '</a>'
+      : '<div class="text-xs" style="color: #86868b;">' + d.source + '</div>';
+    return '<div class="' + (i > 0 ? 'mt-4' : '') + '">' +
+      '<div class="font-bold ' + (big ? 'text-2xl' : 'text-lg') + '" style="color: #1d1d1f;">' + d.value + '</div>' +
+      '<div class="text-xs" style="color: #6e6e73;">' + d.label + '</div>' +
+      sourceHtml +
+    '</div>';
+  }).join('');
+  parts.push(layerHTML('data', dataParts));
+
+  // Pattern layer
+  var patternBody = '<p class="mb-3">' + layers.pattern.text + '</p>' +
+    '<div class="rounded-lg p-3 text-sm" style="background: rgba(52,199,89,0.08); border-left: 3px solid #34c759;">' +
+      '<span class="font-semibold" style="color: #34c759;">Frag mal:</span> ' + layers.pattern.question +
+    '</div>';
+  parts.push(layerHTML('pattern', patternBody));
+
+  document.getElementById('cascade-content').innerHTML = parts.join('');
+
+  // Show/hide next button
+  document.getElementById('next-topic-wrap').style.display = index < GUIDE_DATA.length - 1 ? '' : 'none';
+
+  window.scrollTo(0, 0);
+}
+
+function showNextTopic() {
+  if (currentIndex < GUIDE_DATA.length - 1) {
+    showCascade(currentIndex + 1);
+  }
+}
+
+function layerHTML(key, content) {
+  return '<div class="cascade-layer bg-white rounded-2xl p-5 mb-3 border border-gray-200">' +
+    '<div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: ' + COLORS[key] + ';">' + LABELS[key] + '</div>' +
+    '<div class="text-sm leading-relaxed">' + content + '</div>' +
+  '</div>';
+}
+
+// Init
+renderLanding();
+</script>
+</body>
+</html>
