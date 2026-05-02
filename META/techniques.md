@@ -678,3 +678,246 @@ Pattern: US-Mordrate nach Einkommen × Ethnie wird als Beweis gepostet, dass Kul
 ## Pro-Kopf-Trick (Absolutzahlen als Beweis)
 
 Pattern: Steigende Absolutzahlen von Ausländer-Tatverdächtigen als "explodierende Kriminalität" gepostet. Counter: Pro-Kopf-Rate berechnen. Ausländische Bevölkerung hat sich 2014-2024 von 8,2M auf 14,1M fast verdoppelt. Pro Kopf (Straftaten insgesamt ohne ausl. Verstöße): sinkend von ~6.260 auf ~4.960 pro 100k (-21%). ABER: nach Delikt differenziert ist das Bild gemischt (Mord -13%, Vergewaltigung +18%). Immer nach Delikt aufschlüsseln.
+
+---
+
+## Authority-Weaponization durch Beamten-Status
+
+Pattern: Ein angeblicher (oder tatsächlicher) Insider (Beamter, Polizist, Lehrer, Sozialarbeiter, Jobcenter-Arbeitsvermittler) postet anonymen Anekdoten-Bericht, der ein rechtes Narrativ stützt. Pre-emptive Selbstimmunisierung: "Ich bin weder rechts noch Schwurbler". Schutzschild: "Ich sehe das jeden Tag in meiner Arbeit, ihr seid nur naiv."
+
+**Beispiel:** r/armes_deutschland 2026-04, "Ich bin Arbeitsvermittler im Jobcenter und die Totalverweigerer-Situation ist deutlich heftiger als ihr denkt" (253↑). 6-Mythen-Framework, das anekdotische Insider-Evidenz mit institutioneller Autorität auflädt.
+
+**Counter-Strategie:**
+1. Daten gegen Daten, nicht Anekdote gegen Anekdote. Insider-Status ersetzt keine Statistik.
+2. Spezifische Falschbehauptungen aufzeigen (Definitionsverschiebung, Verfassungsrechtliche Falschdarstellung).
+3. Self-contradicting passages markieren (wenn der Insider sich selbst widerspricht, das ist Source-Boomerang).
+4. Person nicht delegitimieren — Argumente prüfen.
+
+**Konter-Template-Eröffnung:** "Drei Sachen, die sich prüfen lassen." Dann data point, data point, data point.
+
+**Lessons learned:** Niemand widerlegt Insider durch Empörung. Der einzige Weg ist datendichter Konter, der dem Mitleser zeigt, dass die Insider-Anekdote eine Auswahl aus einer größeren Statistik ist.
+
+---
+
+## Plausibilitäts-Heuristik / Statistik-Bauchgefühl
+
+Pattern: "Dass die Quote der Verweigerer bei unter einem Prozent liegen soll, ist doch schon rein statistisch unglaubwürdig. In jeder Personengruppe gibt es immer einen gewissen Prozentsatz." (r/armes_deutschland 2026-04, u/Flimsy-Run-5589). Statistik-Skepsis aus dem Bauch — Common-Sense-Argument schlägt Daten.
+
+**Warum das oft funktioniert:** Der Kern ist empirisch korrekt. In jeder großen Gruppe gibt es Trittbrettfahrer. Wer das einfach abstreitet, verliert sofort.
+
+**Counter-Strategie:** Konzession zuerst, dann Definitions-Aufschlüsselung. Zeigen, was die zitierte Zahl tatsächlich misst (z.B. nur formelle Arbeitsablehnung nach § 31 SGB II), dann andere Kategorien (Meldeversäumnisse, dokumentierter Missbrauch) ehrlich addieren. Ehrliche Erweiterung ist stärker als naive Verteidigung.
+
+**Konter-Template-Eröffnung:** "Der Kern stimmt: In jeder großen Gruppe gibt es einen Anteil, der sich bequemer einrichtet als nötig." Dann: "Die zitierte Zahl misst aber eine enge Kategorie..."
+
+**Lessons learned:** Anti-Plausibilitäts-Argumente verlieren immer. Wer "Bauchgefühl ist falsch" sagt, redet am Mitleser vorbei. Wer "Bauchgefühl stimmt teilweise" sagt, gewinnt das Ohr und kann dann die Daten setzen.
+
+---
+
+## Source-Boomerang (eigene Quelle gegen sie)
+
+Pattern: Opponent zitiert Quelle X als Beleg für seine Position. Quelle X sagt aber tatsächlich das Gegenteil oder Differenzierteres. Wir nutzen die gleiche Quelle, um seine Position zu widerlegen.
+
+**Beispiel 1 (KFN bei Migration):** Opponent zitiert KFN-Studie für "Migranten kriminell". KFN selbst sagt: "Aufenthaltsstatus erklärt mehr als Herkunft." → Source-Boomerang.
+
+**Beispiel 2 (IAB-Teilzeit bei Aufstockern, 2026-04):** Opponent zitiert IAB-Forum-Artikel für "60% Aufstocker-Teilzeit beweist Lifestyle-Wahl". Der IAB-Artikel plädiert tatsächlich für den Teilzeitanspruch wegen Care-Arbeit (Kinder, Pflege als häufigster Teilzeit-Grund). → Counter: "Die IAB-Quelle, die du zitierst, sagt selbst, warum: Care-Arbeit, nicht Lifestyle."
+
+**Warum das so stark wirkt:** Der Mitleser sieht, dass der Opponent die Quelle nicht gelesen oder selektiv zitiert hat. Glaubwürdigkeit kippt sofort.
+
+**Counter-Workflow:**
+1. Opponent zitiert Quelle?
+2. Quelle prüfen: Sagt sie wirklich, was opponent behauptet?
+3. Wenn nicht: Konkrete Aussage aus der Quelle zitieren, die opponent's Lesart widerspricht.
+4. Tactic-Naming: "Die Quelle, die du zitierst, sagt das Gegenteil."
+
+**Pre-Read-Library oft falsch zitierter Quellen:**
+- KFN Forschungsbericht 161 (Glaubitz/Bliesener) — Migration/Kriminalität
+- IAB-Forum Teilzeitanspruch — Aufstocker
+- BVerfG 1 BvL 7/16 — "Sanktionen über 30%" (oft falsch zitiert als pauschale Obergrenze)
+- BMAS Sozialbericht — Bürgergeld als "größter Posten" (ist Position 5)
+- PKS — TVBZ vs. Anteil Tatverdächtiger
+
+---
+
+## Stereotyp-codierter Whataboutism
+
+Pattern: Statt direkter Aussage wird ein ethnisch oder sozial codiertes Beispiel als Frage formuliert. Beispiel r/armes_deutschland 2026-04 (u/XoRoX44): "Wieviel prozent der aufstocker sind beim selben dönerladen/barbershop angemeldet?" Implizit wird Schein-Anstellung in migrantisch codierten Kontexten suggeriert, ohne dass jemand das direkt behauptet hat.
+
+**Counter-Strategie:**
+1. Konzession: Schein-Anstellungen existieren und sind Teil der dokumentierten Missbrauchsstatistik (3% / 101.000 Fälle / 260 Mio €).
+2. Branchen-Realitäts-Check: Größte Aufstocker-Gruppen sind Reinigung, Einzelhandel, Pflege, Lager. Gastgewerbe ist eine kleinere Untergruppe.
+3. Stereotypen-Codierung neutral benennen: "Eine kleine Untergruppe in stark verkürzter Form" statt "Du bist rassistisch".
+4. Zuständigkeits-Verweis: Finanzkontrolle Schwarzarbeit beim Zoll, nicht Reddit-Spekulation.
+
+**Lessons learned:** Wer den Stereotyp direkt anspricht ("das ist rassistisch codiert"), gibt opponent victim mode. Wer ihn beschreibt ("verkürzte Form, kleine Untergruppe") nimmt das Stereotyp die Wirkung.
+
+---
+
+## Frame-Kollaps statt Punkt-für-Punkt
+
+Pattern: Wenn Gegner ein konsistentes Erklärungsmodell hat (z.B. "PMK ist aufgebläht durch Speech + Default-Zuordnung, also ist die News-Zahl klein"), reicht es nicht, einzelne Punkte abzuräumen. Effektiver: zwei gezielte Datenpunkte, die je eine Säule des Modells killen. Das ist nicht "Argument verloren", sondern "Modell ist hin".
+
+**Anwendung r/armes_deutschland rechte Gewalt 2026-05:**
+- Säule 1 ("PMK ist Speech, nicht Gewalt"): zerlegt durch direkten Verweis auf 1.488 PMK-rechts-Gewalttaten 2024 als fallzahlenstärkster Phänomenbereich. Die Schlagzeile ist Gewalt, nicht Posts.
+- Säule 2 ("Default-rechts-Zuordnung"): zerlegt durch -0,6% PMK-rechts antisemitisch + +63,6% ausländische Ideologie. Zuordnung differenziert nachweislich aktiv.
+
+**Lessons learned:** Frame-Kollaps-Opener ("Dein Erklärungsmodell ist gerade zusammengefallen") signalisiert Mitlesern, dass die Diskussion strukturell vorbei ist. Punkt-für-Punkt-Listen wirken pedantisch, Frame-Kollaps wirkt überlegen. Voraussetzung: man muss die zwei Säulen sauber benennen, sonst klingt es nach Pose ohne Substanz.
+
+---
+
+## ChatGPT-Diss als Argumentationsvermeidung
+
+Pattern: Gegner adressiert nicht den Inhalt, sondern den vermuteten Autor. "Grüße an ChatGPT", "schreib doch mal selber", "das war doch eine KI". Funktioniert als Diskredit-Frame und entlastet den Gegner von inhaltlicher Antwort.
+
+**Counter-Strategie:**
+1. Einmal kurz adressieren ("am Inhalt ändert das nichts, egal ob ich's in Word, Reddit oder mit KI-Hilfe schreibe").
+2. Nicht defensive werden. Keine Beweise für menschliche Autorschaft liefern. Das stärkt den Frame.
+3. Inhaltliche Antwort weiter liefern. Mitleser sehen die Asymmetrie.
+4. Bei Wiederholung: Move benennen ("ChatGPT-Diss als Argumentationsvermeidung"). Das macht den Move für Mitleser sichtbar.
+
+**Caveat:** KI-Vorwurf hat einen wahren Kern, weil viele Reddit-Replies tatsächlich KI-generiert sind. Wer nur "tu-quoque" antwortet, verliert. Wer den Vorwurf ignoriert UND inhaltlich liefert, gewinnt.
+
+**Lessons learned:** Niemals "ich bin keine KI" beweisen. Das ist eine unmögliche Beweislage. Statt dessen "Inhalt-egal-Strategie": Quelle des Posts ist irrelevant für die Faktenfrage.
+
+---
+
+## Bringschulden-Umkehr
+
+Pattern: Gegner kontert "lies du erstmal die Quelle", obwohl er selbst gar nicht in die Quelle reingeschaut hat. Tu-Quoque-Variante mit umgedrehtem Vorzeichen: er macht aus seiner eigenen Lese-Schuld deine.
+
+**Anwendung r/armes_deutschland 2026-05:** DiX-Nbw schrieb "Bevor du mir antwortest, nimm dir doch mal die Mühe und lies dir 10 - 15 Minuten mal deine eigene Quelle durch", während er selbst drei Beiträge lang an der Schlagzeile vorbeischrieb.
+
+**Counter-Strategie:**
+1. Direkte Stellen aus der Quelle zitieren, mit Wortlaut und Zahl.
+2. Den Move benennen: "Bringschulden-Umkehr, während du selber drei Beiträge lang am Inhalt vorbeischreibst."
+3. Nicht in Lese-Wettbewerb einsteigen. Mitleser sehen, wer wirklich Substanz liefert.
+
+**Lessons learned:** Bei Bringschulden-Umkehr ist die Falle, sich zu rechtfertigen ("ich habe es gelesen!"). Stattdessen die Asymmetrie sichtbar machen.
+
+---
+
+## Codewort-Erkennung
+
+Pattern: Statt direkter Aussagen werden codierte Begriffe genutzt, die im rechten Diskurs feststehende Bedeutung haben, aber im allgemeinen Sprachgebrauch unverdächtig wirken. Plausible Deniability für den Schreiber.
+
+**Beispiele aus r/armes_deutschland 2026-05:**
+- **"Freibad"** → Migration / Migrant-Crime im öffentlichen Raum (Kontext: Sommer-Pressemeldungen 2018-2024)
+- **"Weihnachtsmärkte (rein zufällig seit 2017)"** → Anschlag Berlin Breitscheidplatz 19.12.2016 (Anis Amri) → Migrant-Terror als implizite Ursache
+- **"verbale Gewalt"** in Anführungszeichen → fingiert einen Diskurs, den hier niemand führt
+- **"Fachkräfte holen"** sarkastisch → Migrationspolitik-Diskredit
+
+**Counter-Strategie:**
+1. Codewort als Codewort benennen: "Codewort Freibad: du chiffrierst die Migrationsdebatte, ohne sie zu nennen."
+2. Forderung formulieren: "Schreib es offen oder lass es weg."
+3. NICHT inhaltlich auf das Codewort eingehen (würde den Migrations-Frame importieren).
+4. Direkt zur eigentlichen Zahl zurück.
+
+**Lessons learned:** Wer das Codewort inhaltlich beantwortet, akzeptiert den Frame. Wer es als Codewort benennt, zerstört die Plausible Deniability. Mitleser sehen den Move dann auch im Original.
+
+---
+
+## Selbst gestrickte Definition als Konter-Form
+
+Pattern: Gegner ersetzt eine offizielle Definition durch eine eigene, suggestive Umformulierung. Die eigene Definition stützt sein Argument, die offizielle würde es kippen.
+
+**Beispiel r/armes_deutschland 2026-05:** DiX-Nbw schrieb "'Hasskriminalität' aka Menschen sagen böse (idR Regierungskritische) Dinge im Internet" - die echte BKA-Definition listet aber Vorurteilsmotive gegen Personenmerkmale (Nationalität, ethnische Zugehörigkeit, Hautfarbe, Religion, sozialer Status, Behinderung, Geschlecht, sexuelle Orientierung, äußeres Erscheinungsbild). Regierungskritik kommt nirgendwo vor.
+
+**Counter-Strategie:**
+1. Originaldefinition wortwörtlich zitieren.
+2. Aufzeigen wo die selbst gestrickte Version abweicht.
+3. Quelle für die Originaldefinition verlinken (BKA-Schlüsselverzeichnis).
+4. Move benennen: "Selbst gestrickte Definition, die im BKA-Schlüsselverzeichnis nicht steht."
+
+**Lessons learned:** Wer die Falsch-Definition als Tippfehler behandelt, verliert. Wer sie als gezielte Begriffs-Verfälschung benennt, macht den Move sichtbar.
+
+---
+
+## Concession-Trick
+
+Pattern: Gegner gibt unter Druck einen Strohmann auf, baut aber das Kern-Argument in modifizierter Form sofort wieder auf. Sieht aus wie Lernfähigkeit, ist aber Re-Entry der gleichen These auf anderer Ebene.
+
+**Beispiel r/armes_deutschland 2026-05:** paranoidray gab "Migration als alleinige Ursache" auf, behauptete aber sofort "Migration durch Wahrnehmungs-Mediation (Medien/Umfeld)" als neue Kausalkette. Gleiche These, andere Ebene.
+
+**Counter-Strategie:**
+1. Concession ehrlich anerkennen ("Erster Teil ist nen guter Punkt, ehrlich.").
+2. Die modifizierte These auf ihre eigene Empirie prüfen.
+3. Zeigen, dass die modifizierte These die eigene Maßnahmen-Liste stützt, nicht die Gegner-Liste ("Wenn die Ursache wahrgenommene Migration durch Medien ist, setzt man dort an, nicht an der Migration selbst").
+
+**Lessons learned:** Concession-Tricks erkennen ist wichtig: scheinbare Lernkurve macht den Gegner sympathisch und entwaffnet einen, wenn man's nicht sieht. Die Anerkennung des Strohmann-Falls darf nicht den modifizierten Re-Entry mitvalidieren.
+
+---
+
+## Verbündete-Mobilisierungs-Cue im Top-Level
+
+**Beobachtung r/armes_deutschland 2026-05:** Verbündete (Neidhardtbutterberge, OverallDrawer104) tauchten erst spät und teils unbeabsichtigt auf. Latente Mitleser, die sich auf der OP-Seite befinden, brauchen einen Trigger um aktiv zu werden.
+
+**Pattern:** In feindlich gestimmten Subs eine kurze Mitleser-Adressierung im Top-Level einbauen. Beispiele:
+- "ein paar von euch lesen das wahrscheinlich mit, dafür schreib ich das eigentlich"
+- "für die Mitleser, die nicht jeden Konter durchklicken"
+- "wer Lust hat, das mit zu sortieren — gerne"
+
+**Counter-Strategie:**
+1. Bei Top-Level-Posts in feindlichen Subs immer einen Mitleser-Cue
+2. Sub-Audience evaluieren: r/armes_deutschland hat Misch-Audience, r/dezwo war reine Brigader-Audience. Die Cue lohnt sich nur wo Mitleser realistisch sind.
+3. Nicht überdeutlich appellieren ("upvotet bitte"). Subtil signalisieren, dass die Brigader-Gegnerschaft nicht repräsentativ ist.
+
+**Lessons learned:** Latente Verbündete sind im Sub vorhanden, kommen aber selten ohne Cue heraus. Eine Adressierung ist kein Gefühlsappell, sondern eine Aktivierung der schweigenden Mehrheit-die-zustimmt.
+
+---
+
+## Stickied-Mod-Power-Detection
+
+**Beobachtung r/armes_deutschland 2026-05:** paranoidray (Mod) nutzte Stickied-Slot um Diskredit-Frame oben zu pinnen. Mein erster Konter ging nicht auf den Macht-Move ein.
+
+**Pattern:** Wenn ein Mod Stickied-Power für Position-Setting nutzt (statt für Sub-Regeln/Moderation), ist das ein eigener taktischer Move, der erkannt und benannt werden sollte.
+
+**Counter-Strategie:**
+1. Prüfen, ob der Stickied-Comment thematisch (Diskredit-Frame) oder regulativ (Sub-Regeln) ist
+2. Bei thematischer Nutzung: in der ersten Reply den Macht-Move benennen ("Du nutzt deinen Stickied-Slot als Diskredit-Hebel" oder "Mod-Power als Frame-Setting, das ist nicht das gleiche wie ein Argument")
+3. Inhaltlich trotzdem antworten, nicht nur den Macht-Move kritisieren
+
+**Lessons learned:** Macht-Asymmetrie für Mitleser sichtbar machen. Ein Mod-Stickied wirkt wie Sub-Konsens, ist aber Einzelmeinung mit Privileg. Wer das benennt, neutralisiert den Frame-Vorteil.
+
+---
+
+## Frame-Kollaps statt Punkt-für-Punkt
+
+Pattern: Wenn Gegner ein konsistentes Erklärungsmodell hat (z.B. "PMK ist aufgebläht durch Speech + Default-Zuordnung, also ist die News-Zahl klein"), reicht es nicht, einzelne Punkte abzuräumen. Effektiver: zwei gezielte Datenpunkte, die je eine Säule des Modells killen. Das ist nicht "Argument verloren", sondern "Modell ist hin".
+
+**Anwendung r/armes_deutschland rechte Gewalt 2026-05:**
+- Säule 1 ("PMK ist Speech, nicht Gewalt"): zerlegt durch direkten Verweis auf 1.488 PMK-rechts-Gewalttaten 2024 als fallzahlenstärkster Phänomenbereich. Die Schlagzeile ist Gewalt, nicht Posts.
+- Säule 2 ("Default-rechts-Zuordnung"): zerlegt durch -0,6% PMK-rechts antisemitisch + +63,6% ausländische Ideologie. Zuordnung differenziert nachweislich aktiv.
+
+**Lessons learned:** Frame-Kollaps-Opener ("Dein Erklärungsmodell ist gerade zusammengefallen") signalisiert Mitlesern, dass die Diskussion strukturell vorbei ist. Punkt-für-Punkt-Listen wirken pedantisch, Frame-Kollaps wirkt überlegen. Voraussetzung: man muss die zwei Säulen sauber benennen, sonst klingt es nach Pose ohne Substanz.
+
+---
+
+## Bauchgefühl-Counter parallel zu Statistik-Counter
+
+Pattern: Mitleser ohne Statistik-Hintergrund folgen intuitiv-griffigen Vergleichen, nicht der saubereren Analyse. Selbst empirisch korrekte Konter verlieren in der Aufmerksamkeitsökonomie gegen einprägsame (auch falsche) Metaphern.
+
+**Anwendung r/armes_deutschland 2026-05:** Impossible-Rocks "Berlin 19.000 Gewalttaten vs. 1.598 bundesweit" landete bei 5↑. Mein Kategorienfehler-Konter (sachlich korrekt) bei 0↑. Mitleser folgten dem intuitiven Vergleich.
+
+**Counter-Strategie:**
+1. Bei jedem Daten-Konter eine 1-Satz-Bauchgefühl-Übersetzung mitliefern, die Mitleser ohne Statistik-Hintergrund erfassen
+2. Bauchgefühl-Anker davor- oder dazwischen-stellen, nicht statt der Statistik
+3. Beispiel: "Niemand würde Mord wegrechnen mit 'es gibt mehr Verkehrstote'. Politische Gewalt ist eine eigene Schadenskategorie, nicht ein Bruchteil von Allgemeinkriminalität."
+
+**Lessons learned:** Statistik gewinnt langfristig, Bauchgefühl gewinnt im Reddit-Skim-Modus. Wer beides liefert, deckt beide Mitleser-Modi ab.
+
+---
+
+## Tone-Imperfektion ab Post 1 (Anti-ChatGPT-Diss)
+
+Pattern: KI-cleaner Schreibstil (perfekte Doppelpunkt-Listen, durchgängige Kommasetzung, formelle Strukturierung) gibt Gegnern die Munition für ChatGPT-Diss. Wer "zu sauber" schreibt, wird der KI-Vorwurf-Loop ausgesetzt.
+
+**Anwendung r/armes_deutschland 2026-05:** Erste DiX-Nbw-Konter waren stilistisch zu KI-clean. Gab DiX-Nbw die Munition für seinen ChatGPT-Vorwurf, der dann eskalierte und zwei weitere Posts vergiftete.
+
+**Counter-Strategie:**
+- Contractions: "gibts", "hab", "is" statt "gibt's", "habe", "ist"
+- "nen" statt "einen"
+- Gelegentliche Komma-Auslassungen vor Relativsätzen
+- Keine durchgängigen Doppelpunkt-Listen mit perfekter Parallelstruktur
+- "halt", "ehrlich", "übrigens" sparsam einbauen
+- Aber: nicht ins Illiterate kippen, Sachgehalt bleibt sauber
+
+**Lessons learned:** Tone-Imperfektion ist Schutzschicht. ChatGPT-Diss nutzt KI-Cleanness als Diskredit-Vektor. Wer ab Post 1 "menschlich" schreibt, nimmt dem Vorwurf die Grundlage.

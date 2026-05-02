@@ -148,4 +148,30 @@ Die Polizei hat Sinti/Roma bis 2017 als einzige Ethnie namentlich in der Krimina
 500.000 ermordet. Erst 1982 als Völkermord anerkannt, 30 Jahre nach den jüdischen Opfern. Entschädigung bis heute unvollständig. Und jetzt erklär mir nochmal dass die Probleme "kulturell" sind.
 ```
 
+---
+
+## Antiziganismus mit Dienstmarke (kulturalistische Verwaltungs-Diskriminierung)
+
+**Pattern:** Beamte oder Sozialarbeiter berufen sich auf "Insider-Erfahrung" und transportieren rassistische Stereotype als angeblich neutrale Beobachtung. Beispiel aus r/armes_deutschland (2026-04, OP angeblicher Jobcenter-Arbeitsvermittler): "Menschen aus dem Kulturkreis der Sinti und Roma, die aufgrund ihrer Kultur oftmals Angehörige pflegen und dementsprechend keine Zeit zum Arbeiten haben."
+
+### Warum das ein spezifisch problematisches Muster ist
+
+1. **Datenkategorie existiert nicht.** In der Jobcenter-Statistik gibt es die Kategorie "Sinti und Roma" gar nicht. Die Polizei hat 2018 aufgehört, sie namentlich in der PKS zu führen. Wer "wir sehen das in den Akten" sagt, beschreibt seine eigene Zuschreibung von Einzelfällen, nicht eine erfasste Erwerbsstatistik.
+
+2. **Empirisch belegt ist das Gegenteil.** Sinti und Roma in Deutschland haben überdurchschnittliche Bildungs- und Erwerbsbarrieren wegen *struktureller Diskriminierung* (Antidiskriminierungsstelle des Bundes, Studie zur Lebenssituation 2021/2023).
+
+3. **Authority-Weaponization.** Die Insider-Position lädt das Stereotyp mit Glaubwürdigkeit auf, die es ohne den Beamten-Status nicht hätte. Das ist die häufigste Form von Verwaltungsdiskriminierung.
+
+### Konter-Template
+
+```
+In der Jobcenter-Statistik gibt es die Kategorie "Sinti und Roma" nicht. Was du beschreibst, sind Einzelfälle, die du als Gruppen-Eigenschaft generalisierst.
+
+Diese Argumentationsfigur ("Kultur erklärt Arbeitsverhalten") ist seit Jahrzehnten als Stereotyp dokumentiert, ohne empirische Basis. Die Antidiskriminierungsstelle des Bundes hat in ihrer Studie zur Lebenssituation von Sinti und Roma genau diesen Reflex als verbreitete Form von Verwaltungsdiskriminierung beschrieben. Empirisch belegt ist das Gegenteil: Sinti und Roma in Deutschland haben überdurchschnittliche Bildungs- und Erwerbsbarrieren wegen struktureller Diskriminierung.
+
+https://www.antidiskriminierungsstelle.de/SharedDocs/downloads/DE/publikationen/Studien/studie_lebenssituation_sinti_und_roma.html
+```
+
+**Quelle:** [Antidiskriminierungsstelle des Bundes: Lebenssituation Sinti und Roma](https://www.antidiskriminierungsstelle.de/SharedDocs/downloads/DE/publikationen/Studien/studie_lebenssituation_sinti_und_roma.html) ✅ Verifiziert 2026-04
+
 [LAST_CHECKED: 2026-04]

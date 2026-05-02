@@ -25,7 +25,7 @@ Der Satz funktioniert, weil er keine Belehrung ist. Er ist eine Frage. Er zwingt
 
 | # | Argument | Links-liberal | Konservativ | Unentschieden | TikTok/Jung (18-25) | Ex-AfD |
 |---|----------|:---:|:---:|:---:|:---:|:---:|
-| 1 | Abstimmungsverhalten (gegen Mindestlohn, Kindergeld, Rente) | 8 | **9** | **9** | 7 | **9** |
+| 1 | Abstimmungsverhalten (Enthaltung Mindestlohn/Kindergeld, gegen Mietpreisbremse, gegen Vermögensteuer) | 8 | **9** | **9** | 7 | **9** |
 | 2 | 10 Jahre Bundestag, 0 Gesetze | 7 | 8 | 8 | 6 | **9** |
 | 3 | Dexit = 690 Mrd. Euro, 2,5 Mio. Jobs (IW-Studie) | 8 | **9** | 8 | 5 | 7 |
 | 4 | EU-Isolation / Orbán will sie nicht | 7 | 6 | 6 | **9** | 5 |

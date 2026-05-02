@@ -1,7 +1,7 @@
 ---
 title: Antisemitismus - Konter-Arsenal
 type: note
-last_updated: 2026-04-09
+last_updated: 2026-05-03
 tags: ["personal"]
 ---
 
@@ -19,10 +19,12 @@ tags: ["personal"]
 - 2024: 6.236 Delikte (+21 %, neuer Höchststand seit Erfassungsbeginn)
 - Gewalttaten 2024: 173 (2023: 148)
 
-**Täterprofile 2024 (PMK-Kategorien):**
-- PMK-rechts: ~3.016 Fälle (48 %)
-- PMK-ausländische Ideologie (inkl. islamistisch/pro-palästinensisch): ~1.940 Fälle (31 %)
+**Täterprofile 2024 (PMK-Kategorien, BKA verifiziert 2025-05-20):**
+- PMK-rechts: 3.016 Fälle (-0,6% vs Vorjahr, in jedem Erfassungsjahr größte Einzelkategorie)
+- PMK-ausländische Ideologie (inkl. islamistisch/pro-palästinensisch): 1.940 Fälle (+63,6%)
 - PMK-links + nicht zuzuordnen: Rest
+
+**Wichtig (Anti-Default-Argument):** PMK-rechts antisemitisch ist 2024 sogar leicht GESUNKEN (-0,6%), während ausländische Ideologie um +63,6% gestiegen ist. Wenn der "BKA zählt alles automatisch rechts"-Topos stimmen würde, müsste exakt das Gegenteil passieren. Die Zuordnung differenziert nachweislich aktiv. Siehe `META/pmk-default-mythos.md`.
 
 **RIAS-Meldestelle 2024** (erfasst auch Vorfälle unterhalb der Strafbarkeitsschwelle):
 - 8.627 antisemitische Vorfälle dokumentiert (+77 % ggü. 2023)

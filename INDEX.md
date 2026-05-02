@@ -1,11 +1,11 @@
 ---
-title: Bullshit Bingo - Schnellnavigation
+title: Bold Claim — Schnellnavigation
 type: note
-last_updated: 2026-02-25
+last_updated: 2026-04-16
 tags: ["personal"]
 ---
 
-# Bullshit Bingo - Schnellnavigation
+# Bold Claim — Schnellnavigation
 
 > Finde das richtige Argument in 10 Sekunden
 
@@ -14,53 +14,84 @@ tags: ["personal"]
 ## Ordner-Übersicht
 
 ```
-bullshit-bingo/
+boldclaim/
 ├── INDEX.md                         ← Du bist hier
 ├── CHANGELOG.md                     ← Was sich geändert hat
 │
+├── docs/                            ← GitHub Pages (öffentlich)
+│   ├── index.html                   ← RAG Frontend SPA (886 Zeilen)
+│   ├── worker.js                    ← Cloudflare Worker API (181 Zeilen)
+│   ├── wrangler.toml                ← Worker-Config
+│   └── guide/                       ← Conversation Guide (ausgelagert nach afd-check.de)
+│       ├── index.html               ← SPA: Landing + Cascade (833 Zeilen)
+│       └── guide-data.js            ← 8 Themen-Datenobjekte (130 Zeilen)
+│
 ├── CONTENT/
 │   ├── 01-parteien/
-│   │   ├── afd-und-rechts.md        ← AfD, Höcke, Remigration, VS-Einstufung
+│   │   ├── afd-und-rechts.md        ← AfD, Höcke, Remigration, VS, Vetternwirtschaft, Brain Drain Ost
 │   │   ├── afd-wahlprogramm-2025.md ← Komplettes Wahlprogramm analysiert
+│   │   ├── afd-drei-saetze.md       ← 3-Satz-Killer für Stammtisch (auswendig lernen)
+│   │   ├── afd-stammtisch-arsenal.md ← 10+ Konter-Blöcke für häufige Stammtisch-Claims
+│   │   ├── afd-komplett-zerlegt.md  ← Alle AfD-Argumente systematisch zerlegt
+│   │   ├── afd-rechtsextremismus-referenz.md ← 8 Kategorien dokumentierter Fälle
 │   │   ├── cdu-argumente-konter.md  ← CDU-Policy-Faktencheck (Wirtschaft, Soziales, Klima)
 │   │   ├── merz-und-cdu.md         ← Merz, CDU-Heuchelei, EVP-Brandmauer
 │   │   └── linke.md                ← Konter gegen Linke-Hetze, BSW-Abgrenzung
 │   │
 │   ├── 02-themen/
-│   │   ├── migration-fakten.md      ← Statistiken, Wirtschaft, Integration
-│   │   ├── russland-ukraine.md      ← NATO-Mythen, Kriegsverbrechen, Kreml-Taktik
+│   │   ├── migration-fakten.md      ← Statistiken, PKS, TVBZ, Wirtschaft, Integration (1018 Zeilen)
+│   │   ├── russland-ukraine.md      ← NATO-Mythen, Kriegsverbrechen, Kreml-Taktik (948 Zeilen)
+│   │   ├── klima.md                 ← Klimaleugner-Konter, Dunkelflaute, Merit-Order
 │   │   ├── wirtschaft-housing.md    ← AfD/FDP-Wohnungspolitik, Markt-Mythen
-│   │   ├── klima.md                 ← Klimaleugner-Konter
+│   │   ├── heizungsgesetz-betrug.md ← CDU-Heizungskampagne, Gaskosten-Falle, WP-Mythen
 │   │   ├── gender.md                ← Trans/Gender-Debatte
+│   │   ├── rente-sozialstaat.md     ← Rente + Bürgergeld konsolidiert, Gotchas
+│   │   ├── antisemitismus.md        ← PMK 2024, RIAS, rechts vs. islamistisch, IHRA 3D
+│   │   ├── frauenquote-gleichstellung.md ← 10 Reddit-Taktiken, 6 Debatten, 12 Gotchas
+│   │   ├── verkehr-mobilitaet.md    ← Tempo 30, Umwelt, Sprit (Merge aus 2 Dateien)
+│   │   ├── islam-integration-religionsfreiheit.md ← MOTRA, Brennpunktschulen, Standardreferenzen
+│   │   ├── sexualdelikte-taetergeschlecht.md ← BKA PKS 2023, Geschlecht > Herkunft
+│   │   ├── verfassungsschutz-verteidigung.md ← VS-Verteidigung, Maaßen, NSU
 │   │   ├── kontokuendigungen-sanktionen.md ← OFAC, Bankkonten, US-Sanktionen
-│   │   ├── verkehr-tempo30.md       ← Tempo 30 München, technische Fakten
-│   │   ├── verkehr-umwelt.md        ← Tempo 30 Politik, NIMBY, Gesundheit
-│   │   ├── heizungsgesetz-betrug.md ← CDU-Heizungskampagne, Gaskosten-Falle
-│   │   ├── verfassungsschutz-verteidigung.md ← VS-Verteidigung, Maaßen, NSU, Kramer
 │   │   ├── bge-grundeinkommen.md   ← BGE als Systemerhaltung, Kaufkraft-Argument
-│   │   ├── frauenquote.md          ← Quoten, Pay Gap, Meritokratie-Mythos
-│   │   └── ki-gefahren.md          ← KI-Gefahren: Optimierung, Scheming, Deepfakes, Kontrollverlust
+│   │   ├── ki-gefahren.md          ← KI: Optimierung, Scheming, Deepfakes
+│   │   ├── milei-marktradikalitaet.md ← Methodentrick, Inflationstrick
+│   │   ├── wehrpflicht-verteidigung.md ← Eskalationsgeschichte, Skandinavien
+│   │   ├── tuerkische-diaspora-wahlverhalten.md ← SPD+AKP, Subgruppen, Generationstrend
+│   │   └── sinti-roma-antiziganismus.md ← PKS-Sonderbehandlung, institutioneller Rassismus
 │   │
 │   ├── 03-usa-und-tech-oligarchie/
-│   │   ├── trump-usa.md             ← Trump-Faschismus, Hitler-Zitate, 6. Januar
-│   │   ├── project-2025.md          ← Heritage Foundation 900-Seiten-Plan
+│   │   ├── trump-usa.md             ← Trump-Faschismus, 6. Januar, DOGE
+│   │   ├── project-2025.md          ← Heritage Foundation, 53% implementiert
 │   │   ├── peter-thiel-explainer.md ← Thiel-Netzwerk, Palantir, Vance, Musk
 │   │   ├── peter-thiel-accelerationist-worldview.md ← Philosophie & Ideologie
-│   │   ├── peter-thiel-online-debate-playbook.md    ← Schwachstellen & Konter
-│   │   └── tactics-against-accelerationist-arguments.md ← Praxis-Playbook
+│   │   ├── peter-thiel-online-debate-playbook.md ← Schwachstellen & Konter
+│   │   ├── tactics-against-accelerationist-arguments.md ← Praxis-Playbook
+│   │   └── republikaner-partner.md  ← Trump-Wähler Werte-Argument
 │   │
 │   ├── 04-rhetorik-und-strategie/
 │   │   ├── false-equivalence.md     ← "Beide Seiten", PMK-Zahlen, Terror-Listen
-│   │   ├── countering-right-wing-populism-mason.md ← Strategischer Rahmen (Paul Mason)
+│   │   ├── privilegien-umkehr.md    ← NEU: Wenn Rechte "Privilege" klauen, Kontaktparadoxon
+│   │   ├── anti-afd-ueberzeugungsstrategie.md ← Scoring-Matrix, Zielgruppen
+│   │   ├── countering-right-wing-populism-mason.md ← Strategischer Rahmen
 │   │   └── tactical-protocols-disinformation-&-troll-counter-measures.md ← Detection Logic
 │   │
 │   └── 05-kommunalwahl-muenchen-2026/
 │       ├── 00-uebersicht-stimmzettel.md ← Übersicht alle Listen
 │       └── 01-14-*.md               ← Wahlprogramm-Analysen (15 Parteien/Listen)
 │
+├── blog/                            ← 23 englische Blog-Posts (unveröffentlicht)
+│   ├── 01-20-*.md                   ← Topic Debunks + Methodology + Tactics
+│   ├── pattern-library.md           ← 10 benannte rhetorische Muster
+│   ├── suppression-frame-explainer.md
+│   └── mirror-field-guide-public.md
+│
 ├── META/
 │   ├── architecture.md              ← Pipeline: Kommentar → Antwort
-│   ├── techniques.md                ← Bot-Erkennung & Gesprächstechniken
+│   ├── techniques.md                ← Bot-Erkennung, Taktiken (Topic-Hopping, Sealioning etc.)
+│   ├── quellen-verteidigung.md      ← 9 Quellen verteidigen (Correctiv, IAB, KFN, ifo etc.)
+│   ├── reddit-strategie.md          ← Subs, Accounts, Taktik
+│   ├── reddit-account-namen.md      ← Panel-getestete Account-Namen
 │   ├── psychologie.md               ← Warum Menschen Disinfo glauben
 │   ├── self-care.md                 ← Burnout vermeiden
 │   ├── exits.md                     ← Exit-Strategien
@@ -72,11 +103,20 @@ bullshit-bingo/
 │   └── fact-check-templates.md      ← Live-Debunking-Vorlagen
 │
 ├── AUTOMATION/
-│   ├── triggers.yaml                ← Keyword-Mapping für Bots
-│   └── cdu-faktencheck-system-prompt.md ← System-Prompt für CDU-Analyse
+│   ├── triggers.yaml                ← Keyword-Mapping
+│   └── cdu-faktencheck-system-prompt.md
 │
-└── archive/
-    └── reddit-kommentare.md         ← Gesammelte Reddit-Debatten
+└── _internal/                       ← Gitignored, Projekt-Docs
+    ├── handoff.md                   ← Übergabe-Dokument
+    ├── cockpit.html                 ← Projekt-Dashboard
+    ├── backlog.md                   ← Feature-Backlog
+    ├── boldclaim-dashboard.html     ← Reddit-Kampagnen-Tracker (6 Tabs)
+    ├── reddit-drafts-dashboard.html ← Konter-Entwürfe (7 Tabs)
+    ├── reddit-entlarvung-dashboard.html ← Entlarvungs-Konter
+    ├── dezwo-counter-dashboard.html ← dezwo-Konter (6 Tabs)
+    ├── topic-map.html               ← Themen-Übersicht
+    ├── knowledge-base-viz.html      ← Wissenslandschaft
+    └── reddit-antworten-*.md        ← Thread-Analysen (8 Dateien)
 ```
 
 ---
@@ -87,244 +127,151 @@ bullshit-bingo/
 
 | Behauptung | Antwort | Schwierigkeit |
 |------------|---------|---------------|
-| "AfD ist keine Nazi-Partei" | [[CONTENT/afd-und-rechts#Höcke ist Faschist - Gerichtsurteil]] | 🟢 EASY |
-| "Das hat Höcke nie gesagt" | [[CONTENT/afd-und-rechts#Höcke ist Faschist - Gerichtsurteil]] | 🟢 EASY |
-| "Remigration ist nicht ethnisch" | [[CONTENT/afd-und-rechts#Potsdam-Treffen Remigration]] | 🟡 MEDIUM |
-| "Verfassungsschutz ist politisch" | [[CONTENT/afd-und-rechts#Verfassungsschutz-Einstufung Timeline]] | 🟡 MEDIUM |
-| "Flüchtlinge = mehr Vergewaltigungen" | [[CONTENT/migration-fakten#Kriminalstatistik richtig lesen]] | 🟡 MEDIUM |
-| "Grenzen mit Gewalt verteidigen ist normal" | [[CONTENT/afd-und-rechts#Schießbefehl auf Flüchtlinge]] | 🟢 EASY |
-| "AfD hat keine Russland-Connections" | [[CONTENT/afd-und-rechts#AfD-Russland Connections]] | 🔴 HARD |
-| "Alle Politiker lügen eh" | [[CONTENT/russland-ukraine#Kreml-Propaganda verstehen]] | 🟡 MEDIUM |
-| "Demos bringen nichts" | [[CONTENT/afd-und-rechts#Demos wirken - Historische Beweise]] | 🟢 EASY |
-| "Verfassungsschutz beobachtet nur Rechts" | [[CONTENT/01-parteien/afd-und-rechts#Warum der Verfassungsschutz rechts stärker beobachtet als links]] | 🟢 EASY |
-| "VS ist links unterwandert!" | [[CONTENT/02-themen/verfassungsschutz-verteidigung#Warum der VS historisch RECHTS-blind ist]] | 🟢 EASY |
-| "Maaßen war der Letzte mit Verstand!" | [[CONTENT/02-themen/verfassungsschutz-verteidigung#Maaßen - Der rechte Ex-Chef]] | 🟢 EASY |
-| "Kramer ist Kommunist!" | [[CONTENT/02-themen/verfassungsschutz-verteidigung#Kramer Thüringen]] | 🟢 EASY |
-| "VS ist Antifa!" | [[CONTENT/02-themen/verfassungsschutz-verteidigung#LfV Niedersachsen Antifa-Tweet]] | 🟢 EASY |
-| "Bevölkerungsaustausch ist real!" | [[CONTENT/02-themen/verfassungsschutz-verteidigung#Bevölkerungsaustausch entlarven]] | 🟡 MEDIUM |
-| "Jeder ist völkischer Nationalist!" | [[CONTENT/02-themen/verfassungsschutz-verteidigung#Völkischer Nationalismus universell]] | 🟡 MEDIUM |
+| "AfD ist keine Nazi-Partei" | [[CONTENT/01-parteien/afd-und-rechts#Höcke ist Faschist - Gerichtsurteil]] | 🟢 EASY |
+| "AfD ist für den kleinen Mann!" | [[CONTENT/04-rhetorik-und-strategie/privilegien-umkehr#AfD als Reichenpartei]] | 🟢 EASY |
+| "Remigration ist nicht ethnisch" | [[CONTENT/01-parteien/afd-und-rechts#Potsdam-Treffen Remigration]] | 🟡 MEDIUM |
+| "Verfassungsschutz ist politisch" | [[CONTENT/01-parteien/afd-und-rechts#Verfassungsschutz-Einstufung Timeline]] | 🟡 MEDIUM |
+| "AfD hat keine Russland-Connections" | [[CONTENT/01-parteien/afd-und-rechts#AfD-Russland Connections]] | 🔴 HARD |
+| "AfD hält ihr Wort" | [[CONTENT/01-parteien/afd-und-rechts#AfD hält ihr Wort?]] | 🟢 EASY |
+| "28 Verurteilte ist normal" | [[CONTENT/01-parteien/afd-und-rechts#AfD-Abgeordnete Verurteilte Straftäter]] | 🟢 EASY |
+| "Vetternwirtschaft gibts überall" | [[CONTENT/01-parteien/afd-und-rechts#Konter Ist das nicht bei allen Parteien so]] | 🟢 EASY |
+| "Alle Politiker lügen eh" | [[CONTENT/02-themen/russland-ukraine#Kreml-Propaganda verstehen]] | 🟡 MEDIUM |
+| "Demos bringen nichts" | [[CONTENT/01-parteien/afd-und-rechts#Demos wirken - Historische Beweise]] | 🟢 EASY |
+| "AfD in drei Sätzen?" | [[CONTENT/01-parteien/afd-drei-saetze]] | 🟢 EASY |
+
+### Privilegien-Umkehr & Klassenpolitik (NEU)
+
+| Behauptung | Antwort | Schwierigkeit |
+|------------|---------|---------------|
+| "Es ist leicht, links zu sein wenn man privilegiert ist" | [[CONTENT/04-rhetorik-und-strategie/privilegien-umkehr]] | 🟡 MEDIUM |
+| "Linke haben 0 Berührungspunkte" | [[CONTENT/04-rhetorik-und-strategie/privilegien-umkehr#Kontaktparadoxon]] | 🟡 MEDIUM |
+| "Lifestyle-Linke" | [[CONTENT/04-rhetorik-und-strategie/privilegien-umkehr#Was daran stimmt]] | 🟡 MEDIUM |
+| "Grüne sind die Reichsten" | [[CONTENT/04-rhetorik-und-strategie/privilegien-umkehr#Wer ist wirklich privilegiert]] | 🟢 EASY |
+| "Die haben andere Sorgen" | [[CONTENT/04-rhetorik-und-strategie/privilegien-umkehr#AfD als Reichenpartei]] | 🟢 EASY |
+
+### Migration
+
+| Behauptung | Antwort | Schwierigkeit |
+|------------|---------|---------------|
+| "Deutschland wird unsicherer!" | [[CONTENT/02-themen/migration-fakten#Deutschland wird unsicherer]] | 🟢 EASY |
+| "60% der Gewalttaten von Migranten" | [[CONTENT/02-themen/migration-fakten#EU-Faktencheck]] | 🟢 EASY |
+| "Sexualdelikte explodieren" | [[CONTENT/02-themen/migration-fakten#Kriminalstatistik richtig lesen]] | 🟡 MEDIUM |
+| "Ausländer sind krimineller" | [[CONTENT/02-themen/migration-fakten#Überrepräsentation verstehen]] | 🔴 HARD |
+| "Die liegen uns auf der Tasche" | [[CONTENT/02-themen/migration-fakten#Wirtschaftlicher Beitrag]] | 🟢 EASY |
+| "Männer als Vergleich" | [[CONTENT/02-themen/sexualdelikte-taetergeschlecht]] | 🟡 MEDIUM |
+| "Gruppenvergewaltigung" | [[CONTENT/02-themen/migration-fakten#PKS 2024 Pro-Kopf-Raten]] | 🔴 HARD |
+| "Sinti und Roma kriminell" | [[CONTENT/02-themen/sinti-roma-antiziganismus]] | 🟡 MEDIUM |
+| "Türken wählen Erdogan" | [[CONTENT/02-themen/tuerkische-diaspora-wahlverhalten]] | 🟡 MEDIUM |
+| "Islam passt nicht zu uns" | [[CONTENT/02-themen/islam-integration-religionsfreiheit]] | 🟡 MEDIUM |
+| "Der Osten wählt AfD wegen Migration" | [[CONTENT/01-parteien/afd-und-rechts#Warum wählt der Osten AfD]] | 🟡 MEDIUM |
 
 ### Merz & CDU/CSU
 
 | Behauptung | Antwort | Schwierigkeit |
 |------------|---------|---------------|
-| "Merz macht gute Politik" | [[CONTENT/merz-und-cdu#Merz gefährdet...]] | 🟡 MEDIUM |
-| "CDU spart Milliarden" | [[CONTENT/merz-und-cdu#Grundsicherung kostet MEHR]] | 🟢 EASY |
-| "Heizungsgesetz ist abgeschafft" | [[CONTENT/merz-und-cdu#Heizungsgesetz - nur umbenannt]] | 🟢 EASY |
-| "Der Heiz-Hammer ist weg!" | [[CONTENT/02-themen/heizungsgesetz-betrug#Die große Lüge Entlastung für alle]] | 🟢 EASY |
-| "Jetzt darf jeder heizen wie er will!" | [[CONTENT/02-themen/heizungsgesetz-betrug#Die Kostenfalle Gas Was auf Mieter zukommt]] | 🟡 MEDIUM |
-| "Wärmepumpe unbezahlbar!" | [[CONTENT/02-themen/heizungsgesetz-betrug#Wärmepumpen-Mythen Faktencheck]] | 🟢 EASY |
-| "Technologieoffenheit!" | [[CONTENT/02-themen/heizungsgesetz-betrug#One-Liner und Konter]] | 🟢 EASY |
-| "Brandmauer zur AfD steht" | [[CONTENT/merz-und-cdu#EVP Brandmauer gefallen]] | 🟢 EASY |
-| "Muslime sind ein Problem" | [[CONTENT/merz-und-cdu#Counter-Beispiele]] | 🟢 EASY |
+| "Merz macht gute Politik" | [[CONTENT/01-parteien/merz-und-cdu#Merz gefährdet]] | 🟡 MEDIUM |
+| "Der Heiz-Hammer ist weg!" | [[CONTENT/02-themen/heizungsgesetz-betrug#Die große Lüge]] | 🟢 EASY |
+| "Wärmepumpe unbezahlbar!" | [[CONTENT/02-themen/heizungsgesetz-betrug#Wärmepumpen-Mythen]] | 🟢 EASY |
+| "Brandmauer zur AfD steht" | [[CONTENT/01-parteien/merz-und-cdu#EVP Brandmauer gefallen]] | 🟢 EASY |
 | "CDU hat gute Wirtschaftspolitik" | [[CONTENT/01-parteien/cdu-argumente-konter]] | 🟡 MEDIUM |
 
 ### Russland & Ukraine
 
 | Behauptung | Antwort | Schwierigkeit |
 |------------|---------|---------------|
-| "NATO hat versprochen..." | [[CONTENT/russland-ukraine#NATO-Osterweiterung Mythos]] | 🟢 EASY |
-| "Die Ukraine hat provoziert" | [[CONTENT/russland-ukraine#Budapest Memorandum]] | 🟡 MEDIUM |
-| "Krim war schon immer russisch" | [[CONTENT/russland-ukraine#Krim-Timeline]] | 🟡 MEDIUM |
-| "Butscha war inszeniert" | [[CONTENT/russland-ukraine#Butscha und Kriegsverbrechen]] | 🟢 EASY |
-| "Was ist mit dem Irak?" | [[CONTENT/russland-ukraine#Whataboutism-Killer]] | 🟢 EASY |
-| "Russland gewinnt den Krieg!" | [[CONTENT/russland-ukraine#Russland hat strategisch VERLOREN]] | 🟢 EASY |
-| "NATO bedroht Russland!" | [[CONTENT/russland-ukraine#NATO-Erweiterung Putins größter Eigentor]] | 🟢 EASY |
-| "Verluste sind Propaganda!" | [[CONTENT/russland-ukraine#Russlands militärische Verluste]] | 🟢 EASY |
-| "Europa friert ohne russisches Gas!" | [[CONTENT/russland-ukraine#Europäischer Energiemarkt Dauerhaft verloren]] | 🟢 EASY |
-| "Russlands Wirtschaft boomt!" | [[CONTENT/russland-ukraine#Russlands Wirtschaft Kriegsblase statt Boom]] | 🟢 EASY |
-| "Russland und China auf Augenhöhe!" | [[CONTENT/russland-ukraine#Chinas Juniorpartner]] | 🟢 EASY |
-| "Ukraine ist am Ende!" | [[CONTENT/russland-ukraine#Ukraines Stärkung durch den Krieg]] | 🟢 EASY |
-| "Brain Drain ist übertrieben!" | [[CONTENT/russland-ukraine#Brain-Drain Russlands Fachkräfte fliehen]] | 🟡 MEDIUM |
-| "AfD-Patrioten wollen nur das Beste!" | [[patriot-paradox-tactics]] | 🟡 MEDIUM |
+| "NATO hat versprochen..." | [[CONTENT/02-themen/russland-ukraine#NATO-Osterweiterung Mythos]] | 🟢 EASY |
+| "Die Ukraine hat provoziert" | [[CONTENT/02-themen/russland-ukraine#Budapest Memorandum]] | 🟡 MEDIUM |
+| "Butscha war inszeniert" | [[CONTENT/02-themen/russland-ukraine#Butscha und Kriegsverbrechen]] | 🟢 EASY |
+| "Was ist mit dem Irak?" | [[CONTENT/02-themen/russland-ukraine#Whataboutism-Killer]] | 🟢 EASY |
+| "Russland gewinnt den Krieg!" | [[CONTENT/02-themen/russland-ukraine#Russland hat strategisch VERLOREN]] | 🟢 EASY |
+| "Europa friert ohne Gas!" | [[CONTENT/02-themen/russland-ukraine#Energiemarkt Dauerhaft verloren]] | 🟢 EASY |
 
-### Migration
+### Wirtschaft & Soziales
 
 | Behauptung | Antwort | Schwierigkeit |
 |------------|---------|---------------|
-| "Deutschland wird unsicherer!" | [[CONTENT/migration-fakten#Deutschland wird unsicherer - Der große Mythos]] | 🟢 EASY |
-| "Man kann nicht mehr sicher auf die Straße!" | [[CONTENT/migration-fakten#Tötungsrate Halb so hoch wie 1995]] | 🟢 EASY |
-| "Medien verschweigen Ausländerkriminalität" | [[CONTENT/migration-fakten#Medien-Bias Die Migrantisierung der Kriminalität]] | 🟢 EASY |
-| "60% der Gewalttaten von Migranten" | [[CONTENT/migration-fakten#EU-Faktencheck Virale Falschbehauptungen entlarvt]] | 🟢 EASY |
-| "Sexualdelikte explodieren" | [[CONTENT/migration-fakten#Kriminalstatistik richtig lesen]] | 🟡 MEDIUM |
-| "Ausländer sind krimineller" | [[CONTENT/migration-fakten#Überrepräsentation verstehen]] | 🔴 HARD |
-| "Die liegen uns auf der Tasche" | [[CONTENT/migration-fakten#Wirtschaftlicher Beitrag]] | 🟢 EASY |
-| "Die nehmen uns die Jobs weg" | [[CONTENT/migration-fakten#Arbeitsmarkt]] | 🟢 EASY |
-| "Integration klappt nicht" | [[CONTENT/migration-fakten#Integration funktioniert]] | 🟡 MEDIUM |
-
-### Wirtschaft & Wohnen
-
-| Behauptung | Antwort | Schwierigkeit |
-|------------|---------|---------------|
-| "AfD hat gute Wohnungspolitik" | [[CONTENT/wirtschaft-housing#AfD Wohnungspolitik - Warum katastrophal]] | 🟡 MEDIUM |
-| "Der Markt regelt Wohnen" | [[CONTENT/wirtschaft-housing#FDP Marktglaube - Warum gescheitert]] | 🟡 MEDIUM |
-| "Texas/Houston zeigt..." | [[CONTENT/wirtschaft-housing#Der freie Markt Mythos]] | 🟢 EASY |
-| "Regulierung funktioniert nicht" | [[CONTENT/wirtschaft-housing#Best Practice - Was funktioniert]] | 🟡 MEDIUM |
-
-### Bedingungsloses Grundeinkommen
-
-| Behauptung | Antwort | Schwierigkeit |
-|------------|---------|---------------|
-| "BGE können wir uns nicht leisten" | [[CONTENT/02-themen/bge-grundeinkommen#Das können wir uns nicht leisten]] | 🟡 MEDIUM |
+| "AfD hat gute Wohnungspolitik" | [[CONTENT/02-themen/wirtschaft-housing#AfD Wohnungspolitik]] | 🟡 MEDIUM |
+| "Der Markt regelt Wohnen" | [[CONTENT/02-themen/wirtschaft-housing#FDP Marktglaube]] | 🟡 MEDIUM |
+| "Rente ist sicher" | [[CONTENT/02-themen/rente-sozialstaat]] | 🟡 MEDIUM |
+| "Bürgergeld macht faul" | [[CONTENT/02-themen/rente-sozialstaat#Bürgergeld]] | 🟢 EASY |
+| "Milei macht alles richtig" | [[CONTENT/02-themen/milei-marktradikalitaet]] | 🟡 MEDIUM |
 | "BGE macht faul" | [[CONTENT/02-themen/bge-grundeinkommen#Das macht faul]] | 🟡 MEDIUM |
-| "BGE verursacht Inflation" | [[CONTENT/02-themen/bge-grundeinkommen#Inflation kommt]] | 🟢 EASY |
-| "Dann kommen noch mehr Einwanderer" | [[CONTENT/02-themen/bge-grundeinkommen#Dann kommen noch mehr Einwanderer]] | 🟢 EASY |
-| "Zeichnet sich doch noch nicht ab" | [[CONTENT/02-themen/bge-grundeinkommen#Der Tobi-Einwand Zeichnet sich doch noch nicht ab]] | 🔴 HARD |
 
-### Frauenquote & Gender Pay Gap
+### Klima & Energie
 
 | Behauptung | Antwort | Schwierigkeit |
 |------------|---------|---------------|
-| "Quote ist Diskriminierung" | [[CONTENT/02-themen/frauenquote#Quote ist Diskriminierung gegen Männer]] | 🟢 EASY |
-| "Meritokratie reicht" | [[CONTENT/02-themen/frauenquote#Die Besten sollen gewinnen egal ob Mann oder Frau]] | 🟡 MEDIUM |
-| "Frauen wollen das nicht" | [[CONTENT/02-themen/frauenquote#Frauen wollen das gar nicht Die entscheiden sich halt anders]] | 🟡 MEDIUM |
-| "Pay Gap ist Mythos" | [[CONTENT/02-themen/frauenquote#Gender Pay Gap richtig lesen]] | 🔴 HARD |
-| "Mit Quote sinkt Qualität" | [[CONTENT/02-themen/frauenquote#Mit Quote wird jemand Schlechtes eingestellt]] | 🟢 EASY |
-| "Ihr gebt Diskriminierung zu!" | [[CONTENT/02-themen/frauenquote#Die Grünen geben ja selbst zu dass sie diskriminieren]] | 🟡 MEDIUM |
-| "Lieber Kitas als Quote!" | [[CONTENT/02-themen/frauenquote#Lieber bessere Kitas als Quote]] | 🟡 MEDIUM |
-| "Wann hört das auf?" | [[CONTENT/02-themen/frauenquote#Wann hört das auf Quote für alles bis in die Ewigkeit]] | 🟢 EASY |
-| "Orchesterstudie hinkt" | [[CONTENT/02-themen/frauenquote#Orchesterstudie hinkt - Politik ist nicht objektiv messbar]] | 🟡 MEDIUM |
+| "Klimawandel ist umstritten" | [[CONTENT/02-themen/klima#Klimawandel ist real]] | 🟢 EASY |
+| "Deutschland allein ändert nichts" | [[CONTENT/02-themen/klima#Deutschland allein]] | 🟡 MEDIUM |
+| "Erneuerbare sind zu teuer" | [[CONTENT/02-themen/klima#Erneuerbare sind zu teuer]] | 🟢 EASY |
+| "Dunkelflaute!" | [[CONTENT/02-themen/klima#Dunkelflaute Spanien Blackout]] | 🟡 MEDIUM |
+| "Merit-Order-Effekt" | [[CONTENT/02-themen/klima#Merit-Order]] | 🟡 MEDIUM |
 
-### Klima
+### Gender & Gleichstellung
 
 | Behauptung | Antwort | Schwierigkeit |
 |------------|---------|---------------|
-| "Klimawandel ist umstritten" | [[CONTENT/klima#Klimawandel ist real - Konsens]] | 🟢 EASY |
-| "Klima hat sich immer verändert" | [[CONTENT/klima#Das Klima hat sich schon immer verändert]] | 🟢 EASY |
-| "CO2 ist gut für Pflanzen" | [[CONTENT/klima#CO2 ist gut für Pflanzen]] | 🟢 EASY |
-| "Deutschland allein ändert nichts" | [[CONTENT/klima#Deutschland allein kann das Klima nicht retten]] | 🟡 MEDIUM |
-| "Erneuerbare sind zu teuer" | [[CONTENT/klima#Erneuerbare sind zu teuer unzuverlässig]] | 🟢 EASY |
-| "Klimaschutz vernichtet Jobs" | [[CONTENT/klima#Klimaschutz zerstört Arbeitsplätze]] | 🟢 EASY |
+| "Es gibt nur zwei Geschlechter" | [[CONTENT/02-themen/gender#Sex vs Gender]] | 🟡 MEDIUM |
+| "Trans ist Mode" | [[CONTENT/02-themen/gender#Trans-Identität ist real]] | 🟡 MEDIUM |
+| "Quote ist Diskriminierung" | [[CONTENT/02-themen/frauenquote-gleichstellung]] | 🟡 MEDIUM |
+| "Pay Gap ist Mythos" | [[CONTENT/02-themen/frauenquote-gleichstellung#Gender Pay Gap]] | 🔴 HARD |
 
-### Energiepolitik & Wärmewende
+### Verkehr
 
 | Behauptung | Antwort | Schwierigkeit |
 |------------|---------|---------------|
-| "Erneuerbare können keine Grundlast" | [[CONTENT/02-themen/klima#Erneuerbare können keine Grundlast! Dunkelflaute! Spanien Blackout!]] | 🟡 MEDIUM |
-| "Dunkelflaute" | [[CONTENT/02-themen/klima#Erneuerbare können keine Grundlast! Dunkelflaute! Spanien Blackout!]] | 🟡 MEDIUM |
-| "Spanien Blackout" | [[CONTENT/02-themen/klima#Erneuerbare können keine Grundlast! Dunkelflaute! Spanien Blackout!]] | 🟢 EASY |
-| "Merit-Order" | [[CONTENT/02-themen/klima#Erneuerbare senken den Strompreis nicht! Merit-Order!]] | 🟡 MEDIUM |
-| "Gas bestimmt Strompreis" | [[CONTENT/02-themen/klima#Erneuerbare senken den Strompreis nicht! Merit-Order!]] | 🟡 MEDIUM |
-| "Rot-Grün russisches Gas" | [[CONTENT/02-themen/klima#Erneuerbare senken den Strompreis nicht! Merit-Order!]] | 🟢 EASY |
-| "Wärmepumpe unbezahlbar" | [[CONTENT/02-themen/heizungsgesetz-betrug#Mythos 1: "Wärmepumpen sind unbezahlbar!"]] | 🟢 EASY |
-| "Habeck Mieterschutz" | [[CONTENT/02-themen/heizungsgesetz-betrug#Die soziale Dimension]] | 🟡 MEDIUM |
-| "Topic-Hopping" | [[META/techniques#Taktik: Topic-Hopping / Whack-a-Mole]] | 🟢 EASY |
+| "Tempo 30 bringt nichts" | [[CONTENT/02-themen/verkehr-mobilitaet]] | 🟢 EASY |
+| "Grüne schikanieren Autofahrer" | [[CONTENT/02-themen/verkehr-mobilitaet#Politischer Opportunismus]] | 🟡 MEDIUM |
 
-### Gender
+### Antisemitismus
 
 | Behauptung | Antwort | Schwierigkeit |
 |------------|---------|---------------|
-| "Es gibt nur zwei Geschlechter" | [[CONTENT/gender#Sex vs. Gender]] | 🟡 MEDIUM |
-| "Trans ist Mode/Störung" | [[CONTENT/gender#Trans-Identität ist real]] | 🟡 MEDIUM |
-| "Gender-Ideologie!" | [[CONTENT/gender#Das ist Ideologie keine Wissenschaft]] | 🟢 EASY |
-| "Das verwirrt Kinder" | [[CONTENT/gender#Das verwirrt Kinder]] | 🟡 MEDIUM |
-| "Kinder werden operiert" | [[CONTENT/gender#Kinder werden zu Trans gemacht]] | 🟢 EASY |
-| "Männer in Frauenklos" | [[CONTENT/gender#Männer in Frauenräumen]] | 🟢 EASY |
-| "Trans-Frauen im Sport unfair" | [[CONTENT/gender#Trans-Frauen dominieren Frauensport]] | 🟡 MEDIUM |
+| "Antisemitismus kommt nur von Muslimen" | [[CONTENT/02-themen/antisemitismus]] | 🟡 MEDIUM |
+| "Israelkritik ist kein Antisemitismus" | [[CONTENT/02-themen/antisemitismus#IHRA 3D-Test]] | 🟡 MEDIUM |
 
-### Die Linke & BSW
+### Verfassungsschutz
 
 | Behauptung | Antwort | Schwierigkeit |
 |------------|---------|---------------|
-| "Die Linke ist die SED!" | [[CONTENT/linke#DDR SED Nachfolgepartei]] | 🟢 EASY |
-| "Linke können nicht Wirtschaft!" | [[CONTENT/linke#Wirtschaftskompetenz]] | 🟢 EASY |
-| "Linke sind Terroristen!" | [[CONTENT/linke#Terrorismus Gewalt Antifa]] | 🟢 EASY |
-| "Linke und AfD sind beide extrem!" | [[CONTENT/linke#AfD vs Linke - Der Knallharte Vergleich]] | 🟡 MEDIUM |
-| "BSW ist vernünftig!" | [[CONTENT/linke#BSW - Klare Abgrenzung]] | 🟡 MEDIUM |
-| "BSW = Die Linke" | [[CONTENT/linke#BSW - Klare Abgrenzung]] | 🟢 EASY |
-
-### Trump & USA
-
-| Behauptung | Antwort | Schwierigkeit |
-|------------|---------|---------------|
-| "Trump ist kein Faschist!" | [[CONTENT/trump-usa#Was seine eigenen Leute sagen]] | 🟢 EASY |
-| "Hitler-Vergleiche sind übertrieben!" | [[CONTENT/trump-usa#Hitler-Zitate und Generäle]] | 🟢 EASY |
-| "Project 2025 hat nichts mit Trump zu tun!" | [[CONTENT/project-2025#Trumps Verbindung]] | 🟢 EASY |
-| "Project 2025 ist nur ein Vorschlag!" | [[CONTENT/project-2025#Was seit Amtsantritt passiert ist]] | 🟢 EASY |
-| "Der 6. Januar war ein Protest!" | [[CONTENT/trump-usa#Der 6. Januar 2021]] | 🟢 EASY |
-| "Demokraten sind Kommunisten!" | [[CONTENT/trump-usa#Republikanische Propaganda gegen Demokraten]] | 🟢 EASY |
-| "Nobelpreisträger sind links!" | [[CONTENT/trump-usa#Akademische Einordnung]] | 🟡 MEDIUM |
-| "Peter Thiel ist nur ein Unternehmer" | [[CONTENT/03-usa-und-tech-oligarchie/peter-thiel-explainer]] | 🟡 MEDIUM |
-| "Tech-Milliardäre wissen was am besten ist" | [[CONTENT/03-usa-und-tech-oligarchie/peter-thiel-accelerationist-worldview]] | 🔴 HARD |
-| "Disruption ist besser als Stillstand" | [[CONTENT/03-usa-und-tech-oligarchie/tactics-against-accelerationist-arguments]] | 🔴 HARD |
-
-### AfD Wahlprogramm 2025
-
-| Behauptung | Antwort | Schwierigkeit |
-|------------|---------|---------------|
-| "AfD will nur illegale Migration stoppen!" | [[CONTENT/afd-wahlprogramm-2025#Migration und Asyl]] | 🟢 EASY |
-| "AfD ist für den kleinen Mann!" | [[CONTENT/afd-wahlprogramm-2025#Wirtschaft und Soziales]] | 🟢 EASY |
-| "AfD hat realistische Energiepolitik!" | [[CONTENT/afd-wahlprogramm-2025#Klima und Energie]] | 🟢 EASY |
-| "AfD ist für Europa!" | [[CONTENT/afd-wahlprogramm-2025#EU und Außenpolitik]] | 🟢 EASY |
-| "AfD hat ein gutes Programm!" | [[CONTENT/afd-wahlprogramm-2025#Versteckte Radikalität]] | 🟡 MEDIUM |
-
-### Verkehr & Umwelt
-
-| Behauptung | Antwort | Schwierigkeit |
-|------------|---------|---------------|
-| "Tempo 30 bringt nichts" | [[CONTENT/02-themen/verkehr-umwelt#Tempo 30 - Fakten vs Gefühle]] | 🟢 EASY |
-| "Das sind nur ein paar NIMBYs" | [[CONTENT/02-themen/verkehr-umwelt#NIMBY-Deflection entlarven]] | 🟢 EASY |
-| "Lärm ist kein Gesundheitsproblem" | [[CONTENT/02-themen/verkehr-umwelt#Lärm und Gesundheit]] | 🟢 EASY |
-| "Grüne schikanieren Autofahrer" | [[CONTENT/02-themen/verkehr-umwelt#Politischer Opportunismus]] | 🟡 MEDIUM |
-| "Tempo 30 erzeugt mehr Stau/Abgase" | [[CONTENT/02-themen/verkehr-umwelt#Tempo 30 erzeugt mehr Stau und damit mehr Abgase]] | 🟢 EASY |
-| "Grenzwert eingehalten, Tempo 30 kann weg" | [[CONTENT/02-themen/verkehr-tempo30#Luft ist sauber genug - Der 40-Grenzwert-Mythos]] | 🟢 EASY |
-| "Tempo 30 verbrennt mehr Sprit" | [[CONTENT/02-themen/verkehr-tempo30#Tempo 30 verbrennt mehr Sprit]] | 🟢 EASY |
-| "Tempo 30 = Mega-Stau" | [[CONTENT/02-themen/verkehr-tempo30#Tempo 30 ruiniert den Verkehrsfluss]] | 🟢 EASY |
-| "War nur wegen Diesel-Fahrverbot" | [[CONTENT/02-themen/verkehr-tempo30#War nur wegen Diesel-Fahrverbot - kann jetzt weg]] | 🟢 EASY |
-| "Tempo 30 auf Hauptstraße übertrieben" | [[CONTENT/02-themen/verkehr-tempo30#Sicherheit - Der Killer-Fakt]] | 🟢 EASY |
+| "VS ist links unterwandert!" | [[CONTENT/02-themen/verfassungsschutz-verteidigung#VS historisch RECHTS-blind]] | 🟢 EASY |
+| "Maaßen war der Letzte mit Verstand!" | [[CONTENT/02-themen/verfassungsschutz-verteidigung#Maaßen]] | 🟢 EASY |
+| "Bevölkerungsaustausch ist real!" | [[CONTENT/02-themen/verfassungsschutz-verteidigung#Bevölkerungsaustausch]] | 🟡 MEDIUM |
 
 ### False Equivalence
 
 | Behauptung | Antwort | Schwierigkeit |
 |------------|---------|---------------|
-| "Beide Seiten sind gleich schlimm" | [[CONTENT/false-equivalence#Gewaltstatistiken - Die Zahlen]] | 🟢 EASY |
-| "Linksextreme sind genauso gefährlich" | [[CONTENT/false-equivalence#Far-Right Terror Liste USA]] | 🟢 EASY |
-| "AfD ist wie jede andere Partei" | [[CONTENT/false-equivalence#AfD ist keine normale Partei]] | 🟡 MEDIUM |
-| "Hufeisen-Theorie!" | [[CONTENT/false-equivalence#Hufeisen-Theorie widerlegt]] | 🟡 MEDIUM |
-| "Linke sind genauso schlimm" | [[CONTENT/04-rhetorik-und-strategie/false-equivalence#Aktuelle Zahlen Lagebilder 2025 2026]] | 🟢 EASY |
-| "PMK-Einteilung ist Schwachsinn" | [[CONTENT/04-rhetorik-und-strategie/false-equivalence#Die Links Rechts-Einteilung ist Schwachsinn]] | 🟡 MEDIUM |
-| "Ausländer verfälschen rechte Statistik" | [[CONTENT/04-rhetorik-und-strategie/false-equivalence#Ausländer aus dem Osten Nahen Osten verfälschen die rechte Statistik]] | 🟡 MEDIUM |
-| "Über 12 Jahre mehr linke Gewalt" | [[CONTENT/04-rhetorik-und-strategie/false-equivalence#Über 12 Jahre gab es mehr linke Gewalttaten]] | 🔴 HARD |
-| "Du relativierst nur!" | [[META/techniques#Deflection Du relativierst]] | 🟢 EASY |
-| "Thanks ChatGPT" | [[META/exits#Exit Thanks ChatGPT]] | 🟢 EASY |
-| "VS/Richter/ÖRR = Antifa" | [[META/techniques#Eskalations-Kette Statistik-Delegitimierung]] | 🟢 EASY |
+| "Beide Seiten sind gleich schlimm" | [[CONTENT/04-rhetorik-und-strategie/false-equivalence#Gewaltstatistiken]] | 🟢 EASY |
+| "Hufeisen-Theorie!" | [[CONTENT/04-rhetorik-und-strategie/false-equivalence#Hufeisen widerlegt]] | 🟡 MEDIUM |
+| "PMK-Einteilung Schwachsinn" | [[CONTENT/04-rhetorik-und-strategie/false-equivalence#Links Rechts-Einteilung]] | 🟡 MEDIUM |
+
+### Trump & USA
+
+| Behauptung | Antwort | Schwierigkeit |
+|------------|---------|---------------|
+| "Trump ist kein Faschist!" | [[CONTENT/03-usa-und-tech-oligarchie/trump-usa#Was seine eigenen Leute sagen]] | 🟢 EASY |
+| "Project 2025 hat nichts mit Trump zu tun!" | [[CONTENT/03-usa-und-tech-oligarchie/project-2025#Trumps Verbindung]] | 🟢 EASY |
+| "Peter Thiel ist nur ein Unternehmer" | [[CONTENT/03-usa-und-tech-oligarchie/peter-thiel-explainer]] | 🟡 MEDIUM |
+| "Republikaner sind unsere Partner" | [[CONTENT/03-usa-und-tech-oligarchie/republikaner-partner]] | 🟡 MEDIUM |
 
 ### KI-Gefahren
 
 | Behauptung | Antwort | Schwierigkeit |
 |------------|---------|---------------|
-| "KI ist nur ein Werkzeug" | [[CONTENT/02-themen/ki-gefahren#Das Kernproblem - Optimierung ohne Verständnis]] | 🟢 EASY |
-| "KI folgt doch nur Anweisungen" | [[CONTENT/02-themen/ki-gefahren#Instrumentelle Konvergenz]] | 🟡 MEDIUM |
-| "Wir können KI sicher machen" | [[CONTENT/02-themen/ki-gefahren#Alignment-Training versagt]] | 🟡 MEDIUM |
-| "KI wird niemanden ersetzen" | [[CONTENT/02-themen/ki-gefahren#Schleichender Kontrollverlust]] | 🟢 EASY |
-| "Deepfakes sind harmlos" | [[CONTENT/02-themen/ki-gefahren#Deepfakes]] | 🟢 EASY |
-| "KI-Firmen haben alles im Griff" | [[CONTENT/02-themen/ki-gefahren#Der Sicherheitswettlauf nach unten]] | 🟡 MEDIUM |
-| "Das ist Science-Fiction" | [[CONTENT/02-themen/ki-gefahren#Das ist alles Science-Fiction Panikmache]] | 🟢 EASY |
-| "Regulierung bremst Innovation" | [[CONTENT/02-themen/ki-gefahren#Regulierung würde Innovation bremsen]] | 🟡 MEDIUM |
-
-### Kontokündigungen & Sanktionen
-
-| Behauptung | Antwort | Schwierigkeit |
-|------------|---------|---------------|
-| "Freie Vertragswahl, Bank darf das" | [[CONTENT/02-themen/kontokuendigungen-sanktionen#Vertragsfreiheit]] | 🟢 EASY |
-| "Die sind Extremisten" | [[CONTENT/02-themen/kontokuendigungen-sanktionen#Betroffene Organisationen]] | 🟢 EASY |
-| "AfD-Konten wurden auch gekündigt" | [[CONTENT/02-themen/kontokuendigungen-sanktionen#AfD-Vergleich]] | 🟡 MEDIUM |
-| "Mitglieder sind Extremisten" | [[CONTENT/02-themen/kontokuendigungen-sanktionen#Goalpost-Shifting]] | 🟡 MEDIUM |
-| "Was hat Trump damit zu tun?" | [[CONTENT/02-themen/kontokuendigungen-sanktionen#OFAC-Mechanismus]] | 🔴 HARD |
+| "KI ist nur ein Werkzeug" | [[CONTENT/02-themen/ki-gefahren#Optimierung ohne Verständnis]] | 🟢 EASY |
+| "Das ist Science-Fiction" | [[CONTENT/02-themen/ki-gefahren#Science-Fiction Panikmache]] | 🟢 EASY |
 
 ### Bot-Taktiken erkennen
 
 | Taktik | Erklärung | Quick-Kill |
 |--------|-----------|------------|
 | "Define Nazi!" | [[QUICK/zinger-arsenal#Bot-Taktik-Killer]] | [[QUICK/one-liners#Define Nazi]] |
-| "Das hat er nie gesagt!" | [[CONTENT/afd-und-rechts#Deflection-Techniken erkennen]] | [[QUICK/one-liners#Reality Denial]] |
-| "Immer kurz vor Wahlen!" | [[CONTENT/afd-und-rechts#Deflection-Techniken erkennen]] | [[QUICK/one-liners#Timing Conspiracy]] |
-| "Beide Seiten!" | [[CONTENT/false-equivalence#Gewaltstatistiken - Die Zahlen]] | [[QUICK/one-liners#Both Sides]] |
-| "Du bist getriggert!" | [[QUICK/zinger-arsenal#Effort Shaming]] | [[QUICK/one-liners#Triggered]] |
-| 🤖 Ist das ein Bot? | [[META/techniques#Bot-Erkennung]] | [[META/techniques#Quick Reference Card]] |
-| 🎭 Troll oder echter Mensch? | [[META/techniques#Troll vs Echter Mensch]] | - |
-| 🧠 Wie mit Verblendeten reden? | [[META/techniques#Mit verblendeten Menschen sprechen]] | [[META/techniques#Street Epistemology]] |
-| ✅ Faktencheck in 30 Sek | [[META/techniques#SIFT-Methode Faktencheck]] | - |
+| "Beide Seiten!" | [[CONTENT/04-rhetorik-und-strategie/false-equivalence]] | [[QUICK/one-liners#Both Sides]] |
+| "Thanks ChatGPT" | [[META/exits#Exit Thanks ChatGPT]] | 🟢 EASY |
+| "Du relativierst nur!" | [[META/techniques#Deflection]] | 🟢 EASY |
+| 🤖 Ist das ein Bot? | [[META/techniques#Bot-Erkennung]] | - |
+| 🧠 Wie mit Verblendeten reden? | [[META/techniques#Street Epistemology]] | - |
 
 ---
 
@@ -355,20 +302,15 @@ Alle Wahlprogramm-Analysen: [[CONTENT/05-kommunalwahl-muenchen-2026/00-uebersich
 
 | Thema | Datei | Wann nutzen |
 |-------|-------|-------------|
-| 🤖 Bot-Erkennung & Gesprächstechniken | [[META/techniques]] | **Zuerst lesen!** |
+| Bot-Erkennung & Taktiken | [[META/techniques]] | **Zuerst lesen!** |
+| Quellen verteidigen | [[META/quellen-verteidigung]] | Wenn jemand Correctiv/IAB/ifo angreift |
+| Reddit-Strategie | [[META/reddit-strategie]] | Vor Reddit-Einsätzen |
 | Warum glauben Menschen Bullshit? | [[META/psychologie]] | Vor Diskussionen |
-| Wie steige ich würdevoll aus? | [[META/exits]] | Wenn Loop erkannt |
-| Wann aufhören? | [[META/self-care]] | Wenn du müde/wütend wirst |
-| Wie das System aufgebaut ist | [[META/architecture]] | Repo verstehen |
-| CDU-Faktencheck Claude-Project | [[META/cdu-faktencheck-setup]] | Claude-Project einrichten |
+| Wie steige ich aus? | [[META/exits]] | Wenn Loop erkannt |
+| Burnout vermeiden | [[META/self-care]] | Wenn müde/wütend |
+| AfD-Überzeugungsstrategie | [[CONTENT/04-rhetorik-und-strategie/anti-afd-ueberzeugungsstrategie]] | Zielgruppen-Matrix |
 
-**Strategie-Vertiefung:**
-
-| Thema | Datei |
-|-------|-------|
-| Rechten Populismus strategisch kontern (Paul Mason) | [[CONTENT/04-rhetorik-und-strategie/countering-right-wing-populism-mason]] |
-| Detection Logic: Disinfo-Muster erkennen | [[CONTENT/04-rhetorik-und-strategie/tactical-protocols-disinformation-&-troll-counter-measures]] |
-| Peter Thiel Debate Playbook | [[CONTENT/03-usa-und-tech-oligarchie/peter-thiel-online-debate-playbook]] |
+**Blog (unveröffentlicht):** 23 englische Posts in `blog/` (26k Wörter). Topics, Methodology, Tactics, Pattern Library.
 
 ---
 
@@ -376,67 +318,49 @@ Alle Wahlprogramm-Analysen: [[CONTENT/05-kommunalwahl-muenchen-2026/00-uebersich
 
 **Gerichte & Behörden:**
 - [Verfassungsschutzberichte](https://www.verfassungsschutz.de/SharedDocs/publikationen/DE/verfassungsschutzberichte/)
-- [OpenJur (Urteile)](https://openjur.de/)
 - [BKA Kriminalstatistik](https://www.bka.de)
+- [Bundestag Abstimmungen](https://www.bundestag.de/parlament/plenum/abstimmung/liste)
+- [Abgeordnetenwatch](https://www.abgeordnetenwatch.de/)
 
 **Investigativ:**
 - [Correctiv](https://correctiv.org/)
 - [Tagesschau Faktenfinder](https://www.tagesschau.de/faktenfinder)
-- [Bellingcat](https://www.bellingcat.com/)
 
 **Migration/Wirtschaft:**
 - [IAB (Arbeitsmarkt)](https://iab.de/)
+- [ifo Institut](https://www.ifo.de/)
+- [DIW Berlin](https://www.diw.de/)
 - [Destatis](https://www.destatis.de)
+- [Mediendienst Integration](https://mediendienst-integration.de/)
 
-**Energie/Heizen:**
-- [Verbraucherzentrale Energieberatung](https://verbraucherzentrale-energieberatung.de/)
-- [Fraunhofer ISE (Wärmepumpen)](https://www.ise.fraunhofer.de)
-- [BVerfG Klimabeschluss 2021 (Volltext)](https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2021/03/rs20210324_1bvr265618.html)
-
-**Klima:**
-- [NASA Climate](https://climate.nasa.gov/)
+**Klima/Energie:**
+- [Fraunhofer ISE](https://www.ise.fraunhofer.de)
+- [IRENA](https://www.irena.org/)
 - [Klimafakten.de](https://www.klimafakten.de/)
 
 **Russland/Ukraine:**
 - [EU vs Disinfo](https://euvsdisinfo.eu/)
-- [CSIS: Russia's Grinding War (Feb 2026)](https://www.csis.org/analysis/russias-grinding-war-ukraine)
-- [CSIS: Russia's Battlefield Woes](https://www.csis.org/analysis/russias-battlefield-woes-ukraine)
-- [Russia Matters: War Report Card](https://www.russiamatters.org/news/russia-ukraine-war-report-card/)
-- [Mediazona/BBC: Namentliche Verlustzählung](https://en.zona.media/article/2026/02/13/casualties_eng-trl)
-- [Congress.gov: Russian Military Performance](https://www.congress.gov/crs-product/IF12606)
-- [PIIE: Russia's economic model](https://www.piie.com/blogs/realtime-economics/2025/why-russias-economic-model-no-longer-delivers)
-- [Bank of Finland/BOFIT: Russia economic monitor](https://www.bofit.fi/en/monitoring/weekly/2026/vw202607_1/)
-- [Moscow Times: Economic coverage](https://www.themoscowtimes.com)
-- [EU-Rat: Gas-Importe](https://www.consilium.europa.eu/en/infographics/eu-gas-supply/)
-- [CREA: Russian fossil fuel exports](https://energyandcleanair.org/)
-- [IEEFA: EU Gas Flows Tracker](https://ieefa.org/eu-gas-flows-tracker)
-- [Bush Center: Russian Brain Drain](https://www.bushcenter.org/catalyst/the-great-gray-wave/the-great-russian-brain-drain)
-- [OutRush/The Bell: Emigrationsstudie](https://en.thebell.io/are-russias-war-emigrants-heading-home/)
+- [Mediazona/BBC Verlustzählung](https://en.zona.media/article/2026/02/13/casualties_eng-trl)
 
-**Opferzahlen:**
-- [Amadeu Antonio Stiftung](https://www.amadeu-antonio-stiftung.de)
+**USA:**
+- [ACLU: Project 2025](https://www.aclu.org/project-2025-explained)
 
-**USA/Project 2025:**
-- [Heritage Foundation Project 2025](https://www.heritage.org/conservatism/commentary/project-2025)
-- [ACLU: Project 2025 Explained](https://www.aclu.org/project-2025-explained)
-- [Democracy Forward: People's Guide](https://democracyforward.org/the-peoples-guide-to-project-2025/)
-- [PolitiFact](https://www.politifact.com/)
-
-**AfD-Programm:**
+**AfD:**
 - [AfD Wahlprogramm 2025 PDF](https://www.afd.de/wp-content/uploads/2025/02/AfD_Bundestagswahlprogramm2025_web.pdf)
 - [DGB Synopse zur AfD](https://www.verdi.de/++file++67ab63018ab0ba3890d49cba/download/DGB%20Synopse%20BTW%202025%20zur%20AfD.pdf)
+- [DIW Aktuell Nr. 106: AfD-Steuerlücke](https://www.diw.de/)
 
 ---
 
 ## Eskalations-Leiter
 
-| Level | Situation | Response | Siehe |
-|-------|-----------|----------|-------|
-| 1 | Echte Frage | Fakten + Quelle | CONTENT/ Dateien |
-| 2 | Wiederholung | "Schon beantwortet. Neues Argument?" | [[QUICK/one-liners]] |
-| 3 | Deflection | "Willst du diskutieren oder propagieren?" | [[QUICK/zinger-arsenal]] |
-| 4 | Loop | "Das ist ein Script, keine Diskussion" | [[META/exits]] |
-| 5 | Exit | "Mitleser haben die Quellen. Fertig." | [[META/exits]] |
+| Level | Situation | Response |
+|-------|-----------|----------|
+| 1 | Echte Frage | Fakten + Quelle |
+| 2 | Wiederholung | "Schon beantwortet. Neues Argument?" |
+| 3 | Deflection | "Willst du diskutieren oder propagieren?" |
+| 4 | Loop | "Das ist ein Script, keine Diskussion" |
+| 5 | Exit | "Mitleser haben die Quellen. Fertig." |
 
 ---
 
@@ -448,5 +372,5 @@ Du überzeugst die Mitleser.
 
 Ein guter Exit mit Zusammenfassung > 20 Runden im Kreis.
 
-Wenn du müde/wütend wirst → [[META/self-care]]
+Wenn du müde/wütend wirst → META/self-care
 ```

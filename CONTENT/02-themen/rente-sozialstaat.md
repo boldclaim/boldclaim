@@ -199,6 +199,94 @@ Seit 2021 bekommen Menschen mit mindestens 33 Beitragsjahren und unterdurchschni
 
 ---
 
+## Bürgergeld-Daten v2 (Stand 2026-04, BA-Statistik 2024)
+
+Aktualisierte Datenbasis nach r/armes_deutschland Arbeitsvermittler-Thread. Diese Sektion liefert die präzisen Zahlen, weil v1-Daten oft zu lose gerundet wurden.
+
+### Sanktions-Kategorien (BA-Statistik 2024)
+
+| Kategorie | Zahl 2024 | Anteil |
+|-----------|-----------|--------|
+| Leistungsminderungen gesamt | rund **369.000** | 100% |
+| Davon Meldeversäumnisse | ca. **300.000** | ~86% |
+| Davon Arbeitsablehnung im engeren Sinn (§ 31 SGB II) | ca. **23.400** | ~6% |
+| 100%-Sanktion (April 2024 - Juni 2025) | "niedriger zweistelliger Bereich" laut IAB | <0,01% |
+| Dokumentierter Missbrauchssatz | **101.000 Fälle, 260 Mio €** | rund 3% |
+
+**Kernpunkt:** Die "0,4% Totalverweigerer" sind nur die formelle Arbeitsablehnung. Über alle Sanktions-Kategorien zusammen kommt man auf 3-7%, je nach Definition. Immer noch weit entfernt von "die Mehrheit holt sich was raus".
+
+### BVerfG-Urteile präzise
+
+- **BVerfG 1 BvL 7/16 (5.11.2019):** Die *damaligen* 60- und 100-Prozent-Stufen wurden gekippt, mit engen Voraussetzungen für jede Kürzung. **Nicht** "über 30% pauschal verfassungswidrig" — das ist eine Vereinfachung, die juristisch ungenau ist. Die seit März 2024 wieder zulässige 100%-Sanktion bei nachhaltiger Arbeitsverweigerung ist möglich, wird aber praktisch kaum verhängt.
+- **BVerfG 1 BvL 1/09 (9.2.2010):** Existenzminimum als Verfassungsgut, auch für Kinder, auch wenn Eltern erwerbslos sind. Lebensmittelgutscheine ersetzen kein Existenzminimum.
+
+### Aufstocker-Demographie (BA Berichtsmonat 11/2024)
+
+- **826.444** erwerbstätige Leistungsbezieher (Aufstocker) = ca. 15% der Bezugsberechtigten
+- Frauen und Bedarfsgemeinschaften mit Kindern überrepräsentiert
+- Teilzeitquote unter Aufstockern: über 60% (IAB)
+- Hauptgrund Teilzeit: Care-Arbeit (Kinder, Pflege), nicht Lifestyle
+- Frauen-Teilzeit in Deutschland gesamt: 47% (Statistisches Bundesamt 2024)
+
+### Schonvermögen (§ 12 SGB II + BA-Merkblatt 2024)
+
+- **Karenzzeit (erstes Bezugsjahr):** 40.000 € erste Person + 15.000 € je weitere Person
+- **Nach Karenzzeit:** 15.000 € pro Person
+- **Auto:** Rechtsprechung schützt "angemessenes Fahrzeug" nach Marktwert (in der Praxis meist um 15.000 €). Es gibt **keine pauschale 30.000-€-Grenze** — diese Zahl ist ein verbreiteter Mythos.
+- **Vor 2023:** Schonvermögen 5.150 € (altersabhängig: 150 € pro Lebensjahr), Auto 7.500 €
+
+### Sanktions-Geschichte (gegen "Plünderkiste vor Sanktionen"-Mythos)
+
+- Sanktionen im SGB II gibt es seit der Hartz-IV-Einführung **2005**
+- Davor (BSHG, **ab 1962**) gab es Sozialhilfe-Sanktionen
+- Eine rechtlich sanktionsfreie Phase mit "Plünderungsoption" hat es **nie** gegeben
+
+### Bundeshaushalt 2024 (Einzelplan 11)
+
+| Posten | 2024 | Verhältnis |
+|--------|------|-----------|
+| Bürgergeld-Auszahlungen | rund **26,5 Mrd €** | 100% |
+| Verwaltung Jobcenter (Bundesmittel) | rund **5 Mrd €** | ca. 19% |
+| Eingliederungstitel | rund **4,2 Mrd €** | ca. 16% |
+| Sozialgerichtsverfahren (gesamt, alle Sozialrechtsfragen) | rund **600 Mio €** | ca. 2% |
+
+**Kernpunkt:** Verwaltungskosten sind etwa **ein Fünftel** der Auszahlungen, **nicht** "mehr als die Auszahlungen". Sozialgerichts-Kosten liegen im niedrigen dreistelligen Millionenbereich, **nicht** im "Milliardenbereich".
+
+### Sozialbudget-Verteilung (BMAS Sozialbericht 2024)
+
+| Posten | Volumen 2024 |
+|--------|-------------|
+| Renten | rund **390 Mrd €** |
+| Gesetzliche Krankenversicherung | rund **330 Mrd €** |
+| Pflege | rund **70 Mrd €** |
+| Familienleistungen | rund **60 Mrd €** |
+| **Bürgergeld** | rund **26,5 Mrd €** (ca. **2%** des Sozialbudgets) |
+
+**Vergleichs-Anker:** Das **Ehegattensplitting** kostet ungefähr so viel wie das gesamte Bürgergeld. Wer Sozialausgaben ernsthaft reduzieren will, müsste bei den großen Posten ansetzen.
+
+### Aufstocker-Branchenverteilung (BA-Beschäftigungsstatistik)
+
+Größte Aufstocker-Gruppen nach Branche:
+1. Reinigung und Hilfsdienste
+2. Einzelhandel
+3. Pflege
+4. Lager und Logistik
+5. Gastgewerbe (kleinerer Anteil)
+
+**Kernpunkt:** "Dönerladen und Barbershop" als Aufstocker-Reduktion beschreibt eine kleine Untergruppe in stark verkürzter Form, nicht das Phänomen.
+
+### Kinder-Existenzminimum (gegen "Kinder kein Grundrecht für Bedürftige"-Forderung)
+
+Rechtslage:
+- **Art. 6 GG** schützt Familie als Grundrecht (Abwehrrecht)
+- **Art. 1 i.V.m. Art. 20 GG** (Sozialstaat) → Recht auf menschenwürdiges Existenzminimum
+- **BVerfG 1 BvL 1/09 (2010):** Existenzminimum gilt explizit auch für Kinder, auch wenn Eltern erwerbslos sind
+- **Art. 3 GG** (Gleichheit): Kinder dürfen rechtlich nicht für die ökonomische Lage ihrer Eltern haftbar gemacht werden
+
+Die Forderung "keine Förderung für Kinder armer Eltern" als Gesetz wäre mit dem GG unvereinbar.
+
+---
+
 ## Zingers
 
 - "Die AfD will 70 % Rentenniveau und hat keinen Finanzierungsplan. Das ist kein Konzept, das ist ein Wahlversprechen."

@@ -164,3 +164,23 @@ Das BKA erklärt die Hellfeld-Limitation seit Jahrzehnten selbst und betreibt ei
 | "Einseitiges Mandat" | IRENA, Mediendienst | Mandat ≠ falsche Daten. Zahlen von Dritten unabhängig bestätigt? Dann valide. |
 | "Direktor war links/rechts" | KFN, DIW | Person ≠ Institution. Methodik der Studie zählt, nicht die Biografie des Autors. |
 | "PKS zeigt nicht die Wahrheit" | BKA/PKS | Richtig und vom BKA selbst kommuniziert. Für Trends valide, für Prävalenz Dunkelfeld nötig. |
+
+---
+
+## Offene Quellen-Lücken (zu verifizieren)
+
+### Polen/Dänemark restriktive Migration vs. rechte Gewalt
+
+**Behauptung im Konter:** "In Polen und Dänemark gibt es trotz harter Grenzpolitik keinen Rückgang rechtsextremer Gewalt, in Polen steigt sie."
+
+**Status:** Plausibel auf Basis bekannter Trends (DPP-Wahlerfolge in DK, polnische Hate-Crime-Statistik), aber bisher ohne direkten Beleg im Repo. Bei nächster Konfrontation als Schwachstelle identifizierbar.
+
+**Zu verifizieren:**
+- EU FRA Survey on Antisemitism / Hate Crime (jährlich, länderspezifisch)
+- OSCE ODIHR Hate Crime Reporting (ländervergleichend)
+- Polnische Statystyka kryminalna (rechtsextreme Gewalt-Trends)
+- Dänische Politiet-Hate-Crime-Reports
+
+**Konter-fester Wortlaut wenn verifiziert:** "Laut [Quelle] zeigt sich in [Land] [Trend], obwohl die Migrationspolitik seit [Jahr] verschärft wurde."
+
+**Bis dahin:** Polen/Dänemark-Argument zurückhaltender formulieren ("kein dokumentierter Rückgang" statt "die Politik liefert den Effekt nicht") oder ganz aus Kontern weglassen, wenn Gegner statistik-affin ist.

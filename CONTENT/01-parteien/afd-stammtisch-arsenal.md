@@ -100,8 +100,11 @@ Bundestagspraesident Schaeuble erteilte ihr dafuer einen Ordnungsruf. Die AfD-Fr
 
 | Abstimmung | AfD-Position |
 |------------|-------------|
-| Mindestlohn-Erhoehung | Dagegen |
-| Kindergelderhöhung | Dagegen |
+| Mindestlohn-Erhoehung auf 12€ | Enthaltung (Drucksache 20/1408, Juni 2022) |
+| Kindergelderhöhung | Enthaltung (Familienentlastungsgesetz, Nov 2018) |
+| Mietpreisbremse-Verlängerung | Dagegen (Juni 2025) |
+| Vermögensteuer | Dagegen (Wahlprogramm 2025) |
+| Erbschaftsteuer | Will Abschaffung (Wahlprogramm 2025) |
 | Wahl von Verfassungsrichtern (Sep 2025) | Aktiv blockiert |
 | WHO-Pandemievertrag | Dagegen (578 zu AfD-Stimmen) |
 | Haertere Abschieberegelungen (wenn von anderen Parteien) | Dagegen (weil sie keine Loesung wollen, sondern das Problem) |
@@ -110,7 +113,7 @@ Bundestagspraesident Schaeuble erteilte ihr dafuer einen Ordnungsruf. Die AfD-Fr
 
 **Wenn jemand sagt:** "Die AfD macht wenigstens Opposition!"
 
-**Du sagst:** "Opposition heisst Gegenvorschlaege machen. Die AfD stimmt gegen Mindestlohn, gegen Kindergeld, blockiert Verfassungsrichterwahlen. In 152 Sitzen im Bundestag haben sie keinen einzigen konstruktiven Gesetzentwurf durchgebracht. Das ist keine Opposition. Das ist Sabotage."
+**Du sagst:** "Opposition heisst Gegenvorschlaege machen. Die AfD enthaelt sich bei Mindestlohn und Kindergeld, stimmt gegen die Mietpreisbremse, will die Erbschaftsteuer abschaffen und blockiert Verfassungsrichterwahlen. In 152 Sitzen im Bundestag haben sie keinen einzigen konstruktiven Gesetzentwurf durchgebracht. Das ist keine Opposition. Das ist Sabotage."
 
 ---
 
@@ -259,7 +262,7 @@ Bundestagspraesident Schaeuble erteilte ihr dafuer einen Ordnungsruf. Die AfD-Fr
 - Antraege stellen, die absichtlich so formuliert sind, dass niemand zustimmen kann
 - Maximale Polarisierung, null Problemloesung
 
-**Rosa-Luxemburg-Stiftung Studie zum Abstimmungsverhalten:** Die AfD stimmt systematisch gegen soziale Verbesserungen (Mindestlohn, Kindergeld, Rentenanpassungen) und fuer Deregulierung, die Arbeitnehmern schadet.
+**Rosa-Luxemburg-Stiftung Studie zum Abstimmungsverhalten:** Die AfD verweigert systematisch soziale Verbesserungen (Enthaltung bei Mindestlohn und Kindergeld, gegen Mietpreisbremse, gegen Vermögensteuer) und fuer Deregulierung, die Arbeitnehmern schadet.
 
 **DGB-Analyse des Wahlprogramms 2025:** "Die AfD vertritt eine Politik, die Arbeitnehmerrechte schwaecht, Gewerkschaften marginalisiert und soziale Sicherungssysteme aushoehlt."
 
@@ -267,7 +270,7 @@ Bundestagspraesident Schaeuble erteilte ihr dafuer einen Ordnungsruf. Die AfD-Fr
 
 **Wenn jemand sagt:** "Die AfD ist die einzige echte Opposition!"
 
-**Du sagst:** "Opposition heisst nicht 'gegen alles sein'. Opposition heisst bessere Vorschlaege machen. Die AfD hat in zehn Jahren Bundestag keinen einzigen Gesetzentwurf durchgebracht. Sie stimmen gegen Mindestlohn, gegen Kindergeld, gegen Verfassungsrichterwahlen. Der DGB (nicht links, sondern Gewerkschaftsbund fuer alle Arbeitnehmer) sagt: AfD-Politik schwaecht Arbeitnehmerrechte. Das ist keine Opposition. Das ist eine Partei, die vom Problem lebt und deshalb keine Loesung will."
+**Du sagst:** "Opposition heisst nicht 'gegen alles sein'. Opposition heisst bessere Vorschlaege machen. Die AfD hat in zehn Jahren Bundestag keinen einzigen Gesetzentwurf durchgebracht. Sie enthalten sich bei Mindestlohn und Kindergeld, stimmen gegen Mietpreisbremse und Vermögensteuer, blockieren Verfassungsrichterwahlen. Der DGB (nicht links, sondern Gewerkschaftsbund fuer alle Arbeitnehmer) sagt: AfD-Politik schwaecht Arbeitnehmerrechte. Das ist keine Opposition. Das ist eine Partei, die vom Problem lebt und deshalb keine Loesung will."
 
 ---
 

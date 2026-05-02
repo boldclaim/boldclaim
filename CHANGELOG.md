@@ -1,7 +1,7 @@
 ---
 title: Changelog - Was sich geändert hat
 type: note
-last_updated: 2026-03-29
+last_updated: 2026-05-03
 tags: ["personal"]
 ---
 
@@ -11,7 +11,65 @@ tags: ["personal"]
 
 ---
 
-## 2026-04 (Aktuell)
+## 2026-05 (Aktuell)
+
+### v3.4 — Strukturelle Lehren aus r/armes_deutschland Thread-Analyse (2026-05-03)
+- **Updated:** `.claude/Skills/boldclaim-reddit/SKILL.md` — 5 neue Sektionen in "Lessons Learned":
+  - Live-Source-Fetch vor jedem statistischen Konter (MANDATORY)
+  - Tone-Imperfektion ab Post 1 (Anti-ChatGPT-Diss)
+  - Bauchgefühl-Counter parallel zu Statistik-Counter
+  - Stickied-Mods früh exposen (Phase 3 erweitert)
+  - Verbündete-Mobilisierungs-Cue im Top-Level
+  - Frame-Kollaps schlägt Punkt-für-Punkt
+- **Updated:** `.claude/Skills/boldclaim-reddit/SKILL.md` Phase 4 — Drei MANDATORY pre-steps eingebaut: Live-Source-Fetch, Bauchgefühl-Anker, Tone-Imperfektion. Frame-Kollaps-Pattern als bevorzugte Struktur bei konsistenten Erklärungsmodellen.
+- **Updated:** `.claude/Skills/boldclaim-reddit/SKILL.md` Phase 3 (Identify Targets) — neue Zeile "Mod-Stickied" als Critical-Priority-Faktor.
+- **Updated:** `META/techniques.md` — 5 neue Strukturelle Sektionen (Frame-Kollaps, Bauchgefühl-Anker, Tone-Imperfektion, Verbündete-Mobilisierung, Stickied-Mod-Detection). Total jetzt 13+ Taktik-Sektionen.
+- **Updated:** `META/quellen-verteidigung.md` — neue Sektion "Offene Quellen-Lücken": Polen/Dänemark restriktive Migration vs. rechte Gewalt als zu-verifizieren-Item, mit konter-festem Wortlaut bei Verifikation und Fallback-Formulierung bis dahin (zurückhaltender als bisher).
+- **Lessons learned (Meta-Ebene):**
+  - Statistik-Sieger ≠ Score-Sieger. Impossible-Rocks Bauchgefühl-Vergleich landete bei 5↑, mein sachlich überlegener Konter bei 0↑. Bauchgefühl-Anker sind nicht optional.
+  - KI-Cleanness ist Diskredit-Munition. Tone-Imperfektion ab Post 1 ist Schutzschicht, kein Stilmittel.
+  - Mod-Stickied-Power-Moves sind eigene taktische Kategorie. Nicht nur Inhalt kontern, auch den Frame-Setting-Vorteil benennen.
+  - Polen/Dänemark-Argument ohne direkte Quelle bleibt fragil. Bei nächster Gelegenheit verifizieren oder zurückhaltender formulieren.
+
+### v3.3 — r/armes_deutschland Rechte-Gewalt-Thread + PMK 2024 Verifikation (2026-05-02 bis 2026-05-03)
+- **Posted:** Konter im r/armes_deutschland Thread "Rechtsextreme Gewalt: Polizei meldet höchsten Stand" (OP 486↑, 56 Kommentare, 1.1k Ansichten). Account: u/Necessary-Low-5226.
+- **Geschrieben:** 10 Konter total — 4 paranoidray + Brigader (Stickied Mod), 1 CrokoStream (sarkastisch), 1 Mock-Spelling-Shutdown, 1 Verbündeten-Stützung, 1 Multi-Layer-Reply gegen paranoidray V2 (Beschneidung/Polen-Dänemark), 1 DiX-Nbw Frame-Kollaps (6 Bewegungen)
+- **Verified:** BKA PMK 2024 (Veröffentlichung 2025-05-20) live gefetcht und Wortlaut sowie Zahlen verifiziert: 84.172 PMK gesamt (+40,2%), 4.107 Gewalttaten (Höchststand seit 2016), 1.488 PMK-rechts-Gewalt (+17,2%, fallzahlenstärkster Phänomenbereich), 21.773 Hasskriminalität (+28%), >2/3 Hasskriminalität in PMK-rechts, 6.236 antisemitisch (+20,8%), 3.016 PMK-rechts antisemitisch (-0,6% — wichtigster Anti-Default-Datenpunkt), 1.940 ausländische Ideologie (+63,6%), 7.777 sonstige Zuordnung Wahlkontext vs 1.566 PMK-rechts
+- **Added:** `META/pmk-default-mythos.md` (NEU) — eigene Topos-Refutation für "BKA zählt alles automatisch rechts"-Standard-Mythos. 3 empirische Refutations-Punkte (sonstige Zuordnung existiert + wird genutzt, PMK-rechts antisemitisch GESUNKEN, RIAS unabhängiger Cross-Check).
+- **Added:** `META/techniques.md` — 6 neue Sektionen: Frame-Kollaps statt Punkt-für-Punkt, ChatGPT-Diss als Argumentationsvermeidung, Bringschulden-Umkehr, Codewort-Erkennung (Freibad/Weihnachtsmarkt 2017/verbale Gewalt/Fachkräfte), Selbst gestrickte Definition als Konter-Form, Concession-Trick (Strohmann-Re-Entry).
+- **Updated:** `CONTENT/02-themen/antisemitismus.md` — verifizierte 2024 Zahlen, Anti-Default-Argument prominenter, Verweis auf `META/pmk-default-mythos.md`.
+- **Added:** `_internal/reddit-antworten-armes-deutschland-rechte-gewalt.md` (NEU) — Thread-Analyse mit allen 10 Kontern, BKA-Zahlen-Tabelle, identifizierten Bewegungen, Lessons learned.
+- **Lessons learned:**
+  - Quelle vor Zitat fetchen, nie aus Memory schätzen — gerade bei statistik-affinen Gegnern
+  - Frame-Kollaps schlägt Punkt-für-Punkt (zwei Säulen je ein Datenpunkt)
+  - "Aus deiner eigenen Quelle"-Framing vermeiden, macht angreifbar
+  - PMK-rechts antisemitisch -0,6% ist beweiskräftiger als der absolute Anstieg ausländische Ideologie
+  - No-foreigners-look-bad-Constraint streng durchhalten: kein Migranten-Ranking, keine Migrant-Crime-Aufrufe, Polen/Dänemark-Argument empirisch (kein Rückgang rechter Gewalt) statt charakterisierend
+- **Pinecone:** Resync ausstehend (782 Vektoren, letzter Sync 2026-04-12, jetzt mehrere Content-Updates seit dem)
+
+### v3.1 — r/armes_deutschland Arbeitsvermittler-Thread Integration (2026-04-27 bis 2026-04-30)
+- **Posted:** 11 Konter im r/armes_deutschland Thread "Ich bin Arbeitsvermittler im Jobcenter" (OP 253↑, 137 Kommentare). Account: u/Necessary-Low-5226.
+- **Pipeline:** boldclaim-reddit Skill mit 3-Panel-Stress-Test (Right-libertarian / Centrist / Left-purist) + /myvoice
+- **Updated:** `CONTENT/02-themen/rente-sozialstaat.md` — neue Sektion "Bürgergeld-Daten v2" mit präzisen BA/IAB/BMAS-Zahlen 2024 (369k Leistungsminderungen, 23,4k Arbeitsablehnungen, 826k Aufstocker, Bundeshaushalt-Verteilung, Schonvermögen-Karenzzeit korrekt, Sozialbudget-Vergleich + Ehegattensplitting, Kinder-Existenzminimum)
+- **Updated:** `CONTENT/02-themen/sinti-roma-antiziganismus.md` — neue Sektion "Antiziganismus mit Dienstmarke / kulturalistische Verwaltungs-Diskriminierung" mit ADS-Studie als Quelle
+- **Updated:** `META/techniques.md` — 4 neue Taktiken dokumentiert: Authority-Weaponization durch Beamten-Status, Plausibilitäts-Heuristik, Source-Boomerang (mit IAB-Teilzeit-Beispiel), Stereotyp-codierter Whataboutism. Plus Pre-Read-Library oft falsch zitierter Quellen.
+- **Lessons learned (kritisch für boldclaim-reddit Skill):**
+  - Schonvermögens-Zahlen NIE pauschal aus dem Gedächtnis zitieren (eine v1-Counter-Antwort hatte erfundene 30k-Kfz-Pauschale; korrekt: angemessenes Fahrzeug nach Marktwert per Rechtsprechung)
+  - Verwaltungskosten Bundeshaushalt Einzelplan 11, nicht aus dem Gefühl runden (v1 hatte 6,5 Mrd, korrekt: ~5 Mrd Bundesmittel)
+  - BVerfG-Urteile präzise zitieren: nicht "über X verfassungswidrig" pauschal, sondern konkrete Stufen mit Voraussetzungen
+  - BA-Statistik unterscheidet Pflichtverletzungen / Leistungsminderungen / Sanktionsgründe — die größere Zahl ist oft die für unsere Argumentation richtige
+- **Files:** `_internal/reddit-antworten-armes-deutschland-arbeitsvermittler.md` (Konter v2), `_internal/reddit-antworten-armes-deutschland-arbeitsvermittler-dashboard.html` (interaktives Dashboard mit 11 Konter-Cards, Reply-Buttons, Stress-Test-Befunden)
+- **Pinecone:** Resync nach Content-Updates erforderlich (aktuell 782 Vektoren)
+
+
+### v3.0 — Conversation Guide + Pinecone Resync + Git Push (2026-04-10 bis 2026-04-12)
+- **Added:** Conversation Guide (`docs/guide/`): interactive website with 8 pro-AfD statements → evidence cascade (272 + 222 lines)
+- **Added:** 8 topics: Migration, Eliten, Energie, Korruption, Sicherheit, Patriotismus, EU, Gender
+- **Added:** Topic pills navigation, OG meta tags, mobile-responsive footer
+- **Fixed:** Pinecone resynced (782 vectors in single `default` namespace, empty namespace deleted)
+- **Fixed:** German typographic quotes breaking JS parse (23 instances)
+- **Fixed:** Git repo fully committed and pushed (was 6+ weeks behind, now 15 commits)
+- **Deployed:** VPS at `89.147.109.248:8650/guide/` + GitHub Pages
 
 ### v2.1 — Sexualdelikte-CONTENT + Reddit Counter-Speech (2026-04-09/10)
 - **Added:** `sexualdelikte-taetergeschlecht.md` (108 Zeilen, 5 Konterwinkel, BKA PKS 2023, Inversionsaudits)

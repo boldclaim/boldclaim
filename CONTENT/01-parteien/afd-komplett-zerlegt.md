@@ -444,8 +444,8 @@ UK war die 5. größte Volkswirtschaft der Welt. Deutschland exportiert über 40
 ### Stammtisch-Allrounder (3 Sätze)
 ```
 Die AfD hat in 10 Jahren Bundestag null Gesetze durchgebracht,
-gegen Mindestlohn und Kindergeld gestimmt, und über eine Million
-Euro Strafzahlungen wegen illegaler Spenden kassiert.
+sich bei Mindestlohn und Kindergeld enthalten, gegen die Mietpreisbremse
+gestimmt, und über eine Million Euro Strafzahlungen wegen illegaler Spenden kassiert.
 Das ist keine Opposition. Das ist eine Partei, die vom Problem lebt.
 ```
 

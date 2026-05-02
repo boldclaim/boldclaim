@@ -11,7 +11,7 @@ tags: ["personal", "afd", "bold-claim", "stammtisch"]
 
 ---
 
-Die AfD hat im Bundestag gegen Mindestlohn, Kindergeld und Mietpreisbremse gestimmt, ihr Spitzenpolitiker wurde rechtskräftig für NS-Parolen verurteilt und ist immer noch Fraktionsvorsitzender, und sie hat 1,1 Millionen Euro Strafe für illegale Spenden kassiert (die intransparenteste Partei im Bundestag). Wer das wählt, wählt keine Protestpartei, sondern eine vom Verfassungsschutz als gesichert rechtsextrem eingestufte Partei, die in zehn Jahren kein einziges Gesetz für ihre Wähler zustande gebracht hat. Die AfD ist eine Reichenpartei im Arbeiterkostüm: gegen Mindestlohn, gegen Erbschaftssteuer, für Steuersenkungen bei Spitzenverdienern, finanziert von anonymen Großspendern aus der Schweiz.
+Die AfD hat sich im Bundestag bei Mindestlohn-Erhöhung und Kindergeld enthalten, gegen die Mietpreisbremse gestimmt, ihr Spitzenpolitiker wurde rechtskräftig für NS-Parolen verurteilt und ist immer noch Fraktionsvorsitzender, und sie hat 1,1 Millionen Euro Strafe für illegale Spenden kassiert (die intransparenteste Partei im Bundestag). Wer das wählt, wählt keine Protestpartei, sondern eine vom Verfassungsschutz als gesichert rechtsextrem eingestufte Partei, die in zehn Jahren kein einziges Gesetz für ihre Wähler zustande gebracht hat. Die AfD ist eine Reichenpartei im Arbeiterkostüm: will Vermögen- und Erbschaftsteuer abschaffen, reißt ein 181-Milliarden-Loch für Steuersenkungen bei Spitzenverdienern (DIW), finanziert von anonymen Großspendern aus der Schweiz.
 
 ---
 
@@ -19,7 +19,7 @@ Die AfD hat im Bundestag gegen Mindestlohn, Kindergeld und Mietpreisbremse gesti
 
 | Fakt                                                        | Quelle                             |
 | ----------------------------------------------------------- | ---------------------------------- |
-| Gegen Mindestlohn, Kindergeld, Mietpreisbremse gestimmt     | bundestag.de Abstimmungsprotokolle |
+| Enthaltung bei Mindestlohn + Kindergeld, gegen Mietpreisbremse | bundestag.de Drucksache 20/1408 (Mindestlohn), Familienentlastungsgesetz 2018 (Kindergeld) |
 | Höcke SA-Parole, 2x BGH-rechtskräftig verurteilt (Aug 2025) | BGH Pressemitteilung 2025          |
 | 1,1 Mio€ Strafzahlungen für illegale Spenden                | Bundestagsverwaltung               |
 | Gesichert rechtsextrem (BfV, Mai 2025)                      | verfassungsschutz.de               |
