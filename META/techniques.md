@@ -921,3 +921,59 @@ Pattern: KI-cleaner Schreibstil (perfekte Doppelpunkt-Listen, durchgängige Komm
 - Aber: nicht ins Illiterate kippen, Sachgehalt bleibt sauber
 
 **Lessons learned:** Tone-Imperfektion ist Schutzschicht. ChatGPT-Diss nutzt KI-Cleanness als Diskredit-Vektor. Wer ab Post 1 "menschlich" schreibt, nimmt dem Vorwurf die Grundlage.
+
+---
+
+## Mitläufer-Zweifel-Säen
+
+Pattern: Wer nicht Brigader ist, sondern guter Glaube zeigt ("Forderungen, die ich mitgehen würde, aber..."), verträgt einen anderen Konter als ein hartgesottener Bad-Faith-Gegner. Frontalangriff treibt ihn zurück in die Brigader-Kohorte. Differenzierte Anerkennung + spezifische Folgen-Aufzeigung lässt ihm einen Ausweg.
+
+**Anwendung r/armes_deutschland 2026-05 (Mitläufer auf paranoidray-Wiki-Thread):**
+User schrieb "Forderungen, die ich mitgehen würde", schlug aber Modifikationen vor: Punktesystem statt 2-Jahre-Cap, Versuchs-Reaktor statt Volleinstieg, Sodium-Batteriespeicher als Alternative zu Kernkraft. Differenziert. Aber gleichzeitig: "Sozialleistungen nur für deutsche Pässe", "Wer kriminell wird, in unsichere Länder abschieben", "Nullrunden für Kinderlose".
+
+**Counter-Strategie:**
+1. **Anerkennung zuerst** — die Differenzierung explizit loben ("ist gut, dass du differenzierst", "mehr als die meisten in solchen Threads"). Macht den Konter glaubwürdig.
+2. **Konkrete Bilder statt Abstraktion** — "32-jährige Pflegerin mit zwei Kindern, 8 Einzahlungsjahre" statt "Demografie-Kohorten". Mitleser denken in Personen.
+3. **Sein eigenes Wort gegen ihn** — wenn er "Lümmel" geschrieben hat, das Wort aufnehmen ohne zu kommentieren, lasse es seine Arbeit tun.
+4. **Verfassungsrechtliche Realitäts-Anker** — BVerfG-Aktenzeichen, EMRK-Artikel, Genfer Konvention. Macht den Konter überprüfbar, nicht moralisierend.
+5. **Empirische Folgen statt moralischer Verurteilung** — "Ungarn hat das unter Orbán probiert, Geburtenrate von 1,55 auf 1,59 gekrochen" ist überzeugender als "das ist autoritär".
+6. **Konstruktiver Closer als Brücke** — DIW-Bürgerversicherung als Variante seines Punktesystem-Gedankens, "ohne den Sprengsatz". Lässt ihm eine Tür raus, ohne Gesicht zu verlieren.
+
+**Was vermeiden:**
+- Frontalangriff ("du bist ein Rassist")
+- Moralisierung ("das ist menschenverachtend")
+- Belehrungs-Pose ("hast du eigentlich mal gelesen, was...")
+- Pauschal-Verteidigung des Sozialstaats — er differenziert, du auch
+
+**Lessons learned:**
+- Mitläufer sind nicht Brigader. Wer differenzieren kann, kann auch lernen — wenn der Konter es ihm erlaubt.
+- Verfassungsrechtliche Anker (BVerfG-Aktenzeichen, EMRK-Artikel) wirken bei Mitläufern besser als statistische Daten — sie respektieren institutionelle Autorität noch.
+- Der "Lümmel"-Sprachverrat ist Gold wert. Aufgreifen ohne kommentieren.
+- DIW-Bürgerversicherung ist eine Standard-Brücke für Reform-skeptische Mitläufer. Etabliert, durchgerechnet, sozial-marktwirtschaftlich anschlussfähig.
+
+---
+
+## Atlas-Network-Aufklärung als Mitleser-First-Move
+
+Pattern: Wenn Gegner ein Programm präsentiert, das aus 8-10 Punkten besteht (Flat Tax + Sozialleistungs-Cap + EU-Austritt + Atomkraft + Migrations-Restriktion etc.), ist die Wahrscheinlichkeit hoch, dass es Atlas-Network-Standard-Material ist. Der Konter funktioniert besser als Mitleser-Aufklärung denn als direkter Gegner-Schlag.
+
+**Anwendung r/armes_deutschland 2026-05 (paranoidray Wiki):**
+"Utiliberalismus"-Wiki mit Flat Tax 25%, 2-Jahre-Bürgergeld-Cap, Grenzen zu, 50% Bürokratie weg, EU-Austritt, Atomkraft-Restauration. Komplette Atlas-Standard-Liste mit Eigenmarken-Etikett.
+
+**Counter-Strategie:**
+1. **"Falls jemand das hier mitliest"-Opener** — adressiert Mitleser direkt, OP wird zum Fallbeispiel, nicht zum Adressaten
+2. **Konkrete Punkt-für-Quelle-Zuordnung** — "Flat Tax → Friedman 1962", "Bürgergeld-Cap → Charles Murray AEI 1984", etc. Spezifische Personen + Jahreszahlen, nicht abstraktes "Atlas Network"
+3. **Mitleser-Aufklärung in eigenem Absatz** — Atlas Network erst ERKLÄREN nach den Punkt-Zuordnungen. Sonst klingt es wie Verschwörungstheorie.
+4. **Geldspur konkret** — Charles Koch (zweitgrößter US-Oligarch), Peter Thiel (15 Mio in JD Vance), ExxonMobil, DonorsTrust. Macht klar: das sind Milliardäre mit eigener Programmatik.
+5. **Aktuelle Anwendung benennen** — Heritage Project 2025 = Trump-Regierungsprogramm gerade live, IEA = Brexit/Liz Truss. Das sind keine theoretischen Punkte.
+6. **Parrot-Frame ohne Beleidigung** — "Er ist nicht der Denker, er ist der Verstärker." Direkt, deklarativ, ohne Personal-Angriff.
+7. **Closer als Mitleser-Aufruf** — "Wer die Liste das nächste Mal liest, weiß jetzt, woher sie kommt." Lädt zur Wiedererkennung ein.
+
+**Vollständige Reference:** Siehe `META/atlas-network-reference.md`.
+
+**Lessons learned:**
+- Atlas-Verbindung erst NACH konkreten Punkt-Zuordnungen erwähnen, sonst Verschwörungs-Geruch
+- Konkrete Personen + Jahre überzeugen mehr als abstrakte "Dachorganisation"
+- "Verstärker" / "Echo" trifft härter als "Marionette" — analytisch statt billig
+- DE-Filialen (Prometheus Institut, Hayek-Gesellschaft, INSM) explizit nennen, das macht es Mitleser-relevant
+- "Jetzt Reddit" in der Skripte-Liste (Reagan, Thatcher, Brexit, Trump, Project 2025, jetzt Reddit) — macht Mitleser bewusst, dass dieser Thread Teil der Übertragungskette ist

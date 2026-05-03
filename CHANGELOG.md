@@ -13,6 +13,30 @@ tags: ["personal"]
 
 ## 2026-05 (Aktuell)
 
+### v3.6 — Werte Union Reference + Mitläufer-Pattern + BYOK-Strategie (2026-05-03)
+- **Added:** `META/werte-union-reference.md` (NEU) — Counter-Reference für WU-Sympathie-Posts. Faktenlage 2025 (BTW 0,3%, kein Mandat in keinem Parlament), Maaßen-Karriere-Bogen (BfV-Chef → Chemnitz-Leugnung → Tichy/NIUS → BfV-Beobachtung), Counter-Pattern, kopierbare Standard-Antwort, Closer-Kontrast Merkel/Schäuble/vdL.
+- **Updated:** `META/techniques.md` — 2 neue Sektionen:
+  - **Mitläufer-Zweifel-Säen:** Pattern für gut-gemeinte Differenzierer. Anerkennung zuerst, konkrete Bilder statt Abstraktion, sein eigenes Wort gegen ihn ("Lümmel"), verfassungsrechtliche Anker (BVerfG, EMRK), empirische Folgen (Ungarn-Orbán-Daten), DIW-Bürgerversicherung als konstruktive Brücke.
+  - **Atlas-Network-Aufklärung als Mitleser-First-Move:** Pattern für Counter-Speech bei vollständigen Atlas-Programm-Listen. Mitleser-First-Opener, Punkt-für-Quelle-Zuordnung, Atlas erst nach den Konkretionen erklären, "Verstärker"-Frame, Closer als Mitleser-Aufruf.
+- **Added:** `_internal/byok-strategy.md` (NEU) — vollständige BYOK-Strategie für Live-Site-Skalierung auf 50k User. Endpoint-Split, 5-Provider-Adapter (Anthropic, OpenAI, Moonshot, OpenRouter, Ollama), Settings-Modal-Mockup, Onboarding-Flow, Pricing-Tier-Reload, Implementierungs-Plan (~20h für Phase 1), Privacy-Garantien, Edge Cases. Marketing-Tagline "Bring your own AI. Wir sehen deine Counter nie."
+- **Lessons (Counter-Anwendung):**
+  - Mitläufer ≠ Brigader. Wer differenzieren kann, braucht differenzierten Konter, sonst ist er für Brigader-Lager verloren.
+  - Werte-Union-Sympathie + Heritage-Wiki + Ganser-Verlinkung = konsistente Übertragungskette, kein zufälliger Mix. Benennen.
+  - "Verstärker" trifft härter als "Marionette" — analytisch statt billig.
+  - Maaßen-vom-BfV-beobachtet ist ein faktischer Mic-Drop, der ohne Performativität auskommt.
+- **Apple Notes erstellt:**
+  - "Atlas-Network-Aufklärung — paranoidray Wiki" (Top-Level-Reply)
+  - "Werte-Union-Auslachen — paranoidray Sympathie" (Hämisch-Reply)
+  - "Mitläufer-Zweifel-Säen — Punktesystem & Sozialleistungen" (Differenziert-Reply)
+  - Alle drei mit aktiven HTML-Hyperlinks, ohne sichtbare Reddit-Markdown-Klammern.
+
+### v3.5 — Atlas Network Reference + paranoidray-Wiki-Konter (2026-05-03)
+- **Added:** `META/atlas-network-reference.md` (NEU) — vollständige Dachorganisation-Mapping für libertär-marktradikale Talking-Points. ~500 Mitglieds-Think-Tanks weltweit, Sitz Arlington/Virginia. Tabellen für US-, UK- und DE-Filialen. Geldspuren (Koch-Stiftungen, ExxonMobil, Sarah Scaife Foundation, DonorsTrust). Mapping einzelner Reddit-Talking-Points zu konkreten Quellen.
+- **Counter-Pattern:** Drei-Schritt-Aufbau (Konkrete Zuordnung → Mitleser-Aufklärung → Closer als Beobachtung). Drei Standard-Templates dokumentiert (Vollständig / Single-Punkt / Mitleser-Edukation).
+- **Anwendungsfall:** paranoidray (r/armes_deutschland Mod) hat im Wiki "Utiliberalismus"-Programm mit Flat Tax 25% + 2-Jahre-Bürgergeld-Cap + Grenzen zu + Rente mit 70 + EU-Austritt + Atomkraft-Restauration. Zuordnung 1:1 zu Friedman 1962, Charles Murray AEI 1984, Heritage seit 1981, Cato (Koch 1977), IEA UK Brexit. Konter dokumentiert.
+- **Lehre:** "Atlas Network" als Dachname erst nach konkreter Zuordnung der Punkte einsetzen (sonst Verschwörungs-Geruch). Geldspur (Koch, ExxonMobil, DonorsTrust) konkreter als das Atlas-Etikett. Mitleser-Aufklärung in eigenem Absatz, nicht in Konter-Body.
+- **Quellen:** DeSmog Disinfo Database, SourceWatch, Lobbycontrol, Greenpeace Koch-Reports, Mayer "Dark Money" 2016, MacLean "Democracy in Chains" 2017, Oreskes "Merchants of Doubt" 2010.
+
 ### v3.4 — Strukturelle Lehren aus r/armes_deutschland Thread-Analyse (2026-05-03)
 - **Updated:** `.claude/Skills/boldclaim-reddit/SKILL.md` — 5 neue Sektionen in "Lessons Learned":
   - Live-Source-Fetch vor jedem statistischen Konter (MANDATORY)
