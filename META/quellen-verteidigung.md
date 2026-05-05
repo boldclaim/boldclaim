@@ -154,6 +154,87 @@ Das BKA erklärt die Hellfeld-Limitation seit Jahrzehnten selbst und betreibt ei
 
 ---
 
+### Abgeordnetenwatch.de
+
+**Was es ist:** Gemeinnützige Plattform für parlamentarische Transparenz, gegründet 2004. Dokumentiert Abstimmungsverhalten, Nebeneinkünfte, Spenden und Ausschuss-Mitgliedschaften aller Bundestagsabgeordneten. Träger: abgeordnetenwatch.de e.V. (Hamburg), gemeinnützig anerkannt.
+
+**Finanzierung:** Mitgliedsbeiträge und Spenden von Einzelpersonen, Förderung der Schöpflin Stiftung (parteiunabhängig, Sitz Hamburg), Open Society Foundations (Soros), European Climate Foundation. Jahresberichte öffentlich. Kein Partei-Budget.
+
+**Gegner sagen:** "Linke Quelle, von Soros finanziert. Der Förderverein ist voll linksgrüner Politiker."
+
+**Fakten:** Die Schöpflin Stiftung ist parteiunabhängig und fördert Demokratie-Infrastruktur quer durch das Spektrum. Open Society Foundations finanzieren weltweit Transparenz-Institutionen ohne Inhalts-Kontrolle. Entscheidend: Die Parlamentsdaten (Abstimmungen, Drucksachen, Spendenberichte) kommen aus dem Bundestag selbst — Abgeordnetenwatch aggregiert öffentliche Quellen. Die politische Ausrichtung der Förderorganisationen ändert nichts an der Korrektheit eines Abstimmungsprotokolls. Im Förderverein sitzen CDU-, SPD-, Grünen- und FDP-Politiker als Unterstützer. Der Vorwurf "linke Quelle" erklärt nicht, welche Abstimmungsdaten falsch sind.
+
+**Konter (Copy-Paste):**
+Abgeordnetenwatch zeigt Abstimmungsprotokolle aus dem Bundestag. Die Förderstruktur ändert nichts daran, ob ein Abgeordneter mit Ja oder Nein gestimmt hat. Wenn eine konkrete Angabe falsch ist, bitte Drucksachen-Nummer dagegenstellen. "Linke Quelle" ist kein Gegenargument gegen Parlamentsdaten.
+
+**URL:** https://www.abgeordnetenwatch.de / Jahresberichte: https://www.abgeordnetenwatch.de/ueber-uns/transparenz
+
+---
+
+### Hans-Böckler-Stiftung
+
+**Was es ist:** Gewerkschaftsnahe Stiftung des Deutschen Gewerkschaftsbunds (DGB), gegründet 1977. Finanziert Forschung zu Arbeit, Wirtschaft, Mitbestimmung und Tarifpolitik. Vergabe von Stipendien und Publikation wissenschaftlicher Studien.
+
+**Finanzierung:** Finanzierung über DGB-Mittel, Mitbestimmungsfonds (gesetzlich vorgeschriebene Unternehmens-Beiträge), Auftragsforschung.
+
+**Gegner sagen:** "Gewerkschaftspropaganda, linke Stiftung, Ergebnisse immer pro-Arbeitnehmer."
+
+**Fakten:** Gewerkschaftsnähe bedeutet nicht, dass Studien methodisch falsch sind. Hans-Böckler-Studien erscheinen in peer-reviewed Fachzeitschriften und werden im IAB-Forschungsnetzwerk genutzt. Das IAB ist eine Bundesbehörde (Bundesagentur für Arbeit), methodisch ausgewiesen und international anerkannt. Wenn Böckler-Daten mit IAB-Ergebnissen übereinstimmen, haben wir zwei verschiedene Quellen mit verschiedenen Trägerschaften und kompatiblen Befunden. Das Etikett "gewerkschaftsnah" trifft die Trägerschaft, nicht die Methodik. Spezifische Studien zu Lohnentwicklung, Tarifbindung und Mitbestimmungs-Effekten werden von Wirtschafts-Ökonomen (u.a. aus dem IZA, Mannheim) herangezogen.
+
+**Konter (Copy-Paste):**
+Böckler-Studien werden im IAB-Forschungsnetzwerk genutzt. Das IAB ist eine staatliche Bundesbehörde. Wenn beide zu vergleichbaren Zahlen kommen, ist das keine Parteilichkeit, sondern Konsistenz. Wer die Methodik kritisiert, soll das konkrete Paper benennen — "gewerkschaftsfinanziert" ist kein methodischer Einwand.
+
+**URL:** https://www.boeckler.de / WSI-Studien: https://www.boeckler.de/de/wsi.htm
+
+---
+
+### Bundesverfassungsgericht / BVerwG
+
+**Was es ist:** Bundesverfassungsgericht (BVerfG), Karlsruhe — höchstes deutsches Gericht, Hüter des Grundgesetzes. Bundesverwaltungsgericht (BVerwG), Leipzig — höchstes Verwaltungsgericht. Richterinnen und Richter werden je zur Hälfte von Bundestag und Bundesrat gewählt, Amtszeit 12 Jahre ohne Wiederwahl.
+
+**Gegner sagen:** "Links-grüne Justiz, die Richter wurden von Ampel-Koalition eingesetzt, Karlsruhe macht Politik statt Recht."
+
+**Fakten:** Der Vorwurf ignoriert die tatsächliche Zusammensetzung. Von den 16 BVerfG-Richterinnen und Richtern (Stand 2025) wurden mehrere von CDU/CSU-dominierten Bundesrat-Mehrheiten gewählt. Präsident Stephan Harbarth wurde 2019 vom CDU/CSU-dominierten Bundesrat mitgewählt. BVerfG-Entscheidungen gelten unabhängig von der politischen Ausrichtung des Richters — das Gericht hat sowohl Positionen der Ampel als auch der Union kassiert (Schuldenbremsen-Urteil 2023, Klimaschutz-Urteil 2021). Verwaltungsgerichtliche Entscheidungen unterliegen mehrstufiger Revision. Aktenzeichen direkt zitierbar und online abrufbar (bverfg.de).
+
+**Konter (Copy-Paste):**
+Harbarth wurde unter CDU/CSU-Mehrheiten ins Amt gewählt. Das Gericht hat Positionen aller großen Parteien kassiert. Wer ein Urteil als "links-grün" bezeichnet, soll die konkrete methodische Begründung zeigen, warum die Urteilsbegründung politisch statt rechtlich ist. Aktenzeichen: [hier einfügen].
+
+**URL:** https://www.bundesverfassungsgericht.de / Entscheidungs-Datenbank: https://www.bverfg.de/e/
+
+---
+
+### Verfassungsschutz / BfV
+
+**Was es ist:** Bundesamt für Verfassungsschutz (BfV), Köln — Inlandsgeheimdienst im Geschäftsbereich des Bundesinnenministeriums (BMI). Beobachtet und dokumentiert verfassungsfeindliche Bestrebungen.
+
+**Finanzierung:** Bundeshaushalt, Bundesinnenministerium. Unterliegt parlamentarischer Kontrolle durch das Parlamentarische Kontrollgremium (PKGr).
+
+**Gegner sagen:** "Links-grüne Behörde, Haldenwang war CDU aber macht linke Politik, der Verfassungsschutz ist politisch gesteuert."
+
+**Fakten:** Thomas Haldenwang war CDU-Mitglied und wurde von einer CDU-geführten Bundesregierung (de Maizière / Seehofer) in das Amt berufen. Er schied Ende 2024 aus dem Amt aus. Sein Nachfolger Sinan Selen wurde ebenfalls nicht von einer "links-grünen" Regierung eingesetzt. BfV-Einstufungen unterliegen verwaltungsgerichtlicher Überprüfung: Wenn die AfD als "gesichert rechtsextremistisch" eingestuft wird, können Betroffene und Parteien klagen — und haben das auch getan. Das OVG Münster hat die BfV-Einstufung 2024 als Verdachtsfall bestätigt. Die Einstufung als Beweis wegzureden mit "politisch gesteuert" ignoriert, dass Verwaltungsgerichte die Begründung geprüft haben.
+
+**Konter (Copy-Paste):**
+Haldenwang war CDU, eingesetzt unter CDU-Innenministern. Die BfV-Einstufungen werden von Verwaltungsgerichten überprüft — das OVG Münster hat den Verdachtsfall-Status 2024 bestätigt. Wer sagt, das BfV sei links gesteuert, muss erklären, warum CDU-geprägte Verwaltungsgerichte der Behörde recht gaben.
+
+**URL:** https://www.verfassungsschutz.de / OVG Münster Urteil AfD: Az. 5 B 1206/22.NE
+
+---
+
+### Rosa-Luxemburg-Stiftung / Verdi
+
+**Was es ist:** Rosa-Luxemburg-Stiftung (RLS) — parteinahe Stiftung der Linken, staatlich mitfinanziert über Stiftungsgesetz wie alle Parteistiftungen (Konrad-Adenauer-Stiftung = CDU, Friedrich-Ebert-Stiftung = SPD, Heinrich-Böll-Stiftung = Grüne, Friedrich-Naumann-Stiftung = FDP, Hans-Seidel-Stiftung = CSU). Verdi — Dienstleistungsgewerkschaft, größte Einzelgewerkschaft im DGB, 1,9 Mio. Mitglieder (2024).
+
+**Warum eigenes Defense-Pattern:** Bei AfD-affinem oder libertär-konservativem Publikum werden RLS und Verdi sofort als "links" abqualifiziert. Das Etikett entfaltet dort Wirkung, noch bevor Zahlen geprüft werden. Standard-Quellen-Defense reicht hier nicht.
+
+**Defense-Strategie:** RLS-Daten und Verdi-Daten nur dann zitieren, wenn (a) die Methodik öffentlich dokumentiert ist und (b) die Zahlen mit einer unabhängigen Primärquelle gegengeprüft werden können. Vorzugsweise die Primärquelle direkt zitieren (Bundestagsdrucksache, Destatis, BKA, Tarifregister BA) und RLS/Verdi nur als Hinweis auf die Drucksache nennen, nicht als Hauptquelle. Bei Mainstream-Publikum die RLS-Aufbereitung nutzen (oft gut lesbar), bei AfD-affinem Publikum direkt zur Primärquelle.
+
+**Konter wenn trotzdem angegriffen:**
+Jede Partei hat eine staatlich finanzierte Stiftung: Konrad-Adenauer für die CDU, Hans-Seidel für die CSU, Naumann für die FDP. RLS ist dieselbe Infrastruktur für die Linke. Wenn die Zahl in der Drucksache steht, ist die Quelle die Drucksache, nicht die Stiftung. Bitte den Fehler in der Drucksache zeigen, nicht den Namen der Stiftung nennen.
+
+**URL:** https://www.rosalux.de / Verdi: https://www.verdi.de / Tarifregister BA: https://www.tarifregister.de
+
+---
+
 ## Schnellreferenz: Welcher Angriff trifft welche Quelle
 
 | Angriffsmuster | Quelle | Kern-Konter |
@@ -164,6 +245,11 @@ Das BKA erklärt die Hellfeld-Limitation seit Jahrzehnten selbst und betreibt ei
 | "Einseitiges Mandat" | IRENA, Mediendienst | Mandat ≠ falsche Daten. Zahlen von Dritten unabhängig bestätigt? Dann valide. |
 | "Direktor war links/rechts" | KFN, DIW | Person ≠ Institution. Methodik der Studie zählt, nicht die Biografie des Autors. |
 | "PKS zeigt nicht die Wahrheit" | BKA/PKS | Richtig und vom BKA selbst kommuniziert. Für Trends valide, für Prävalenz Dunkelfeld nötig. |
+| "Linke Quelle / Soros" | Abgeordnetenwatch | Parlamentsdaten aus dem Bundestag. Förderstruktur ≠ falsche Abstimmungsdaten. |
+| "Gewerkschaftspropaganda" | Hans-Böckler-Stiftung | IAB-anschlussfähig, peer-reviewed. Trägerschaft ≠ Methodik. |
+| "Links-grüne Justiz" | BVerfG / BVerwG | Harbarth CDU-gewählt. Gericht hat alle Parteien kassiert. Aktenzeichen prüfbar. |
+| "Links-grüne Behörde" | BfV / Verfassungsschutz | Haldenwang CDU. OVG Münster hat BfV-Einstufung bestätigt. |
+| "Linke Stiftung / Gewerkschaft" | RLS / Verdi | Primärquelle direkt zitieren (Drucksache, Destatis). RLS nur als Wegweiser, nicht als Hauptquelle. |
 
 ---
 

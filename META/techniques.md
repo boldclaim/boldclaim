@@ -1040,3 +1040,83 @@ Standard-Counter: "Du hast eine Stelle gepickt und die andere ignoriert. Das ist
 
 Erkennung: Wenn die zitierte Stelle die Gegen-Linie absurd stark stützt, fast immer ist im Originalpaper ein qualifizierender Satz, der die Stärke abschwächt.
 
+---
+
+## Sticky-Lie-Pinning (2026-05-05)
+
+**Pattern:** Ein Mod oder hochgepunkteter Top-Voter setzt eine Falschbehauptung oder einen Diskredit-Frame als Sticky-Comment. Die Korrektur muss als Antwort darauf gepostet werden und versinkt im Unterfaden. Der erste Eindruck des Threads wird durch den angepinnten Kommentar geprägt — Mitleser, die nur flüchtig scrollen, lesen nur den Sticky, nicht die Korrektur darunter.
+
+**Beispiel (r/armes_deutschland rechte Gewalt, 2026-05):** paranoidray (Mod) pinte einen statistischen Zweifel an der PMK-Antisemitismus-Zählung als ersten Kommentar. Der Konter-Kommentar mit den korrekten BKA-Zahlen (Zuordnung seit 2024 differenziert, PMK-rechts bleibt größte Einzelkategorie) erschien als Unterantwort. Das Follow-up ("Kann sein, dass das veraltet ist") relativierte im Unterfaden, ohne den Sticky zu entfernen. Wirkung: Mitleser sahen "Zweifel" oben, "Diskussion" unten.
+
+**Counter-Move:**
+1. Stickiness explizit benennen: "Du pinnst oben einen veralteten Statistik-Twist an und relativierst ihn hier unten mit 'kann sein'. Der erste Eindruck bleibt kleben, die Korrektur verschwindet im Unterfaden."
+2. Parallel einen eigenen Top-Level-Kommentar posten (nicht nur Unterantwort), der die Korrektur auf die erste Ebene hebt. Thematisch eigenständig formulieren, nicht als direkte Reaktion auf den Sticky.
+3. Mitleser in diesem Top-Level-Kommentar direkt adressieren: "Man sieht im Thread ziemlich gut, welche Taktik hier läuft." Dann Korrektur mit Zahlen.
+4. Den Macht-Move benennen (wenn Mod): "Mod-Power als Frame-Setting ist nicht dasselbe wie ein Argument." — Macht die Asymmetrie für Mitleser sichtbar.
+
+**Lessons learned:**
+- Nur im Unterfaden zu antworten verliert strukturell, weil der Sticky Platzierungsvorteil hat. Top-Level-Gegenzug ist nötig.
+- Den Sticky inhaltlich UND taktisch kommentieren. Nur Inhalt ignoriert den Macht-Move. Nur Macht ignoriert die Fakten.
+- "Der erste Eindruck bleibt kleben" ist ein Satz, den auch nicht-statistisch-affine Mitleser verstehen. Einsetzbar als Opener ohne Datenfunding.
+- In Subs mit feindlicher Grundstimmung (paranoidray-kontrollierten Subs) ist der Top-Level-Gegenzug wichtiger als der Unterfaden-Treffer.
+
+---
+
+## Tautologischer Selbstschaden-Beweis (2026-05-05)
+
+**Pattern:** Die staatliche Einschränkung oder das Verbot gegen eine Gruppe wird als Beweis für eine Behauptung über diese Gruppe zitiert — ohne zu bemerken, dass das Verbot die behauptete Eigenschaft produziert hat. Der Zirkelschluss: erst verbieten, dann als Beleg verwenden, dass die verbotene Handlung ausbleibt.
+
+**Beispiel (BC25/BC24 — Bürgergeld-Arbeitsverbot für Asylsuchende):** "Asylsuchende arbeiten nicht, obwohl sie es wollen. Abgelehnte Asylsuchende dürfen sechs Monate gar nicht arbeiten, Geduldete haben restriktiven Vorrangsnachweis. Du verbietest ihnen zu arbeiten und beschwerst dich dann, dass sie nicht arbeiten." Das klassische Gegner-Argument dreht sich: "Die Statistik zeigt, dass Asylsuchende nicht arbeiten" — ohne zu sagen, dass das Recht dazu verweigert wird.
+
+**Counter-Move:**
+1. Den Zirkelschluss explizit benennen: "Du benutzt das Ergebnis einer Einschränkung als Beleg für die Notwendigkeit der Einschränkung. Das ist kein Befund, das ist ein selbst produziertes Ergebnis."
+2. Reihenfolge umkehren und sichtbar machen: "Erst Arbeitsverbot, dann Statistik, dann Statistik als Beleg für das Arbeitsverbot. Schritt 1 fehlt in deiner Darstellung."
+3. Beleg, dass das Verbot die Behauptung produziert: Asylbewerberleistungsgesetz §61 (Arbeitsverbot erste 3 Monate, Nachrangregelung bis zu 15 Monate), BeschV §32 (Vorrangprüfung für Geduldete). Primärquelle direkt zitieren.
+4. Analogie für nicht-juristische Mitleser: "Das ist so, als würdest du jemandem das Fahrrad wegnehmen, dann feststellen, dass er nicht fährt, und das als Beweis nehmen, dass er nicht fahren will."
+
+**Lessons learned:**
+- Der Zirkelschluss ist nur sichtbar, wenn man die Chronologie rekonstruiert: Gesetz vor Statistik. Wer die Reihenfolge überspringt, lässt den Schluss stehen.
+- Primärquelle-Zitat (AufenthG / BeschV / AsylbLG) nimmt dem Gegner den Ausweg "das ist falsch". Aktenzeichen und Paragrafen benennen.
+- Das Muster taucht auch bei anderen Gruppen auf: Strafregister als Arbeitsmarkt-Ausschluss, Schulabschluss-Anforderung bei fehlenden Schulzugangs-Rechten. Muster erkennen, nicht nur den Einzelfall.
+
+---
+
+## Massstabswechsel (Kategorienfehler als Kontext) (2026-05-05)
+
+**Pattern:** Eine Unterkategorie wird gegen eine Gesamtmenge gestellt, um die Unterkategorie kleiner wirken zu lassen. Kein klassischer Whataboutism (der wechselt das Thema), sondern ein Kategorienfehler: verschiedene Grundgesamtheiten werden so nebengestellt, als wären sie vergleichbar. Das Ergebnis: eine reale Zahl wirkt durch den falschen Bezugsrahmen geschrumpft.
+
+**Beispiel (r/armes_deutschland rechte Gewalt 2026-05, Reply 4):** "Nur um das einzuordnen. In Berlin allein gab es letztes Jahr 19.000 gemeldete Gewalttaten. Also mehr als 10x so viele Delikte." Der Artikel behandelt 1.598 rechts motivierte Gewalttaten bundesweit (PMK-Kategorie: politisches Motiv). Dagegen wird die Berliner Gesamtkriminalität gestellt (alle Motive: Raub, Beziehungstaten, häusliche Gewalt, Alltagsschlägereien). Unterschiedliche Grundgesamtheit, unterschiedliches Motiv-Kriterium, unterschiedliche Geographie. Auch in BC15 (Kriminalitätsrate Migranten vs. Gesamtbevölkerung ohne Alters-Normierung).
+
+**Counter-Move:**
+1. Grundgesamtheit explizit benennen: "Die Berliner Zahl ist Gesamtkriminalität: alle Motive. Der Artikel behandelt eine Motiv-Kategorie. Das ist kein Vergleich, das ist eine falsche Addition."
+2. Gleicher Maßstab als Test anwenden: "Wenn wir denselben Motiv-Maßstab anlegen, heißt das: Wieviel politisch motivierte Gewalt gibt es in Berlin? Nicht 19.000."
+3. Analogie zum Analogieschluss: "Niemand würde Mord kleinreden mit 'es gibt mehr Verkehrstote'. Politische Gewalt ist eine eigene Schadenskategorie."
+4. Brandanschlag/Autounfall-Analogie als Bauchgefühl-Version: "Ein Brandanschlag wird nicht harmloser, weil es mehr Autounfälle gibt. Der Schaden liegt im Motiv, nicht nur in der Zahl."
+
+**Lessons learned:**
+- Der Massstabswechsel landet bei Mitlesern intuitiv gut, weil die große Zahl (19.000) gegenüber der kleinen (1.598) überzeugend wirkt — bis man erklärt, dass sie verschiedene Dinge messen.
+- Bauchgefühl-Anker (Brandanschlag/Autounfall) ist nötig, weil die analytische Grundgesamtheits-Erklärung in der Skim-Kultur verloren geht. Beides kombinieren.
+- Dieser Fehler taucht systematisch auf: lokale vs. nationale Zahlen, Gesamtkriminalität vs. Delikt-Kategorie, Absolutzahl vs. Pro-Kopf. Einmal das Muster erkannt, kann man es auf alle Fälle anwenden.
+- Nicht als Whataboutism klassifizieren — der Gegner wechselt nicht das Thema, er bleibt beim Thema aber wechselt den Rahmen. Die Unterscheidung ist für Mitleser wichtig.
+
+---
+
+## Erdogan-Fanfiction (Hypothetische Schuld) (2026-05-05)
+
+**Pattern:** Ein hypothetisches Zukunfts-Szenario wird konstruiert, um Personen oder Gruppen heute moralisch zu verurteilen, für etwas, das nicht passiert ist. Anders als Slippery Slope (Kausalitätskette A führt zu B führt zu C) gibt es hier keine Kausalbehauptung — nur eine Projektion: "Stell dir vor, X würde passieren. Du würdest dann Y tun. Also bist du heute schon schuldig."
+
+**Beispiel (BC37/BC38 — Erdogan-Szenario):** "Stell dir vor, ein Erdogan gewinnt die nächste Bundestagswahl. Würdest du dann auch sagen, demokratisch legitimiert ist demokratisch legitimiert?" — Das Szenario ist hypothetisch, Erdogan kandidiert nicht in Deutschland, der hypothetische Zukunftsausgang ist fiktiv. Die Person wird für ihre hypothetische Reaktion auf ein fiktives Szenario angegriffen. Counter: "Du erfindest ein hypothetisches Szenario, um Leute heute zu verurteilen für etwas, was nicht passiert ist."
+
+**Counter-Move:**
+1. Konjunktiv markieren und Wirklichkeitsstand zeigen: "Das ist Konjunktiv. Erdogan kandidiert nicht in Deutschland. Kein hypothetischer Gedanke kann eine reale Handlung heute beweisen."
+2. Unterschied zu Slippery Slope benennen: "Das ist kein 'A führt zu B'. Das ist Fiktion, die als Anklageschrift verwendet wird."
+3. Projektion explizit benennen: "Das ist keine Analyse meiner Position, das ist eine Projektion darüber, was ich tun würde, in einer Situation, die nicht existiert."
+4. Wirklichkeitsstand halten: "Was passiert ist: [konkrete Situation]. Was du beschreibst: Fiktion. Zeig mir, wo ich in der realen Situation falsch lag."
+5. Optional — Tactic-Naming als Closer: "Das ist Erdogan-Fanfiction als Argumentation: ein Szenario erfinden, das ich ablehne, und so tun, als hätte ich darin etwas getan."
+
+**Lessons learned:**
+- Hypothetische Schuld-Zuschreibung ist besonders wirkungsvoll in emotionalen Threads, weil das Bild (Erdogan als Bundeskanzler) stark ist. Wer dagegen nur analytisch antwortet, verliert den emotionalen Kanal.
+- Den Konjunktiv explizit benennen ("das Wort ist 'würde', nicht 'hat'") hilft nicht-statistisch-affinen Mitlesern.
+- Das Muster taucht überall auf, wo emotionale Drohszenarien als Beweis für aktuelle Charakterfehler genutzt werden: "Was würdest du machen wenn..." ist immer ein Signal für hypothetische Schuld.
+- Unterschied zu Slippery Slope ist entscheidend für die richtige Konter-Strategie: Slippery Slope braucht einen Kausalitäts-Disput, Hypothetische Schuld braucht einen Realitäts-Check.
+
