@@ -644,3 +644,81 @@ Was gefällt dir an der AfD am besten? Die SA-Parole (BGH-bestätigt), der chine
 ```
 CumEx ist ein Steuerskandal. Schwarze Koffer sind Parteispenden. Beides schlimm, beides vor Gericht. Die AfD hat 28 Verurteilte, 14 im Amt. Höcke nach SA-Urteil befördert. Arppe mit pädophilen Chats bis 2021 im Landtag. Alle haben Dreck. Der Unterschied ist was danach passiert.
 ```
+
+---
+
+## Reddit-Zinger aus Real-World-Konter (BC-Notes)
+
+One-Liner direkt aus dokumentierten Reddit-Kontern. Anwendungskontext je angegeben.
+
+### Tautologischer Selbstschaden (BC25)
+```
+Du verbietest ihnen zu arbeiten und beschwerst dich dann dass sie nicht arbeiten.
+```
+Gegen Argumente, die Asylbewerber als "faul" bezeichnen, während gleichzeitig das Arbeitsverbot für Asylbewerber verteidigt wird. Entlarvt die logische Selbstwidersprüchlichkeit in einer Zeile.
+
+### Systemkritik-ohne-Lösung (BC14)
+```
+Frust als Weltbild, ohne eine einzige Idee was besser wäre.
+```
+Gegen Kommentare die ausschließlich das System angreifen aber keinen konstruktiven Vorschlag machen. Richtet sich an den Mitleser, nicht den Poster.
+
+### Kritik-Immunität (BC—1933)
+```
+Demokratie heißt nicht Kritikimmunität.
+```
+Wenn jemand behauptet, die eigene Wahlentscheidung dürfe nicht kommentiert werden. Kurz genug um als Standalone zu stehen.
+
+### Firehose-Killer (BC9)
+```
+Du erfindest schneller Zahlen als ich sie widerlegen kann.
+```
+Gegen Firehose-of-Falsehood-Taktik: zu viele unbelegte Behauptungen auf einmal. Benennt die Taktik ohne sie zu wiederholen.
+
+### Quellen-Delegitimierung (BC31)
+```
+Wenn ein CDU-Mann die AfD als Verdachtsfall einstuft, ist das kein linker Angriff.
+```
+Wenn Verfassungsschutz-Einstufungen als politisch motiviert abgetan werden. Nutzt die Parteiherkunft des Arguments gegen den Angreifer.
+
+### Equivalence-Reframe (BC42)
+```
+Alle haben Dreck. Der Unterschied ist was danach passiert.
+```
+Gegen "andere Parteien sind genauso schlimm"-Whataboutism. Räumt die Prämisse ein, ohne das Argument gelten zu lassen.
+
+### Privat-Gespräch-Strategie (BC44)
+```
+Eine Frage die zwei Wochen später beim Duschen wiederkommt bringt mehr als eine Stunde Diskussion.
+```
+Meta-Kommentar zur Strategie in Gesprächen mit Überzeugten. Für den Mitleser der sich fragt ob Diskutieren Sinn macht.
+
+### Beobachtungs-Schluss (BC40)
+```
+Wenn das den Westen hassen ist, hat der Westen einen seltsamen Begriff von Hass.
+```
+Wenn sachliche Kritik an westlicher Politik als "Westenhass" geframed wird. Dreht den Framing-Angriff um.
+
+### Pauschal-Vorwurf-Demaskierung (BC35)
+```
+Du scheinst nicht viele Araber zu kennen ist der nettere Weg zu sagen die sind halt alle so.
+```
+Gegen subtile Kollektivurteile über ethnische Gruppen. Benennt den impliziten Rassismus ohne das Wort zu benutzen.
+
+### Sarkasmus-Ausweichen (BC—1933)
+```
+Drei Sätze Beleidigtsein, null Sätze Inhalt.
+```
+Wenn jemand auf eine Sachkritik mit Entrüstung statt Argumenten antwortet. Beendet den Ausweichmanöver knapp.
+
+### Höcke-Analogie (BC43)
+```
+Stell dir vor jemand grölt 'Sieg Heil' auf dem Marktplatz und beschwert sich dann über die Anzeige.
+```
+Wenn Höcke-Anhänger die Strafverfolgung wegen der SA-Parole als politische Verfolgung darstellen. Die Analogie macht das Absurde sichtbar ohne Belehrung.
+
+### Whataboutism-Kollaps (BC—Pädophilie-Nachschlag)
+```
+Funktioniert nur, solange niemand die Namen nennt.
+```
+Wenn ein Whataboutism-Argument auf vage Andeutungen angewiesen ist. Sobald konkrete Aktenzeichen kommen, bricht das Argument zusammen.

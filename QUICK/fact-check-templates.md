@@ -382,3 +382,40 @@ oder wir sind hier fertig.
 - [Google Reverse Image](https://images.google.com)
 - [TinEye](https://tineye.com)
 - [Yandex Images](https://yandex.com/images)
+
+---
+
+## Template: Definitions-Shift-Tracker
+
+Wenn ein Diskussionsgegner über mehrere Kommentare die Begriffsdefinition verschiebt, sammle die Sequenz explizit und mache sie für den Mitleser sichtbar. Beispiel-Kette aus BC10/BC7: "faul → Niedriglohn → keine Ambitionen → eine Stufe über Arbeitsverweigerung".
+
+```
+Kommentar 1 sagte: [X]
+Kommentar 2 sagte: [Y]
+Kommentar 3 sagte: [Z]
+Das ist nicht dasselbe Argument, das sind drei Argumente.
+```
+
+**Warum:** Mitleser können die Verschiebung sehen ohne den ganzen Thread zu lesen. Der Poster muss sich nicht mehr auf ein Argument festlegen, weil niemand ihn daran festhält. Dieses Template hält ihn daran fest.
+
+**Anwendung:** Direkte Zitation der Kommentare (Screenshot oder exakter Wortlaut), dann die Zeile "Das ist nicht dasselbe Argument." Keine weitere Erklärung nötig.
+
+---
+
+## Template: Quellen-Asymmetrie-Pattern
+
+Wenn der Gegner Quellen pauschal ablehnt aber selber unbelegt argumentiert. Belege: BC25, BC27.
+
+```
+Deine Quellen: [konkret benennen, oft schwach]
+Beispiele: irisches Rechtsportal, Freundin, Bruttozahl ohne Kontext
+
+Meine Quellen: [konkret benennen, primär]
+Beispiele: BKA (PMKZahlen2024), IAB-Kurzbericht, BVerfG Az. [Nummer]
+
+Quellenkritik geht in beide Richtungen.
+```
+
+**Warum:** Quellenkritik ist legitim. Aber wer Quellen ablehnt ohne eigene zu liefern, nutzt Skepsis als Asymmetrie-Waffe. Dieses Template macht die Asymmetrie explizit, ohne in einen Quellenkrieg zu gehen.
+
+**Anwendung:** Nur einsetzen wenn der Gegner tatsächlich eigene Quellen geliefert hat (auch schlechte). Sonst reicht "Ohne Quelle ist das eine Meinung." Die Stärke liegt in der Parallelstruktur: seine Quellen, meine Quellen, eine Zeile Fazit.
