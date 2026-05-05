@@ -5,3 +5,14 @@ input/
 .wrangler/
 CLAUDE-PROJECT-INSTRUCTIONS.md
 .claude/
+
+# Workspace junk
+.superpowers/
+docs/superpowers/
+
+# v2 chat site moved to its own repo (boldclaim/chat)
+docs/v2.html
+docs/worker-v2.js
+
+# afd-check is its own GitHub repo (frederikmetz42/afd-check) — never co-track here
+afd-check/
