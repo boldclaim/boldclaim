@@ -282,6 +282,59 @@ Die CDU hat mit ihrer "Heiz-Hammer"-Kampagne den Wärmepumpen-Absatz um 46% einb
 
 ---
 
+## Fernwärme als Pocketbook-Falle — der München-Datenpunkt (NEU 2026-05)
+
+**Stand:** 2026-05-05 | Recherche-Quelle: BoldClaim-Inbox (Wirtschafts-Recherche Februar 2026)
+
+### Das Argument
+
+Wer "Heizungsgesetz weg, dann wirds billig" sagt, ignoriert: kommunale Fernwärme-Monopolisten haben in den letzten zwei Jahren stärker am Preis gedreht als jeder Wärmepumpen-Förderkürzungs-Effekt.
+
+### Der Fakt: München, +226% in unter zwei Jahren
+
+- Die Stadtwerke München (SWM) haben den Fernwärmepreis zwischen 2022 und 2024 um **+226%** angehoben — Deutschlands höchste Fernwärmepreise unter den Großstädten
+- **Über 250.000 Münchner Haushalte** sind direkt betroffen (oft ohne Wechseloption — Anschluss- und Benutzungszwang in vielen Quartieren)
+- Im Stadtrat hat die Linke 2024/2025 wiederholt einen **Sozialtarif** für Strom und Fernwärme gefordert (Energiearmut-Argument). SPD/Grüne im SWM-Aufsichtsrat haben das bisher abgelehnt
+- Der Aufsichtsrat besetzt sich aus Vertretern fast aller Stadtratsfraktionen — die "Markt regelt"-Logik gilt für ein 100% kommunales Unternehmen
+
+### Warum das Bold-Claim-relevant ist
+
+1. **Konter zu "Wärmepumpe ist Habecks Zwang":** Wer Fernwärme hat, ist sowieso gefangen — die Heizung "freie Wahl" ist Mieter-Märchen
+2. **Konter zu "Fernwärme ist die Lösung":** Ohne Sozialtarif ist Fernwärme nicht automatisch billiger als Gas. Die Argumentation "ihr müsst halt anschließen" hilft Geringverdienern nicht
+3. **Konter zu "Stadtwerke = sicher und günstig":** SWM ist 100% kommunal, hat trotzdem aggressiv die Preise erhöht. "Privatisierung schuld" greift hier nicht.
+
+### Quellen
+
+- [Linke München Stadtrat: 226% Preissteigerung bei der Fernwärme](https://www.dielinke-muenchen-stadtrat.de/themen/mieten-wohnen-bauen/detail/226-preissteigerung-bei-der-fernwaerme-in-weniger-als-zwei-jahren-schoenfaerberei-der-swm-ist-durchschaubares-manoever/)
+- [Linke München Stadtrat: Sozialtarif für Fernwärme](https://www.dielinke-muenchen-stadtrat.de/presse/detail/sozialtarif-bei-den-muenchner-stadtwerken-gegen-energiearmut-fuer-soziale-waerme-im-kommenden-winter/)
+- [Netzwerk Saubere Energie München: Soziale Folgen der Energiepreispolitik](https://energienetzwerk-muc.de/die-sozialen-folgen-der-energiepreispolitik/)
+- [SWM Wärmewende](https://www.swm.de/unternehmen/waermewende)
+
+### Konter
+
+```
+"Fernwärme ist die billige Alternative."
+
+München 2022→2024: +226% Fernwärmepreis. SWM ist zu 100% kommunal.
+250.000 Haushalte betroffen, viele mit Anschlusszwang.
+Sozialtarif? Stadtrats-Mehrheit (SPD/Grüne) blockiert.
+
+Heizungsgesetz "abschaffen" hilft hier null.
+Das Problem ist nicht Habeck. Es ist der Monopolist im Aufsichtsrat.
+```
+
+```
+"Mieter haben doch Wahl."
+
+Im Fernwärme-Quartier hast du keinen Vertrag — du hast Anschlusszwang.
+Preis steigt um 226%? Pech. Wechsel? Nicht erlaubt.
+
+Wer "freier Markt" predigt und Fernwärme-Monopole verteidigt,
+hat die Logik gewechselt, sobald ein Stadtwerk profitiert.
+```
+
+---
+
 ## Quellen [LAST_CHECKED: 2026-02]
 
 **Aktuell:**

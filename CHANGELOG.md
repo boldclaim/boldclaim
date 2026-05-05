@@ -13,6 +13,52 @@ tags: ["personal"]
 
 ## 2026-05 (Aktuell)
 
+### v3.8 — r/armes_deutschland Reddit-Session: Afghanistan/Ortskräfte + Corona-Schwurbler-Playbook (2026-05-05)
+
+- **NEU:** `META/afghanistan-ortskraefte-verfahren.md` — vollständige Spuren-Trennung Afghanistan-Aufnahme: drei Listen (Ortskräfte/Menschenrechtsliste/NGO-Sammelpostfach), BMI-Prüfprozess, Schwerin-Fall-Zuordnung (OK-Programm-Familienzusammenführung, NICHT NGO-Liste), Sicherheitslücken-Realität (Spiegel "erheblicher Anteil" ohne Zahl), CDU-Stop-Kontext. Plus Nordkurier-Verstärkungs-Pattern (Headline-Inflation, AfD-lastige Quellenauswahl 4/4 Hauptzitate). Primärquelle: Bundestag-UA 48. Sitzung 2023. Counter-Templates sachlich + gungho enthalten.
+
+- **NEU:** `META/corona-schwurbler-playbook.md` — komplettes Playbook mit (1) sieben häufigsten Tricks (Quote-Mining, Disziplin-Wash, Drei-Ebenen-Verklebung, "Bullshit"-Stempel, Selbstwiderspruch, Peer-Review-Trumpf, Goalpost-Verschiebung), (2) Standard-Behauptungen + Faktenlage (RKI-Files, Übersterblichkeit, PEI-Kausalität, Maßnahmen-Frame, Untersuchungsausschüsse, Lauterbach-Tweet, Schwurbler-Lager-selektives-Gedächtnis), (3) verlässliche Counter-Quellen (Watson Lancet 2022, RKI-Modellierung, PEI-Dossier, BVerfG 1 BvR 781/21, Tagesschau, Correctiv, Destatis), (4) Counter-Templates (Frame-Kollaps, Gungho-7-Punkte, Selektives-Gedächtnis-Zinger), (5) Eskalations-Flow für Pfizer-Files / "Mainstream"-Diss / Schäm-dich-Eskalation.
+
+- **Updated:** `META/techniques.md` — fünf neue Patterns angehängt: **Tactic-Naming-Opener** ("Vier 'Bullshit'-Stempel und drei Halbsätze"), **Drei-Ebenen-Trick** für Sterbe-Daten-Diskussionen, **Peer-Review-Trumpf-Entkräftung** (Surgisphere/PLOS-ONE-Beispiele), **Selbstwiderspruch im selben Post** (Concession-als-Schutzschild-Pattern), **Quote-Mining-Default** (immer Originalwortlaut prüfen).
+
+- **Reddit-Session r/armes_deutschland Thread "Rechtsextreme Gewalt: Polizei meldet höchsten Stand"** (2026-05-05): Vier Konter geliefert.
+  - Annihilator761 (Antisemitismus-"Hauptakteure"-Frame): zerlegt mit BKA-2024-Zahlen 3.016 PMK-rechts vs 1.940 PMK-ausländisch + EMRK Art. 3 Refoulement-Verbot
+  - Akp5617 ("Graue Wölfe grüßen"): hämisch-knapp, Tabellenüberschrift-Verwechslung benannt
+  - JumpPackPenguin (Einwanderungsland-melting-pot Sachfrage): sachlich, PMK-rechts-Stoßrichtung gegen Migranten/Linke/Politiker
+  - Opening-Pen-5154 (Rockenfeller PLOS ONE Cherry + Verheimlichungs-Frame): Gungho-7-Punkte-Counter mit Tactic-Naming, Drei-Ebenen-Differenzierung, Peer-Review-Entkräftung, UA-Liste, Schäm-dich-Stufe
+  - mchl189 (Ortskräfte-NGO-Verklebung mit Welt/T-Online/Nordkurier): Bulletproof-Counter mit Listen-Trennung + Nordkurier-Fact-Check + Schwerin-Falsche-Schublade
+
+- **NEU `_internal/feedback_gungho_mode.md` (Memory)** — Trigger-Phrasen ("gungho", "vernichtend", "zerstöre", "stress test", "kein mit Verlaub", "blamiere ihn") aktivieren Reddit-Counter ohne Konzessionen, nur Aktenlage gegen Lüge, schwache Punkte weglassen statt einbauen.
+
+- **Quellen-Verifizierung neu in dieser Session:**
+  - BVerfG 1 BvR 781/21 (Bundesnotbremse-Schulschließungen) ✓
+  - PEI Coronavirus-Dossier ✓
+  - Tagesschau RKI-Protokolle ✓
+  - Destatis Sterbefallzahlen ✓
+  - Watson Lancet 2022 via PubMed 35753318 ✓
+  - Bundestag-UA 48. Sitzung Drucksache 967592 ✓
+
+- **Lessons:**
+  - **Tactic-Naming schlägt inhaltliches Nachsetzen** wenn Gegner mit "Bullshit"-Stempeln antwortet. Mitleser sehen sofort: er argumentiert nicht, er performt Empörung.
+  - **Drei-Ebenen-Differenzierung** bei Sterbe-Daten ist universell anwendbar (Roh-Zählung vs Aggregat-Modell vs Kausal-Attribution).
+  - **Peer-Review-Trumpf** wird mit Surgisphere-Lancet-Retraction 2020 sauber entkräftet.
+  - **Schäm-dich-Stufe** funktioniert für Reddit, ist nicht slur, wird selten gemoddet.
+  - **Schwerin-Vermischung** (OK-Programm vs NGO-Programm) ist der Standard-Falsche-Schublade-Move bei Afghanistan-Diskussionen.
+  - **Nordkurier seit Madsack-Übernahme 2021** zeigt Headline-Inflation bei Migrations-Themen, AfD-lastige Quellenauswahl. Wer Nordkurier verlinkt: Original-Spiegel/Welt-Quelle prüfen.
+
+### v3.7 — Recherche-Inbox-Integration: Wirtschafts- und Konservativ-Themen (2026-05-05)
+- **Updated:** `CONTENT/02-themen/heizungsgesetz-betrug.md` — neue Sektion "Fernwärme als Pocketbook-Falle — der München-Datenpunkt". SWM Fernwärmepreis +226% in zwei Jahren (2022→2024), 250.000 betroffene Haushalte, Sozialtarif-Forderung der Linken vs. SPD/Grüne-Mehrheit im SWM-Aufsichtsrat. Zwei neue Konter (Fernwärme-Falle, Anschlusszwang-Argument).
+- **Updated:** `CONTENT/02-themen/wirtschaft-housing.md` — drei neue Sektionen:
+  - **Bürokratie-Realität in Großstädten:** 85% der Bauanträge in München überschreiten 3-Monats-Frist, tatsächliche Bearbeitungszeit 8-18 Monate. Zwei Konter gegen "Bürokratieabbau löst Wohnungskrise"-Slogan.
+  - **Stimmungsbild Bayern 2026 (BayernTrend):** Wohnen 57% unzufrieden, Migration 37% — empirischer Konter zur "ihr redet am Volk vorbei"-Erzählung.
+  - **"Einheimische zuerst" — warum es rechtlich nicht geht:** EU-Freizügigkeit + Art. 3 GG + faktischer Test. Adressiert Bayernpartei/AfD-Slogan.
+- **Added:** `_inbox/2026-05-05-recherche-integration-report.md` (NEU) — Gap-Report über die Integration (welche Chunks dupliziert/erweitert/neu/übersprungen, mit Verweisen).
+- **Quellen-Status:** Linke München Stadtrat (226% Fernwärme), FT Immobilien (Baugenehmigungen), BayernTrend Februar 2026 — alle ✅ verifiziert.
+- **Lessons:**
+  - Recherche aus dem Mucwahl-Quiz-Kontext liefert verwertbare Bold-Claim-Munition für Pocketbook-Themen (Fernwärme-Monopol, Bauamts-Personal, EU-Freizügigkeit). Quiz-Mechanik (Thesen-Empfehlungen, Themenbalance, Spaltungs-Tabellen) ist out-of-scope.
+  - Fernwärme-Preise als Bold-Claim-Hebel: kommunale Monopolisten greifen die "Markt regelt"-Logik der gleichen Parteien, die ihre Aufsichtsräte besetzen.
+  - "Einheimischen-Vorrang" ist als Konter-Argument bisher nur kurz in `wirtschaft-housing#AfD Wohnungspolitik` angerissen — die EU-Freizügigkeit hat eine eigene saubere Sektion bekommen.
+
 ### v3.6 — Werte Union Reference + Mitläufer-Pattern + BYOK-Strategie (2026-05-03)
 - **Added:** `META/werte-union-reference.md` (NEU) — Counter-Reference für WU-Sympathie-Posts. Faktenlage 2025 (BTW 0,3%, kein Mandat in keinem Parlament), Maaßen-Karriere-Bogen (BfV-Chef → Chemnitz-Leugnung → Tichy/NIUS → BfV-Beobachtung), Counter-Pattern, kopierbare Standard-Antwort, Closer-Kontrast Merkel/Schäuble/vdL.
 - **Updated:** `META/techniques.md` — 2 neue Sektionen:

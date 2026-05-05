@@ -172,6 +172,7 @@ boldclaim/
 | "Merz macht gute Politik" | [[CONTENT/01-parteien/merz-und-cdu#Merz gefährdet]] | 🟡 MEDIUM |
 | "Der Heiz-Hammer ist weg!" | [[CONTENT/02-themen/heizungsgesetz-betrug#Die große Lüge]] | 🟢 EASY |
 | "Wärmepumpe unbezahlbar!" | [[CONTENT/02-themen/heizungsgesetz-betrug#Wärmepumpen-Mythen]] | 🟢 EASY |
+| "Fernwärme ist die billige Alternative" | [[CONTENT/02-themen/heizungsgesetz-betrug#Fernwärme als Pocketbook-Falle — der München-Datenpunkt NEU 2026-05]] | 🟢 EASY |
 | "Brandmauer zur AfD steht" | [[CONTENT/01-parteien/merz-und-cdu#EVP Brandmauer gefallen]] | 🟢 EASY |
 | "CDU hat gute Wirtschaftspolitik" | [[CONTENT/01-parteien/cdu-argumente-konter]] | 🟡 MEDIUM |
 
@@ -192,6 +193,9 @@ boldclaim/
 |------------|---------|---------------|
 | "AfD hat gute Wohnungspolitik" | [[CONTENT/02-themen/wirtschaft-housing#AfD Wohnungspolitik]] | 🟡 MEDIUM |
 | "Der Markt regelt Wohnen" | [[CONTENT/02-themen/wirtschaft-housing#FDP Marktglaube]] | 🟡 MEDIUM |
+| "Weniger Bürokratie, mehr Wohnungen!" | [[CONTENT/02-themen/wirtschaft-housing#Bürokratie-Realität in Großstädten NEU 2026-05]] | 🟢 EASY |
+| "Einheimische zuerst bei Sozialwohnungen!" | [[CONTENT/02-themen/wirtschaft-housing#Einheimische zuerst — warum es rechtlich nicht geht]] | 🟢 EASY |
+| "Wohnen ist gar nicht das Top-Thema" | [[CONTENT/02-themen/wirtschaft-housing#Stimmungsbild Bayern 2026 — der Mood-Datenpunkt]] | 🟢 EASY |
 | "Rente ist sicher" | [[CONTENT/02-themen/rente-sozialstaat]] | 🟡 MEDIUM |
 | "Bürgergeld macht faul" | [[CONTENT/02-themen/rente-sozialstaat#Bürgergeld]] | 🟢 EASY |
 | "Milei macht alles richtig" | [[CONTENT/02-themen/milei-marktradikalitaet]] | 🟡 MEDIUM |

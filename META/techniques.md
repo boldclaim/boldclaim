@@ -977,3 +977,66 @@ Pattern: Wenn Gegner ein Programm präsentiert, das aus 8-10 Punkten besteht (Fl
 - "Verstärker" / "Echo" trifft härter als "Marionette" — analytisch statt billig
 - DE-Filialen (Prometheus Institut, Hayek-Gesellschaft, INSM) explizit nennen, das macht es Mitleser-relevant
 - "Jetzt Reddit" in der Skripte-Liste (Reagan, Thatcher, Brexit, Trump, Project 2025, jetzt Reddit) — macht Mitleser bewusst, dass dieser Thread Teil der Übertragungskette ist
+
+
+---
+
+## Tactic-Naming-Opener (2026-05-05)
+
+Pattern: Wenn der Gegner mit pauschalen Diss-Stempeln antwortet ("Bullshit", "Nebelkerze", "lächerlich", "Schwurbel-Argument") statt auf Inhalte einzugehen, NICHT inhaltlich nachsetzen, sondern die Tactic benennen.
+
+**Standard-Opener:** "Vier 'Bullshit'-Stempel und drei Halbsätze. Lass mich benennen was du machst."
+
+Dann numerierte Punkte, jeweils mit Pattern-Name (Quote-Mining, Disziplin-Wash, Drei-Ebenen-Verklebung, Selbstwiderspruch im selben Post, Goalpost-Verschiebung, Peer-Review-Trumpf, Pseudo-Peer-Authority, Confounder-Wegblicken).
+
+**Closer-Optionen:**
+- "Vier 'Bullshits' sind keine vier Gegenargumente. Schäm dich oder steig aus." (gungho)
+- "Antworte auf was steht. Oder schweige." (sachlich-hart)
+- "Wortklauberei während die Aktenlage offen liegt ist Punkt 1 nochmal: Ablenkung." (analytisch)
+
+Funktioniert weil Mitleser sehen: der Gegner argumentiert nicht, er performt Empörung. Tactic-Naming macht das sichtbar.
+
+---
+
+## Drei-Ebenen-Trick (Sterbe-Daten)
+
+Schwurbler-Move: drei verschiedene Daten-Ebenen gleichsetzen oder mischen.
+
+**(a) Sterbe-Zählung** = real, Tot-Zähler bei Destatis
+**(b) Übersterblichkeit** = Modell-Differenz zu erwarteter Baseline (bereits modelliert)
+**(c) Kausal-Zuordnung** = "wegen Impfung" oder "wegen Virus" (nochmal modelliert mit Confounder)
+
+Schwurbler behandelt (b) als wäre es (a), behauptet gegen (c) sei "Modellrechnung statt Zählung" Foul. Counter: "(b) ist selbst Modell. Watson Lancet ist die saubere (c) für die andere Richtung. Beide sind Modelle. Du verwechselst Sterbedaten mit kausaler Zuordnung."
+
+Funktioniert allgemein bei jeder Statistik-Diskussion: Roh-Zählung vs Aggregat-Modell vs Kausal-Attribution sauber trennen.
+
+---
+
+## Peer-Review-Trumpf-Entkräftung
+
+Schwurbler-Move: "Mein Studienpapier ist peer-reviewed, dein Vergleich mit 5G-Verschwörung ist daneben."
+
+Counter: Peer-Review schützt nicht vor Quote-Mining oder Cherry-Pick. Standard-Beispiele: Lancet-Surgisphere-Retraction 2020 (Hydroxychloroquin-Mortality-Paper zurückgezogen), PLOS-ONE-Korrekturen bei mehreren COVID-skeptischen Papers. Methodisch ist der Schwurbler-Move (Korrelation finden, Caveat überspringen, Kausation behaupten) derselbe wie 5G-Antennen-Korrelation. Das Etikett ändert die Methode nicht.
+
+Funktioniert in allen Wissenschaftsgesprächen wo der Gegner ein Einzel-Paper als Trumpf zieht.
+
+---
+
+## Selbstwiderspruch im selben Post
+
+Häufiger Move: Concession + Maximalbehauptung im selben Atemzug. Beispiel: "muss nicht 100% an der Impfung liegen" UND "Fakt dass es Impftote in signifikanter Zahl gab".
+
+Counter: Eng festnageln. Begriffe definieren ("'signifikant' im statistischen Sinn = belegbar erhöht über Zufallsschwelle"), zeigen dass beides zugleich nicht haltbar ist. "Such dir was aus."
+
+Pattern erkennen: Schwurbler nutzt Concession als rhetorischen Schutzschild ("ich behaupte ja nicht 100%"), während die Hauptbehauptung trotzdem maximal bleibt. Der Schutzschild fällt wenn man die Maximalbehauptung präzise zitiert.
+
+---
+
+## Quote-Mining-Default
+
+Wenn jemand eine wissenschaftliche Studie verlinkt, IMMER den Originalwortlaut prüfen, besonders Abstract und Discussion. Schwurbler zitieren oft eine starke Stelle ("must be examined") und ignorieren den Caveat zwei Absätze entfernt ("do not necessarily indicate causality").
+
+Standard-Counter: "Du hast eine Stelle gepickt und die andere ignoriert. Das ist Quote-Mining, einer der ältesten Tricks."
+
+Erkennung: Wenn die zitierte Stelle die Gegen-Linie absurd stark stützt, fast immer ist im Originalpaper ein qualifizierender Satz, der die Stärke abschwächt.
+
