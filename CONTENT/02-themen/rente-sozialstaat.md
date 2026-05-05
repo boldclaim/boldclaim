@@ -170,13 +170,15 @@ Seit 2021 bekommen Menschen mit mindestens 33 Beitragsjahren und unterdurchschni
 
 **Richtig:** Die tatsächliche Zahl der Totalverweigerer liegt bei ca. **0,4 % aller Empfänger** (~23.400 Sanktionen wegen Arbeitsverweigerung im Jahr 2024). Die 100-%-Sanktion (vollständiger Leistungsentzug) wurde laut IAB zwischen April 2024 und Juni 2025 im "niedrigen zweistelligen Bereich" angewandt — also kaum.
 
+**Definitionen nicht mischen:** Totalverweigerung (Vollsanktion wegen wiederholter Pflichtverletzung, §31 SGB II) umfasst rund 0,4% der Bürgergeld-Empfänger (BA-Statistik). Sanktionsfälle gesamt (jede Art Pflichtverletzung, inkl. Meldeversäumnisse) belaufen sich auf rund 101.000, das sind ca. 3% der Bezugsgemeinschaften. Beide Zahlen beschreiben unterschiedliche Phänomene. Wer 0,4% und 3% gegeneinander ausspielt oder verwechselt, mischt Begriffe aus verschiedenen Definitionen.
+
 ### Mythos 3: "Bürgergeld ist zu großzügig, deshalb arbeitet niemand"
 
 **Richtig:** Der Missbrauchssatz liegt bei ca. **3 %** (101.000 Fälle bei 5,56 Millionen Empfängern — Bundesagentur für Arbeit, 2024, davon 260 Mio. € Schaden). Das ist nicht null, aber weit von einer systemischen Betrugskultur entfernt.
 
 ### Mythos 4: "Alle, die könnten, beziehen Bürgergeld"
 
-**Richtig:** Die Nichtinanspruchnahme liegt bei **43–56 % aller Anspruchsberechtigten** (SGB II). Bei Grundsicherung im Alter sogar bei ca. 60 %. Die häufigsten Gründe: Scham, bürokratische Hürden, Unwissenheit. Das System hat ein Unternutzungsproblem, kein Übernutzungsproblem.
+**Richtig:** Die Nichtinanspruchnahme liegt bei **43–56 % aller Anspruchsberechtigten** (SGB II, ISG-Studie zur Nichtinanspruchnahme). Bei Grundsicherung im Alter sogar bei ca. 60 %. Die häufigsten Gründe: Scham, bürokratische Hürden, Unwissenheit. Das System hat ein Unternutzungsproblem, kein Übernutzungsproblem.
 
 ---
 

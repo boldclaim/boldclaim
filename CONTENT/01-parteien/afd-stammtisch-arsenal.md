@@ -293,6 +293,16 @@ Bundestagspraesident Schaeuble erteilte ihr dafuer einen Ordnungsruf. Die AfD-Fr
 
 ---
 
+## Umlaufende Falschbehauptung: "9,4% Verurteiltenquote AfD-Fraktion"
+
+**Status:** Nicht durch Destatis oder eine andere amtliche Quelle belegt. Die Behauptung kursiert in sozialen Medien, oft mit dem Zusatz "laut Destatis" oder ähnlicher Quellangabe.
+
+**Was stimmt nicht:** Destatis veröffentlicht keine Verurteilungsquoten nach Parteifraktion. Eine solche Statistik existiert bei Destatis nicht. Wer eine "9,4%"-Zahl mit Destatis-Quellenangabe zitiert, erfindet die Quelle.
+
+**Was sauber zitierbar ist:** Correctiv hat im April 2024 eine Liste von 28 verurteilten AfD-Mandatsträgern bundesweit veröffentlicht (Correctiv.org, April 2024). Diese Zahl ist verifizierbar und belegt genug. Eine erfundene Prozentzahl braucht es dafür nicht.
+
+**Praxisregel:** Die Behauptung nicht weiterverwenden, auch wenn sie "gut klingt". Wenn der Gegner die Quelle nachfragt, ist die Position sofort geschwächt. Die Correctiv-Liste ist robuster und genug.
+
 ## Gespraechstaktik: Die 3-Satz-Regel
 
 Fuer Stammtisch-Gespraeche gilt: Mehr als drei Saetze pro Punkt verlierst du dein Gegenueber. Formatiere deine Antwort immer so:

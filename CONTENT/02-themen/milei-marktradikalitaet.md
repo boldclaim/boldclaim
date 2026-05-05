@@ -26,6 +26,8 @@ tags: ["personal"]
 ### Methodenwechsel Ende 2024
 INDEC (Argentiniens Statistikbehörde) hat Ende 2024 die Messmethodik geändert: staatliche Hilfen werden jetzt als Einkommen gezählt. Familien die exakt dieselben Lebensumstände haben sind auf dem Papier nicht mehr arm. Die Katholische Universität Argentiniens (UCA, Social Debt Observatory) schätzt dass **drei Viertel des statistischen Rückgangs ein reiner Methodeneffekt** sind.
 
+**INDEC-Methodenwechsel Anfang 2024 (BC30-Effekt):** INDEC hat Anfang 2024 zusätzlich zur Einkommenserfassung von Staatshilfen auch Änderungen am Erhebungsfragebogen vorgenommen. Die UCA schätzt vorsichtig, dass ein erheblicher Teil des statistischen Rückgangs auf diese Methodeneffekte zurückzuführen ist, nicht auf tatsächlich verbesserte Lebensumstände. INDEC selbst weist in seinen Veröffentlichungen darauf hin, dass Vergleiche mit früheren Perioden "schwierig" sind.
+
 ### Weitere methodische Probleme
 - Armutsmessung basiert auf einem Warenkorb der über 20 Jahre alt ist
 - Steigende Kosten für Energie, Transport und Miete (massiv gestiegen unter Milei) werden nicht adäquat erfasst
@@ -33,9 +35,12 @@ INDEC (Argentiniens Statistikbehörde) hat Ende 2024 die Messmethodik geändert:
 - INDEC selbst: "Schwierig mit früheren Perioden zu vergleichen" wegen Fragebogenänderungen
 
 ### Quellen
-- CPG Click: Methodik geändert, Reallöhne gefallen, Obdachlose +57% (https://en.clickpetroleoegas.com.br/the-argentine-government-celebrates-the-lowest-poverty-rate-in-7-years-but-experts-warn-that-the-methodology-has-changed-real-wages-have-fal-mhbb01/)
-- Buenos Aires Herald: Strukturelle Probleme bleiben (https://buenosairesherald.com/society/poverty-drops-but-structural-issues-remain-under-milei-report-warns)
+- UCA Observatorio de la Deuda Social Argentina (Primärquelle für die Drei-Viertel-Schätzung): observatorio.uca.edu.ar — UCA Social Debt Observatory, direkte Berichte unter "Barómetro de la Deuda Social Argentina"
+- Buenos Aires Times: Methodenwechsel-Berichterstattung (https://batimes.com.ar/news/economy/poverty-drops-but-structural-issues-remain-under-milei-report-warns.phtml)
 - Buenos Aires Herald: Sind Argentinier wirklich besser dran? (https://buenosairesherald.com/society/poverty-is-down-again-but-are-argentines-really-faring-better)
+- Reuters: INDEC-Methodenwechsel und UCA-Einschätzung — reuters.com (suche: "Argentina poverty INDEC methodology UCA 2024")
+
+**Hinweis zu UCA-Direktzitat:** Die Originalveröffentlichungen der UCA sind auf Spanisch unter observatorio.uca.edu.ar abrufbar. Reuters und Buenos Aires Times haben den INDEC-Methodenwechsel und die UCA-Einschätzung auf Englisch berichtet und sind als stabile Sekundärquellen zitierbar.
 
 ---
 

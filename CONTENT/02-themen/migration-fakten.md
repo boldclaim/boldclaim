@@ -593,7 +593,7 @@ Danke, liebe Gastarbeiter.
 **Fachkräftemangel:**
 - ~700–800k gemeldete offene Stellen (BA, 2024); IAB-Gesamtschätzung inkl. nicht gemeldeter Stellen: ~1,7 Mio (Methodenstand 2022)
 - Demografischer Wandel: Deutsche Bevölkerung schrumpft
-- Ohne Migration: 5 Mio weniger Arbeitskräfte bis 2035
+- Erwerbspersonenpotenzial schrumpft bis 2035 um ca. 5 Millionen ohne Nettozuwanderung (IAB Kurzbericht 17/2025, Szenario-Differenz). Das ist nicht ein "Bedarf an 5 Mio", sondern die Lücke zwischen dem Szenario mit und ohne Zuwanderung.
 
 **Quellen:**
 - [Bundesagentur für Arbeit: Gemeldete Stellen](https://www.arbeitsagentur.de)
@@ -976,6 +976,29 @@ Gleichzeitig: Abschiebungsquoten sagen nichts darüber aus, ob die Anwesenheit d
 **Konter:** Die PKS erfasst Staatsangehörigkeit. "Migrationshintergrund" ist keine PKS-Kategorie, die Zahl existiert dort nicht. Wer sie trotzdem behauptet, erfindet Daten. Eingebürgerte leben im Schnitt 8+ Jahre in Deutschland, sprechen Deutsch, arbeiten, zahlen Steuern. Wer die trotzdem nicht als Deutsche zählen will, hat ein Definitions-Problem: "deutsch" als Frage der Abstammung statt des Passes. Das ist völkisches Denken, nicht Kriminologie.
 
 **Biodeutsch-Mythos:** Der Mikrozensus erfasst Migrationshintergrund nur zwei Generationen zurück. Vertriebene 1945 (12-14 Millionen), Spätaussiedler (4,5 Millionen), Gastarbeiter-Nachkommen: alles "ohne Migrationshintergrund". Rechnet man alle nach die in den letzten 100 Jahren von woanders kamen, ist fast die Hälfte der heutigen Bevölkerung betroffen. "Biodeutsch seit immer" ist ein Mythos.
+
+## Migrationshintergrund-Definitions-Trick
+
+**Muster:** AfD-Rhetoriker nutzen "Migrationshintergrund" selektiv aus zwei inkompatiblen Quellen.
+
+**Das Problem:**
+
+- Die PKS (Polizeiliche Kriminalstatistik) erfasst **Staatsangehörigkeit**, nicht Migrationshintergrund. "Migrationshintergrund" ist dort keine Kategorie.
+- Destatis (Statistisches Bundesamt) definiert Migrationshintergrund breiter: eigene Zuwanderung oder mindestens ein zugewandertes Elternteil. Das umfasst auch vollständig integrierte Eingebürgerte, deren Kinder, und Spätaussiedler.
+- Die AfD zitiert PKS-Zahlen (Staatsangehörigkeit) für Kriminalitätsstatistiken und Destatis-Zahlen (Migrationshintergrund) für Sozialleistungs- oder Beschäftigungsstatistiken. Die Kategorien sind nicht kompatibel.
+
+**Konkret:** Wenn die AfD sagt "X% der Bürgergeldempfänger haben Migrationshintergrund" (Destatis-Definition, zwei Generationen) und gleichzeitig "Nichtdeutsche begehen Y% der Taten" (PKS-Staatsangehörigkeit), werden Äpfel mit Birnen verglichen. Die Nennergruppen sind unterschiedlich groß und unterschiedlich zusammengesetzt.
+
+**Konter:**
+```
+PKS misst Staatsangehörigkeit. Destatis misst Migrationshintergrund
+(zwei Generationen). Das sind verschiedene Kategorien, verschiedene
+Datenquellen, verschiedene Grundgesamtheiten.
+
+Wer PKS-Kriminalzahlen mit Destatis-Sozialleistungszahlen kombiniert,
+vergleicht Staatsangehörige mit Ur-Enkeln von Gastarbeitern.
+Das ist kein Argument, das ist Kategorienbruch.
+```
 
 ## Ehegattensplitting und Erziehungszeiten
 

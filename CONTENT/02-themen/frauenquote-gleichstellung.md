@@ -41,6 +41,8 @@ tags: ["personal"]
 **Bundestag gesamt:** 32,4% (204 von 630). Bevölkerung: 51% weiblich.
 **Deutschland weltweit:** Rang 58 beim Frauenanteil im Parlament.
 
+**Datums-Hinweis:** AfD 11,8%, CDU 22,6%, FDP 25%, SPD 41,7%, Grüne 60,2%, Linke 53,8% sind Stände der 20. Wahlperiode (vor BTW 2025). Nach der Bundestagswahl 2025 haben sich die Anteile verschoben. Bei konkreter Verwendung dieser Zahlen bitte aktuelle Bundestags-Abgeordnetenstatistik gegenchecken.
+
 Quellen: Statista, Bundestag Abgeordnetenstatistik, Destatis
 
 ### Killer-Fakt
