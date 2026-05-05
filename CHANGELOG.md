@@ -60,7 +60,7 @@ tags: ["personal"]
   - "Einheimischen-Vorrang" ist als Konter-Argument bisher nur kurz in `wirtschaft-housing#AfD Wohnungspolitik` angerissen — die EU-Freizügigkeit hat eine eigene saubere Sektion bekommen.
 
 ### v3.6 — Werte Union Reference + Mitläufer-Pattern + BYOK-Strategie (2026-05-03)
-- **Added:** `META/werte-union-reference.md` (NEU) — Counter-Reference für WU-Sympathie-Posts. Faktenlage 2025 (BTW 0,3%, kein Mandat in keinem Parlament), Maaßen-Karriere-Bogen (BfV-Chef → Chemnitz-Leugnung → Tichy/NIUS → BfV-Beobachtung), Counter-Pattern, kopierbare Standard-Antwort, Closer-Kontrast Merkel/Schäuble/vdL.
+- **Added:** `CONTENT/01-parteien/werte-union.md` (NEU) — Counter-Reference für WU-Sympathie-Posts. Faktenlage 2025 (BTW 0,3%, kein Mandat in keinem Parlament), Maaßen-Karriere-Bogen (BfV-Chef → Chemnitz-Leugnung → Tichy/NIUS → BfV-Beobachtung), Counter-Pattern, kopierbare Standard-Antwort, Closer-Kontrast Merkel/Schäuble/vdL.
 - **Updated:** `META/techniques.md` — 2 neue Sektionen:
   - **Mitläufer-Zweifel-Säen:** Pattern für gut-gemeinte Differenzierer. Anerkennung zuerst, konkrete Bilder statt Abstraktion, sein eigenes Wort gegen ihn ("Lümmel"), verfassungsrechtliche Anker (BVerfG, EMRK), empirische Folgen (Ungarn-Orbán-Daten), DIW-Bürgerversicherung als konstruktive Brücke.
   - **Atlas-Network-Aufklärung als Mitleser-First-Move:** Pattern für Counter-Speech bei vollständigen Atlas-Programm-Listen. Mitleser-First-Opener, Punkt-für-Quelle-Zuordnung, Atlas erst nach den Konkretionen erklären, "Verstärker"-Frame, Closer als Mitleser-Aufruf.
@@ -77,7 +77,7 @@ tags: ["personal"]
   - Alle drei mit aktiven HTML-Hyperlinks, ohne sichtbare Reddit-Markdown-Klammern.
 
 ### v3.5 — Atlas Network Reference + paranoidray-Wiki-Konter (2026-05-03)
-- **Added:** `META/atlas-network-reference.md` (NEU) — vollständige Dachorganisation-Mapping für libertär-marktradikale Talking-Points. ~500 Mitglieds-Think-Tanks weltweit, Sitz Arlington/Virginia. Tabellen für US-, UK- und DE-Filialen. Geldspuren (Koch-Stiftungen, ExxonMobil, Sarah Scaife Foundation, DonorsTrust). Mapping einzelner Reddit-Talking-Points zu konkreten Quellen.
+- **Added:** `CONTENT/03-usa-und-tech-oligarchie/atlas-network.md` (NEU) — vollständige Dachorganisation-Mapping für libertär-marktradikale Talking-Points. ~500 Mitglieds-Think-Tanks weltweit, Sitz Arlington/Virginia. Tabellen für US-, UK- und DE-Filialen. Geldspuren (Koch-Stiftungen, ExxonMobil, Sarah Scaife Foundation, DonorsTrust). Mapping einzelner Reddit-Talking-Points zu konkreten Quellen.
 - **Counter-Pattern:** Drei-Schritt-Aufbau (Konkrete Zuordnung → Mitleser-Aufklärung → Closer als Beobachtung). Drei Standard-Templates dokumentiert (Vollständig / Single-Punkt / Mitleser-Edukation).
 - **Anwendungsfall:** paranoidray (r/armes_deutschland Mod) hat im Wiki "Utiliberalismus"-Programm mit Flat Tax 25% + 2-Jahre-Bürgergeld-Cap + Grenzen zu + Rente mit 70 + EU-Austritt + Atomkraft-Restauration. Zuordnung 1:1 zu Friedman 1962, Charles Murray AEI 1984, Heritage seit 1981, Cato (Koch 1977), IEA UK Brexit. Konter dokumentiert.
 - **Lehre:** "Atlas Network" als Dachname erst nach konkreter Zuordnung der Punkte einsetzen (sonst Verschwörungs-Geruch). Geldspur (Koch, ExxonMobil, DonorsTrust) konkreter als das Atlas-Etikett. Mitleser-Aufklärung in eigenem Absatz, nicht in Konter-Body.

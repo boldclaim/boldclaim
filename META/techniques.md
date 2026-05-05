@@ -969,7 +969,7 @@ Pattern: Wenn Gegner ein Programm präsentiert, das aus 8-10 Punkten besteht (Fl
 6. **Parrot-Frame ohne Beleidigung** — "Er ist nicht der Denker, er ist der Verstärker." Direkt, deklarativ, ohne Personal-Angriff.
 7. **Closer als Mitleser-Aufruf** — "Wer die Liste das nächste Mal liest, weiß jetzt, woher sie kommt." Lädt zur Wiedererkennung ein.
 
-**Vollständige Reference:** Siehe `META/atlas-network-reference.md`.
+**Vollständige Reference:** Siehe `CONTENT/03-usa-und-tech-oligarchie/atlas-network.md`.
 
 **Lessons learned:**
 - Atlas-Verbindung erst NACH konkreten Punkt-Zuordnungen erwähnen, sonst Verschwörungs-Geruch
