@@ -1,7 +1,7 @@
 ---
 title: Changelog - Was sich geändert hat
 type: note
-last_updated: 2026-05-03
+last_updated: 2026-05-07
 tags: ["personal"]
 ---
 
@@ -12,6 +12,28 @@ tags: ["personal"]
 ---
 
 ## 2026-05 (Aktuell)
+
+### v3.9 — Apple-Notes-Verwertung + 4-Panel-Review + Pinecone-Resync (2026-05-06 bis 2026-05-07)
+
+- **Added:** 8 neue CONTENT-Files aus 75 Apple-Notes-Konter-Drafts: `02-themen/oppositions-trick.md`, `02-themen/paedophilie-whataboutism.md`, `02-themen/bot-netzwerke-afd.md`, `02-themen/nahost-linke-iran-flaggen.md`, `02-themen/afd-waehler-eigene-interessen.md`, `02-themen/grundgesetz-verteidigung.md`, `02-themen/familienpolitik-ehegattensplitting.md`, `04-rhetorik-und-strategie/mitleser-zusammenfassung.md`
+- **Added:** 4 neue Tactics in `META/techniques.md`: Sticky-Lie-Pinning (Mod-Stickied-Falsehoods), Tautologischer Selbstschaden-Beweis (Verbot-als-Beweis-Zirkelschluss), Maßstabswechsel (Kategorienfehler ohne Whataboutism), Erdogan-Fanfiction (hypothetische-Schuld-ohne-Kausalkette)
+- **Added:** 5 neue Quellen-Defenses in `META/quellen-verteidigung.md`: Abgeordnetenwatch.de, Hans-Böckler-Stiftung, BVerfG/BVerwG, BfV/Verfassungsschutz, Rosalux/Verdi (mit Primary-Source-First-Pattern für AfD-affines Publikum)
+- **Added:** 12 Reddit-Zinger in `QUICK/one-liners.md` mit BC-Quellen-Verweis (BC25, 14, 1933, 9, 31, 42, 44, 40, 35, 43, Pädophilie-Nachschlag)
+- **Added:** 2 Fact-Check-Templates in `QUICK/fact-check-templates.md`: Definitions-Shift-Tracker (Kommentar-Sequenz dokumentieren), Quellen-Asymmetrie-Pattern
+- **Added:** Neuer Ordner `06-reddit-thread-cases/` mit `README.md` + `2026-rechte-gewalt-paranoidray.md` als erster Case-Study
+- **Fixed:** 5 Brittle-Facts in existierenden Files: `migration-fakten.md` ("5 Mio fehlende Arbeitskräfte" → IAB-Szenario-Differenz mit Migrationshintergrund-Definitions-Trick-Block), `frauenquote-gleichstellung.md` (AfD 11,8% explizit als Wahlperiode 20 vor BTW 2025 markiert), `milei-marktradikalitaet.md` (UCA-Originalquelle statt clickpetroleoegas-Aggregator + INDEC-Methodenwechsel-Block), `rente-sozialstaat.md` (0,4% Totalverweigerung vs 3% Sanktionsfälle als verschiedene Definitionen), `afd-stammtisch-arsenal.md` (9,4%-Verurteiltenquote-Stretch entfernt, Correctiv-Liste als saubere Alternative)
+- **Changed:** `META/atlas-network-reference.md` → `CONTENT/03-usa-und-tech-oligarchie/atlas-network.md` (Sach-Referenz, nicht Meta-Strategie); `META/werte-union-reference.md` → `CONTENT/01-parteien/werte-union.md`. Refs in CHANGELOG + techniques.md aktualisiert.
+- **Removed:** 77 Apple-Notes via osascript gelöscht (alle BC-prefixed + Bold-Claim-Threads + konter-prefixed + afd-wählen-Notes — nach Verwertung in CONTENT-Files redundant)
+- **Pinecone:** Index resynced, 313 neue Records upserted via REST-API Batch-Pipeline. 795 → 1108 vectors. Search verified mit 0.89 score auf paedophilie-whataboutism. Hinweis: Vorgänger-Indexer nutzte andere Slug-Konvention, Records sind additiv. Nuclear-Reset bei Worker-Reaktivierung empfohlen.
+- **v2-Chat-Site:** Multiple Iterationen deployed auf https://boldclaim.github.io/chat/. Light-Mode-Default + Dark-Toggle, Voice-Sample-Upload (Settings → Allgemein), Section-Popup-statt-Sidebar (paragraph-click → annotation-card), Anti-KI-Stilregeln im System-Prompt (kein Em-Dash, keine Mic-Drops, keine Filler), Section-Headers Reddit-natürlich (kein "False framing"-Akademismus), DE/EN Site-Wide-Toggle im Header, Opus 4.7 + claude-opus-4-latest-Aliase, inline Model-Switcher im Composer-Footer, Streaming-Bug fixed (Alpine-Proxy-Reference), Reddit/Plain-Copy-Buttons.
+- **4-Panel-Review-Pattern etabliert:** Counter-Speech-Tactician + Information-Architect + Source-Quality-Auditor + Voice-Consistency-Reviewer als parallele Sub-Agents auf Knowledge-Imports angewendet. Konsolidierte Synthese → 4 Umsetzungs-Sub-Agents in zweiter Welle.
+- **Lessons:**
+  - 4-Panel-Review skaliert für große Knowledge-Imports (~4h Real-Time von Notes-Dump bis fertige CONTENT-Files).
+  - Source-Audit-Panel deckt Self-Inconsistency auf (BC23 nutzt Quote-Mining vor dem es warnt).
+  - Voice-Sample = personal, gehört nicht in public Repo. Repo trägt Beispiel-Templates, individueller Schreibstil bleibt im `_internal/`.
+  - osascript-Note-Deletion erfordert Two-Phase: Phase 1 collect names, Phase 2 lookup-by-name + delete. Direct iterate-and-delete bricht mit -1728-Error.
+  - Pinecone Sync-Strategie: REST-API + Python-Batch-Pipeline (30 Records, 0.4s Throttle) ist token-effizienter als MCP-Tool-Calls bei Large-Scale-Upserts.
+  - META vs CONTENT Trennung: Meta-Strategie + Tactics + Source-Defenses bleiben in META; konkrete Sach-Referenzen (einzelne Org/Partei/Person/Mythos) gehören in CONTENT.
 
 ### v3.8 — r/armes_deutschland Reddit-Session: Afghanistan/Ortskräfte + Corona-Schwurbler-Playbook (2026-05-05)
 
