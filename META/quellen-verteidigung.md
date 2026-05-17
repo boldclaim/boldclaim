@@ -270,3 +270,99 @@ Jede Partei hat eine staatlich finanzierte Stiftung: Konrad-Adenauer für die CD
 **Konter-fester Wortlaut wenn verifiziert:** "Laut [Quelle] zeigt sich in [Land] [Trend], obwohl die Migrationspolitik seit [Jahr] verschärft wurde."
 
 **Bis dahin:** Polen/Dänemark-Argument zurückhaltender formulieren ("kein dokumentierter Rückgang" statt "die Politik liefert den Effekt nicht") oder ganz aus Kontern weglassen, wenn Gegner statistik-affin ist.
+
+---
+
+## Octopus Energy + RWTH Aachen Wärmepumpen-Preisstudie 2025
+
+**Was es ist:** Vergleichsstudie der Octopus Energy und des Lehrstuhls für Gebäude- und Raumklimatechnik der RWTH Aachen University zur Wärmepumpen-Installation in Deutschland vs Großbritannien. Veröffentlicht März 2025.
+
+**Kernzahl:** 8 kW Wärmepumpe DE rund 28.000 Euro, UK rund 14.000 Euro. DE-Anlage damit fast doppelt so teuer.
+
+**Vier Treiber für den Preisunterschied (laut Studie):**
+1. **19% MwSt in DE vs 0% in UK** (UK hat WP von Mehrwertsteuer befreit). Bundesfinanzministerium-Sache, keine GEG-Frage.
+2. **Förderungsform:** UK gibt 7.500 Pfund Festbetrag (ca 8.888 Euro), DE gibt prozentual gestaffelt (bis 70%, gedeckelt). Prozentuale Förderung erzeugt Marktmacht für Anbieter.
+3. **Höhere technische Anforderungen in DE:** Schallschutz-Pflicht erfordert leisere und damit schwerere Geräte. Diese brauchen ein aufwendiges Fundament. UK-Anlagen werden meist einfach aufgestellt.
+4. **Klimatische Anforderungen:** niedrigere Außentemperaturen in DE = höhere Vorlauftemperaturen im Heizsystem = WP-Modelle die auch in dem Bereich noch effizient sind, kosten mehr.
+
+**Was Gegner damit machen:** Verkürzung auf "Wärmepumpen in DE sind 60% teurer als in UK, also ist die Förderung Schuld." Übersieht systematisch die anderen drei Treiber.
+
+**Konter-Boomerang:** "Die Studie listet vier Treiber, nicht einen. Förderung ist EIN Hebel von vieren. Die anderen drei sind nicht GEG-Sache: MwSt regelt das Finanzministerium, Schallschutz und Bau-Genehmigung sind Länder und Kommunen."
+
+**URLs:**
+- Studien-Pressemitteilung: https://octopusenergy.de/newsroom/waermepumpen-in-deutschland-fast-doppelt-so-teuer-wie-in-grossbritannien
+- pv-magazine.de Zusammenfassung: https://www.pv-magazine.de/2025/03/06/studie-waermepumpen-in-deutschland-fast-doppelt-so-teuer-wie-in-grossbritannien/
+
+---
+
+## Nationaler Normenkontrollrat (NKR), gesetzlicher Auftrag
+
+**Was es ist:** Unabhängiges Beratungs- und Kontrollgremium der Bundesregierung. Eingerichtet durch das Gesetz zur Einsetzung eines Nationalen Normenkontrollrates (NKRG) vom 14. August 2006.
+
+**Auftrag laut NKRG (in drei Stufen erweitert):**
+1. **Seit 2006:** Prüfung der Bürokratiekosten neuer Gesetze.
+2. **Seit 22.03.2011:** Erweiterung auf den gesamten Erfüllungsaufwand (alle messbaren Kosten und Zeitaufwände, die neue Gesetze verursachen).
+3. **Seit 01.01.2023:** Digital-Check (prüft, ob neue Gesetze digital einfach und effizient umsetzbar sind).
+
+**Gegner sagen:** "Der NKR macht ideologische Politik" oder "Das ist keine sachliche Stelle."
+
+**Fakten:** Der NKR hat einen klaren gesetzlichen Auftrag. "Praxisfern" und "handwerklich schwach" sind genau die Kategorien, in denen er gesetzlich prüfen muss. Er ist konservativ besetzt (Vorsitzender 2026: Lutz Goebel, vorher Unternehmer und Familienunternehmen-Verbandschef). Er hat unter SPD-Regierungen, GroKo-Regierungen, der Ampel und jetzt der schwarz-roten Koalition kritisch geurteilt.
+
+**Konter-Anwendung:** Wenn der NKR ein Gesetz zerlegt, ist das kein parteipolitisches Statement sondern eine technische Bewertung gegen Maßstäbe des NKRG. Wer den NKR delegitimiert, delegitimiert eine konservative Kontroll-Institution.
+
+**Beispiel-Anwendung 2026-05:** NKR-Chef Lutz Goebel zum Reiche-Heizungsgesetz: "eines der handwerklich schwächsten und praxisfernsten Vorhaben, die dem Nationalen Normenkontrollrat in den vergangenen Jahren vorgelegt wurden." Plus Befund: "Mietnebenkosten-Aufteilung ohne externe Beratung kaum umsetzbar."
+
+**URLs:**
+- NKR-Aufgaben: https://www.normenkontrollrat.bund.de/Webs/NKR/DE/der-nkr/aufgabe/aufgabe_node.html
+- NKRG Volltext: https://www.gesetze-im-internet.de/nkrg/
+- Goebel-Kritik Reiche-Gesetz: https://www.handelsblatt.com/politik/deutschland/normenkontrollrat-kontrollrat-heizungsgesetz-schwach-und-praxisfern/100225007.html
+
+---
+
+## GEG §71 Sechs-Erfüllungs-Optionen-Liste
+
+**Was es ist:** § 71 des Gebäudeenergiegesetzes (GEG) regelt die 65-Prozent-Erneuerbare-Energien-Anforderung für neue Heizungsanlagen ab 2024. Bauherr kann frei wählen, welche Heizung er nutzt, um die Anforderung zu erfüllen.
+
+**Sechs pauschale Erfüllungsoptionen (kein rechnerischer Nachweis nötig):**
+1. **Anschluss an ein Wärmenetz** (§ 71b)
+2. **Elektrisch betriebene Wärmepumpe** (deckt 100% Wärmebedarf)
+3. **Biomasse-Heizung** (Pellets, Hackschnitzel, Holz), feste Biomasse
+4. **Solarthermie** (deckt 100% Wärmebedarf, allein oder als Ergänzung zu Bestand)
+5. **Hybrid-Heizung** (WP + Gas/Öl/Biomasse für Spitzenlast)
+6. **Heizung mit 65%+ flüssiger/gasförmiger Biomasse oder grünem/blauem Wasserstoff** (H2-ready)
+
+**Was Gegner daraus machen:** Verkürzung auf "Habeck zwingt mir Wärmepumpe auf." War nie so. Wer eine WP nicht wollte, hatte fünf andere Optionen.
+
+**Bestand (nicht neu eingebaut):** keine Tauschpflicht. Alte Heizungen durften weiterlaufen, solange sie funktionieren. Erst bei Heizungs-Tausch greift die 65-Prozent-Regel, und auch dann mit Übergangsfristen entlang der kommunalen Wärmeplanung.
+
+**Konter-Anwendung:** Wenn der Gegner sagt "Habeck wollte mir WP aufzwingen", liste die sechs Optionen plus Bestand-Regel. Der WP-Pflicht-Mythos ist die Kernlüge der Heizungs-Kampagne.
+
+**URLs:**
+- GEG §71 Volltext: https://www.gesetze-im-internet.de/geg/__71.html
+- BBSR GEG-Infoportal Erfüllungsoptionen: https://www.bbsr-geg.bund.de/GEGPortal/DE/GEGRegelungen/Anlagen_EE/Erfuellungsoptionen/Erfuellungsoptionen-node.html
+
+---
+
+## BWP/BDH Wärmepumpen-Absatz-Statistik
+
+**Was es ist:** Der Bundesverband Wärmepumpe (BWP) und der Bundesverband der Deutschen Heizungsindustrie (BDH) veröffentlichen jährliche Absatzzahlen für Wärmepumpen in Deutschland.
+
+**Zahlen 2022 bis 2024:**
+- 2022: rund 236.000 Heizungs-WP verkauft
+- 2023: **356.000** WP verkauft (+51% vs 2022), Rekordjahr
+- 2024: rund 200.000 WP verkauft (−44% vs 2023)
+
+**Erklärung des 2024-Einbruchs:** 
+1. Bundesverfassungsgerichts-Urteil November 2023 kippte die KTF-Lücke (Klima- und Transformationsfonds).
+2. BAFA-Auszahlungen waren wochenlang eingefroren.
+3. Hersteller-Lager-Aufbau im 1. Halbjahr 2023 (Sorge vor Gasmangel-Lage) führte zu Front-Loading.
+4. Förderbedingungen-Unsicherheit nach Regierungswechsel ab 2024.
+
+**Was Gegner damit machen:** "Habecks Förderung hat nichts gebracht, Markt eingebrochen." Halbe Wahrheit (Markt eingebrochen ja, aber wegen Haushalts-Urteil + Auszahlungs-Freeze, nicht wegen Programm-Versagen).
+
+**Konter-Anwendung:** "Das Programm hat geliefert solange Geld floss." +51% 2022→2023 ist Wirkung. Der 2024-Crash ist Auszahlungs-Funktion, nicht Programm-Funktion.
+
+**URLs:**
+- BWP Absatzzahlen: https://www.waermepumpe.de/presse/zahlen-daten/absatzzahlen/
+- TGA Fachplaner Meldung 2023-Rekord: https://www.tga-fachplaner.de/meldungen/marktdaten-rekord-2023-wurden-356-000-waermepumpen-verkauft
+- BDH Pressemeldung: https://www.bdh-industrie.de/presse/pressemeldungen/artikel/heizungsindustrie-rekordjahr-beim-absatz-von-waermepumpen

@@ -357,3 +357,77 @@ hat die Logik gewechselt, sobald ein Stadtwerk profitiert.
 - [BWP Strom-/Gaspreis-Barometer Feb. 2026](https://www.tga-fachplaner.de/service/heizenergiekosten-waermepumpenstrom-gaspreis-barometer-2026-02)
 - [thermondo: Wärmepumpe im Altbau](https://www.thermondo.de/info/rat/waermepumpe/waermepumpe-im-altbau/)
 - [EnBW: Wärmepumpe Preisentwicklung](https://www.enbw.com/blog/wohnen/modernisieren-und-bauen/waermepumpe-so-haben-sich-die-preise-in-deutschland-seit-2022-entwickelt/)
+
+---
+
+## Update Mai 2026: Reiches Heizungsgesetz und der NKR-Befund [LAST_CHECKED: 2026-05-17]
+
+Am 13. Mai 2026 hat das Bundeskabinett unter Wirtschaftsministerin Katherina Reiche (CDU) und Bauministerin Verena Hubertz den Entwurf des Gebäudemodernisierungsgesetzes (GMG) beschlossen, der die GEG-Reform der Ampel ersetzt.
+
+### Was Reiches GMG kippt
+
+- **65-Prozent-Regel fällt weg.** Stattdessen ein Modell "Technologieoffenheit mit ansteigenden Bio-Quoten". Praktisch heisst das: Gas- und Ölheizungen wieder uneingeschränkt installierbar.
+- **Mieter-Kostenbremse geschwächt.** Die Modernisierungsumlage-Begrenzung (§ 559 BGB-Anpassungen unter GEG) wird verwässert.
+- **Mietnebenkosten-Aufteilung bei fossilen Heizungen kompliziert.** Laut NKR ohne externe Beratung kaum umsetzbar.
+
+### Was der Normenkontrollrat dazu sagt
+
+NKR-Chef Lutz Goebel: "Eines der handwerklich schwächsten und praxisfernsten Vorhaben, die dem Nationalen Normenkontrollrat in den vergangenen Jahren vorgelegt wurden." Der Text sei in weiten Teilen kaum verständlich. Verursache zusätzliche Bürokratie- und Beratungskosten.
+
+Quellen:
+- [Handelsblatt: Kontrollrat: Heizungsgesetz schwach und praxisfern](https://www.handelsblatt.com/politik/deutschland/normenkontrollrat-kontrollrat-heizungsgesetz-schwach-und-praxisfern/100225007.html)
+- [ZDF heute: Vernichtende Kritik vom Normenkontrollrat](https://www.zdfheute.de/politik/deutschland/heizungsgesetz-gebaeudemodernisierungsgesetz-normenkontrollrat-kritik-100.html)
+
+### Was Habecks GEG tatsächlich enthielt (nicht der CDU-Mythos)
+
+Diese Fakten gehören in jeden Konter gegen "Habeck zwingt mir Wärmepumpe auf":
+
+**1. Sechs pauschale Erfüllungsoptionen (GEG §71)**, keine WP-Pflicht:
+- Anschluss an Wärmenetz (§71b)
+- Wärmepumpe
+- Biomasse (Pellets/Holz)
+- Solarthermie
+- Hybrid (WP + Gas/Öl für Spitzenlast)
+- H2-ready Gas oder Biomethan-Heizung
+
+Quelle: [GEG §71 Volltext](https://www.gesetze-im-internet.de/geg/__71.html), [BBSR-Infoportal](https://www.bbsr-geg.bund.de/GEGPortal/DE/GEGRegelungen/Anlagen_EE/Erfuellungsoptionen/Erfuellungsoptionen-node.html)
+
+**2. Bestand: keine Tausch-Pflicht.** Alte Heizungen durften weiterlaufen. Erst bei Neueinbau greift die 65-Prozent-Regel, und auch dann mit Übergangsfristen entlang der kommunalen Wärmeplanung.
+
+**3. Gestaffelte BAFA-Förderung bis 70%**, einkommensabhängig (geltend bis Förderfreeze 2024):
+- 30% Grundförderung
+- +20% Klimageschwindigkeits-Bonus (Bestandsheizung tauschen statt neu bauen)
+- +30% Einkommens-Bonus (wenn zu versteuerndes Einkommen unter 40.000 Euro)
+- +5% Effizienz-Bonus (bestimmte WP-Modelle)
+- Deckel: max 70% von 30.000 Euro = max 21.000 Euro pro erste Wohneinheit
+
+Quelle: [BAFA Förderprogramm im Überblick](https://www.bafa.de/DE/Energie/Heizen_mit_Erneuerbaren_Energien/Foerderprogramm_im_Ueberblick/foerderprogramm_im_ueberblick_node.html)
+
+**4. Mieter-Kostenbremse via Modernisierungsumlage-Cap.** Der Vermieter konnte die teuerste Modernisierung nicht mehr 1:1 auf den Mieter umlegen. Genau das war der soziale Kern, den Reiche jetzt schwächt.
+
+### Wärmepumpen-Marktentwicklung 2022 bis 2024
+
+Belegt, dass Habecks Förderung gewirkt hat, solange die Auszahlungen liefen:
+
+| Jahr | WP-Absatz DE | Veränderung |
+|------|-------------|-------------|
+| 2022 | ~236.000 | Vergleichsbasis |
+| 2023 | **356.000** | +51%, Rekordjahr |
+| 2024 | ~200.000 | −44% |
+
+**Ursache 2024-Einbruch:** BVerfG-Urteil November 2023 zur KTF-Lücke + wochenlanger BAFA-Auszahlungs-Freeze + Förderbedingungs-Unsicherheit nach Regierungswechsel. Nicht Programm-Versagen.
+
+Quelle: [BWP/BDH Pressemeldung 2023-Rekord](https://www.tga-fachplaner.de/meldungen/marktdaten-rekord-2023-wurden-356-000-waermepumpen-verkauft), [BWP Absatzzahlen](https://www.waermepumpe.de/presse/zahlen-daten/absatzzahlen/)
+
+### WP-Preisunterschied DE vs UK: vier Treiber, nicht ein
+
+Die Octopus Energy + RWTH Aachen Studie 2025 zeigt: 8 kW WP-Anlage kostet in DE rund 28.000, in UK rund 14.000. Treiber laut Studie:
+
+1. **19% MwSt in DE vs 0% in UK.** Bundesfinanzministerium-Sache.
+2. **Förderungsform:** UK Festbetrag 7.500 Pfund, DE prozentual gestaffelt (begünstigt Anbieter-Markt-Macht).
+3. **Schallschutzpflicht** in DE erzwingt schwerere Geräte plus Fundament.
+4. **Klimatische Anforderungen:** niedrigere Außentemperaturen erfordern Modelle, die auch bei tieferen Temperaturen effizient bleiben.
+
+Drei der vier Treiber sind nicht GEG-Sache. Wer "Habecks Förderung treibt die Preise" sagt, muss erklären, wie das die MwSt und die Bauordnung erklären soll.
+
+Quelle: [Octopus/RWTH-Studie via pv-magazine](https://www.pv-magazine.de/2025/03/06/studie-waermepumpen-in-deutschland-fast-doppelt-so-teuer-wie-in-grossbritannien/), [Pressemitteilung Octopus](https://octopusenergy.de/newsroom/waermepumpen-in-deutschland-fast-doppelt-so-teuer-wie-in-grossbritannien)

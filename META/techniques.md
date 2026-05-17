@@ -1120,3 +1120,153 @@ Erkennung: Wenn die zitierte Stelle die Gegen-Linie absurd stark stützt, fast i
 - Das Muster taucht überall auf, wo emotionale Drohszenarien als Beweis für aktuelle Charakterfehler genutzt werden: "Was würdest du machen wenn..." ist immer ein Signal für hypothetische Schuld.
 - Unterschied zu Slippery Slope ist entscheidend für die richtige Konter-Strategie: Slippery Slope braucht einen Kausalitäts-Disput, Hypothetische Schuld braucht einen Realitäts-Check.
 
+---
+
+## Förderung-treibt-Preise-Trick (2026-05-17)
+
+**Pattern:** Jede staatliche Subvention wird als alleinige Ursache höherer Preise framet. "Wir fördern ohne Ende und die Anbieter schlagen es stumpf auf die Preise auf." Klingt logisch und libertarian-anschlussfähig, ignoriert aber Strukturkosten (Steuern, Regulierung, Materialknappheit, technische Anforderungen) die unabhängig von Subvention existieren.
+
+**Beispiel (r/armes_deutschland Heizungsgesetz, 2026-05-17, u/Word_Word_4Numbers 26↑):** "Weil wir die Dinger fördern ohne Ende und die Förderung einfach stumpf auf die Preise aufgeschlagen wird." Bezogen auf Wärmepumpen-Preise DE vs UK.
+
+**Counter-Move:**
+1. **Source-Boomerang auf die zugrundeliegende Studie**, falls eine zitiert wird. Beispiel: Octopus/RWTH-Aachen 2025 listet vier Treiber, nicht einen. 19% MwSt, Schallschutz, Genehmigung, prozentuale Förderung. Förderung ist EIN Hebel von vieren.
+2. **Konzession load-bearing machen:** "Bei einem von vier Treibern hast du recht." Die anderen drei lassen sich dann sauber zuordnen (Finanzministerium, Länder, Kommunen) und entlasten das angegriffene Gesetz.
+3. **Volumen-Evidenz**, falls vorhanden: wenn das Programm seit Einführung Markt-Volumen gesteigert hat, ist "stumpfes Aufschlagen" Teilbild, nicht Vollbild. Nicht behaupten Volumen widerlege Preisaufschlag, beides kann gleichzeitig wahr sein, aber Volumen-Wachstum zeigt dass das Programm gewirkt hat.
+
+**Counter-Reframe:** Lösung wäre nicht "Förderung weg" sondern Adressierung der Struktur-Treiber (MwSt-Senkung wie UK, Regulierungs-Inventur).
+
+**Lessons learned:**
+- Sub-Pattern des Markt-Verzerrungs-Frames. Verwandt mit: "Subvention macht abhängig", "ohne Förderung würde es sich rechnen".
+- Volume-vs-Preis-Logikfehler ist die Falle: wer das Volumen-Argument als Refutation framet, gibt dem Gegner einen logischen Gegenpunkt. Volumen zeigt Wirkung des Programms, nicht Abwesenheit von Preisaufschlag.
+- Funktioniert nur, wenn die zitierte Studie wirklich gegen den Gegner liest. Pre-Read der Studie ist Pflicht.
+
+---
+
+## Eigenheimer-Sonderfall-Retreat (2026-05-17)
+
+**Pattern:** Nach Daten-Niederlage retreat zur individuellen Anekdote. "Ich bin einer davon, für mein Haus macht es schlicht und einfach keinen Sinn." Verschiebt den Diskurs von Politik-Bewertung (öffentlich überprüfbar) zu Hausbau-Spezifika (privat, nicht überprüfbar), wo der Gegner immer das letzte Wort hat.
+
+**Beispiel (r/armes_deutschland Heizungsgesetz, 2026-05-17, u/Word_Word_4Numbers d2):** "Ich finde es erstaunlich, dass du die Situation aller Menschen die sich gegen Dämmung/ Wärmepumpe entscheiden kennst. Ich bin einer davon, denn für mich bzw. mein Haus macht es schlicht und einfach keinen Sinn aktuell auf Dämmung oder Wärmepumpe zu setzen."
+
+**Counter-Move:**
+1. **Sonderfall konzedieren ohne Politik-Frame aufzugeben:** "Wenn dein Haus also schlicht und einfach gegen WP spricht..."
+2. **Misconception-Klärung:** das Gesetz hatte Optionen für genau diesen Fall. GEG §71 hatte sechs pauschale Erfüllungsoptionen (Wärmenetz, WP, Pellets, Solarthermie, Hybrid, H2-ready Gas). Niemand hätte ihm den Keller aufgerissen.
+3. **Trap-Frage:** "Was an dem Gesetz dein Haus konkret schlechter gestellt hätte, würde mich tatsächlich interessieren." Forciert Spezifika. Wenn er nichts hat, war's Bluster. Wenn doch, kriegst du echtes Material.
+4. **Niemand-kennt-alle-Häuser-Strohmann benennen**, ohne zu eskalieren: "Niemand muss die Situation aller Häuser kennen, um zu sehen dass die Lügenkampagne stattfand."
+
+**Lessons learned:**
+- Klassischer libertärer Rückzug. Funktioniert, weil der Counter-Sprecher die Spezifika des Hauses nicht kennen kann.
+- Counter über GEG-Optionen-Liste zerstört die "Habeck zwingt mir WP auf"-Implikation ohne den individuellen Fall anzugreifen.
+- Trap-Frage am Ende ist dominant: drei mögliche Antworten (Spezifika, Retreat, Eskalation), alle drei sind Mitleser-Gewinn.
+
+---
+
+## Einfaches-Weltbild-Opener (2026-05-17)
+
+**Pattern:** Concern-Troll-Eröffnung. Der Gegner wird als simplistisch framet, bevor das eigentliche Argument kommt. "Ich hätte auch gerne so ein einfaches Weltbild, wirklich beneidenswert." Zielt darauf ab, die analytische Position als naiv erscheinen zu lassen ohne ihre Substanz angreifen zu müssen.
+
+**Beispiel (r/armes_deutschland, 2026-05-17, u/Word_Word_4Numbers):** "Ich hätte auch gerne so ein einfaches Weltbild, wirklich beneidenswert."
+
+**Counter-Move:**
+1. **Nicht engagieren auf der Mock-Ebene.** Wer "doch nicht so einfach!" antwortet, hat den Frame angenommen.
+2. **Differenzierung als Tat zeigen, nicht behaupten:** liefere die Komplexität, die er dir absprechen will, durch konkrete Zahlen-Trennung, Akteurs-Zuordnung, Mehrfach-Ursachen-Diagramm.
+3. **Schluss-Frage zwingt Mitlieferung von Spezifika** ("Was an dem Gesetz dein Haus konkret schlechter gestellt hätte").
+
+**Lessons learned:**
+- Eng verwandt mit "Du verstehst die Komplexität nicht"-Opener. Beides verschiebt Bewertungslast vom Inhalt auf den Gegner.
+- Funktioniert gegen Sprecher, die sich verteidigen. Funktioniert nicht, wenn der Counter selbst differenziert genug ist, dass die Simplistik-Anschuldigung absurd wirkt.
+
+---
+
+## Demystification + Time-Anchor (Ally-Pattern, 2026-05-17)
+
+**Pattern (eigener-Camp-Counter):** Wenn der Gegner Technologie als unausgereift framet, zeigt der Ally erstens die technische Einfachheit ("ist keine NASA-Technik") und zweitens einen Zeit-Anker, der die Aussage widerlegt ("meine Erdwärme von 2011 läuft"). Doppelter Wirkmechanismus: rationale Entzauberung plus persönliche Glaubwürdigkeit.
+
+**Beispiel (r/armes_deutschland Heizungsgesetz, 2026-05-17, u/vier10comma5 10↑):** "Aus dem nichts entstehen? Eine Wärmepumpe ist keine NASA Technik. Jeder gelernte Heizungsmonteur sollte das spätestens nach einem Wochenendkurs können. Davon abgesehen sind Wärmepumpe bei weitem nichts neues. Meine erdwärme wurde 2011 gelegt."
+
+**Einsatz-Muster für unsere Counter:**
+1. Statt nur "WP funktioniert" sage "WP funktioniert seit Jahrzehnten in DE/AT/CH/NO".
+2. Quellen-Anker: Bundesverband Wärmepumpe Statistik, IRENA, Marktanteils-Historie 2010-2020.
+3. Wenn möglich, konkrete Modelle/Hersteller von vor 10+ Jahren nennen.
+
+**Lessons learned:**
+- Score 10↑ in einem 75-Comment-Thread = überdurchschnittliche Landung.
+- Persönliche Anekdote als Time-Anchor schlägt abstrakte Statistik. Mitleser können sich das vorstellen.
+- Gut kombinierbar mit Eigenheimer-Sonderfall-Retreat-Counter: erst die Möglichkeit zeigen (Demystification), dann die Optionen benennen (GEG §71).
+
+---
+
+## Lügenkampagnen-Attribution (Ally-Pattern mit Tone-Warnung, 2026-05-17)
+
+**Pattern (eigener-Camp-Counter):** Attribution der Desinformation an benannte Akteurs-Bündel: "CDU, rechte Schmutzpresse, AfD und Russentrolle haben gemeinsam eine absurd lächerliche Lügenkampagne gefahren." Schiebt die Schuld vom individuellen Skeptiker zu den Producers.
+
+**Beispiel (r/armes_deutschland Heizungsgesetz, 2026-05-17, u/Suitable-Display-410 15↑):** "Aber die CDU, die rechte Schmutzpresse, die AfD und die Russentrolle haben alle gemeinsam eine absurd lächerliche Lügenkampagne gefahren, und diese Dummbürger haben es geschluckt."
+
+**Wirkung:** Score 15↑ ist hoch. Funktioniert in Pro-Camp-Threads als Camp-Mobilisierung.
+
+**Tone-Warnung:** "Dummbürger" am Ende ist Mitleser-Verlust. Der Move funktioniert nur ohne die Verachtungs-Schlusszeile. Wer Mitleser-Wirkung will, lässt den Insult weg.
+
+**Counter-Reframe für unsere Anwendung:**
+1. Akteurs-Bündel nennen, aber **ohne Insult der Mitläufer.** Stattdessen: "Wer auf die Kampagne reingefallen ist, ist nicht das Problem. Wer sie gefahren hat, ist das Problem."
+2. Konkrete Belege pro Akteur (BILD-Schlagzeilen, AfD-Bundestags-Anträge, dokumentierte Russentroll-Accounts) statt Behauptung.
+3. Vorsicht mit "Dummbürger"-Framing: aktiviert den Mitleser-Schutzreflex, kostet uns Sympathie, hilft dem Gegner.
+
+**Lessons learned:**
+- Akteurs-Attribution ist stark, weil sie die Diskurs-Ebene wechselt: nicht "wer hat recht" sondern "wer hat die Behauptungen produziert".
+- Camp-Mobilisierungs-Moves (Score 15↑ in Pro-Camp-Thread) sind nicht automatisch Mitleser-Moves. Beide Wirkungen messen, nicht verwechseln.
+- "Dummbürger Maul halten Suppe auslöffeln" ist klassisches Pro-Camp-Pile-on: gut für In-Group-Bonding, schlecht für Persuasion. Spezialisten-Tool, nicht Standard.
+
+---
+
+## Future-State-Inversion (Ally-Pattern, 2026-05-17)
+
+**Pattern (eigener-Camp-Counter):** Vorwegnahme der zukünftigen Position des Gegners. "Endliche Ressourcen werden mit zunehmender Endlichkeit teuer. Du bist dann einer der in 20 Jahren voller Wut Subventionen auf seinen fossilen Energieträger fordert, weil er sich das heizen nicht mehr leisten kann." Spiegelt dem Gegner seine eigene zukünftige Klage entgegen, die seine heutige Position untergräbt.
+
+**Beispiel (r/armes_deutschland Heizungsgesetz, 2026-05-17, u/Schmidisl_ in einer Reply-Kette mit Word_Word_4Numbers):** Genau dieses Zitat oben.
+
+**Einsatz-Muster für unsere Counter:**
+1. **Voraussage des wahrscheinlichen Future-State** (Gaspreis-Trajektorie, Lock-in-Effekte, Subventions-Forderungen ex post).
+2. **Spiegelung an die heutige Position:** "Wenn deine Position in 20 Jahren ist X, dann ist deine heutige Position Y inkonsistent."
+3. **Achtung Konjunktiv-Falle:** zu spekulativ wirkt belehrend. Nur einsetzen, wenn die Future-State-Wahrscheinlichkeit hoch ist (IEA-Szenarien, Bundesnetzagentur-Forecasts) und nicht reine Stilfigur.
+
+**Lessons learned:**
+- Funktioniert nur bei Themen mit klarer Zeit-Trajektorie (Energiepreise, Demographie, Klima). Nicht bei Themen mit offener Zukunft.
+- Verwandt mit Erdogan-Fanfiction (hypothetische Schuld), aber inverse Polung: hier wird die hypothetische Zukunft genutzt, um die heutige eigene Konsistenz zu prüfen, nicht den Gegner moralisch zu verurteilen.
+- Mitleser-Wirkung mittel. Score-Daten dünn (nur 1-2↑ in der beobachteten Kette). Nicht für Top-Level-Antworten geeignet, eher als Reply-im-Cycle-Move.
+
+---
+
+## Premise-Challenge mit Faktencheck (Ally-Pattern, 2026-05-17)
+
+**Pattern (eigener-Camp-Counter):** Statt die Schlussfolgerung des Gegners zu kontern, wird die zugrundeliegende Annahme mit konkreten Zahlen falsifiziert. Wenn Stahl-Chefin "hohe und unberechenbare Energiepreise" als AfD-Treiber framet, antwortet der Ally mit Strompreis- und Gaspreis-Trajektorie der letzten Jahre: "Strompreis ist auf dem Stand von 2019. Inflationsbereinigt sogar billiger. Gaspreis seit 2022 massiv gesunken." Frame zerbricht ohne dass über AfD-Politik gestritten wird.
+
+**Beispiel (r/armes_deutschland Stahl-AfD-Thread, 2026-05-17, u/Wide-Resolution-2352 4↑):** "Der Strompreis ist auf dem Stand von 2019. Er ist seit 2022 wieder auf den alten Stand gesunken. Inflationsbereinigt wurde er sogar billiger. Angekündigt sind nach EU-Regelung 5cent pro kWh als Zielpreis. Der Gaspreis ist seit 2022 ebenfalls massiv gesunken."
+
+**Einsatz-Muster für unsere Counter:**
+1. **Premise statt Conclusio kontern.** "Energiepreise explodieren" ist die Premise. Wenn die falsch ist, fällt die ganze AfD-Wahl-Erklärung in sich zusammen.
+2. **Konkrete Zahlen-Trajektorie** statt qualitativer Behauptung. BDEW + BNetzA als Standard-Quellen für DE-Strom/Gaspreise.
+3. **Inflations-Bereinigung explizit machen.** Mitleser-Wirkung höher als nominal-Werte.
+
+**Lessons learned:**
+- Der Move ist unterversorgt im Sub (Score 4↑, sollte mehr sein). Wir können ihn verstärken indem wir die gleiche Premise-Challenge mit besseren Quellen-URLs liefern.
+- Eng verwandt mit Source-Boomerang, aber Source-Boomerang braucht Gegner-Quelle, Premise-Challenge braucht nur unsere Quelle.
+- Funktioniert besonders gut gegen "weil X, deshalb Y"-Argumente, wenn X messbar ist (Preise, Anzahl, Trajektorien).
+
+---
+
+## Counter-Bedingung-Vorschlag (Ally-Pattern, 2026-05-17)
+
+**Pattern (eigener-Camp-Counter):** Statt den Gegner-Vorschlag direkt zu kontern, akzeptiert der Ally ihn unter einer Bedingung, die ihn praktisch unattraktiv macht. "Vielleicht sollten wir dem Vorschlag zustimmen, unter der Bedingung dass Überstunden mit Faktor 3 ausgeglichen oder ausgezahlt werden, als Anreiz für Arbeitgeber, ihre neuen Möglichkeiten doch ausgewogen einzusetzen." Ironischer Modus, der die ungesagten Voraussetzungen des Vorschlags sichtbar macht.
+
+**Beispiel (r/armes_deutschland Achtstundentag-Thread, 2026-05-17, u/Historical_Cook_1664 2↑):** Genau dieses Zitat oben.
+
+**Einsatz-Muster für unsere Counter:**
+1. **Akzeptanz mit fairer Bedingung** statt frontaler Ablehnung.
+2. **Bedingung muss "fair" sein** auf den ersten Blick (Faktor 3 = höhere Bezahlung für mehr Arbeit ist logisch verteidigbar) und der Gegner-Seite gleichzeitig die Lust am Vorschlag rauben.
+3. **Funktioniert gegen Asymmetrie-Vorschläge:** wenn eine Reform einseitig wirkt (Arbeitgeber-Vorteil + Arbeitnehmer-Risiko), legt die Counter-Bedingung die Asymmetrie offen.
+
+**Lessons learned:**
+- Mitleser-Wirkung mittel (2↑), aber pädagogisch stark: zeigt das Spiel, statt nur zu protestieren.
+- Verwandt mit "Ja, aber"-Move, aber spezifischer: die Bedingung muss ökonomisch greifbar sein, nicht nur rhetorisch.
+- Funktioniert nicht bei Themen ohne klare Asymmetrie. Bei symmetrischen Reform-Debatten wirkt es lahm.
+
