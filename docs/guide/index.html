@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Was die AfD verspricht, und wie sie abstimmt</title>
+<meta name="description" content="Was die AfD verspricht, und wie sie abstimmt. Faktencheck mit Originalquellen.">
+<meta property="og:title" content="Was die AfD verspricht, und wie sie abstimmt">
+<meta property="og:description" content="Waehl ein Thema. Wir zeigen dir Zitate, Abstimmungen und Zahlen, alle mit Originalquellen.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F50D;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FFF8F0;
+  --surface: #FFFFFF;
+  --text: #1C1917;
+  --text-muted: #78716C;
+  --border: #FDDCB5;
+  --accent-primary: #C2410C;
+  --accent-secondary: #166534;
+  --accent-quote: #9A3412;
+  --accent-vote-yes: #065F46;
+  --accent-vote-no: #B91C1C;
+  --accent-afd: #DFE6EE;
+  --accent-pattern: #FEF3E2;
+  --accent-fragmal: #E8F5E9;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- screens ---- */
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* ---- outer container ---- */
+.b-container {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ---- nav bar ---- */
+.b-nav {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.b-logo {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.03em;
+}
+
+.b-logo span { color: var(--accent-primary); }
+
+/* ---- landing hero ---- */
+.b-landing {
+  padding: 32px 20px 0;
+}
+
+.b-landing-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 10px;
+}
+
+.b-landing h1 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--text);
+  margin-bottom: 10px;
+  letter-spacing: -0.03em;
+}
+
+.b-landing-subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 28px;
+}
+
+/* ---- statement cards ---- */
+.b-card-list {
+  padding: 0 16px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.b-statement-card {
+  background: var(--surface);
+  border-radius: 20px;
+  border-left: 3px solid var(--accent-primary);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.b-statement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+}
+
+.b-icon-circle {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  background: var(--accent-pattern);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.b-statement-text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text);
+  flex: 1;
+}
+
+.b-chevron {
+  color: var(--accent-primary);
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+}
+
+.b-statement-card:hover .b-chevron {
+  opacity: 1;
+}
+
+/* ---- stats bar ---- */
+.b-stats-bar {
+  padding: 0 16px 36px;
+  display: flex;
+  gap: 10px;
+}
+
+.b-stat-item {
+  flex: 1;
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 12px 10px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.b-stat-num {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.b-stat-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ---- cascade screen ---- */
+
+/* ---- topic pills ---- */
+.b-pills-wrap {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 12px 16px 10px;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.b-pills-wrap::-webkit-scrollbar { display: none; }
+
+.b-topic-pill {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+  border: 1px solid var(--border);
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.b-topic-pill.active {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+  border-color: var(--accent-primary);
+}
+
+.b-topic-pill:not(.active) {
+  background: var(--surface);
+  color: var(--text-muted);
+}
+
+.b-topic-pill:not(.active):hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+/* ---- cascade wrapper ---- */
+.b-cascade-wrap {
+  padding: 20px 16px 0;
+}
+
+/* ---- back button ---- */
+.b-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-primary);
+  cursor: pointer;
+  margin-bottom: 16px;
+  background: none;
+  border: none;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  padding: 0;
+}
+
+.b-back-btn:hover { text-decoration: underline; }
+
+/* ---- cascade header ---- */
+.b-cascade-header {
+  background: var(--accent-primary);
+  border-radius: 16px 16px 0 0;
+  padding: 20px 20px 28px;
+}
+
+.b-cascade-header-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 10px;
+}
+
+.b-speech-bubble {
+  font-family: 'Outfit', system-ui, sans-serif;
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px 12px 12px 4px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.4;
+  position: relative;
+}
+
+.b-speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 16px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 10px solid rgba(255,255,255,0.15);
+}
+
+/* ---- evidence stack ---- */
+.b-evidence-stack {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+/* ---- fadeUp animation ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.b-evidence-layer {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+  animation: fadeUp 0.2s ease-out both;
+}
+
+.b-evidence-layer:last-child {
+  border-bottom: none;
+}
+
+.b-evidence-layer:nth-child(1) { animation-delay: 0.00s; }
+.b-evidence-layer:nth-child(2) { animation-delay: 0.05s; }
+.b-evidence-layer:nth-child(3) { animation-delay: 0.10s; }
+.b-evidence-layer:nth-child(4) { animation-delay: 0.15s; }
+.b-evidence-layer:nth-child(5) { animation-delay: 0.20s; }
+.b-evidence-layer:nth-child(6) { animation-delay: 0.25s; }
+
+/* ---- layer label row ---- */
+.b-layer-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.b-layer-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: var(--accent-pattern);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.b-layer-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tag-promise { color: var(--accent-primary); }
+.tag-quote   { color: var(--accent-quote); }
+.tag-vote    { color: var(--accent-vote-yes); }
+.tag-stat    { color: var(--accent-primary); }
+.tag-pattern { color: var(--accent-secondary); }
+
+/* ---- layer body ---- */
+.b-layer-body {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+/* ---- blockquote ---- */
+.b-blockquote {
+  border-left: 3px solid var(--accent-quote);
+  padding-left: 14px;
+  font-style: italic;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.b-blockquote + .b-blockquote {
+  margin-top: 14px;
+}
+
+.b-quote-attr {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-style: normal;
+}
+
+/* ---- vote bars ---- */
+.b-vote-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.b-vote-bill + .b-vote-bill {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.b-vote-row {
+  margin-bottom: 8px;
+}
+
+.b-vote-row-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.b-vote-bar-track {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.b-vote-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.fill-yes { background: var(--accent-vote-yes); }
+.fill-no  { background: var(--accent-vote-no); }
+
+.b-afd-note {
+  margin-top: 10px;
+  background: var(--accent-afd);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* ---- stat numbers ---- */
+.b-stat-big {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--accent-primary);
+  line-height: 1;
+  margin-bottom: 4px;
+  letter-spacing: -0.04em;
+}
+
+.b-stat-small {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent-primary);
+  line-height: 1;
+  margin-bottom: 4px;
+  letter-spacing: -0.03em;
+}
+
+.b-stat-desc {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.b-stat-entry + .b-stat-entry {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* ---- pattern box ---- */
+.b-pattern-box {
+  background: var(--accent-pattern);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+/* ---- frag mal speech bubble ---- */
+.b-fragmal-bubble {
+  background: var(--accent-fragmal);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: 12px;
+  padding: 16px 18px 20px;
+  position: relative;
+  margin-top: 4px;
+}
+
+.b-fragmal-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid var(--accent-fragmal);
+  border-right: 4px solid transparent;
+  border-top: 10px solid var(--accent-fragmal);
+}
+
+.b-fragmal-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 8px;
+}
+
+.b-fragmal-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* ---- hook layer ---- */
+.b-hook-layer {
+  padding: 22px 20px 18px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  animation: fadeUp 0.2s ease-out both;
+}
+
+.b-hook-text {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text-muted);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+/* ---- betrayal layer variant ---- */
+.b-evidence-layer.layer-betrayal {
+  background: rgba(185,28,28,0.04);
+  border-left: 3px solid var(--accent-vote-no);
+  border-bottom: 1px solid var(--border);
+  padding-left: 17px;
+}
+
+/* ---- source link ---- */
+a.b-source {
+  font-size: 12px;
+  color: var(--accent-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a.b-source:hover { opacity: 0.75; }
+
+/* ---- next topic button ---- */
+.b-next-wrap {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 8px 16px 48px;
+  text-align: center;
+}
+
+.b-next-btn {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 13px 32px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.b-next-btn:hover { opacity: 0.85; }
+
+/* ---- footer ---- */
+footer {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 24px 20px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+footer .b-footer-dot {
+  margin: 0 6px;
+  opacity: 0.4;
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== LANDING SCREEN ===================== -->
+<div id="landing" class="screen active">
+
+  <nav class="b-nav">
+    <div class="b-logo">afd-<span>check</span></div>
+  </nav>
+
+  <div class="b-container">
+    <div class="b-landing" style="padding-bottom: 4px;">
+      <p class="b-landing-eyebrow">Faktencheck</p>
+      <h1>Was die AfD verspricht, und wie sie abstimmt</h1>
+      <p class="b-landing-subtitle">Waehl ein Thema. Wir zeigen dir Zitate, Abstimmungen und Zahlen, alle mit Originalquellen.</p>
+    </div>
+
+    <div class="b-card-list" id="card-grid" role="list"></div>
+
+    <div class="b-stats-bar">
+      <div class="b-stat-item">
+        <div class="b-stat-num" style="color: var(--accent-primary);">8</div>
+        <div class="b-stat-label">Themen</div>
+      </div>
+      <div class="b-stat-item">
+        <div class="b-stat-num" style="color: var(--accent-secondary);">30+</div>
+        <div class="b-stat-label">Quellen</div>
+      </div>
+      <div class="b-stat-item">
+        <div class="b-stat-num" style="color: var(--accent-vote-no);">0</div>
+        <div class="b-stat-label">AfD Ja-Stimmen</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===================== CASCADE SCREEN ===================== -->
+<div id="cascade" class="screen">
+
+  <nav class="b-nav">
+    <div class="b-logo">afd-<span>check</span></div>
+  </nav>
+
+  <div class="b-pills-wrap" id="topic-pills"></div>
+
+  <div class="b-container">
+    <div class="b-cascade-wrap">
+      <button class="b-back-btn" onclick="showLanding()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Alle Themen
+      </button>
+
+      <div class="b-cascade-header">
+        <p class="b-cascade-header-label" id="cascade-topic-label"></p>
+        <div class="b-speech-bubble" id="cascade-statement"></div>
+      </div>
+
+      <div class="b-evidence-stack" id="cascade-content"></div>
+    </div>
+
+    <div class="b-next-wrap" id="next-topic-wrap">
+      <button class="b-next-btn" onclick="showNextTopic()">Naechstes Thema &rarr;</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer id="site-footer">
+  <span>Alle Quellen verlinkt</span>
+  <span class="b-footer-dot">&#183;</span>
+  <span>Kein Tracking</span>
+  <span class="b-footer-dot">&#183;</span>
+  <span>Kein Cookie</span>
+</footer>
+
+<script src="guide-data.js"></script>
+<script>
+// XSS note: fully static site, zero user input.
+// All DOM content comes from author-controlled guide-data.js.
+// Template literals are safe by design.
+
+var currentIndex = 0;
+
+function renderLanding() {
+  var grid = document.getElementById('card-grid');
+
+  grid.innerHTML = GUIDE_DATA.map(function(topic, i) {
+    return (
+      '<button onclick="showCascade(' + i + ')" class="b-statement-card" role="listitem" aria-label="' + topic.shortLabel + '">' +
+        '<div class="b-icon-circle" aria-hidden="true">' + topic.icon + '</div>' +
+        '<p class="b-statement-text">\u201E' + topic.statement + '\u201C</p>' +
+        '<span class="b-chevron" aria-hidden="true">&#8250;</span>' +
+      '</button>'
+    );
+  }).join('');
+}
+
+function showLanding() {
+  document.getElementById('cascade').classList.remove('active');
+  document.getElementById('landing').classList.add('active');
+  document.getElementById('site-footer').style.display = '';
+  window.scrollTo(0, 0);
+}
+
+function showCascade(index) {
+  currentIndex = index;
+  var topic = GUIDE_DATA[index];
+
+  document.getElementById('landing').classList.remove('active');
+  document.getElementById('cascade').classList.add('active');
+  document.getElementById('site-footer').style.display = 'none';
+
+  // Header
+  document.getElementById('cascade-topic-label').textContent = 'Thema: ' + topic.shortLabel;
+  document.getElementById('cascade-statement').textContent = '\u201E' + topic.statement + '\u201C';
+
+  // Pills
+  document.getElementById('topic-pills').innerHTML = GUIDE_DATA.map(function(t, i) {
+    var cls = i === index ? 'b-topic-pill active' : 'b-topic-pill';
+    return '<button onclick="showCascade(' + i + ')" class="' + cls + '">' + t.icon + '\u00A0' + t.shortLabel + '</button>';
+  }).join('');
+
+  var parts = [];
+
+  // 1. Hook (Du-Frage) — large, center-aligned, warm opener
+  parts.push(
+    '<div class="b-hook-layer">' +
+      '<p class="b-hook-text">' + topic.hook + '</p>' +
+    '</div>'
+  );
+
+  // 2. Promise
+  parts.push(
+    '<div class="b-evidence-layer">' +
+      '<div class="b-layer-label">' +
+        '<div class="b-layer-icon" aria-hidden="true">&#x1F4CB;</div>' +
+        '<span class="b-layer-tag tag-promise">Das Versprechen</span>' +
+      '</div>' +
+      '<p class="b-layer-body">' + topic.promise + '</p>' +
+    '</div>'
+  );
+
+  // 3. Betrayal — red-tinted, more visual weight
+  parts.push(
+    '<div class="b-evidence-layer layer-betrayal">' +
+      '<div class="b-layer-label">' +
+        '<div class="b-layer-icon" style="background: rgba(185,28,28,0.1);" aria-hidden="true">&#x26A1;</div>' +
+        '<span class="b-layer-tag" style="color: var(--accent-vote-no);">Die Realit\u00E4t</span>' +
+      '</div>' +
+      '<p class="b-layer-body">' + topic.betrayal + '</p>' +
+    '</div>'
+  );
+
+  // 4. Consequence
+  parts.push(
+    '<div class="b-evidence-layer">' +
+      '<div class="b-layer-label">' +
+        '<div class="b-layer-icon" aria-hidden="true">&#x1F464;</div>' +
+        '<span class="b-layer-tag tag-promise">F\u00FCr dich</span>' +
+      '</div>' +
+      '<p class="b-layer-body">' + topic.consequence + '</p>' +
+    '</div>'
+  );
+
+  // 5. Source — compact, small font
+  parts.push(
+    '<div class="b-evidence-layer">' +
+      '<div class="b-layer-label">' +
+        '<div class="b-layer-icon" style="background: var(--bg);" aria-hidden="true">&#x1F517;</div>' +
+        '<span class="b-layer-tag" style="color: var(--text-muted);">Quelle</span>' +
+      '</div>' +
+      '<p style="font-size:12px; color: var(--text-muted); line-height: 1.5;">' +
+        '<a href="' + topic.source.url + '" target="_blank" rel="noopener" class="b-source">' + topic.source.text + ' &#8599;</a>' +
+      '</p>' +
+    '</div>'
+  );
+
+  // 6. Pattern + Question
+  parts.push(
+    '<div class="b-evidence-layer" style="background: var(--accent-pattern); padding-bottom: 22px;">' +
+      '<div class="b-layer-label">' +
+        '<div class="b-layer-icon" aria-hidden="true">&#x1F9E9;</div>' +
+        '<span class="b-layer-tag tag-pattern">Das Muster</span>' +
+      '</div>' +
+      '<div class="b-pattern-box">' + topic.pattern + '</div>' +
+      '<div style="height:12px;"></div>' +
+      '<div class="b-fragmal-bubble">' +
+        '<p class="b-fragmal-tag">Frag mal</p>' +
+        '<p class="b-fragmal-text">' + topic.question + '</p>' +
+      '</div>' +
+    '</div>'
+  );
+
+  document.getElementById('cascade-content').innerHTML = parts.join('');
+
+  document.getElementById('next-topic-wrap').style.display =
+    index < GUIDE_DATA.length - 1 ? '' : 'none';
+
+  window.scrollTo(0, 0);
+}
+
+function showNextTopic() {
+  if (currentIndex < GUIDE_DATA.length - 1) {
+    showCascade(currentIndex + 1);
+  }
+}
+
+// Init
+renderLanding();
+</script>
+</body>
+</html>

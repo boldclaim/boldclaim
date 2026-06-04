@@ -1,0 +1,34 @@
+.DS_Store
+_internal/
+archive/
+input/
+.wrangler/
+CLAUDE-PROJECT-INSTRUCTIONS.md
+.claude/
+
+# Workspace junk
+.superpowers/
+docs/superpowers/
+
+# v2 chat site moved to its own repo (boldclaim/chat)
+docs/v2.html
+docs/worker-v2.js
+
+# afd-check is its own GitHub repo (frederikmetz42/afd-check) — never co-track here
+afd-check/
+
+# --- Content + playbook are LOCAL-ONLY (kept in the vault, served to the site via Pinecone, never pushed) ---
+# Edited locally, vectorised into the Pinecone index by a local push; the public repo holds ONLY docs/ (web stack).
+# Re-sync a changed file: tell Claude Code "re-index <path> into counter-speech". The website reads Pinecone, not these files.
+/CONTENT/
+/META/
+/blog/
+/QUICK/
+/06-reddit-thread-cases/
+/AUTOMATION/
+/_inbox/
+/INDEX.md
+/CLAIMS-INDEX.md
+/CHANGELOG.md
+/CHANGELOG 2.md
+/patriot-paradox-tactics.md
