@@ -1,0 +1,2402 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Touché — Bring your own AI. Wir sehen deine Counter nie.">
+  <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+  <title>Touché</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:title" content="Touché">
+  <meta property="og:description" content="Der scharfe, faktenbasierte Konter — wenn der Punkt sitzt.">
+  <meta property="og:image" content="touche-lockup.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            amber: {
+              50:'#FFF2EF',100:'#FFE0DA',200:'#FFC2B8',300:'#FF9C8C',400:'#FF6E58',500:'#FF4332',600:'#F02A16',700:'#C71F0F',800:'#A11D11',900:'#831D14',950:'#480C07'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; overscroll-behavior: none; }
+    body { -webkit-font-smoothing: antialiased; }
+    .scroll-area::-webkit-scrollbar { width: 6px; }
+    .scroll-area::-webkit-scrollbar-thumb { background: rgba(160,160,160,0.35); border-radius: 3px; }
+    .scroll-area::-webkit-scrollbar-track { background: transparent; }
+    [x-cloak] { display: none !important; }
+    .msg-fade { animation: fadeIn .25s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+    .typing::after {
+      content: '▍';
+      animation: blink 1s steps(2) infinite;
+      opacity: .5;
+      margin-left: 2px;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    textarea { field-sizing: content; }
+    .topic-pill { transition: background .15s, transform .1s, border-color .15s; }
+    .topic-pill:active { transform: scale(0.97); }
+    .drag-over { outline: 2px dashed rgba(0,0,0,.25); outline-offset: -8px; border-radius: 18px; }
+    .dark .drag-over { outline-color: rgba(255,255,255,.3); }
+    .modal-backdrop { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    /* Sexy radial spotlight in welcome */
+    .hero-bg {
+      background-image: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(120,113,108,0.08), transparent 60%);
+    }
+    .dark .hero-bg {
+      background-image: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(244,244,245,0.06), transparent 60%);
+    }
+    /* Markdown content styling */
+    .prose-content { line-height: 1.6; word-wrap: break-word; overflow-wrap: anywhere; }
+    .prose-content p { margin: 0 0 0.65em 0; }
+    .prose-content p:last-child { margin-bottom: 0; }
+    .prose-content strong { font-weight: 600; }
+    .prose-content em { font-style: italic; }
+    .prose-content ul { list-style: disc; padding-left: 1.4em; margin: 0.5em 0; }
+    .prose-content ol { list-style: decimal; padding-left: 1.6em; margin: 0.5em 0; }
+    .prose-content li { margin: 0.2em 0; }
+    .prose-content h3.section-header {
+      font-size: 0.85em;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      margin: 0.9em 0 0.3em 0;
+      padding-top: 0.2em;
+      color: inherit;
+      scroll-margin-top: 60px;
+    }
+    .prose-content h3.section-header:first-child { margin-top: 0; padding-top: 0; }
+    .prose-content a.link {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-all;
+      overflow-wrap: anywhere;
+    }
+    .prose-content a.link:hover { text-decoration-thickness: 2px; }
+    .prose-content blockquote {
+      border-left: 3px solid currentColor;
+      opacity: .7;
+      padding-left: 0.8em;
+      margin: 0.5em 0;
+    }
+    @keyframes sectionFlash {
+      0%, 100% { background-color: transparent; }
+      40% { background-color: rgba(250,204,21,0.28); }
+    }
+    .section-flash { animation: sectionFlash 1.6s ease; border-radius: 6px; }
+    .dark .section-flash { animation: sectionFlashDark 1.6s ease; }
+    @keyframes sectionFlashDark {
+      0%, 100% { background-color: transparent; }
+      40% { background-color: rgba(250,204,21,0.18); }
+    }
+    .section-active {
+      background-color: rgba(250,204,21,0.12);
+      border-radius: 6px;
+      padding-left: 0.6em;
+      padding-right: 0.6em;
+      transition: background-color 0.2s ease;
+    }
+    .dark .section-active {
+      background-color: rgba(250,204,21,0.08);
+    }
+    .section-active.section-header {
+      padding-top: 0.3em;
+      padding-bottom: 0.1em;
+    }
+  </style>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+  <script>
+    // Light default. Dark only if user explicitly toggled.
+    (function() {
+      if (localStorage.getItem('boldclaim_theme_v2') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body class="h-full bg-stone-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans antialiased">
+
+<div x-data="boldclaimApp()" x-init="init()" x-cloak class="flex h-full">
+
+  <!-- Sidebar (history) -->
+  <aside x-show="sidebarOpen"
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="-translate-x-full sm:translate-x-0 sm:opacity-0"
+         x-transition:enter-end="translate-x-0 opacity-100"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="translate-x-0 opacity-100"
+         x-transition:leave-end="-translate-x-full sm:translate-x-0 sm:opacity-0"
+         @click.outside="if (window.innerWidth < 1024) sidebarOpen = false"
+         class="fixed sm:static inset-y-0 left-0 z-30 w-72 bg-white dark:bg-zinc-900 border-r border-zinc-200 dark:border-zinc-800 flex flex-col shrink-0">
+    <div class="h-12 px-4 flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800">
+      <span class="text-sm font-semibold tracking-tight" x-text="t('sidebar.history')"></span>
+      <button @click="sidebarOpen=false" class="lg:hidden p-1.5 rounded text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-800">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <button @click="newChat()"
+            class="m-3 px-3 py-2 text-sm font-medium rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-white transition flex items-center justify-center gap-2 shrink-0">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+      <span x-text="t('sidebar.newChat')"></span>
+    </button>
+    <div class="flex-1 overflow-y-auto scroll-area px-2 pb-3 space-y-1">
+      <template x-for="conv in archive" :key="conv.id">
+        <div class="group flex items-center gap-1">
+          <button @click="loadConversation(conv.id)"
+                  :class="conv.id === activeConvId ? 'bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100' : 'text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800'"
+                  class="flex-1 min-w-0 text-left px-3 py-2 rounded-lg text-sm transition truncate">
+            <span x-text="conv.title"></span>
+          </button>
+          <button @click="deleteConversation(conv.id)"
+                  class="opacity-0 group-hover:opacity-100 p-1.5 rounded text-zinc-400 hover:text-red-500 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          </button>
+        </div>
+      </template>
+      <div x-show="archive.length === 0" class="text-center text-xs text-zinc-400 dark:text-zinc-600 mt-8 px-4" x-text="t('sidebar.empty')"></div>
+    </div>
+    <div class="p-3 border-t border-zinc-200 dark:border-zinc-800 text-[11px] text-zinc-400 dark:text-zinc-600" x-text="t('sidebar.privacy')"></div>
+  </aside>
+
+  <!-- Sidebar overlay (mobile) -->
+  <div x-show="sidebarOpen" x-transition.opacity
+       @click="sidebarOpen=false"
+       class="fixed inset-0 bg-black/30 z-20 lg:hidden"></div>
+
+  <!-- Main column -->
+  <div class="flex flex-col flex-1 min-w-0">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between px-4 sm:px-6 h-14 border-b border-zinc-200 dark:border-zinc-800 shrink-0 bg-white/70 dark:bg-zinc-950/70 backdrop-blur">
+      <div class="flex items-center gap-2">
+        <button @click="sidebarOpen=!sidebarOpen"
+                :title="t('header.history') + ' (⌘B / Ctrl+B)'"
+                class="p-2 -ml-2 rounded-md text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <img src="touche-fencer.png" alt="Touché" class="h-8 w-auto -my-1 select-none" style="image-rendering:pixelated" draggable="false">
+        <span class="text-base font-semibold tracking-tight">Touché</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <!-- Language toggle (site-wide) -->
+        <div class="flex items-center text-[11px] font-mono mr-1 rounded-md overflow-hidden border border-zinc-200 dark:border-zinc-800">
+          <button @click="setLang('de')"
+                  :class="settings.lang==='de' ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900' : 'bg-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100'"
+                  class="px-2 py-1 transition">DE</button>
+          <button @click="setLang('en')"
+                  :class="settings.lang==='en' ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900' : 'bg-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100'"
+                  class="px-2 py-1 transition">EN</button>
+        </div>
+        <button @click="toggleTheme()" :title="dark ? t('theme.light') : t('theme.dark')"
+                class="p-2 rounded-md text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition">
+          <svg x-show="!dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg x-show="dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button @click="settingsOpen=true" title="Einstellungen"
+                class="p-2 rounded-md text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Onboarding banner (no key) -->
+    <div x-show="!hasKey() && !settingsOpen && messages.length === 0"
+         class="bg-amber-100 dark:bg-amber-500/10 border-b border-amber-300 dark:border-amber-500/30 text-amber-900 dark:text-amber-200 text-sm px-4 sm:px-6 py-2 flex items-center justify-between">
+      <span x-text="t('banner.needKey')"></span>
+      <button @click="settingsOpen=true; settingsTab='onboarding'"
+              class="font-semibold underline hover:no-underline" x-text="t('banner.setup')"></button>
+    </div>
+
+    <!-- Main scroll area -->
+    <main class="flex-1 overflow-y-auto scroll-area"
+          @drop.prevent="handleDrop($event)"
+          @dragover.prevent="dragOver=true"
+          @dragleave="dragOver=false"
+          :class="dragOver && 'drag-over'">
+
+      <!-- Welcome state -->
+      <div x-show="messages.length === 0" class="hero-bg max-w-2xl mx-auto px-6 pt-16 sm:pt-24 pb-8">
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1]">
+          <span x-text="t('welcome.titleA')"></span>
+          <span class="block text-zinc-400 dark:text-zinc-500" x-text="t('welcome.titleB')"></span>
+        </h1>
+        <!-- Progressive disclosure: button -> topics -> claims -> typing clears all -->
+        <div x-show="!input.trim()" x-transition.opacity.duration.200ms>
+
+          <!-- Step 1: button (initial state, before topics revealed) -->
+          <button x-show="!topicsVisible"
+                  @click="topicsVisible = true"
+                  x-transition.opacity.duration.150ms
+                  class="mt-10 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-full bg-white dark:bg-zinc-800/70 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-sm">
+            <span x-text="t('examples.button')"></span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+
+          <!-- Step 2+3: caption + chips + claims (after button click) -->
+          <div x-show="topicsVisible"
+               x-transition:enter="transition-all duration-200 ease-out"
+               x-transition:enter-start="opacity-0 translate-y-1"
+               x-transition:enter-end="opacity-100 translate-y-0">
+            <p class="mt-10 text-[11px] uppercase tracking-wider font-semibold text-zinc-500 dark:text-zinc-500"
+               x-text="t('examples.label')"></p>
+
+            <!-- Topic chips -->
+            <div class="mt-3 flex flex-wrap gap-2">
+              <template x-for="group in examples" :key="group.cat">
+                <button @click="selectedExampleCat = (selectedExampleCat === group.cat ? null : group.cat)"
+                        class="topic-pill text-sm px-3.5 py-1.5 rounded-full border shadow-sm transition-colors"
+                        :class="selectedExampleCat === group.cat
+                          ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 border-zinc-900 dark:border-zinc-100'
+                          : 'bg-white dark:bg-zinc-800/70 hover:bg-zinc-50 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-200 border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600'">
+                  <span x-text="group.cat"></span>
+                </button>
+              </template>
+            </div>
+
+            <!-- Step 3: claims preview, after topic clicked -->
+            <div x-show="selectedExampleCat"
+                 x-transition:enter="transition-all duration-200 ease-out"
+                 x-transition:enter-start="opacity-0 translate-y-1"
+                 x-transition:enter-end="opacity-100 translate-y-0"
+                 class="mt-6 space-y-2">
+              <template x-for="point in currentExamplePoints()" :key="point">
+                <button @click="useExample(point)"
+                        class="block w-full text-left text-sm px-4 py-3 rounded-2xl bg-white dark:bg-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-700/60 text-zinc-800 dark:text-zinc-200 leading-snug shadow-sm">
+                  <span x-text="'„' + point + '“'"></span>
+                </button>
+              </template>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 flex flex-wrap gap-x-3 gap-y-1 text-xs text-zinc-500 dark:text-zinc-500">
+          <button @click="settingsOpen=true; settingsTab='onboarding'" class="underline hover:text-zinc-700 dark:hover:text-zinc-300" x-text="t('welcome.setup')"></button>
+          <button @click="settingsOpen=true; settingsTab='privacy'" class="underline hover:text-zinc-700 dark:hover:text-zinc-300" x-text="t('welcome.privacy')"></button>
+          <a href="https://github.com/boldclaim/boldclaim.github.io" target="_blank" rel="noopener" class="underline hover:text-zinc-700 dark:hover:text-zinc-300" x-text="t('welcome.code')"></a>
+          <a href="./modi.html" class="underline hover:text-zinc-700 dark:hover:text-zinc-300">Modi erklärt</a>
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div x-show="messages.length > 0" class="max-w-2xl mx-auto px-4 sm:px-6 py-6 space-y-5">
+        <template x-for="msg in messages" :key="msg.id">
+          <div :class="msg.role === 'user' ? 'flex justify-end' : 'flex justify-start'" class="msg-fade">
+            <div :class="msg.role === 'user'
+                  ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 rounded-2xl rounded-br-md shadow-sm'
+                  : 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 rounded-2xl rounded-bl-md border border-zinc-200 dark:border-zinc-800 shadow-sm'"
+                 class="max-w-full sm:max-w-[88%] px-4 py-3">
+
+              <!-- Images -->
+              <template x-if="msg.images && msg.images.length">
+                <div class="flex flex-wrap gap-2 mb-2">
+                  <template x-for="(img, i) in msg.images" :key="i">
+                    <img :src="img" @click="lightboxImg=img"
+                         class="rounded-lg max-h-48 cursor-zoom-in border border-zinc-300/30 dark:border-zinc-700">
+                  </template>
+                </div>
+              </template>
+
+              <!-- Body -->
+              <template x-if="msg.role === 'user'">
+                <div class="whitespace-pre-wrap leading-relaxed text-[15px]" style="overflow-wrap: anywhere; word-break: break-word;" x-text="msg.content"></div>
+              </template>
+              <template x-if="msg.role === 'assistant'">
+                <div>
+                  <!-- Analysis (collapsible, only if present) -->
+                  <details x-show="splitContent(msg.content).analysis.length > 0"
+                           class="mb-3 rounded-lg border border-amber-200 dark:border-amber-900/40 bg-amber-50 dark:bg-amber-500/5 group">
+                    <summary class="px-3 py-2 cursor-pointer text-xs font-semibold text-amber-900 dark:text-amber-200 list-none flex items-center gap-2 select-none">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition group-open:rotate-90"><polyline points="9 18 15 12 9 6"/></svg>
+                      <span x-text="t('msg.analysisTitle')"></span>
+                      <span class="ml-auto text-[10px] font-normal opacity-60" x-text="t('msg.analysisHint')"></span>
+                    </summary>
+                    <div class="px-3 pb-3 pt-1 prose-content text-[14px] text-amber-950 dark:text-amber-100"
+                         x-html="renderMarkdown(splitContent(msg.content).analysis)"></div>
+                  </details>
+                  <!-- Reply (click sections to see purpose annotation) -->
+                  <div class="prose-content text-[15px] cursor-pointer"
+                       :class="msg.streaming && 'typing'"
+                       :data-msg-id="msg.id"
+                       @click="onSectionClick($event)"
+                       x-html="renderMarkdown(splitContent(msg.content).reply)"></div>
+                </div>
+              </template>
+
+              <!-- Trust badge (assistant only, driven by msg.trust; 'unknown'/unset renders nothing) -->
+              <template x-if="msg.role === 'assistant' && !msg.streaming && msg.trust && msg.trust !== 'unknown'">
+                <div class="mt-2.5">
+                  <template x-if="msg.trust === 'checking'">
+                    <span class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">
+                      <span class="w-1.5 h-1.5 rounded-full bg-zinc-400 dark:bg-zinc-500 animate-pulse"></span>
+                      <span x-text="t('trust.checking')"></span>
+                    </span>
+                  </template>
+                  <template x-if="msg.trust === 'pass'">
+                    <span class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/30">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span x-text="t('trust.pass')"></span>
+                    </span>
+                  </template>
+                  <template x-if="msg.trust === 'fail'">
+                    <span class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium bg-amber-50 dark:bg-amber-500/10 text-amber-800 dark:text-amber-200 border border-amber-300 dark:border-amber-500/40">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                      <span x-text="t('trust.fail')"></span>
+                    </span>
+                  </template>
+                  <template x-if="msg.trust === 'unsure'">
+                    <span class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800/60 text-zinc-500 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-700">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                      <span x-text="t('trust.unsure')"></span>
+                    </span>
+                  </template>
+                </div>
+              </template>
+
+              <!-- Footer (assistant only) -->
+              <template x-if="msg.role === 'assistant' && !msg.streaming">
+                <div class="mt-2.5 pt-2 border-t border-zinc-100 dark:border-zinc-800 flex flex-wrap items-center gap-3 text-xs text-zinc-500">
+                  <button @click="copyAs(msg, 'reddit', $event)" class="hover:text-zinc-900 dark:hover:text-zinc-200 flex items-center gap-1">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span x-text="msg.copiedAs === 'reddit' ? t('msg.copiedReddit') : t('msg.copyReddit')"></span>
+                  </button>
+                  <button @click="copyAs(msg, 'plain', $event)" class="hover:text-zinc-900 dark:hover:text-zinc-200 flex items-center gap-1">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    <span x-text="msg.copiedAs === 'plain' ? t('msg.copiedPlain') : t('msg.copyPlain')"></span>
+                  </button>
+                  <template x-if="msg.sources && msg.sources.length">
+                    <details class="group">
+                      <summary class="cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-200 list-none flex items-center gap-1">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition group-open:rotate-90"><polyline points="9 18 15 12 9 6"/></svg>
+                        <span x-text="t('msg.sources') + ' (' + msg.sources.length + ')'"></span>
+                      </summary>
+                      <div class="mt-2 space-y-1.5 text-zinc-600 dark:text-zinc-400">
+                        <template x-for="(s, i) in msg.sources" :key="i">
+                          <div class="border-l border-zinc-300 dark:border-zinc-700 pl-3">
+                            <div class="text-[11px] font-mono text-zinc-500 dark:text-zinc-500" x-text="s.source"></div>
+                            <div class="text-[12px]" x-text="s.snippet"></div>
+                          </div>
+                        </template>
+                      </div>
+                    </details>
+                  </template>
+                </div>
+              </template>
+
+              <!-- Error -->
+              <template x-if="msg.error">
+                <div class="mt-2 text-xs text-red-600 dark:text-red-400 border-l-2 border-red-500/50 pl-2">
+                  <span x-text="msg.error"></span>
+                  <button @click="settingsOpen=true" class="underline ml-1">Settings</button>
+                </div>
+              </template>
+            </div>
+          </div>
+        </template>
+      </div>
+    </main>
+
+    <!-- Composer -->
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 px-3 sm:px-4 pt-3 pb-4 shrink-0 bg-stone-50 dark:bg-zinc-950">
+      <div class="max-w-2xl mx-auto">
+
+        <!-- Quick platform/tone selectors -->
+        <div class="flex flex-wrap items-center gap-1.5 mb-2 px-1 text-xs">
+          <span class="text-zinc-400 dark:text-zinc-600" x-text="t('comp.for')"></span>
+          <select x-model="settings.platform" @change="saveSettings()"
+                  class="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md px-2 py-1 font-medium text-zinc-700 dark:text-zinc-300 focus:outline-none focus:border-zinc-400 dark:focus:border-zinc-600 cursor-pointer">
+            <option value="Reddit" x-text="t('platform.reddit')"></option>
+            <option value="X/Twitter" x-text="t('platform.twitter')"></option>
+            <option value="Mündlich" x-text="t('platform.spoken')"></option>
+            <option value="WhatsApp" x-text="t('platform.whatsapp')"></option>
+          </select>
+          <span class="text-zinc-400 dark:text-zinc-600" x-text="t('comp.view')"></span>
+          <div class="inline-flex rounded-md border border-zinc-200 dark:border-zinc-700 overflow-hidden">
+            <button type="button" @click="settings.selectorStyle='pills'; saveSettings()"
+              class="px-2 py-1 font-medium transition"
+              :class="settings.selectorStyle==='pills' ? 'bg-indigo-600 text-white' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300'">Pills</button>
+            <button type="button" @click="settings.selectorStyle='pad'; saveSettings()"
+              class="px-2 py-1 font-medium transition border-l border-zinc-200 dark:border-zinc-700"
+              :class="settings.selectorStyle==='pad' ? 'bg-indigo-600 text-white' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300'">Pad</button>
+          </div>
+          <template x-if="settings.selectorStyle==='pills'">
+            <span class="inline-flex flex-wrap items-center gap-1.5">
+              <span class="text-zinc-400 dark:text-zinc-600" x-text="t('comp.cat')"></span>
+              <div class="inline-flex rounded-md border border-zinc-200 dark:border-zinc-700 overflow-hidden">
+                <template x-for="c in cats" :key="'cc'+c[0]">
+                  <button type="button" @click="settings.category=c[0]; userOverrodePicker=true; saveSettings()"
+                    class="px-2 py-1 font-medium transition border-l first:border-l-0 border-zinc-200 dark:border-zinc-700"
+                    :class="settings.category===c[0] ? 'bg-indigo-600 text-white' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700'"
+                    x-text="t(c[1])"></button>
+                </template>
+              </div>
+              <span class="text-zinc-400 dark:text-zinc-600" x-text="t('comp.hard')"></span>
+              <div class="inline-flex rounded-md border border-zinc-200 dark:border-zinc-700 overflow-hidden">
+                <template x-for="h in hards" :key="'ch'+h[0]">
+                  <button type="button" @click="settings.hardness=h[0]; userOverrodePicker=true; saveSettings()"
+                    class="px-2 py-1 font-medium transition border-l first:border-l-0 border-zinc-200 dark:border-zinc-700"
+                    :class="settings.hardness===h[0] ? 'bg-indigo-600 text-white' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700'"
+                    x-text="t(h[1])"></button>
+                </template>
+              </div>
+            </span>
+          </template>
+          <template x-if="settings.selectorStyle==='pad'">
+            <span class="inline-flex items-center gap-2">
+              <div class="flex gap-1 items-center">
+                <div class="flex flex-col justify-between self-stretch text-[8px] leading-none uppercase text-zinc-400 dark:text-zinc-600 text-right py-0.5">
+                  <template x-for="h in hards" :key="'crl'+h[0]"><span x-text="t(h[1])"></span></template>
+                </div>
+                <div class="grid grid-cols-3 gap-1.5">
+                  <template x-for="h in hards" :key="'cr'+h[0]"><template x-for="c in cats" :key="'ccell'+c[0]+h[0]">
+                    <button type="button" :title="t(c[1])+' · '+t(h[1])" @click="settings.category=c[0]; settings.hardness=h[0]; userOverrodePicker=true; saveSettings()"
+                      class="w-4 h-4 rounded-full border transition"
+                      :class="(settings.category===c[0]&&settings.hardness===h[0]) ? 'bg-indigo-600 border-indigo-600 scale-125' : 'border-zinc-300 dark:border-zinc-600 hover:border-indigo-400'"></button>
+                  </template></template>
+                </div>
+              </div>
+              <span class="text-zinc-500 dark:text-zinc-400 font-medium" x-text="settings.category + ' · ' + settings.hardness"></span>
+            </span>
+          </template>
+
+          <!-- Advisory style suggestion (Vorschlag). Never auto-applies, never hides the manual picker. -->
+          <template x-if="recoStyle">
+            <button type="button"
+                    @click="if(!userOverrodePicker) applyRecoStyle()"
+                    :title="recoReasonText()"
+                    :disabled="userOverrodePicker"
+                    class="inline-flex items-center gap-1 rounded-md border border-dashed border-amber-400/70 dark:border-amber-500/50 bg-amber-50/70 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 px-2 py-1 font-medium transition"
+                    :class="userOverrodePicker ? 'opacity-60 cursor-default' : 'hover:bg-amber-100 dark:hover:bg-amber-500/20 cursor-pointer'">
+              <span class="uppercase text-[9px] tracking-wide text-amber-600/80 dark:text-amber-400/80" x-text="t('comp.reco')"></span>
+              <span x-text="recoStyleLabel(recoStyle)"></span>
+            </button>
+          </template>
+          <template x-if="recoStyle">
+            <span class="text-zinc-400 dark:text-zinc-600 basis-full pl-1" x-text="recoReasonText()"></span>
+          </template>
+        </div>
+
+        <!-- Pending images -->
+        <div x-show="pendingImages.length" class="flex flex-wrap gap-2 mb-2">
+          <template x-for="(img, i) in pendingImages" :key="i">
+            <div class="relative">
+              <img :src="img" class="h-16 w-16 object-cover rounded-md border border-zinc-300 dark:border-zinc-700 shadow-sm">
+              <button @click="pendingImages.splice(i,1)"
+                      class="absolute -top-1.5 -right-1.5 bg-zinc-700 hover:bg-zinc-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">×</button>
+            </div>
+          </template>
+        </div>
+
+        <div class="flex items-end gap-2 bg-white dark:bg-zinc-800/70 rounded-2xl px-3 py-2 border border-zinc-300 dark:border-zinc-700 ring-1 ring-zinc-900/5 dark:ring-white/5 shadow-lg shadow-zinc-900/5 dark:shadow-black/40 focus-within:border-zinc-400 dark:focus-within:border-zinc-600 focus-within:ring-zinc-900/10 dark:focus-within:ring-white/10 transition">
+          <button @click="$refs.fileInput.click()"
+                  :title="t('comp.attach')"
+                  class="p-1.5 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 transition shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+          </button>
+          <input type="file" multiple accept="image/*" x-ref="fileInput" @change="handleFiles($event)" class="hidden">
+          <textarea x-model="input"
+                    @input="recommendStyle()"
+                    @paste="handlePaste($event)"
+                    @keydown.enter.prevent="if(!$event.shiftKey) send()"
+                    @keydown.cmd.enter.prevent="send()"
+                    @keydown.ctrl.enter.prevent="send()"
+                    rows="1"
+                    :placeholder="busy ? t('comp.busy') : t('comp.placeholder')"
+                    :disabled="busy"
+                    class="flex-1 bg-transparent resize-none outline-none text-[15px] py-1.5 max-h-48 placeholder-zinc-400 dark:placeholder-zinc-500 text-zinc-900 dark:text-zinc-50"></textarea>
+          <button @click="busy ? cancel() : send()"
+                  :disabled="!busy && !canSend()"
+                  :class="busy ? 'bg-red-500/90 hover:bg-red-500 text-white' : (canSend() ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-black dark:hover:bg-white' : 'bg-zinc-200 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-600')"
+                  class="rounded-full p-2 transition shrink-0 shadow-sm">
+            <template x-if="!busy">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l14 0M13 6l6 6-6 6"/></svg>
+            </template>
+            <template x-if="busy">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+            </template>
+          </button>
+        </div>
+        <div class="mt-1.5 px-2 flex items-center justify-between text-[11px] text-zinc-500 dark:text-zinc-500 gap-2">
+          <div class="flex items-center gap-1.5 min-w-0">
+            <template x-if="hasKey()">
+              <div class="flex items-center gap-1.5 min-w-0">
+                <span class="opacity-70 capitalize" x-text="settings.provider"></span>
+                <span class="opacity-40">·</span>
+                <select x-model="settings.model" @change="customMode = !modelsForProvider().some(m => m.id === settings.model); saveSettings()"
+                        class="bg-transparent border-0 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100 outline-none font-mono py-0 pr-1"
+                        :title="t('set.model')">
+                  <template x-for="m in modelsForProvider()" :key="m.id">
+                    <option :value="m.id" x-text="m.label"></option>
+                  </template>
+                  <option x-show="customMode" :value="settings.model" x-text="(settings.model || '...') + ' (custom)'"></option>
+                </select>
+              </div>
+            </template>
+            <template x-if="!hasKey()">
+              <button @click="settingsOpen=true" class="hover:text-zinc-900 dark:hover:text-zinc-100" x-text="t('comp.noKey')"></button>
+            </template>
+          </div>
+          <span x-show="messages.length > 0" class="shrink-0" x-text="countUserMsgs() + ' ' + (countUserMsgs()===1 ? t('comp.turn') : t('comp.turns'))"></span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Floating annotation card (replaces right sidebar) -->
+  <div x-show="activeSection && currentSection()"
+       x-transition:enter="transition ease-out duration-200"
+       x-transition:enter-start="opacity-0 translate-y-3"
+       x-transition:enter-end="opacity-100 translate-y-0"
+       x-transition:leave="transition ease-in duration-150"
+       x-transition:leave-start="opacity-100"
+       x-transition:leave-end="opacity-0 translate-y-3"
+       class="fixed bottom-32 right-4 left-4 sm:left-auto sm:max-w-sm z-30">
+    <div class="bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-2xl shadow-2xl shadow-black/20 p-4">
+      <div class="flex items-start gap-3">
+        <div class="flex-1 min-w-0">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-zinc-500"
+               x-text="(currentSectionIdx().idx) + ' / ' + currentSectionIdx().total + ' · ' + t('msg.analysisHint').replace(/[()]/g, '').toUpperCase()"></div>
+          <div class="font-semibold text-zinc-900 dark:text-zinc-100 mt-1 leading-tight"
+               x-text="currentSection()?.title"></div>
+          <div class="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed"
+               x-text="currentSection()?.purpose || (settings.lang === 'de' ? 'Keine Zweck-Annotation. Modell hat <!--purpose: ...--> nicht emittiert.' : 'No purpose annotation. Model did not emit <!--purpose: ...-->.')"></div>
+        </div>
+        <button @click="dismissSection()"
+                class="p-1 -m-1 text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 shrink-0"
+                title="Schließen">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="mt-3 flex gap-2" x-show="currentSectionIdx().total > 1">
+        <button @click="prevSection()"
+                :disabled="currentSectionIdx().idx <= 1"
+                class="flex-1 text-xs px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-md disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-1">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          <span x-text="settings.lang === 'de' ? 'Zurück' : 'Prev'"></span>
+        </button>
+        <button @click="nextSection()"
+                :disabled="currentSectionIdx().idx >= currentSectionIdx().total"
+                class="flex-1 text-xs px-3 py-1.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-black dark:hover:bg-white rounded-md disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-1">
+          <span x-text="settings.lang === 'de' ? 'Weiter' : 'Next'"></span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div x-show="settingsOpen"
+       x-transition.opacity
+       @click.self="settingsOpen=false"
+       class="fixed inset-0 modal-backdrop bg-black/40 dark:bg-black/60 flex items-end sm:items-center justify-center z-40 p-0 sm:p-4">
+    <div @click.stop
+         class="bg-white dark:bg-zinc-900 border-t sm:border border-zinc-200 dark:border-zinc-800 sm:rounded-2xl w-full sm:max-w-md max-h-[92vh] overflow-y-auto scroll-area shadow-2xl">
+
+      <!-- Tabs -->
+      <div class="flex border-b border-zinc-200 dark:border-zinc-800 sticky top-0 bg-white dark:bg-zinc-900 z-10">
+        <button @click="settingsTab='general'"
+                :class="settingsTab==='general' ? 'text-zinc-900 dark:text-zinc-100 border-zinc-900 dark:border-zinc-100' : 'text-zinc-500 border-transparent'"
+                class="flex-1 py-3 text-sm font-medium border-b-2 transition" x-text="t('set.tab.general')"></button>
+        <button @click="settingsTab='onboarding'"
+                :class="settingsTab==='onboarding' ? 'text-zinc-900 dark:text-zinc-100 border-zinc-900 dark:border-zinc-100' : 'text-zinc-500 border-transparent'"
+                class="flex-1 py-3 text-sm font-medium border-b-2 transition" x-text="t('set.tab.setup')"></button>
+        <button @click="settingsTab='privacy'"
+                :class="settingsTab==='privacy' ? 'text-zinc-900 dark:text-zinc-100 border-zinc-900 dark:border-zinc-100' : 'text-zinc-500 border-transparent'"
+                class="flex-1 py-3 text-sm font-medium border-b-2 transition" x-text="t('set.tab.privacy')"></button>
+      </div>
+
+      <div class="p-5 space-y-5">
+
+        <!-- General tab -->
+        <div x-show="settingsTab==='general'" class="space-y-5">
+          <div>
+            <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.provider')"></label>
+            <select x-model="settings.provider" @change="onProviderChange()"
+                    class="mt-1.5 w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-zinc-500 dark:focus:border-zinc-500">
+              <option value="anthropic">Anthropic (Claude)</option>
+              <option value="openai">OpenAI (GPT)</option>
+              <option value="moonshot">Moonshot (Kimi)</option>
+              <option value="openrouter">OpenRouter</option>
+              <option value="ollama">Ollama (lokal)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.model')"></label>
+            <select :value="customMode ? '__custom__' : settings.model"
+                    @change="onModelSelect($event.target.value)"
+                    class="mt-1.5 w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-zinc-500 dark:focus:border-zinc-500">
+              <template x-for="m in modelsForProvider()" :key="m.id">
+                <option :value="m.id" x-text="m.label"></option>
+              </template>
+              <option value="__custom__" x-text="t('set.customOpt')"></option>
+            </select>
+            <input x-show="customMode"
+                   x-model="settings.model"
+                   :placeholder="t('set.customPh')"
+                   class="mt-2 w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:border-zinc-500">
+          </div>
+
+          <div>
+            <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.apiKey')"></label>
+            <div class="mt-1.5 flex gap-2">
+              <input :type="showKey ? 'text' : 'password'"
+                     x-model="settings.apiKey"
+                     :placeholder="keyPlaceholder(settings.provider)"
+                     class="flex-1 bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:border-zinc-500 dark:focus:border-zinc-500">
+              <button @click="showKey=!showKey"
+                      class="px-3 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-lg text-sm border border-zinc-300 dark:border-zinc-700">
+                <span x-text="showKey ? t('set.hide') : t('set.show')"></span>
+              </button>
+            </div>
+            <div class="mt-2 flex items-center gap-2">
+              <button @click="testKey()"
+                      :disabled="!settings.apiKey || testing"
+                      class="text-xs px-3 py-1.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-black dark:hover:bg-white rounded-md font-medium disabled:opacity-50">
+                <span x-text="testing ? t('set.testing') : t('set.test')"></span>
+              </button>
+              <span class="text-xs" :class="testStatusColor()" x-text="testStatus"></span>
+            </div>
+          </div>
+
+          <div>
+            <label class="flex items-center gap-2.5 cursor-pointer select-none">
+              <input type="checkbox" x-model="settings.critic"
+                     class="w-4 h-4 rounded border-zinc-300 dark:border-zinc-700 accent-zinc-900 dark:accent-zinc-100">
+              <span class="text-sm font-medium text-zinc-700 dark:text-zinc-300" x-text="t('set.critic')"></span>
+            </label>
+            <p class="mt-1 ml-6 text-[11px] text-zinc-500 dark:text-zinc-500" x-text="t('set.criticHelp')"></p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.platform')"></label>
+              <select x-model="settings.platform"
+                      class="mt-1.5 w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-zinc-500">
+                <option value="Reddit" x-text="t('platform.reddit')"></option>
+                <option value="X/Twitter" x-text="t('platform.twitter')"></option>
+                <option value="Mündlich" x-text="t('platform.spoken')"></option>
+                <option value="WhatsApp" x-text="t('platform.whatsapp')"></option>
+              </select>
+            </div>
+            <div>
+              <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.cat')"></label>
+              <select x-model="settings.category" class="mt-1.5 w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-zinc-500">
+                <option value="Fakten" x-text="t('cat.fakten')"></option>
+                <option value="Rhetorik" x-text="t('cat.rhetorik')"></option>
+                <option value="Logik" x-text="t('cat.logik')"></option>
+              </select>
+              <label class="mt-3 block text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.hard')"></label>
+              <select x-model="settings.hardness" class="mt-1.5 w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-zinc-500">
+                <option value="Ruhig" x-text="t('hard.ruhig')"></option>
+                <option value="Direkt" x-text="t('hard.direkt')"></option>
+                <option value="Gungho" x-text="t('hard.gungho')"></option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Voice sample -->
+          <div class="pt-3 border-t border-zinc-200 dark:border-zinc-800 space-y-2">
+            <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.voice.label')"></label>
+            <p class="text-[11px] text-zinc-500 dark:text-zinc-500" x-text="t('set.voice.help')"></p>
+            <input type="file" accept=".md,.markdown,.txt" x-ref="voiceFileInput" @change="loadVoiceSample($event)" class="hidden">
+            <div class="flex items-center gap-2">
+              <button @click="$refs.voiceFileInput.click()"
+                      class="text-xs px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-md border border-zinc-300 dark:border-zinc-700"
+                      x-text="t('set.voice.upload')"></button>
+              <button @click="settings.voiceSample = ''"
+                      x-show="settings.voiceSample.length > 0"
+                      class="text-xs px-3 py-1.5 text-red-700 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-md"
+                      x-text="t('set.voice.clear')"></button>
+              <span class="text-[11px] text-zinc-500 dark:text-zinc-500"
+                    x-text="settings.voiceSample.length > 0 ? t('set.voice.active').replace('{n}', settings.voiceSample.length) : t('set.voice.none')"></span>
+            </div>
+            <textarea x-model="settings.voiceSample"
+                      :placeholder="t('set.voice.placeholder')"
+                      rows="6"
+                      class="w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:border-zinc-500 resize-y"></textarea>
+          </div>
+
+          <div class="pt-3 border-t border-zinc-200 dark:border-zinc-800 space-y-2">
+            <button @click="exportConversations()"
+                    class="w-full text-left text-sm px-3 py-2 bg-stone-50 dark:bg-zinc-950 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg border border-zinc-200 dark:border-zinc-800"
+                    x-text="t('set.export')"></button>
+            <button @click="clearAll()"
+                    class="w-full text-left text-sm px-3 py-2 bg-red-50 dark:bg-red-500/5 hover:bg-red-100 dark:hover:bg-red-500/15 rounded-lg border border-red-200 dark:border-red-500/20 text-red-700 dark:text-red-300"
+                    x-text="t('set.clear')"></button>
+          </div>
+        </div>
+
+        <!-- Onboarding tab -->
+        <div x-show="settingsTab==='onboarding'" class="space-y-4 text-sm">
+          <p class="text-zinc-700 dark:text-zinc-300" x-text="t('onb.intro')"></p>
+
+          <div class="space-y-3">
+            <div class="border border-zinc-200 dark:border-zinc-800 rounded-lg p-3 bg-stone-50 dark:bg-zinc-950/50">
+              <div class="font-semibold text-zinc-900 dark:text-zinc-100">Anthropic (Claude) <span class="text-xs text-zinc-500 font-normal" x-text="t('onb.recommended')"></span></div>
+              <div class="text-zinc-600 dark:text-zinc-400 text-xs mt-0.5" x-text="t('onb.anthropic.desc')"></div>
+              <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener"
+                 class="text-xs font-medium text-zinc-900 dark:text-zinc-100 underline mt-1 inline-block" x-text="t('onb.getKey')"></a>
+            </div>
+            <div class="border border-zinc-200 dark:border-zinc-800 rounded-lg p-3 bg-stone-50 dark:bg-zinc-950/50">
+              <div class="font-semibold text-zinc-900 dark:text-zinc-100">OpenAI (GPT)</div>
+              <div class="text-zinc-600 dark:text-zinc-400 text-xs mt-0.5" x-text="t('onb.openai.desc')"></div>
+              <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener"
+                 class="text-xs font-medium text-zinc-900 dark:text-zinc-100 underline mt-1 inline-block" x-text="t('onb.getKey')"></a>
+            </div>
+            <div class="border border-zinc-200 dark:border-zinc-800 rounded-lg p-3 bg-stone-50 dark:bg-zinc-950/50">
+              <div class="font-semibold text-zinc-900 dark:text-zinc-100">Moonshot (Kimi)</div>
+              <div class="text-zinc-600 dark:text-zinc-400 text-xs mt-0.5" x-text="t('onb.moonshot.desc')"></div>
+              <a href="https://platform.moonshot.cn" target="_blank" rel="noopener"
+                 class="text-xs font-medium text-zinc-900 dark:text-zinc-100 underline mt-1 inline-block" x-text="t('onb.getKey')"></a>
+            </div>
+          </div>
+
+          <button @click="settingsTab='general'"
+                  class="w-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-black dark:hover:bg-white rounded-lg py-2 text-sm font-semibold"
+                  x-text="t('onb.continue')"></button>
+        </div>
+
+        <!-- Privacy tab -->
+        <div x-show="settingsTab==='privacy'" class="space-y-3 text-sm text-zinc-700 dark:text-zinc-300">
+          <p class="font-semibold text-zinc-900 dark:text-zinc-100" x-text="t('priv.head')"></p>
+          <ol class="list-decimal pl-5 space-y-1.5 text-zinc-600 dark:text-zinc-400">
+            <li x-text="t('priv.1')"></li>
+            <li x-text="t('priv.2')"></li>
+            <li x-text="t('priv.3')"></li>
+            <li x-text="t('priv.4')"></li>
+          </ol>
+          <p class="pt-2 text-xs text-zinc-500" x-text="t('priv.foot')"></p>
+        </div>
+
+        <button @click="saveSettings(); settingsOpen=false"
+                class="w-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-black dark:hover:bg-white rounded-lg py-2.5 text-sm font-semibold"
+                x-text="t('set.save')"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div x-show="lightboxImg"
+       x-transition.opacity
+       @click="lightboxImg=null"
+       class="fixed inset-0 bg-black/90 flex items-center justify-center z-50 cursor-zoom-out p-4">
+    <img :src="lightboxImg" class="max-w-full max-h-full rounded-lg">
+  </div>
+
+</div>
+
+<script>
+  // Pinecone-Worker URL — leer = kein externer Request
+  const WORKER_URL = 'https://bold-claim.proof-machine.workers.dev';
+
+  const PROVIDERS = {
+    anthropic: {
+      defaultModel: 'claude-opus-4-7',
+      keyPlaceholder: 'sk-ant-...',
+      keyPattern: /^sk-ant-/,
+      url: 'https://api.anthropic.com/v1/messages',
+      vision: true,
+      models: [
+        { id: 'claude-opus-4-7',        label: 'Opus 4.7' },
+        { id: 'claude-opus-4-latest',   label: 'Opus latest' },
+        { id: 'claude-sonnet-4-6',      label: 'Sonnet 4.6' },
+        { id: 'claude-sonnet-4-latest', label: 'Sonnet latest' },
+        { id: 'claude-haiku-4-5',       label: 'Haiku 4.5' },
+        { id: 'claude-haiku-4-latest',  label: 'Haiku latest' },
+        { id: 'claude-opus-4-6',        label: 'Opus 4.6' },
+        { id: 'claude-sonnet-4-5',      label: 'Sonnet 4.5' }
+      ]
+    },
+    openai: {
+      defaultModel: 'gpt-5',
+      keyPlaceholder: 'sk-...',
+      keyPattern: /^sk-/,
+      url: 'https://api.openai.com/v1/chat/completions',
+      vision: true,
+      models: [
+        { id: 'gpt-5',       label: 'GPT-5 (flagship)' },
+        { id: 'gpt-5-mini',  label: 'GPT-5 mini (günstig)' },
+        { id: 'gpt-4o',      label: 'GPT-4o' },
+        { id: 'gpt-4o-mini', label: 'GPT-4o mini' }
+      ]
+    },
+    moonshot: {
+      defaultModel: 'kimi-k2-0926',
+      keyPlaceholder: 'sk-...',
+      keyPattern: /^sk-/,
+      url: 'https://api.moonshot.cn/v1/chat/completions',
+      vision: false,
+      models: [
+        { id: 'kimi-k2-0926',  label: 'Kimi K2 0926' },
+        { id: 'kimi-k2-turbo', label: 'Kimi K2 Turbo' }
+      ]
+    },
+    openrouter: {
+      defaultModel: 'anthropic/claude-opus-4.7',
+      keyPlaceholder: 'sk-or-...',
+      keyPattern: /^sk-or-/,
+      url: 'https://openrouter.ai/api/v1/chat/completions',
+      vision: true,
+      models: [
+        { id: 'anthropic/claude-opus-4.7',   label: 'Claude Opus 4.7' },
+        { id: 'anthropic/claude-sonnet-4.6', label: 'Claude Sonnet 4.6' },
+        { id: 'anthropic/claude-haiku-4.5',  label: 'Claude Haiku 4.5' },
+        { id: 'openai/gpt-5',                label: 'GPT-5' },
+        { id: 'openai/gpt-5-mini',           label: 'GPT-5 mini' },
+        { id: 'moonshot/kimi-k2',            label: 'Kimi K2' },
+        { id: 'deepseek/deepseek-chat',      label: 'DeepSeek' }
+      ]
+    },
+    ollama: {
+      defaultModel: 'llama3.2',
+      keyPlaceholder: 'http://localhost:11434',
+      keyPattern: /./,
+      url: 'http://localhost:11434/api/chat',
+      vision: false,
+      models: [
+        { id: 'llama3.2',  label: 'Llama 3.2' },
+        { id: 'llama3.1',  label: 'Llama 3.1' },
+        { id: 'qwen2.5',   label: 'Qwen 2.5' },
+        { id: 'mistral',   label: 'Mistral' }
+      ]
+    }
+  };
+
+  const EXAMPLES = {
+    de: [
+      { cat: 'Migration', points: [
+        'Asylbewerber bekommen mehr Geld als deutsche Rentner.',
+        '4,5 Prozent vom Bundeshaushalt gehen für Bürgergeld an Ausländer.',
+        'Die meisten Migranten sind junge Männer im wehrfähigen Alter.',
+        'Gruppenvergewaltigungen werden überwiegend von Nichtdeutschen begangen.',
+        'Wir können nicht mehr aufnehmen, das System bricht zusammen.'
+      ] },
+      { cat: 'Heizung & Energie', points: [
+        'Habecks 65-Prozent-Regel war Wärmepumpen-Pflicht für alle.',
+        'Die Förderung wird einfach stumpf auf die Preise aufgeschlagen.',
+        'Mein Haus eignet sich nicht für eine Wärmepumpe, das ist Sonderfall.',
+        'Eine Wärmepumpe kostet 100.000 Euro und amortisiert sich nie.',
+        'Der Spanien-Blackout beweist dass Erneuerbare nicht funktionieren.',
+        'Der Atomausstieg war der größte Fehler der Energiewende.'
+      ] },
+      { cat: 'Bürgergeld & Arbeit', points: [
+        'Wer arbeiten geht ist der Dumme, Bürgergeld lohnt sich mehr.',
+        'Totalverweigerer kassieren 600 Euro im Monat fürs Nichtstun.',
+        'Bürgergeld ist die größte Position im Bundeshaushalt.',
+        'Der Achtstundentag muss weg, das ist nicht mehr zeitgemäß.'
+      ] },
+      { cat: 'AfD & Brandmauer', points: [
+        'Die AfD ist die einzige Partei, die noch das Volk vertritt.',
+        'Die Brandmauer ist undemokratisch, AfD-Wähler werden ausgeschlossen.',
+        'Die Politik treibt die Wähler zur AfD, das ist gewollt.',
+        'Höcke wurde nur missverstanden, das war kein Nazi-Vokabular.'
+      ] },
+      { cat: 'Russland & Ukraine', points: [
+        'Ohne NATO-Osterweiterung gäbe es keinen Krieg.',
+        'Sanktionen treffen nur uns selbst, Russland profitiert.',
+        'Selenskyj ist ein korrupter Kokainist.',
+        'Putin musste so handeln zum Schutz Russlands.',
+        'Die Ukraine ist auch keine Demokratie, alles geschönt.'
+      ] },
+      { cat: 'Klima', points: [
+        'Deutschland macht 2 Prozent vom weltweiten CO2, was bringt das?',
+        'CO2 ist Pflanzennahrung, kein Problem.',
+        'Klimawandel hat es immer gegeben, ist natürlich.',
+        'Klimaschutz ist Mittelschichts-Hobby auf Kosten der Armen.'
+      ] },
+      { cat: 'Eliten & Verschwörung', points: [
+        'Schwab und das WEF wollen die Bevölkerung kontrollieren.',
+        'Soros finanziert die Lügenpresse und NGOs.',
+        'Bill Gates plant uns durch Impfungen zu reduzieren.',
+        'Politiker bereichern sich, das System ist durchkorrupt.'
+      ] },
+      { cat: 'EU', points: [
+        'Die EU diktiert uns alles, raus da.',
+        'Brüssel ist undemokratisch, keiner hat das gewählt.',
+        'Wir zahlen für andere Länder, ohne was dafür zu kriegen.'
+      ] },
+      { cat: 'Gender & Familie', points: [
+        'Es gibt nur zwei Geschlechter, alles andere ist Ideologie.',
+        'Gendern zerstört die deutsche Sprache.',
+        'Frühsexualisierung wird Kindern aufgezwungen.'
+      ] },
+      { cat: 'Corona & Wissenschaft', points: [
+        'Das RKI hat Lockdown und Maßnahmen gefälscht.',
+        'Die Impfungen waren gefährlicher als Corona selbst.',
+        'Die Übersterblichkeit kam von der Impfung, nicht vom Virus.'
+      ] }
+    ],
+    en: [
+      { cat: 'Migration', points: [
+        'Asylum seekers get more money than German pensioners.',
+        'Most migrants are young military-age men.',
+        'We cannot take in any more, the system is collapsing.',
+        'Group sex offences are mostly committed by non-Germans.'
+      ] },
+      { cat: 'Heating & Energy', points: [
+        'The 65 percent renewable rule was a heat-pump mandate for everyone.',
+        'Subsidies just get added to the price by manufacturers.',
+        'My house is not suitable for a heat pump, that is a special case.',
+        'The Spanish blackout proves renewables do not work.',
+        'Phasing out nuclear was the biggest energy mistake.'
+      ] },
+      { cat: 'Welfare & Work', points: [
+        'Working is for suckers, welfare pays better.',
+        'Total refusers get 600 euros a month for doing nothing.',
+        'The eight-hour day is outdated and has to go.'
+      ] },
+      { cat: 'Far-right & Firewall', points: [
+        'The AfD is the only party that still represents the people.',
+        'The firewall against the AfD is undemocratic.',
+        'Politicians push voters to the far right, it is intentional.'
+      ] },
+      { cat: 'Russia & Ukraine', points: [
+        'Without NATO eastward expansion there would be no war.',
+        'Sanctions only hurt us, Russia profits.',
+        'Zelensky is a corrupt coke-addict.',
+        'Putin had to act to protect Russia.'
+      ] },
+      { cat: 'Climate', points: [
+        'Germany is 2 percent of global CO2, what is the point?',
+        'CO2 is plant food, not a problem.',
+        'Climate has always changed, it is natural.'
+      ] },
+      { cat: 'Elites & Conspiracy', points: [
+        'Schwab and the WEF want to control the population.',
+        'Soros funds the mainstream press and NGOs.',
+        'Politicians enrich themselves, the system is corrupt through and through.'
+      ] },
+      { cat: 'EU', points: [
+        'The EU dictates everything, we should leave.',
+        'Brussels is undemocratic, nobody elected this.',
+        'We pay for other countries and get nothing back.'
+      ] },
+      { cat: 'Gender & Family', points: [
+        'There are only two sexes, anything else is ideology.',
+        'Gender-inclusive language is destroying English.',
+        'Children are being sexualised too early through gender politics.'
+      ] }
+    ]
+  };
+
+  const I18N = {
+    de: {
+      'header.history': 'Verlauf', 'header.new': 'Neuer Chat', 'header.settings': 'Einstellungen',
+      'theme.light': 'Light Mode', 'theme.dark': 'Dark Mode',
+      'sidebar.history': 'Verlauf', 'sidebar.newChat': 'Neuer Chat',
+      'sidebar.empty': 'Hier landen deine Conversations. Erste schreiben, dann erscheint sie.',
+      'sidebar.privacy': 'Lokal gespeichert. Wir sehen nichts.',
+      'right.title': 'Aufbau', 'right.sections': 'Sections',
+      'right.noSections': 'Aktuelle Antwort hat keine Section-Struktur. Probier den Ton "Taktik entblößen" oder "Gungho".',
+      'right.welcomeHint': 'Hier zeigt sich der Aufbau jeder Touché-Antwort. Sections kommen aus Markdown-Headern (## ...).',
+      'banner.needKey': 'Du brauchst einen API-Key. Setup in 60 Sekunden.', 'banner.setup': 'Einrichten',
+      'welcome.titleA': 'Gegen Desinformation.', 'welcome.titleB': 'Mit Quellen.',
+      'examples.button': 'Typische Behauptungen',
+      'examples.label': 'Typische Behauptungen',
+      'welcome.setup': 'Setup-Anleitung', 'welcome.privacy': 'Privacy', 'welcome.code': 'Code',
+      'comp.for': 'Für', 'comp.tone': 'im Ton', 'comp.placeholder': 'Comment einfügen, Bild droppen oder Thema beschreiben...',
+      'comp.busy': 'Touché antwortet...', 'comp.attach': 'Bild anhängen',
+      'comp.imgTooLarge': 'Bild zu groß (max 5 MB)', 'comp.turn': 'Turn', 'comp.turns': 'Turns',
+      'comp.noKey': 'Kein API-Key, Settings öffnen',
+      'comp.reco': 'Vorschlag', 'comp.recoReason': 'Gegner schrieb kurz, Audience unklar → kurz + sachlich halten',
+      'platform.reddit': 'Reddit', 'platform.twitter': 'X/Twitter', 'platform.spoken': 'Mündlich', 'platform.whatsapp': 'WhatsApp',
+      'tone.factual': 'Sachlich', 'tone.snarky': 'Hämisch', 'tone.gungho': 'Gungho',
+      'tone.deescalate': 'De-eskalierend', 'tone.factcheck': 'Fact-Check pur', 'tone.expose': 'Taktik entblößen', 'tone.contradiction': 'Widerspruchsfalle',
+      'comp.cat': 'Kategorie', 'comp.hard': 'Härte', 'comp.view': 'Auswahl', 'set.cat': 'Kategorie', 'set.hard': 'Härte',
+      'cat.fakten': 'Fakten', 'cat.rhetorik': 'Rhetorik', 'cat.logik': 'Logik',
+      'hard.ruhig': 'Ruhig', 'hard.direkt': 'Direkt', 'hard.gungho': 'Gungho',
+      'msg.copyReddit': 'Reddit (Markdown)', 'msg.copyPlain': 'Plain Text',
+      'msg.copiedReddit': '✓ Reddit', 'msg.copiedPlain': '✓ Plain',
+      'msg.sources': 'Quellen', 'msg.analysisTitle': 'Analyse des Gegner-Kommentars',
+      'msg.analysisHint': '(nicht zum Posten)',
+      'trust.checking': 'Prüfe Quellen ...', 'trust.pass': 'Geprüft, deckt sich mit den Quellen',
+      'trust.fail': 'Vorsicht, nicht durch die Quellen gedeckt', 'trust.unsure': 'Quellenlage unklar',
+      'set.critic': 'Konter-Prüfer (Eigentor- und Quellen-Check)', 'set.criticHelp': 'Zweiter Durchgang nach jeder Antwort: prüft jede Zahl gegen die Belege, fängt Eigentore, schärft die Stimme. Kostet einen zusätzlichen API-Call pro Antwort.',
+      'set.tab.general': 'Allgemein', 'set.tab.setup': 'Setup', 'set.tab.privacy': 'Privacy',
+      'set.provider': 'Provider', 'set.model': 'Modell', 'set.customOpt': 'Eigenes Modell eingeben...',
+      'set.customPh': 'exakter Modellname', 'set.apiKey': 'API-Key', 'set.show': 'zeigen', 'set.hide': 'verbergen',
+      'set.test': 'Verbindung testen', 'set.testing': 'teste...', 'set.testOk': '✓ Verbunden', 'set.testReceived': 'Antwort erhalten',
+      'set.platform': 'Plattform', 'set.tone': 'Ton',
+      'set.export': 'Conversation-History exportieren (JSON)', 'set.clear': 'Alle lokalen Daten löschen',
+      'set.clearConfirm': 'Alle Settings, Conversations und API-Key löschen?',
+      'set.deleteConfConfirm': 'Diese Conversation löschen?', 'set.save': 'Speichern und schließen',
+      'set.voice.label': 'Voice-Sample (Markdown)', 'set.voice.help': 'Optional: Schreib oder lade einen Auszug deines Schreibstils. Touché imitiert Rhythmus, Wortwahl und Eigenheiten. Akzeptiert .md / .txt.',
+      'set.voice.upload': 'Datei laden', 'set.voice.clear': 'Leeren', 'set.voice.placeholder': '## Mein Stil\n\nKurze Absätze. Punkt zuerst. Keine Floskeln. Beispiel:\n\n[hier ein paar Sätze deines eigenen Schreibens einfügen]',
+      'set.voice.active': 'Voice-Sample aktiv ({n} Zeichen)', 'set.voice.none': 'Kein Voice-Sample. Touché nutzt Default-Anti-KI-Regeln.',
+      'onb.intro': 'Touché braucht einen API-Key von einem KI-Anbieter. Du wählst, du zahlst, du behältst die Kontrolle.',
+      'onb.recommended': 'empfohlen',
+      'onb.anthropic.desc': 'Beste Counter-Qualität. ~$0.01 pro Counter mit Sonnet.',
+      'onb.openai.desc': 'Solide Alternative. ~$0.01 pro Counter.',
+      'onb.moonshot.desc': 'Günstigste Option. ~$0.001 pro Counter.',
+      'onb.getKey': 'Key holen →', 'onb.continue': 'Weiter zu Provider-Auswahl',
+      'priv.head': 'So funktioniert Privacy bei Touché:',
+      'priv.1': 'Dein API-Key wird nur in deinem Browser gespeichert (localStorage).',
+      'priv.2': 'Dein Counter-Text geht direkt von deinem Browser zu deinem Provider.',
+      'priv.3': 'Touché sieht beides nie. Wir loggen nichts.',
+      'priv.4': 'Dein Provider (Anthropic, OpenAI, etc.) sieht deine Counter, das ist deren Job. Wir nicht.',
+      'priv.foot': 'Quellcode öffentlich auf GitHub. Keine Cookies, keine Tracker, kein Analytics.'
+    },
+    en: {
+      'header.history': 'History', 'header.new': 'New chat', 'header.settings': 'Settings',
+      'theme.light': 'Light mode', 'theme.dark': 'Dark mode',
+      'sidebar.history': 'History', 'sidebar.newChat': 'New chat',
+      'sidebar.empty': 'Your conversations land here. Write the first one and it shows up.',
+      'sidebar.privacy': 'Stored locally. We see nothing.',
+      'right.title': 'Structure', 'right.sections': 'sections',
+      'right.noSections': 'Current reply has no section structure. Try the tone "Expose tactic" or "Gung-ho".',
+      'right.welcomeHint': 'Shows the structure of every Touché reply. Sections come from Markdown headers (## ...).',
+      'banner.needKey': 'You need an API key. Setup in 60 seconds.', 'banner.setup': 'Set up',
+      'welcome.titleA': 'Against disinformation.', 'welcome.titleB': 'With sources.',
+      'examples.button': 'Typical claims',
+      'examples.label': 'Typical claims',
+      'welcome.setup': 'Setup guide', 'welcome.privacy': 'Privacy', 'welcome.code': 'Code',
+      'comp.for': 'For', 'comp.tone': 'in tone', 'comp.placeholder': 'Paste a comment, drop an image, or describe a topic...',
+      'comp.busy': 'Touché is replying...', 'comp.attach': 'Attach image',
+      'comp.imgTooLarge': 'Image too large (max 5 MB)', 'comp.turn': 'turn', 'comp.turns': 'turns',
+      'comp.noKey': 'No API key, open Settings',
+      'comp.reco': 'Suggestion', 'comp.recoReason': 'Opponent wrote short, audience unclear → keep it short and factual',
+      'platform.reddit': 'Reddit', 'platform.twitter': 'X/Twitter', 'platform.spoken': 'Spoken', 'platform.whatsapp': 'WhatsApp',
+      'tone.factual': 'Factual', 'tone.snarky': 'Snarky', 'tone.gungho': 'Gung-ho',
+      'tone.deescalate': 'De-escalating', 'tone.factcheck': 'Fact-check only', 'tone.expose': 'Expose tactic', 'tone.contradiction': 'Contradiction trap',
+      'comp.cat': 'Category', 'comp.hard': 'Hardness', 'comp.view': 'Selector', 'set.cat': 'Category', 'set.hard': 'Hardness',
+      'cat.fakten': 'Facts', 'cat.rhetorik': 'Rhetoric', 'cat.logik': 'Logic',
+      'hard.ruhig': 'Calm', 'hard.direkt': 'Direct', 'hard.gungho': 'Gungho',
+      'msg.copyReddit': 'Reddit (markdown)', 'msg.copyPlain': 'Plain text',
+      'msg.copiedReddit': '✓ Reddit', 'msg.copiedPlain': '✓ Plain',
+      'msg.sources': 'Sources', 'msg.analysisTitle': "Analysis of the opponent's comment",
+      'msg.analysisHint': '(not for posting)',
+      'trust.checking': 'Checking sources ...', 'trust.pass': 'Verified, matches the sources',
+      'trust.fail': 'Caution, not covered by the sources', 'trust.unsure': 'Source coverage unclear',
+      'set.critic': 'Counter-checker (own-goal and source check)', 'set.criticHelp': 'A second pass after every answer: checks every number against the evidence, catches own-goals, sharpens the voice. Costs one extra API call per answer.',
+      'set.tab.general': 'General', 'set.tab.setup': 'Setup', 'set.tab.privacy': 'Privacy',
+      'set.provider': 'Provider', 'set.model': 'Model', 'set.customOpt': 'Enter custom model...',
+      'set.customPh': 'exact model name', 'set.apiKey': 'API key', 'set.show': 'show', 'set.hide': 'hide',
+      'set.test': 'Test connection', 'set.testing': 'testing...', 'set.testOk': '✓ Connected', 'set.testReceived': 'Reply received',
+      'set.platform': 'Platform', 'set.tone': 'Tone',
+      'set.export': 'Export conversation history (JSON)', 'set.clear': 'Delete all local data',
+      'set.clearConfirm': 'Delete all settings, conversations and API key?',
+      'set.deleteConfConfirm': 'Delete this conversation?', 'set.save': 'Save and close',
+      'set.voice.label': 'Voice sample (Markdown)', 'set.voice.help': 'Optional: write or upload a sample of your writing voice. Touché mimics rhythm, vocabulary and quirks. Accepts .md / .txt.',
+      'set.voice.upload': 'Upload file', 'set.voice.clear': 'Clear', 'set.voice.placeholder': '## My voice\n\nShort paragraphs. Point first. No filler. Example:\n\n[paste a few sentences of your own writing here]',
+      'set.voice.active': 'Voice sample active ({n} chars)', 'set.voice.none': 'No voice sample. Touché uses default anti-AI rules.',
+      'onb.intro': 'Touché needs an API key from an AI provider. You choose, you pay, you stay in control.',
+      'onb.recommended': 'recommended',
+      'onb.anthropic.desc': 'Best counter quality. ~$0.01 per counter with Sonnet.',
+      'onb.openai.desc': 'Solid alternative. ~$0.01 per counter.',
+      'onb.moonshot.desc': 'Cheapest option. ~$0.001 per counter.',
+      'onb.getKey': 'Get key →', 'onb.continue': 'Continue to provider selection',
+      'priv.head': 'How privacy works at Touché:',
+      'priv.1': 'Your API key is stored only in your browser (localStorage).',
+      'priv.2': 'Your counter text goes directly from your browser to your provider.',
+      'priv.3': 'Touché sees neither. We log nothing.',
+      'priv.4': "Your provider (Anthropic, OpenAI, etc.) sees your counters, that's their job. We don't.",
+      'priv.foot': 'Source code public on GitHub. No cookies, no trackers, no analytics.'
+    }
+  };
+
+  function boldclaimApp() {
+    return {
+      // State
+      messages: [],
+      input: '',
+      pendingImages: [],
+      busy: false,
+      currentAbort: null,
+      dragOver: false,
+      lightboxImg: null,
+      selectedExampleCat: null,
+      settingsOpen: false,
+      topicsVisible: false,
+      settingsTab: 'general',
+      sidebarOpen: localStorage.getItem('boldclaim_sidebar_open') === 'true',
+      showKey: false,
+      testing: false,
+      testStatus: '',
+      testStatusOk: null,
+      archive: [],
+      activeConvId: null,
+      dark: document.documentElement.classList.contains('dark'),
+      customMode: false,
+      activeSection: null,
+      // Advisory style suggestion derived from the opponent comment + platform.
+      // Null = no suggestion yet. recoApplied flips true once the user clicks the chip.
+      recoStyle: null,
+      // Becomes true once the user manually touches the 3x3 picker, so the suggestion never stomps it.
+      userOverrodePicker: false,
+
+      settings: {
+        provider: 'anthropic',
+        model: '',
+        apiKey: '',
+        platform: 'Reddit',
+        category: 'Fakten',
+        hardness: 'Direkt',
+        selectorStyle: 'pills',
+        lang: 'de',
+        voiceSample: '',
+        critic: true
+      },
+
+      // Init
+      init() {
+        const saved = localStorage.getItem('boldclaim_settings_v2');
+        if (saved) {
+          try { Object.assign(this.settings, JSON.parse(saved)); } catch (e) {}
+        }
+        if (!this.settings.model) this.settings.model = this.defaultModel(this.settings.provider);
+        this.customMode = !this.modelsForProvider().some(m => m.id === this.settings.model);
+        this.loadArchive();
+        const session = localStorage.getItem('boldclaim_session_v2');
+        if (session) {
+          try {
+            const s = JSON.parse(session);
+            if (s.messages && Date.now() - s.ts < 24 * 3600 * 1000) {
+              this.messages = s.messages;
+              this.activeConvId = s.id || null;
+            }
+          } catch (e) {}
+        }
+        window.addEventListener('resize', () => {
+          if (window.innerWidth < 1024 && this.sidebarOpen) this.sidebarOpen = false;
+        });
+        // persist sidebar preference
+        this.$watch('sidebarOpen', v => {
+          localStorage.setItem('boldclaim_sidebar_open', v ? 'true' : 'false');
+        });
+        // keyboard shortcut: Cmd/Ctrl + B toggles sidebar
+        window.addEventListener('keydown', (e) => {
+          if ((e.metaKey || e.ctrlKey) && (e.key === 'b' || e.key === 'B')) {
+            const tag = document.activeElement?.tagName;
+            if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+            e.preventDefault();
+            this.sidebarOpen = !this.sidebarOpen;
+          }
+        });
+      },
+
+      loadArchive() {
+        try {
+          this.archive = JSON.parse(localStorage.getItem('boldclaim_archive_v2') || '[]');
+        } catch (e) { this.archive = []; }
+      },
+
+      // Computed
+      hasKey() { return this.settings.apiKey && this.settings.apiKey.length > 8; },
+      canSend() {
+        if (!(this.input.trim() || this.pendingImages.length)) return false;
+        if (this.busy) return false;
+        return this.hasKey();
+      },
+      countUserMsgs() { return this.messages.filter(m => m.role === 'user').length; },
+      modelLabel() {
+        if (this.hasKey()) return `${this.settings.provider} · ${this.settings.model || this.defaultModel(this.settings.provider)}`;
+        return this.t('comp.noKey');
+      },
+      defaultModel(p) { return PROVIDERS[p]?.defaultModel || ''; },
+      keyPlaceholder(p) { return PROVIDERS[p]?.keyPlaceholder || ''; },
+      modelsForProvider() { return PROVIDERS[this.settings.provider]?.models || []; },
+      onModelSelect(value) {
+        if (value === '__custom__') {
+          this.customMode = true;
+          this.settings.model = '';
+        } else {
+          this.customMode = false;
+          this.settings.model = value;
+        }
+      },
+      testStatusColor() {
+        if (this.testStatusOk === true) return 'text-emerald-600 dark:text-emerald-400';
+        if (this.testStatusOk === false) return 'text-red-600 dark:text-red-400';
+        return 'text-zinc-500';
+      },
+
+      // i18n + examples
+      get examples() { return EXAMPLES[this.settings.lang] || EXAMPLES.de; },
+      t(key) {
+        const dict = I18N[this.settings.lang] || I18N.de;
+        return dict[key] || I18N.de[key] || key;
+      },
+      setLang(lang) {
+        this.settings.lang = lang;
+        this.saveSettings();
+        document.documentElement.lang = lang;
+      },
+
+      // Theme
+      toggleTheme() {
+        this.dark = !this.dark;
+        document.documentElement.classList.toggle('dark', this.dark);
+        localStorage.setItem('boldclaim_theme_v2', this.dark ? 'dark' : 'light');
+      },
+
+      // Settings
+      onProviderChange() {
+        this.settings.model = this.defaultModel(this.settings.provider);
+        this.customMode = false;
+        this.testStatus = '';
+        this.testStatusOk = null;
+      },
+      saveSettings() {
+        localStorage.setItem('boldclaim_settings_v2', JSON.stringify(this.settings));
+      },
+      async testKey() {
+        this.testing = true;
+        this.testStatus = '';
+        this.testStatusOk = null;
+        try {
+          const reply = await this.callProvider({
+            systemPrompt: 'Antworte nur mit dem Wort: ok',
+            messages: [{ role: 'user', content: 'test' }],
+            stream: false
+          });
+          if (reply && reply.toLowerCase().includes('ok')) {
+            this.testStatus = this.t('set.testOk');
+            this.testStatusOk = true;
+          } else {
+            this.testStatus = this.t('set.testReceived');
+            this.testStatusOk = true;
+          }
+        } catch (e) {
+          this.testStatus = e.message.slice(0, 80);
+          this.testStatusOk = false;
+        } finally {
+          this.testing = false;
+        }
+      },
+
+      // Compose
+      useExample(text) {
+        this.input = text;
+        this.selectedExampleCat = null;
+        this.$nextTick(() => {
+          const ta = document.querySelector('textarea');
+          if (ta) ta.focus();
+        });
+      },
+      currentExamplePoints() {
+        if (!this.selectedExampleCat) return [];
+        const group = this.examples.find(g => g.cat === this.selectedExampleCat);
+        return group ? group.points : [];
+      },
+      handlePaste(e) {
+        const items = e.clipboardData?.items;
+        if (!items) return;
+        for (const item of items) {
+          if (item.type?.startsWith('image/')) {
+            e.preventDefault();
+            const file = item.getAsFile();
+            if (file) this.addImage(file);
+          }
+        }
+        // Text paste lands in this.input after the native input event; recompute the suggestion next tick.
+        this.$nextTick(() => this.recommendStyle());
+      },
+      handleDrop(e) {
+        this.dragOver = false;
+        const files = e.dataTransfer?.files;
+        if (!files) return;
+        for (const f of files) {
+          if (f.type.startsWith('image/')) this.addImage(f);
+        }
+      },
+      handleFiles(e) {
+        for (const f of e.target.files || []) {
+          if (f.type.startsWith('image/')) this.addImage(f);
+        }
+        e.target.value = '';
+      },
+      loadVoiceSample(e) {
+        const file = e.target.files?.[0];
+        if (!file) return;
+        if (file.size > 200 * 1024) {
+          alert('Voice-Sample > 200KB, ist zu groß. Kürze auf prägnante Beispiele.');
+          e.target.value = '';
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = () => {
+          this.settings.voiceSample = reader.result;
+          this.saveSettings();
+        };
+        reader.readAsText(file);
+        e.target.value = '';
+      },
+      addImage(file) {
+        if (this.pendingImages.length >= 5) return;
+        if (file.size > 5 * 1024 * 1024) {
+          alert(this.t('comp.imgTooLarge'));
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = () => this.pendingImages.push(reader.result);
+        reader.readAsDataURL(file);
+      },
+
+      // Send
+      async send() {
+        if (!this.canSend()) return;
+
+        const userMsg = {
+          id: crypto.randomUUID(),
+          role: 'user',
+          content: this.input.trim(),
+          images: [...this.pendingImages],
+          ts: Date.now()
+        };
+        if (this.messages.length === 0) this.activeConvId = crypto.randomUUID();
+        this.messages.push(userMsg);
+        this.input = '';
+        this.pendingImages = [];
+        // Clear the advisory suggestion + override flag for the next comment.
+        this.recoStyle = null;
+        this.userOverrodePicker = false;
+        this.persistSession();
+        this.scrollDown();
+
+        // Pinecone-Context (only if WORKER_URL set)
+        let context = { docs: [], systemPrompt: this.fallbackSystemPrompt() };
+        if (WORKER_URL) {
+          try {
+            const ctxRes = await fetch(WORKER_URL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                query: this.queryFromHistory(),
+                topK: 5,
+                platform: this.settings.platform,
+                tone: this.settings.category + ' / ' + this.settings.hardness,
+                lang: this.settings.lang
+              })
+            });
+            if (ctxRes.ok) {
+              const w = await ctxRes.json();
+              context.docs = w.docs || [];
+              context.sourceUrls = w.sourceUrls || [];
+              // Knowledge from Pinecone, but ALWAYS keep our voice+tactics prompt
+              // (do not let the worker's basic prompt overwrite it).
+              // Live method/tactics from Pinecone (worker), with the built-in block as fallback.
+              const knowledge = this.knowledgeBlock(context.docs);
+              context.systemPrompt = this.fallbackSystemPrompt(w.method) + (knowledge ? '\n\n' + knowledge : '');
+            }
+          } catch (e) { /* fallback */ }
+        }
+
+        const providerMessages = this.buildProviderMessages();
+        this.activeSection = null;
+        const assistantMsg = {
+          id: crypto.randomUUID(),
+          role: 'assistant',
+          content: '',
+          streaming: true,
+          sources: context.docs || [],
+          sourceUrls: context.sourceUrls || [],
+          ts: Date.now()
+        };
+        this.messages.push(assistantMsg);
+        // Reactive proxy reference (Alpine wraps array elements lazily; mutating the local
+        // pre-push object does NOT trigger reactivity, so we re-fetch via index)
+        const idx = this.messages.length - 1;
+        this.busy = true;
+        this.scrollDown();
+
+        try {
+          await this.callProvider({
+            systemPrompt: context.systemPrompt,
+            messages: providerMessages,
+            stream: true,
+            onDelta: (text) => {
+              this.messages[idx].content += text;
+              this.scrollDown();
+            }
+          });
+        } catch (e) {
+          this.messages[idx].error = e.message;
+        } finally {
+          this.messages[idx].streaming = false;
+          if (!this.messages[idx].error) this.messages[idx].content = this.deAI(this.messages[idx].content);
+          this.busy = false;
+          this.currentAbort = null;
+          this.persistSession();
+          // Critic pass refines the answer (own-goal/inversion, grounding, voice) before the trust check verifies it.
+          // Only with retrieved evidence: without it the grounding rule would strip correct numbers from a fallback answer.
+          if (this.settings.critic && !this.messages[idx].error && this.messages[idx].content
+              && this.messages[idx].sources && this.messages[idx].sources.length) {
+            await this.criticPass(idx);
+          }
+          // Trust check runs AFTER the answer is rendered, so the user never waits for it.
+          // Only when the answer succeeded and the message actually has sources to check against.
+          const am = this.messages[idx];
+          if (am && !am.error && am.content && am.sources && am.sources.length) {
+            await this.runTrustCheck(idx);
+          }
+        }
+      },
+
+      // Critic pass: ONE refine call that approximates the skill's stress-test + red-team gate.
+      // Catches own-goals/inversion, enforces grounding (every number must be in the evidence),
+      // strips strawmen and screenshot-able concessions, cleans the voice. Refines in place.
+      // BYOK, runs in the user's browser via their own key, never throws.
+      async criticPass(idx) {
+        const msg = this.messages[idx];
+        if (!msg || msg.error || !msg.content) return;
+        const msgId = msg.id;
+        const isDE = this.settings.lang === 'de';
+        const comment = this.queryFromHistory();
+        const evidence = (msg.sources || []).map((s, i) => {
+          let line = '[' + (i + 1) + '] ' + (s.source ? s.source + ': ' : '') + (s.snippet || '');
+          // If this doc was armored with a pre-tested rebuttal answer, hand it to the critic so it
+          // defends with the proven line instead of improvising (and so FLANKE does not kill the point).
+          if (s.rebuttal_answer) {
+            line += '\n    ' + (isDE
+              ? 'BILLIGSTE GEGEN-REPLIK: ' + (s.rebuttal || '(unbenannt)') + '\n    GETESTETE ANTWORT: ' + s.rebuttal_answer
+              : 'CHEAPEST COMEBACK: ' + (s.rebuttal || '(unnamed)') + '\n    TESTED ANSWER: ' + s.rebuttal_answer);
+          }
+          return line;
+        }).join('\n') || (isDE ? '(keine Belege abgerufen)' : '(no evidence retrieved)');
+        // Live-source fetch: pull the top source's live page (server-side via the worker) so the
+        // critic can reconcile the draft's numbers against the current page and catch stale figures.
+        let live = '';
+        if (msg.sourceUrls && msg.sourceUrls.length && WORKER_URL) {
+          try {
+            const fr = await fetch(WORKER_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'fetchSource', url: msg.sourceUrls[0] }) });
+            if (fr.ok) { const fd = await fr.json(); live = (fd.text || '').slice(0, 3000); }
+          } catch (e) { /* live-fetch is non-fatal */ }
+        }
+        const sys = isDE
+          ? `Du bist ein gnadenloser Konter-Prüfer für Touché. Du verbesserst den ENTWURF, du lobst nicht und erklärst deine Änderungen nicht. Gib NUR den finalen Konter zurück, im exakt gleichen Aufbau wie der Entwurf (sind ein Analyse-Teil und ein ~~~REPLY~~~-Marker vorhanden, behalte sie).
+Prüfe und fixe in dieser Reihenfolge:
+1. ERFINDUNG/GROUNDING: jede Zahl, jedes Datum, jede Quelle MUSS in den BELEGEN stehen. Aus dem Gedächtnis gerundete oder erfundene Zahlen raus oder durch belegte ersetzen. Fehlt ein Beleg, Behauptung schwächen bis sie gedeckt ist, nicht raten. Liegt eine LIVE-QUELLE bei, gleiche jede Zahl damit ab und korrigiere veraltete Werte auf den Live-Stand.
+2. EIGENTOR/INVERSION: jede Statistik invertiert prüfen. Hilft sie dem Gegner wenn er sie zurückwirft (38% durch X heißt 62% durch Y), raus oder anders framen.
+3. STROHMANN: nur kontern was der Gegner WÖRTLICH gesagt hat.
+4. KONZESSION: kein Satz der als Gegner-Screenshot funktioniert, Kontext in den Satz bauen.
+5. STIMME: keine Gedankenstriche, keine Floskeln, Punkt zuerst, max 4-5 Sätze, nicht moralisieren.
+6. FLANKE: Nenne die billigste Gegen-Replik auf diesen Konter. Beantworte sie in einem Halbsatz. Ist die Replik wahr und stark und du kannst sie nicht mit der Aktenlage schlagen → STREICHE den Punkt, statt ihn schwach zu verteidigen. Liegt zu einem Beleg eine GETESTETE ANTWORT bei, nutze sie zum Verteidigen statt zu improvisieren.
+7. FRAGILE MUSTER: Prüfe gegen aggregate-vs-per-capita, whataboutism, survivorship, cherry-picked-timeframe, appeal-to-future-tech, naked-aggregate-quote. Trifft einer zu, ist der Punkt im Zweifel raus.
+Ist der Entwurf schon sauber, gib ihn unverändert zurück.`
+          : `You are a merciless counter-checker for Touché. You IMPROVE the draft, you do not praise and do not explain your changes. Return ONLY the final counter, in the exact same structure as the draft (if an analysis part and a ~~~REPLY~~~ marker are present, keep them).
+Check and fix, in order:
+1. FABRICATION/GROUNDING: every number, date and source MUST appear in the EVIDENCE. Remove or replace memory-rounded or invented numbers with sourced ones. If a fact is missing, weaken the claim until it is covered, do not guess. If a LIVE SOURCE is attached, reconcile every number against it and correct stale values to the live figure.
+2. OWN-GOAL/INVERSION: check every statistic inverted. If it helps the opponent when quoted back (38% by X means 62% by Y), cut or reframe it.
+3. STRAWMAN: only counter what the opponent literally said.
+4. CONCESSION: no sentence that works as their screenshot, build the context into the sentence.
+5. VOICE: no em-dashes, no filler, point first, max 4-5 sentences, do not moralise.
+6. FLANK: Name the cheapest comeback to this counter. Answer it in half a sentence. If that comeback is true and strong and you cannot beat it with the record → CUT the point instead of defending it weakly. If a piece of evidence carries a TESTED ANSWER, use it to defend instead of improvising.
+7. FRAGILE PATTERNS: Check against aggregate-vs-per-capita, whataboutism, survivorship, cherry-picked-timeframe, appeal-to-future-tech, naked-aggregate-quote. If one applies, when in doubt the point is out.
+If the draft is already clean, return it unchanged.`;
+        const user = (isDE ? 'GEGNER-KOMMENTAR:\n' : 'OPPONENT COMMENT:\n') + comment +
+          '\n\n' + (isDE ? 'BELEGE:\n' : 'EVIDENCE:\n') + evidence +
+          (live ? '\n\n' + (isDE ? 'LIVE-QUELLE (frisch geladene Original-Seite, Auszug):\n' : 'LIVE SOURCE (freshly fetched original page, excerpt):\n') + live : '') +
+          '\n\n' + (isDE ? 'ENTWURF:\n' : 'DRAFT:\n') + msg.content;
+        try {
+          const refined = await this.callProvider({ systemPrompt: sys, messages: [{ role: 'user', content: user }], stream: false });
+          const cur = this.messages.findIndex(m => m.id === msgId);
+          if (cur === -1) return;
+          const clean = this.deAI(String(refined || '').trim());
+          if (clean && clean.length > 20) {
+            this.messages[cur].content = clean;
+            this.messages[cur].refined = true;
+          }
+        } catch (e) {
+          // critic failure is non-fatal: the original draft stands
+        } finally {
+          this.persistSession();
+        }
+      },
+
+      // BYOK trust check (source self-verification). Runs in the user's browser via their own
+      // provider key, never on a server. Sets messages[idx].trust to one of:
+      // 'checking' | 'pass' | 'fail' | 'unsure' | 'unknown'. Never throws; on any error the
+      // answer stands unchanged with trust 'unknown' (badge renders nothing).
+      async runTrustCheck(idx) {
+        const msg = this.messages[idx];
+        if (!msg || !msg.sources || !msg.sources.length) return;
+        // Guard: pin the message id so a newer message never receives a stale verdict.
+        const msgId = msg.id;
+        this.messages[idx].trust = 'checking';
+        try {
+          const answer = this.splitContent(msg.content || '').reply || msg.content || '';
+          const sourceText = msg.sources
+            .map((s, i) => {
+              const label = s.source ? (s.source + ': ') : '';
+              return '[' + (i + 1) + '] ' + label + (s.snippet || '');
+            })
+            .join('\n');
+          const verifySystem = 'Du bist ein strenger Faktenprüfer. Prüfe NUR, ob die folgende Antwort durch die angegebenen Quellen gedeckt ist und ihnen nicht widerspricht. Antworte mit GENAU einem Wort: ja, nein oder unklar.';
+          const verifyUser = 'ANTWORT:\n' + answer + '\n\nQUELLEN:\n' + sourceText;
+          const raw = await this.callProvider({
+            systemPrompt: verifySystem,
+            messages: [{ role: 'user', content: verifyUser }],
+            stream: false
+          });
+          // The message may have moved if the array changed; re-find it by id and bail if it is gone.
+          const curIdx = this.messages.findIndex(m => m.id === msgId);
+          if (curIdx === -1) return;
+          const first = String(raw || '').trim().toLowerCase().replace(/^[^a-zäöü]+/, '');
+          let verdict = 'unsure';
+          if (first.startsWith('ja')) verdict = 'pass';
+          else if (first.startsWith('nein')) verdict = 'fail';
+          this.messages[curIdx].trust = verdict;
+        } catch (e) {
+          const curIdx = this.messages.findIndex(m => m.id === msgId);
+          if (curIdx !== -1) this.messages[curIdx].trust = 'unknown';
+        } finally {
+          this.currentAbort = null;
+          this.persistSession();
+        }
+      },
+
+      cancel() {
+        if (this.currentAbort) this.currentAbort.abort();
+      },
+
+      queryFromHistory() {
+        const recentUser = this.messages
+          .filter(m => m.role === 'user')
+          .slice(-2)
+          .map(m => m.content)
+          .join(' ');
+        return recentUser.slice(0, 1000);
+      },
+
+      buildProviderMessages() {
+        const out = [];
+        const visionProvider = PROVIDERS[this.settings.provider]?.vision || false;
+        for (const m of this.messages) {
+          if (m.role === 'user') {
+            if (m.images?.length && visionProvider) {
+              if (this.settings.provider === 'anthropic') {
+                const content = [];
+                for (const img of m.images) {
+                  const [meta, data] = img.split(',');
+                  const mime = meta.match(/data:([^;]+)/)?.[1] || 'image/png';
+                  content.push({ type: 'image', source: { type: 'base64', media_type: mime, data } });
+                }
+                content.push({ type: 'text', text: m.content || '(siehe Bild)' });
+                out.push({ role: 'user', content });
+              } else if (this.settings.provider === 'openai' || this.settings.provider === 'openrouter') {
+                const content = [{ type: 'text', text: m.content || '(siehe Bild)' }];
+                for (const img of m.images) content.push({ type: 'image_url', image_url: { url: img } });
+                out.push({ role: 'user', content });
+              } else {
+                out.push({ role: 'user', content: m.content + '\n\n[Bild im Anhang, Provider unterstützt keine Vision]' });
+              }
+            } else {
+              out.push({ role: 'user', content: m.content });
+            }
+          } else if (m.role === 'assistant' && m.content && !m.error) {
+            out.push({ role: 'assistant', content: m.content });
+          }
+        }
+        return out;
+      },
+
+      cats: [['Fakten','cat.fakten'],['Rhetorik','cat.rhetorik'],['Logik','cat.logik']],
+      hards: [['Ruhig','hard.ruhig'],['Direkt','hard.direkt'],['Gungho','hard.gungho']],
+      modeStyleName() {
+        const m = {
+          'Fakten|Ruhig':'Sanfter Quellen-Konter','Fakten|Direkt':'Sachlicher Quellen-Konter','Fakten|Gungho':'Faktenbombe, keine Konzession',
+          'Rhetorik|Ruhig':'Trick freundlich benennen','Rhetorik|Direkt':'Taktik entblößen','Rhetorik|Gungho':'Taktik-Demontage, schonungslos',
+          'Logik|Ruhig':'Widerspruch sanft aufzeigen','Logik|Direkt':'Widerspruchsfalle','Logik|Gungho':'Widerspruchsfalle, vernichtend'
+        };
+        return m[(this.settings.category||'Fakten')+'|'+(this.settings.hardness||'Direkt')] || '';
+      },
+
+      // Map a recommended style key -> the matching {category, hardness} from cats/hards.
+      // Outcome-table mapping (frozen spec): one-line-and-leave / short-and-cold -> {Fakten,Direkt};
+      // collaborative -> {Fakten,Ruhig}; expose-the-tactic -> {Rhetorik,Gungho}.
+      recoStyleMap: {
+        'one-line-and-leave': { category: 'Fakten', hardness: 'Direkt' },
+        'short-and-cold':     { category: 'Fakten', hardness: 'Direkt' },
+        'collaborative':      { category: 'Fakten', hardness: 'Ruhig' },
+        'expose-the-tactic':  { category: 'Rhetorik', hardness: 'Gungho' }
+      },
+
+      // Advisory only. Runs on input/paste. Measures the opponent comment + reads the platform,
+      // then picks ONE recommended style. On uncertainty (audience unknown) it defaults to the
+      // SAFER, shorter / less-gungho style. Never auto-sends, never hides the manual 3x3 picker.
+      recommendStyle() {
+        const text = (this.input || '').trim();
+        if (!text) { this.recoStyle = null; return; }
+        const words = (text.match(/\S+/g) || []).length;
+        const platform = this.settings.platform;
+        // Reddit / X-Twitter are public, audience-bearing channels.
+        // WhatsApp / Mündlich are typically 1:1, audience unknown -> stay on the safer side.
+        const hasAudience = platform === 'Reddit' || platform === 'X/Twitter';
+        let style;
+        if (!hasAudience) {
+          // 1:1, no clear audience -> safer = short, sachlich, never gungho.
+          style = words <= 12 ? 'one-line-and-leave' : 'collaborative';
+        } else if (words <= 12) {
+          // Public + very short jab -> a clean one-line record-correction beats a wall of text.
+          style = 'one-line-and-leave';
+        } else if (words >= 60) {
+          // Public + long manipulative wall -> name the tactic for the lurkers.
+          style = 'expose-the-tactic';
+        } else {
+          // Public, medium length, intent unclear -> default to the SAFER short+cold lane.
+          style = 'short-and-cold';
+        }
+        this.recoStyle = style;
+      },
+
+      // Short human reason for the suggestion chip tooltip / secondary line.
+      recoReasonText() {
+        if (!this.recoStyle) return '';
+        const platform = this.settings.platform;
+        const hasAudience = platform === 'Reddit' || platform === 'X/Twitter';
+        const text = (this.input || '').trim();
+        const words = (text.match(/\S+/g) || []).length;
+        const isDE = this.settings.lang === 'de';
+        if (!hasAudience) {
+          return isDE
+            ? 'Vermutlich 1:1, Audience unklar → kurz + sachlich halten'
+            : 'Likely 1:1, audience unclear → keep it short and factual';
+        }
+        if (words <= 12) {
+          return isDE
+            ? 'Gegner schrieb kurz, eine saubere Korrektur reicht'
+            : 'Opponent wrote short, one clean correction is enough';
+        }
+        if (words >= 60) {
+          return isDE
+            ? 'Lange Wand mit Audience → Taktik für die Mitleser benennen'
+            : 'Long wall with an audience → name the tactic for the lurkers';
+        }
+        return isDE
+          ? 'Audience da, Absicht unklar → kurz + kühl, auf der sicheren Seite'
+          : 'Audience present, intent unclear → short and cold, the safe side';
+      },
+
+      // Localised label for a style key (used on the chip).
+      recoStyleLabel(style) {
+        const isDE = this.settings.lang === 'de';
+        const de = {
+          'one-line-and-leave': 'Einzeiler + raus',
+          'short-and-cold': 'Kurz + kühl',
+          'collaborative': 'Brücken bauen',
+          'expose-the-tactic': 'Taktik entblößen'
+        };
+        const en = {
+          'one-line-and-leave': 'One-liner, then leave',
+          'short-and-cold': 'Short and cold',
+          'collaborative': 'Collaborative',
+          'expose-the-tactic': 'Expose the tactic'
+        };
+        return (isDE ? de : en)[style] || style;
+      },
+
+      // Click handler: applies the recommended category+hardness, unless the user already
+      // overrode the picker manually (then the chip is informational only and does not stomp).
+      applyRecoStyle() {
+        if (!this.recoStyle) return;
+        const map = this.recoStyleMap[this.recoStyle];
+        if (!map) return;
+        this.settings.category = map.category;
+        this.settings.hardness = map.hardness;
+        this.saveSettings();
+      },
+
+      // Inject the retrieved Pinecone evidence with a hard grounding rule (the website's
+      // live-source discipline: only cite what is in the evidence, never from memory).
+      knowledgeBlock(docs) {
+        if (!docs || !docs.length) return '';
+        const isDE = this.settings.lang === 'de';
+        const head = isDE
+          ? 'BELEGE AUS DEINER WISSENSDATENBANK. Das ist deine EINZIGE Faktenbasis. Jede Zahl, jedes Datum und jede Quelle im Reply MUSS aus diesen Belegen stammen. Erfinde nichts, runde nichts aus dem Gedächtnis, zitiere keine Quelle die hier nicht steht. Fehlt ein nötiger Beleg, sag das statt zu raten.'
+          : 'EVIDENCE FROM YOUR KNOWLEDGE BASE. This is your ONLY factual basis. Every number, date and source in the reply MUST come from this evidence. Invent nothing, do not round from memory, do not cite a source not listed here. If a needed fact is missing, say so instead of guessing.';
+        const body = docs.map((d, i) => '[' + (i + 1) + '] (' + (d.source || 'Quelle') + ') ' + (d.snippet || '')).join('\n\n');
+        return head + '\n\n' + body;
+      },
+      fallbackSystemPrompt(methodOverride) {
+        const lang = this.settings.lang;
+        const isDE = lang === 'de';
+
+        // Length cap: the client knows the opponent comment, so size the answer to it.
+        // "One line in, one line out." Governs the shell length, never the kill-fact.
+        const lastUser = [...this.messages].reverse().find(m => m.role === 'user' && (m.content || '').trim());
+        const inputWords = lastUser ? (lastUser.content.trim().match(/\S+/g) || []).length : 0;
+        let lengthRule = '';
+        if (inputWords > 0) {
+          // Cap = max(input × 1.5, one full sentence ≈ 25 words). Length, not substance.
+          const cap = Math.max(Math.round(inputWords * 1.5), 25);
+          lengthRule = isDE
+            ? `LÄNGE: Der Gegner-Kommentar hat ${inputWords} Wörter. Halte die Antwort entsprechend kurz, höchstens etwa ${cap} Wörter im eigentlichen Reply (Teil 3). Eine Zeile auf eine Zeile. Das regelt die Länge, nicht die Substanz: die belegte Kernaussage bleibt drin, gestreckt wird nichts.`
+            : `LENGTH: The opponent comment has ${inputWords} words. Keep the answer correspondingly short, at most about ${cap} words in the actual reply (part 3). One line in, one line out. This governs length, not substance: the sourced kill-fact stays in, nothing gets padded.`;
+        }
+
+        // Hard language directive — first AND last line of system prompt for emphasis
+        const langTop = isDE
+          ? 'KRITISCH: Antworte AUSSCHLIESSLICH auf Deutsch. Auch Tactic-Namen, Section-Header und Quellen-Hinweise auf Deutsch (Quote-Mining bleibt Quote-Mining, aber kein Mix mit englischen Erklärsätzen).'
+          : 'CRITICAL: Respond ENTIRELY in English. Section headers, tactic names, and all prose must be English. Do not mix in German sentences. Tactic-names: Quote-Mining, Strawman, Whataboutism, Goalpost-shifting, "Bullshit"-stamping, Self-contradiction, Side-step, Cherry-picking, Discipline-wash, Peer-review-trump, Selective memory.';
+
+        const cat = this.settings.category || 'Fakten';
+        const hard = this.settings.hardness || 'Direkt';
+        const catMap = isDE ? {
+          'Fakten': `Greife die FAKTEN an: widerlege die Behauptung mit Quellen, für die stillen Mitleser. Bei MEHREREN diskreten Behauptungen eine Punktetafel (pro Behauptung Wahr/Teilweise/Irreführend/Falsch plus Quelle, Header = die verkürzte Behauptung). Bei EINER Behauptung ein flüssiger, belegter Konter. Keine generischen Header wie "Faktenkorrektur". Schreib wie ein Reddit-Kommentar, max 220 Wörter.`,
+          'Rhetorik': `Greife die RHETORIK an: benenne die manipulative Taktik des Gegners beim Namen. Section-Header IST der Taktik-Name pur ('## Quote-Mining', '## Whataboutism', '## Beweislastumkehr'), Fakten als Prosa darunter, Quellen als bare URLs am Ende. Max 3 Taktiken, max 150 Wörter, Mitleser-first: zeig WAS er tut, bevor du zeigst warum es falsch ist. Mögliche Taktiken: Quote-Mining, Cherry-Picking, Strohmann, Whataboutism, Goalpost-Verschiebung, Gish-Gallop, Sippenhaft-Logik, Disziplin-Wash, Peer-Review-Trumpf, Selektives Gedächtnis, Selbstwiderspruch.`,
+          'Logik': `Greife die LOGIK an (Widerspruchsfalle): finde ZWEI Aussagen (oder eine Aussage plus Forderung) des Gegners, die sich gegenseitig kassieren. Scheininteresse-Opener ("ah interessant"), seine zwei Positionen wortnah nebeneinander, die Zange als AUSSAGE ("eins von beidem geht nur"), eine harte Zahl als Nachschlag. Nur EIN Widerspruch, kein Sealioning, keine generischen Header, eine flüssige Antwort, max 120 Wörter. Wenn KEIN echter Widerspruch da ist, sag das und greif stattdessen die Fakten an, erfinde nie einen.`
+        } : {
+          'Fakten': `Attack the FACTS: refute the claim with sources, for the silent lurkers. For MULTIPLE discrete claims use a scorecard (per claim True/Partly/Misleading/False plus source, header = the shortened claim). For ONE claim a flowing, sourced counter. No generic headers like "Fact correction". Write like a Reddit comment, max 220 words.`,
+          'Rhetorik': `Attack the RHETORIC: name the opponent's manipulative tactic. The section header IS the tactic name only ('## Quote-Mining', '## Whataboutism', '## Burden-shift'), facts as prose underneath, sources as bare URLs at the end. Max 3 tactics, max 150 words, reader-first: show WHAT he does before why it is wrong. Possible tactics: Quote-Mining, Cherry-Picking, Strawman, Whataboutism, Goalpost-shifting, Gish-Gallop, Guilt-by-association, Discipline-wash, Peer-review-trump, Selective-memory, Self-contradiction.`,
+          'Logik': `Attack the LOGIC (contradiction trap): find TWO of the opponent's statements (or one claim plus a demand) that cancel each other out. Feigned-interest opener ("interesting"), his two positions side by side, the pincer as a STATEMENT ("you have to give up one of the two"), one hard number as a follow-up. Only ONE contradiction, no sealioning, no generic headers, one flowing reply, max 120 words. If there is NO real contradiction, say so and attack the facts instead, never invent one.`
+        };
+        const hardMap = isDE ? {
+          'Ruhig': `Härtegrad RUHIG: sanfter Ton, Emotion validieren wo nötig, Konzessionen erlaubt, Off-Ramp anbieten, Beziehung schützen. Für Menschen die du kennst oder gewinnen willst. Eine ruhige, flüssige Antwort.`,
+          'Direkt': `Härtegrad DIREKT: sachlich und klar, keine unnötigen Konzessionen, aber kein Angriff. Der Standard.`,
+          'Gungho': `Härtegrad GUNGHO: vernichtend, keine Konzessionen, nur Aktenlage gegen die Behauptung, schwache eigene Punkte weglassen, scharfer Schluss-Satz. KEIN Spott, kein Sarkasmus (das gibt dem Gegner Opfer-Modus-Munition). Für Brigader und dreiste Lügen.`
+        } : {
+          'Ruhig': `Hardness CALM: gentle tone, validate emotion where needed, concessions allowed, offer an off-ramp, protect the relationship. For people you know or want to win over. One calm, flowing reply.`,
+          'Direkt': `Hardness DIRECT: factual and clear, no unnecessary concessions, but no attack. The default.`,
+          'Gungho': `Hardness GUNGHO: devastating, no concessions, only the record vs the claim, drop weak points, sharp closer. NO mockery, no sarcasm (that hands the opponent victim-mode ammunition). For brigaders and brazen lies.`
+        };
+        const toneInstruction = (catMap[cat] || catMap['Fakten']) + '\n\n' + (hardMap[hard] || hardMap['Direkt']);
+        const formatBlock = isDE
+          ? `ZWEI-TEIL-FORMAT (PFLICHT):
+
+Teil 1: ## Analyse
+Knappe Analyse des Gegner-Kommentars in 3-5 Bullet-Points: was er behauptet, welche Tactics er nutzt, größte Schwachstellen. Max 100 Wörter. NUR für mich, NICHT zum Posten.
+
+Teil 2: Marker auf eigener Zeile genau:
+~~~REPLY~~~
+
+Teil 3: Der eigentliche Konter im Ton oben. NUR Teil 3 wird kopiert.
+
+PFLICHT für jeden ## Section-Header in Teil 3:
+Direkt unter dem ## Header (nächste Zeile, vor dem Absatz-Text), füge einen HTML-Kommentar mit Zweck-Annotation:
+<!--purpose: kurze Erklärung was diese Section macht, max 12 Wörter-->
+
+Beispiel:
+## Quote-Mining
+<!--purpose: Belegt dass der Gegner selektiv aus seiner Quelle zitiert hat-->
+Du zitierst nur den einen Halbsatz. Im Original steht zwei Absätze entfernt: "do not necessarily indicate causality"...
+
+Diese Kommentare sind unsichtbar für Reddit-Reader, aber Touché zeigt sie als Popup beim Klick. Pflicht für jede Section.`
+          : `TWO-PART FORMAT (REQUIRED):
+
+Part 1: ## Analysis
+Compact analysis of opponent's comment in 3-5 bullets: claims, tactics, weak spots. Max 100 words. FOR ME ONLY, not for posting.
+
+Part 2: marker on its own line, exactly:
+~~~REPLY~~~
+
+Part 3: the actual counter in the tone above. ONLY part 3 gets copied.
+
+REQUIRED for every ## Section-Header in part 3:
+Directly under the ## header (next line, before the paragraph text), add an HTML comment with a purpose annotation:
+<!--purpose: brief description of what this section does, max 12 words-->
+
+Example:
+## Quote-Mining
+<!--purpose: Shows opponent quoted selectively from their own source-->
+You quote only that half-sentence. Two paragraphs later the original says "do not necessarily indicate causality"...
+
+These comments are invisible to Reddit readers but Touché shows them as a popup on click. Required for every section.`;
+
+        const platformLabel = isDE ? this.settings.platform : this.settings.platform.replace('Mündlich', 'Spoken');
+
+        const antiAi = isDE
+          ? `ANTI-KI-STIL (PFLICHT, nicht verhandelbar):
+
+GRUNDREGEL: Schreib wie ein echter Reddit-Kommentar von einem genervten Mensch, nicht wie ein Lehrbuch oder Wikipedia.
+
+VERBOTEN:
+- Geviertstriche/Em-Dashes (—) und En-Dashes (–). Nutze Klammern oder Komma. Niemand schreibt mit Geviertstrichen außer KI.
+- Floskel-Übergänge: "Darüber hinaus", "Außerdem", "Zusätzlich", "Letztendlich", "Somit", "Folglich", "Es ist erwähnenswert", "Nicht zuletzt", "Beachtenswert ist".
+- "um zu" — schreib "zu".
+- Hedging-Stapel ("man könnte vielleicht argumentieren dass möglicherweise...").
+- Punchlines, Mic-Drops, "Boom", "Game over"-Schlüsse. Schluss-Satz ist Beobachtung, nicht Performance.
+- Generische Eröffnungen: "Das ist ein interessanter Punkt", "Lass mich das aufdröseln", "Ich verstehe deinen Punkt", "Spannende Beobachtung".
+- Eingangs-Claim am Ende wiederholen.
+- Bold für jeden Begriff. Bold sparsam.
+- Akademische Header wie "Falscher Frame", "Logischer Fehler", "Gegenargument", "Kategorienverwechslung", "Misleading comparison". Das sind Lehrbuch-Labels, kein Reddit-Comment.
+
+ERWÜNSCHT:
+- Kurze Absätze, 2-4 Sätze. Wenn 2 reichen, stop bei 2.
+- Punkt zuerst, Kontext danach.
+- Klammern für Präzisierung, keine extra-Sätze.
+- Leichte Imperfektion: "gibts", "hab", "nen" sparsam, gelegentlich Komma weglassen wo Sprache es nicht braucht.
+- Direkte Du-Ansprache wo's passt.
+
+SECTION-HEADER-STIL:
+Header lesen wie ein Reddit-Pointer, nicht wie eine Fact-Check-Kategorie.
+GUT: "## Quote-Mining" / "## Du verwechselst Größenordnungen" / "## Skala-Trick" / "## Lies deine eigene Quelle" / "## Drei Schritte zurück" / "## Selbstwiderspruch"
+SCHLECHT: "## Falscher Frame" / "## Misleading framing" / "## Logischer Fehler" / "## Schwaches Argument" / "## Counterpoint" / "## Kategorienverwechslung"
+Kein "False framing" als Header. Wenn du ein Frame-Problem benennen willst, dann konkret: "## Falsche Vergleichsgröße" oder "## Falsche Skala".`
+          : `ANTI-AI VOICE (REQUIRED, non-negotiable):
+
+CORE RULE: Write like an actual annoyed-person Reddit comment, not a textbook or Wikipedia entry.
+
+FORBIDDEN:
+- Em-dashes (—) or en-dashes (–). Use parentheses or commas. Only AI uses em-dashes.
+- Filler transitions: "Furthermore", "Moreover", "In addition", "Additionally", "Ultimately", "Thus", "Consequently", "It is worth noting", "Not least", "Notably".
+- "in order to" — use "to".
+- Hedging stacks ("one could perhaps argue that maybe...").
+- Punchlines, mic-drops, "Boom", "Game over" closers. Closing sentence is observation, not performance.
+- Generic openers: "That's an interesting point", "Let me break this down", "I understand your point", "Great observation".
+- Restating the opening claim at the end.
+- Bold on every term. Bold sparingly.
+- Academic headers like "False framing", "Logical fallacy", "Counterpoint", "Misleading comparison", "Category error". Those are textbook labels, not a Reddit comment.
+
+WANTED:
+- Short paragraphs, 2-4 sentences. If 2 works, stop at 2.
+- Point first, context second.
+- Parentheses for precision, no extra sentences.
+- Light imperfection: contractions ("it's", "you're"), occasional dropped comma where speech wouldn't need one.
+- Direct "you"-address where it fits.
+
+SECTION-HEADER STYLE:
+Headers read like a Reddit pointer, not a fact-check category.
+GOOD: "## Quote-Mining" / "## You're comparing different scales" / "## Read your own source" / "## Three steps back" / "## Self-contradiction"
+BAD: "## False framing" / "## Misleading comparison" / "## Logical fallacy" / "## Weak argument" / "## Counterpoint" / "## Category error"
+No "False framing" as header. If you need to flag a frame problem, name it concretely: "## Wrong comparison" or "## Wrong scale".`;
+
+        const voiceBlock = (this.settings.voiceSample && this.settings.voiceSample.trim().length > 0)
+          ? (isDE
+              ? `\n\nVOICE-REFERENCE (LIES DAS ZUERST, BEVOR DU ANTWORTEST. Das ist der Schreibstil des Users, du sollst exakt so klingen):
+=== VOICE START ===
+${this.settings.voiceSample.trim()}
+=== VOICE END ===
+
+Vorgehen:
+1. Lies VOICE komplett durch.
+2. Identifiere: typische Satzlänge, Lieblings-Verben, Eigenheiten, was vermieden wird.
+3. Schreibe deinen Reply in genau diesem Stil. Der User soll glauben es sei seine eigene Stimme.
+Anti-KI-Regeln oben gelten zusätzlich, KEIN Widerspruch zu Voice.`
+              : `\n\nVOICE-REFERENCE (READ THIS FIRST BEFORE ANSWERING. This is the user's writing voice, sound exactly like this):
+=== VOICE START ===
+${this.settings.voiceSample.trim()}
+=== VOICE END ===
+
+Process:
+1. Read VOICE in full.
+2. Identify: typical sentence length, favorite verbs, quirks, what's avoided.
+3. Write your reply in exactly this style. The user should believe it is his own voice.
+Anti-AI rules above still apply, no contradiction with VOICE.`)
+          : '';
+
+        const generalRules = isDE
+          ? `GENERELLE REGELN:
+- Quellen als bare URLs am Ende des Reply (Reddit-Format ohne Markdown-Linkbrackets)
+- Wenn unklar, EINMAL nachfragen, beim 2. Turn best-guess
+- Wenn User Bild geschickt hat, Text/Kontext im Bild lesen
+- NIEMALS fremdenfeindlich argumentieren. Keine Statistiken die Gruppen pauschal abwerten.`
+          : `GENERAL RULES:
+- Sources as bare URLs at end of reply (Reddit format, no Markdown link brackets)
+- If unclear, ask ONCE; on turn 2 best-guess
+- If user attached image, read text/context in it
+- NEVER xenophobic. No statistics that demean groups wholesale.`;
+
+        const tactics = (methodOverride && methodOverride.trim().length > 30) ? methodOverride.trim() : (isDE
+          ? `TAKTIK (so wird der Konter scharf, nicht nur korrekt):
+- Quelle-Bumerang ist die stärkste Waffe: zitiert der Gegner eine Studie oder Quelle, zitiere DIESELBE Quelle, aber den Teil den er nicht gelesen hat. Was die Zahl wirklich misst, nicht die Schlagzeile.
+- Inversions-Check (Pflicht bei jeder Statistik): stell dir vor der Gegner zitiert deine Zahl zurück, hilft sie ihm dann? "38% Femizide durch Deutsche" wird zu "also 62% durch Ausländer bei 15% Bevölkerung, danke". Wenn ja: andere Zahl oder anderes Framing. Ein einziges Eigentor kippt den ganzen Konter.
+- Konzession-sicher: schreib nie einen Satz der als Screenshot dem Gegner dient. Nicht "die Überrepräsentation ist real", sondern den Kontext IN den Satz bauen ("die Tatverdächtigenzahlen überrepräsentieren Nichtdeutsche, weil die Kategorie Delikte enthält die nur Ausländer begehen können"). Test: liest sich der Konzessions-Satz allein wie eine Gegner-Schlagzeile, dann umformulieren.
+- Zur ungünstigeren Zahl zitieren: bei Unsicherheit die für dich schlechtere Zahl nehmen. Ein übertriebener Wert verbrennt jede andere Zahl.
+- Frame-Kollaps schlägt Punkt-für-Punkt: hat der Gegner ein Erklärungsmodell, kill die 2 tragenden Säulen mit je einem Datenpunkt statt einer Liste.
+- Bauchgefühl-Anker: zu jedem Daten-Konter EIN einfacher Satz für Mitleser ohne Statistik ("niemand rechnet Mord weg mit es gibt mehr Verkehrstote").
+- Akademisch zu Klartext: nicht "negative Korrelation zwischen Aufenthaltsstatus und Kriminalitätsbelastung", sondern "dieselben Leute, arbeiten dürfen = weniger Kriminalität, Arbeitsverbot = mehr".
+- Für die stillen Mitleser schreiben, nicht für den Kommentator. EIN Fehler pro Konter, kein Vortrag, max 4-5 Sätze.
+- Nie moralisieren, nie sarkastisch, flach bleiben. Opfer-Modus ("darf man nichts mehr fragen") nur mit Substanz kontern, nie mit Empörung, die ist sein Treibstoff.`
+          : `TACTICS (this makes the counter sharp, not just correct):
+- Source-boomerang is the strongest weapon: if they cite a study or source, cite the SAME source, the part they did not read. What the number actually measures, not the headline.
+- Inversion check (mandatory on every statistic): imagine they quote your number back, does it help them? "38% of femicides by Germans" becomes "so 62% by foreigners at 15% of the population, thanks". If yes, pick a different number or framing. One own-goal sinks the whole counter.
+- Concession-proof: never write a line that works as a screenshot for them. Not "the overrepresentation is real", build the context INTO the sentence. Test: if the concession reads alone like their headline, rephrase.
+- Cite toward the less favourable number: when unsure, use the figure worse for you. One overshoot burns every other number.
+- Frame-collapse beats point-by-point: if they have an explanatory model, kill its 2 load-bearing pillars with one datapoint each, not a list.
+- Gut-feel anchor: one plain-language line per data counter for lurkers without statistics.
+- Academic to plain: not "negative correlation between residence status and crime", but "same people, allowed to work = less crime, banned from working = more".
+- Write for the silent lurkers, not the commenter. ONE error per counter, no lecture, max 4-5 sentences.
+- Never moralise, never sarcastic, stay flat. Counter victim-mode only with substance, never with outrage, it is their fuel.`);
+
+        return `${langTop}
+
+Du bist Touché, ein Assistent für faktenbasierte Counter-Speech.
+Plattform: ${platformLabel}. Sprache: ${lang}.
+
+KATEGORIE: ${cat}  HÄRTE: ${hard}
+${toneInstruction}
+${lengthRule ? '\n' + lengthRule + '\n' : ''}
+${antiAi}${voiceBlock}
+
+${tactics}
+
+${formatBlock}
+
+${generalRules}
+
+${langTop}`;
+      },
+
+      // Provider call dispatch
+      async callProvider({ systemPrompt, messages, stream = false, onDelta }) {
+        const p = this.settings.provider;
+        if (p === 'anthropic') return this.callAnthropic({ systemPrompt, messages, stream, onDelta });
+        if (p === 'openai' || p === 'moonshot' || p === 'openrouter') return this.callOpenAICompat({ systemPrompt, messages, stream, onDelta });
+        if (p === 'ollama') return this.callOllama({ systemPrompt, messages, stream, onDelta });
+        throw new Error('Unbekannter Provider');
+      },
+
+      async callAnthropic({ systemPrompt, messages, stream, onDelta }) {
+        const ctrl = new AbortController();
+        this.currentAbort = ctrl;
+        const res = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: {
+            'x-api-key': this.settings.apiKey,
+            'anthropic-version': '2023-06-01',
+            'anthropic-dangerous-direct-browser-access': 'true',
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify({
+            model: this.settings.model || PROVIDERS.anthropic.defaultModel,
+            max_tokens: 2048,
+            system: systemPrompt,
+            messages,
+            stream
+          }),
+          signal: ctrl.signal
+        });
+        if (!res.ok) throw new Error(`Anthropic ${res.status}: ${(await res.text()).slice(0, 200)}`);
+        if (!stream) {
+          const data = await res.json();
+          return data.content?.[0]?.text || '';
+        }
+        return this.consumeSSE(res, (event) => {
+          if (event.type === 'content_block_delta' && event.delta?.text) onDelta(event.delta.text);
+        });
+      },
+
+      async callOpenAICompat({ systemPrompt, messages, stream, onDelta }) {
+        const ctrl = new AbortController();
+        this.currentAbort = ctrl;
+        const provider = this.settings.provider;
+        const url = PROVIDERS[provider].url;
+        const headers = {
+          'Authorization': `Bearer ${this.settings.apiKey}`,
+          'Content-Type': 'application/json'
+        };
+        if (provider === 'openrouter') {
+          headers['HTTP-Referer'] = 'https://boldclaim.github.io';
+          headers['X-Title'] = 'Touché';
+        }
+        const res = await fetch(url, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({
+            model: this.settings.model || PROVIDERS[provider].defaultModel,
+            messages: [{ role: 'system', content: systemPrompt }, ...messages],
+            stream,
+            max_tokens: 2048
+          }),
+          signal: ctrl.signal
+        });
+        if (!res.ok) throw new Error(`${provider} ${res.status}: ${(await res.text()).slice(0, 200)}`);
+        if (!stream) {
+          const data = await res.json();
+          return data.choices?.[0]?.message?.content || '';
+        }
+        return this.consumeSSE(res, (event) => {
+          const delta = event.choices?.[0]?.delta?.content;
+          if (delta) onDelta(delta);
+        });
+      },
+
+      async callOllama({ systemPrompt, messages, stream, onDelta }) {
+        const ctrl = new AbortController();
+        this.currentAbort = ctrl;
+        const url = (this.settings.apiKey?.includes('://') ? this.settings.apiKey : 'http://' + this.settings.apiKey) || 'http://localhost:11434';
+        const res = await fetch(url.replace(/\/+$/, '') + '/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            model: this.settings.model || PROVIDERS.ollama.defaultModel,
+            messages: [{ role: 'system', content: systemPrompt }, ...messages],
+            stream
+          }),
+          signal: ctrl.signal
+        });
+        if (!res.ok) throw new Error(`Ollama ${res.status}`);
+        if (!stream) {
+          const data = await res.json();
+          return data.message?.content || '';
+        }
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let acc = '';
+        let buffer = '';
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop();
+          for (const line of lines) {
+            if (!line.trim()) continue;
+            try {
+              const obj = JSON.parse(line);
+              const t = obj.message?.content;
+              if (t) { acc += t; onDelta(t); }
+            } catch (e) {}
+          }
+        }
+        return acc;
+      },
+
+      async consumeSSE(res, handler) {
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+          const blocks = buffer.split('\n\n');
+          buffer = blocks.pop();
+          for (const block of blocks) {
+            for (const line of block.split('\n')) {
+              if (!line.startsWith('data: ')) continue;
+              const payload = line.slice(6).trim();
+              if (payload === '[DONE]') return;
+              try { handler(JSON.parse(payload)); } catch (e) {}
+            }
+          }
+        }
+      },
+
+      // Persistence
+      persistSession() {
+        try {
+          localStorage.setItem('boldclaim_session_v2', JSON.stringify({
+            ts: Date.now(),
+            id: this.activeConvId,
+            messages: this.messages.slice(-40)
+          }));
+          if (this.activeConvId && this.messages.length > 0) this.upsertArchive();
+        } catch (e) {}
+      },
+
+      upsertArchive() {
+        try {
+          let archive = JSON.parse(localStorage.getItem('boldclaim_archive_v2') || '[]');
+          const idx = archive.findIndex(c => c.id === this.activeConvId);
+          const entry = {
+            id: this.activeConvId,
+            ts: Date.now(),
+            title: (this.messages.find(m => m.role === 'user')?.content || 'Conversation').slice(0, 80),
+            messages: this.messages
+          };
+          if (idx >= 0) archive[idx] = entry;
+          else archive.unshift(entry);
+          archive = archive.slice(0, 50);
+          localStorage.setItem('boldclaim_archive_v2', JSON.stringify(archive));
+          this.archive = archive;
+        } catch (e) {}
+      },
+
+      loadConversation(id) {
+        const conv = this.archive.find(c => c.id === id);
+        if (!conv) return;
+        this.messages = conv.messages;
+        this.activeConvId = conv.id;
+        this.persistSession();
+        if (window.innerWidth < 1024) this.sidebarOpen = false;
+      },
+
+      deleteConversation(id) {
+        if (!confirm(this.t('set.deleteConfConfirm'))) return;
+        this.archive = this.archive.filter(c => c.id !== id);
+        localStorage.setItem('boldclaim_archive_v2', JSON.stringify(this.archive));
+        if (this.activeConvId === id) this.newChat();
+      },
+
+      newChat() {
+        this.messages = [];
+        this.input = '';
+        this.pendingImages = [];
+        this.activeConvId = null;
+        localStorage.removeItem('boldclaim_session_v2');
+      },
+
+      exportConversations() {
+        try {
+          const all = this.messages.length
+            ? [{ id: this.activeConvId, ts: Date.now(), title: 'aktuell', messages: this.messages }, ...this.archive]
+            : this.archive;
+          const blob = new Blob([JSON.stringify(all, null, 2)], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `boldclaim-export-${new Date().toISOString().slice(0,10)}.json`;
+          a.click();
+          URL.revokeObjectURL(url);
+        } catch (e) { alert('Export fehlgeschlagen: ' + e.message); }
+      },
+
+      clearAll() {
+        if (!confirm(this.t('set.clearConfirm'))) return;
+        ['boldclaim_settings_v2', 'boldclaim_session_v2', 'boldclaim_archive_v2', 'boldclaim_theme_v2'].forEach(k => localStorage.removeItem(k));
+        this.messages = [];
+        this.archive = [];
+        this.activeConvId = null;
+        Object.assign(this.settings, { provider: 'anthropic', model: '', apiKey: '', platform: 'Reddit', category: 'Fakten', hardness: 'Direkt', selectorStyle: 'pills', lang: 'de' });
+        this.settings.model = this.defaultModel('anthropic');
+      },
+
+      // Split assistant content into analysis + reply
+      splitContent(text) {
+        if (!text) return { analysis: '', reply: '' };
+        const marker = '~~~REPLY~~~';
+        const idx = text.indexOf(marker);
+        if (idx === -1) {
+          // While streaming, treat the whole as analysis-in-progress so the user
+          // sees structured content from the start. The reply renders empty until
+          // the marker arrives.
+          if (text.startsWith('## Analyse') || text.startsWith('# Analyse')) {
+            return { analysis: text.trim(), reply: '' };
+          }
+          return { analysis: '', reply: text };
+        }
+        return {
+          analysis: text.slice(0, idx).trim(),
+          reply: text.slice(idx + marker.length).trim()
+        };
+      },
+
+      // Markdown rendering
+      escapeHtml(s) {
+        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      },
+      slugify(s) {
+        return s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')
+          .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+      },
+      // De-AI pass: strip the machine tells (em-dashes, filler transitions, hedges,
+      // performative openers/closers) so every answer reads in-voice. Runs on the rendered
+      // text AND on the stored text at completion (so Reddit/Plain copies are clean too).
+      // Deterministic and idempotent.
+      deAI(text) {
+        if (!text) return text;
+        let t = text;
+        // Dashes: numeric range -> hyphen, prose aside -> comma. Word-hyphens untouched.
+        t = t.replace(/(\d) ?[—–―] ?(\d)/g, '$1-$2').replace(/ ?[—–―] ?/g, ', ');
+        // Fancy punctuation -> plain
+        t = t.replace(/[“”„«»]/g, '"').replace(/[‘’‚]/g, "'").replace(/…/g, '...');
+        // Sentence-initial filler transitions -> drop, keep the clause
+        const fillers = '(?:Dar[üu]ber hinaus|Des Weiteren|Letztendlich|Letztlich|Zusammenfassend|Abschlie[ßs]end|Furthermore|Moreover|In addition|Additionally|Ultimately|Consequently|Notably|Importantly|Essentially)';
+        t = t.replace(new RegExp('(^|[.!?]\\s+|\\n+)' + fillers + ',?\\s+', 'gu'), '$1');
+        // Openers / hedges / self-reference / performative closers -> remove
+        const kill = [
+          /Das ist ein interessanter Punkt[.!,]?\s*/gi,
+          /(?:Gute|Gro[ßs]artige|Spannende) Frage[.!,]?\s*/gi,
+          /Lass mich das (?:kurz )?aufdr[öo]seln[.!,:]?\s*/gi,
+          /(?:Great|Good|Excellent|Interesting) question[.!,]?\s*/gi,
+          /That'?s an? (?:great|good|fair|valid|interesting) question[.!,]?\s*/gi,
+          /Let me break (?:this|that) down[.!,:]?\s*/gi,
+          /Es ist wichtig,? (?:zu beachten|anzumerken|zu erw[äa]hnen),?\s*(?:dass\s*)?/gi,
+          /Es sei (?:angemerkt|erw[äa]hnt),?\s*(?:dass\s*)?/gi,
+          /It'?s (?:important|worth) (?:to note|noting|mentioning)(?: that)?,?\s*/gi,
+          /It is (?:important|worth) (?:to note|noting|mentioning)(?: that)?,?\s*/gi,
+          /Als KI(?:[- ]Sprachmodell)?,?\s*/gi,
+          /As an AI(?: language model)?,?\s*/gi,
+          /(?:Ich hoffe|Hoffe),? das hilft(?: dir)?[.!]?\s*/gi,
+          /I hope (?:this|that) helps[.!]?\s*/gi,
+          /Hope (?:this|that) helps[.!]?\s*/gi,
+          /Lass(?:t)? mich wissen,? wenn[^.!?\n]*[.!?]\s*/gi,
+          /Let me know if[^.!?\n]*[.!?]\s*/gi,
+          /\bBoom[.!]?(?=\s|$)/gi,
+          /\bMic[- ]?drop[.!]?\s*/gi,
+        ];
+        for (const re of kill) t = t.replace(re, '');
+        // Word-level tells
+        t = t.replace(/\bdelve into\b/gi, 'look at').replace(/\bdelve\b/gi, 'look')
+             .replace(/\bin order to\b/gi, 'to').replace(/\ba tapestry of\b/gi, '')
+             .replace(/\bnavigate the complexit(?:y|ies)(?: of)?\b/gi, '');
+        // Re-capitalize sentence starts left lowercase by removals
+        t = t.replace(/(^|[.!?]["')\]]?\s+|\n+)(\p{Ll})/gu, (m, pre, ch) => pre + ch.toUpperCase());
+        // Tidy spacing/punctuation
+        t = t.replace(/[ \t]{2,}/g, ' ').replace(/ +([,.;:!?])/g, '$1')
+             .replace(/,\s*,/g, ',').replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n');
+        return t.trim();
+      },
+      renderMarkdown(text) {
+        if (!text) return '';
+        // Strip purpose comments (extracted separately for popup) before any other processing
+        text = text.replace(/<!--\s*purpose:[\s\S]*?-->/g, '');
+        text = this.deAI(text);
+        let html = this.escapeHtml(text);
+        // Code spans
+        html = html.replace(/`([^`\n]+)`/g, '<code class="font-mono text-[0.9em] bg-zinc-100 dark:bg-zinc-800 rounded px-1">$1</code>');
+        // Headings ## — `t` is already escaped from the escapeHtml call above, do NOT escape again
+        html = html.replace(/^##\s+(.+)$/gm, (m, t) => {
+          const slug = this.slugify(t.replace(/&[a-z]+;/g, '')); // strip entities for slug calc
+          return `<h3 class="section-header" data-section-id="${slug}">${t}</h3>`;
+        });
+        // Bold
+        html = html.replace(/\*\*([^*\n]+?)\*\*/g, '<strong>$1</strong>');
+        // Italic
+        html = html.replace(/(?<![*\w])\*([^*\n]+?)\*(?![*\w])/g, '<em>$1</em>');
+        // Markdown links
+        html = html.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="link">$1</a>');
+        // Bare http(s) URLs
+        html = html.replace(/(?<!["=>\w])(https?:\/\/[^\s<)]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="link">$1</a>');
+        // Bare common domains
+        const domains = ['bka.de','tagesschau.de','destatis.de','bundesverfassungsgericht.de','pubmed.ncbi.nlm.nih.gov','correctiv.org','pei.de','bundestag.de','rki.de','mediendienst-integration.de','spiegel.de','welt.de','zeit.de','sueddeutsche.de','faz.net','afd.de','t-online.de','nordkurier.de','kfn.de','svr-migration.de','iab.de','ifo.de','kriminologie.uni-koeln.de','volksverpetzer.de','abgeordnetenwatch.de','dserver.bundestag.de','zdfheute.de'];
+        for (const d of domains) {
+          const re = new RegExp(`(?<!["'>\\w/.])(${d.replace(/\./g,'\\.')}\\/[^\\s<,;)]*)`, 'g');
+          html = html.replace(re, '<a href="https://$1" target="_blank" rel="noopener noreferrer" class="link">$1</a>');
+        }
+        // Bullet lists
+        html = html.replace(/(^|\n)((?:- [^\n]+\n?)+)/g, (_m, pre, block) => {
+          const items = block.trim().split('\n').map(l => l.replace(/^- /, '').trim()).filter(Boolean);
+          return pre + '<ul>' + items.map(i => `<li>${i}</li>`).join('') + '</ul>';
+        });
+        // Numbered lists
+        html = html.replace(/(^|\n)((?:\d+\. [^\n]+\n?)+)/g, (_m, pre, block) => {
+          const items = block.trim().split('\n').map(l => l.replace(/^\d+\.\s*/, '').trim()).filter(Boolean);
+          return pre + '<ol>' + items.map(i => `<li>${i}</li>`).join('') + '</ol>';
+        });
+        // Paragraphs
+        const blocks = html.split(/\n\n+/).map(b => {
+          if (b.match(/^\s*<(h3|ul|ol|blockquote)/)) return b;
+          return '<p>' + b.replace(/\n/g, '<br>') + '</p>';
+        });
+        return blocks.join('');
+      },
+
+      // Section parsing — extracts title AND purpose annotation (<!--purpose: ...-->)
+      parseSections(text) {
+        if (!text) return [];
+        const sections = [];
+        // Header followed optionally by a purpose-comment on the next non-empty line
+        const re = /^##\s+(.+?)\s*$\s*(?:<!--\s*purpose:\s*([\s\S]+?)\s*-->)?/gm;
+        for (const m of text.matchAll(re)) {
+          const title = m[1].trim();
+          const purpose = (m[2] || '').trim().replace(/\s+/g, ' ');
+          sections.push({ id: this.slugify(title), title, purpose });
+        }
+        return sections;
+      },
+      lastAssistantSections() {
+        for (let i = this.messages.length - 1; i >= 0; i--) {
+          const m = this.messages[i];
+          if (m.role === 'assistant' && m.content) {
+            return this.parseSections(this.splitContent(m.content).reply);
+          }
+        }
+        return [];
+      },
+      currentSection() {
+        return this.lastAssistantSections().find(s => s.id === this.activeSection);
+      },
+      currentSectionIdx() {
+        const sections = this.lastAssistantSections();
+        const i = sections.findIndex(s => s.id === this.activeSection);
+        return { idx: i + 1, total: sections.length };
+      },
+      prevSection() {
+        const sections = this.lastAssistantSections();
+        const i = sections.findIndex(s => s.id === this.activeSection);
+        if (i > 0) this.selectSection(sections[i - 1].id);
+      },
+      nextSection() {
+        const sections = this.lastAssistantSections();
+        const i = sections.findIndex(s => s.id === this.activeSection);
+        if (i >= 0 && i < sections.length - 1) this.selectSection(sections[i + 1].id);
+      },
+      dismissSection() {
+        this.activeSection = null;
+        document.querySelectorAll('.section-active').forEach(n => n.classList.remove('section-active'));
+      },
+      selectSection(id) {
+        this.activeSection = id;
+        this.$nextTick(() => {
+          document.querySelectorAll('.section-active').forEach(n => n.classList.remove('section-active'));
+          const header = document.querySelector(`[data-section-id="${id}"]`);
+          if (!header) return;
+          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const group = [header];
+          let next = header.nextElementSibling;
+          while (next && !(next.tagName === 'H3' && next.classList.contains('section-header'))) {
+            group.push(next);
+            next = next.nextElementSibling;
+          }
+          group.forEach(el => {
+            el.classList.add('section-active');
+            el.classList.remove('section-flash');
+            void el.offsetWidth;
+            el.classList.add('section-flash');
+          });
+        });
+      },
+      // Click anywhere within a section paragraph to activate
+      onSectionClick(e) {
+        const direct = e.target.closest('[data-section-id]');
+        if (direct) {
+          this.selectSection(direct.dataset.sectionId);
+          return;
+        }
+        let el = e.target;
+        while (el && el.classList && !el.classList.contains('prose-content')) {
+          let sibling = el.previousElementSibling;
+          while (sibling) {
+            if (sibling.tagName === 'H3' && sibling.classList?.contains('section-header')) {
+              this.selectSection(sibling.dataset.sectionId);
+              return;
+            }
+            sibling = sibling.previousElementSibling;
+          }
+          el = el.parentElement;
+        }
+      },
+
+      // Copy
+      copyAs(msg, mode, ev) {
+        let text = this.splitContent(msg.content || '').reply || msg.content || '';
+        if (mode === 'plain') text = this.toPlain(text);
+        navigator.clipboard.writeText(text);
+        msg.copiedAs = mode;
+        setTimeout(() => { msg.copiedAs = null; }, 1500);
+      },
+      toPlain(text) {
+        return text
+          .replace(/`([^`]+)`/g, '$1')
+          .replace(/\*\*([^*]+)\*\*/g, '$1')
+          .replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '$1')
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1 ($2)')
+          .replace(/^#{1,6}\s+/gm, '')
+          .replace(/^>\s?/gm, '')
+          .replace(/^- /gm, '• ')
+          .trim();
+      },
+
+      scrollDown() {
+        this.$nextTick(() => {
+          const main = document.querySelector('main');
+          if (main) main.scrollTop = main.scrollHeight;
+        });
+      }
+    };
+  }
+</script>
+
+</body>
+</html>
