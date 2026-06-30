@@ -1,18 +1,61 @@
 <!DOCTYPE html>
+<!--
+=== PROJECT SPEC: DO NOT REMOVE ===
+## FEATURES (AI providers)
+- Keyless "Touché AI" provider (default): server-side Cloudflare Workers AI (Llama 3.3 70B) via the worker's text+mode route, Pinecone-grounded. No user key needed.
+- BYOK providers (anthropic / openai / moonshot / openrouter / ollama): client-side generation with the user's own key. Adds critic pass + trust check (key-only).
+- canChat() = usingTouche() || hasKey(). Gates send, banner, composer label.
+
+## CHANGELOG
+- 2026-06-29: ADDED EN SEO: hreflang (de/en/x-default), canonical URL, og:locale + og:locale:alternate (de_DE / en_US), og:url, og:type, JSON-LD WebApplication schema, absolute og:image URL. Updated meta description to EN-first bilingual. Updated title to "Touché — AI Counter-Speech".
+- 2026-06: ADDED first-visit choice modal (free Touché AI vs BYOK), shows once via boldclaim_welcome_v1.
+- 2026-06: ADDED keyless Touché AI (Workers AI) as the default provider; BYOK preserved as upgrade. Critic/trust passes gated off for keyless (they need a key). Worker unchanged (text+mode route already shipped).
+- 2026-06: FIXED mobile header overlap (375px) — Topics link is icon-only below sm; left header group is shrink-0 so the wordmark can't bleed over the nav.
+- 2026-06: REDESIGNED mobile selectors to the "Preset Rail" (design-explorer panels + workshop). 3 tone presets Ruhig/Direkt/Gungho always visible + a Vermilion hardness meter + inline 9-tone "Mehr Töne" matrix (category x hardness). Removed the Pills/Pad toggle and settings.selectorStyle. recommendStyle() now AUTO-APPLIES the AI tone (one-tap override, KI badge on the picked preset). Accent = Vermilion #FF4332; display font = Space Grotesk; selector targets >=44px + composer safe-area.
+
+## DESIGN DECISIONS (do NOT change without asking)
+- BYOK stays fully supported and never removed — privacy promise ("we never see your counters") holds for BYOK.
+- Keyless is the DEFAULT so no-key visitors can chat (was the keystone constraint). Confirmed with user 2026-06.
+- Light mode default. No streaming on the keyless path (Workers AI returned whole; add stream:true later if wanted).
+- Mobile tone selector is the "Preset Rail" (hardness presets + meter + "Mehr Töne" matrix for category). AI tone auto-applies, manual override is one tap. Accent Vermilion #FF4332, display font Space Grotesk. Chosen via design-explorer panels + workshop 2026-06; do NOT revert to the old Pills/Pad selectorStyle UI.
+=== END PROJECT SPEC ===
+-->
 <html lang="de" class="h-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="description" content="Touché — Bring your own AI. Wir sehen deine Counter nie.">
+  <meta name="description" content="Touché — AI-powered counter-speech. Sharp, fact-based rebuttals to disinformation. Bring your own key — we never see your counters.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://touche.fyi/">
+  <link rel="alternate" hreflang="de" href="https://touche.fyi/">
+  <link rel="alternate" hreflang="en" href="https://touche.fyi/">
+  <link rel="alternate" hreflang="x-default" href="https://touche.fyi/">
   <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
-  <title>Touché</title>
+  <title>Touché — AI Counter-Speech</title>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <meta property="og:title" content="Touché">
-  <meta property="og:description" content="Der scharfe, faktenbasierte Konter — wenn der Punkt sitzt.">
-  <meta property="og:image" content="touche-lockup.png">
+  <meta property="og:title" content="Touché — KI-gestützter Konter">
+  <meta property="og:description" content="Der scharfe, faktenbasierte Konter — wenn der Punkt sitzt. Bring your own AI key.">
+  <meta property="og:image" content="https://touche.fyi/touche-lockup.png">
+  <meta property="og:url" content="https://touche.fyi/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="en_US">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Touché",
+    "url": "https://touche.fyi/",
+    "description": "AI-powered counter-speech tool. Fact-based rebuttals to disinformation. Available in German and English.",
+    "inLanguage": ["de", "en"],
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0" }
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -22,11 +65,13 @@
           colors: {
             amber: {
               50:'#FFF2EF',100:'#FFE0DA',200:'#FFC2B8',300:'#FF9C8C',400:'#FF6E58',500:'#FF4332',600:'#F02A16',700:'#C71F0F',800:'#A11D11',900:'#831D14',950:'#480C07'
-            }
+            },
+            vermilion: '#FF4332'
           },
           fontFamily: {
             sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-            mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+            display: ['"Space Grotesk"', 'sans-serif']
           }
         }
       }
@@ -34,7 +79,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     html, body { height: 100%; overscroll-behavior: none; }
     body { -webkit-font-smoothing: antialiased; }
@@ -121,7 +166,12 @@
       padding-top: 0.3em;
       padding-bottom: 0.1em;
     }
+    .meter-fill { background: #FF4332; transition: width .28s cubic-bezier(.2,.8,.2,1); }
+    .meter-track { background: rgba(17,17,20,.08); }
+    .dark .meter-track { background: rgba(255,255,255,.10); }
+    @media (prefers-reduced-motion: reduce) { .meter-fill { transition: none; } }
   </style>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.14.1/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
   <script>
     // Light default. Dark only if user explicitly toggled.
@@ -185,17 +235,24 @@
   <div class="flex flex-col flex-1 min-w-0">
 
     <!-- Header -->
-    <header class="flex items-center justify-between px-4 sm:px-6 h-14 border-b border-zinc-200 dark:border-zinc-800 shrink-0 bg-white/70 dark:bg-zinc-950/70 backdrop-blur">
-      <div class="flex items-center gap-2">
+    <header class="flex items-center justify-between gap-2 px-4 sm:px-6 h-14 border-b border-zinc-200 dark:border-zinc-800 shrink-0 bg-white/70 dark:bg-zinc-950/70 backdrop-blur">
+      <div class="flex items-center gap-2 shrink-0">
         <button @click="sidebarOpen=!sidebarOpen"
                 :title="t('header.history') + ' (⌘B / Ctrl+B)'"
                 class="p-2 -ml-2 rounded-md text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
         <img src="touche-fencer.png" alt="Touché" class="h-8 w-auto -my-1 select-none" style="image-rendering:pixelated" draggable="false">
-        <span class="text-base font-semibold tracking-tight">Touché</span>
+        <span class="text-base font-display font-semibold tracking-tight">Touché</span>
       </div>
       <div class="flex items-center gap-1">
+        <!-- Topics overview (inspiration library) -->
+        <a href="/topics/"
+           :title="settings.lang==='en' ? 'Browse topics' : 'Themen durchstöbern'"
+           class="mr-1 px-2.5 h-8 inline-flex items-center gap-1.5 rounded-md text-sm font-medium text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <span class="hidden sm:inline" x-text="settings.lang==='en' ? 'Topics' : 'Themen'"></span>
+        </a>
         <!-- Language toggle (site-wide) -->
         <div class="flex items-center text-[11px] font-mono mr-1 rounded-md overflow-hidden border border-zinc-200 dark:border-zinc-800">
           <button @click="setLang('de')"
@@ -218,7 +275,7 @@
     </header>
 
     <!-- Onboarding banner (no key) -->
-    <div x-show="!hasKey() && !settingsOpen && messages.length === 0"
+    <div x-show="!canChat() && !settingsOpen && messages.length === 0"
          class="bg-amber-100 dark:bg-amber-500/10 border-b border-amber-300 dark:border-amber-500/30 text-amber-900 dark:text-amber-200 text-sm px-4 sm:px-6 py-2 flex items-center justify-between">
       <span x-text="t('banner.needKey')"></span>
       <button @click="settingsOpen=true; settingsTab='onboarding'"
@@ -415,83 +472,91 @@
     </main>
 
     <!-- Composer -->
-    <footer class="border-t border-zinc-200 dark:border-zinc-800 px-3 sm:px-4 pt-3 pb-4 shrink-0 bg-stone-50 dark:bg-zinc-950">
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 px-3 sm:px-4 pt-3 pb-4 shrink-0 bg-stone-50 dark:bg-zinc-950" style="padding-bottom: env(safe-area-inset-bottom)">
       <div class="max-w-2xl mx-auto">
 
-        <!-- Quick platform/tone selectors -->
-        <div class="flex flex-wrap items-center gap-1.5 mb-2 px-1 text-xs">
-          <span class="text-zinc-400 dark:text-zinc-600" x-text="t('comp.for')"></span>
-          <select x-model="settings.platform" @change="saveSettings()"
-                  class="bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md px-2 py-1 font-medium text-zinc-700 dark:text-zinc-300 focus:outline-none focus:border-zinc-400 dark:focus:border-zinc-600 cursor-pointer">
-            <option value="Reddit" x-text="t('platform.reddit')"></option>
-            <option value="X/Twitter" x-text="t('platform.twitter')"></option>
-            <option value="Mündlich" x-text="t('platform.spoken')"></option>
-            <option value="WhatsApp" x-text="t('platform.whatsapp')"></option>
-          </select>
-          <span class="text-zinc-400 dark:text-zinc-600" x-text="t('comp.view')"></span>
-          <div class="inline-flex rounded-md border border-zinc-200 dark:border-zinc-700 overflow-hidden">
-            <button type="button" @click="settings.selectorStyle='pills'; saveSettings()"
-              class="px-2 py-1 font-medium transition"
-              :class="settings.selectorStyle==='pills' ? 'bg-indigo-600 text-white' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300'">Pills</button>
-            <button type="button" @click="settings.selectorStyle='pad'; saveSettings()"
-              class="px-2 py-1 font-medium transition border-l border-zinc-200 dark:border-zinc-700"
-              :class="settings.selectorStyle==='pad' ? 'bg-indigo-600 text-white' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300'">Pad</button>
-          </div>
-          <template x-if="settings.selectorStyle==='pills'">
-            <span class="inline-flex flex-wrap items-center gap-1.5">
-              <span class="text-zinc-400 dark:text-zinc-600" x-text="t('comp.cat')"></span>
-              <div class="inline-flex rounded-md border border-zinc-200 dark:border-zinc-700 overflow-hidden">
-                <template x-for="c in cats" :key="'cc'+c[0]">
-                  <button type="button" @click="settings.category=c[0]; userOverrodePicker=true; saveSettings()"
-                    class="px-2 py-1 font-medium transition border-l first:border-l-0 border-zinc-200 dark:border-zinc-700"
-                    :class="settings.category===c[0] ? 'bg-indigo-600 text-white' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700'"
-                    x-text="t(c[1])"></button>
-                </template>
-              </div>
-              <span class="text-zinc-400 dark:text-zinc-600" x-text="t('comp.hard')"></span>
-              <div class="inline-flex rounded-md border border-zinc-200 dark:border-zinc-700 overflow-hidden">
-                <template x-for="h in hards" :key="'ch'+h[0]">
-                  <button type="button" @click="settings.hardness=h[0]; userOverrodePicker=true; saveSettings()"
-                    class="px-2 py-1 font-medium transition border-l first:border-l-0 border-zinc-200 dark:border-zinc-700"
-                    :class="settings.hardness===h[0] ? 'bg-indigo-600 text-white' : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700'"
-                    x-text="t(h[1])"></button>
-                </template>
-              </div>
-            </span>
-          </template>
-          <template x-if="settings.selectorStyle==='pad'">
-            <span class="inline-flex items-center gap-2">
-              <div class="flex gap-1 items-center">
-                <div class="flex flex-col justify-between self-stretch text-[8px] leading-none uppercase text-zinc-400 dark:text-zinc-600 text-right py-0.5">
-                  <template x-for="h in hards" :key="'crl'+h[0]"><span x-text="t(h[1])"></span></template>
-                </div>
-                <div class="grid grid-cols-3 gap-1.5">
-                  <template x-for="h in hards" :key="'cr'+h[0]"><template x-for="c in cats" :key="'ccell'+c[0]+h[0]">
-                    <button type="button" :title="t(c[1])+' · '+t(h[1])" @click="settings.category=c[0]; settings.hardness=h[0]; userOverrodePicker=true; saveSettings()"
-                      class="w-4 h-4 rounded-full border transition"
-                      :class="(settings.category===c[0]&&settings.hardness===h[0]) ? 'bg-indigo-600 border-indigo-600 scale-125' : 'border-zinc-300 dark:border-zinc-600 hover:border-indigo-400'"></button>
-                  </template></template>
-                </div>
-              </div>
-              <span class="text-zinc-500 dark:text-zinc-400 font-medium" x-text="settings.category + ' · ' + settings.hardness"></span>
-            </span>
-          </template>
+        <!-- Preset Rail selector (Vermilion accent) -->
+        <div class="mb-2">
 
-          <!-- Advisory style suggestion (Vorschlag). Never auto-applies, never hides the manual picker. -->
-          <template x-if="recoStyle">
-            <button type="button"
-                    @click="if(!userOverrodePicker) applyRecoStyle()"
-                    :title="recoReasonText()"
-                    :disabled="userOverrodePicker"
-                    class="inline-flex items-center gap-1 rounded-md border border-dashed border-amber-400/70 dark:border-amber-500/50 bg-amber-50/70 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 px-2 py-1 font-medium transition"
-                    :class="userOverrodePicker ? 'opacity-60 cursor-default' : 'hover:bg-amber-100 dark:hover:bg-amber-500/20 cursor-pointer'">
-              <span class="uppercase text-[9px] tracking-wide text-amber-600/80 dark:text-amber-400/80" x-text="t('comp.reco')"></span>
-              <span x-text="recoStyleLabel(recoStyle)"></span>
-            </button>
-          </template>
-          <template x-if="recoStyle">
-            <span class="text-zinc-400 dark:text-zinc-600 basis-full pl-1" x-text="recoReasonText()"></span>
-          </template>
+          <!-- Inline 9-tone matrix accordion -->
+          <div x-show="matrixOpen" x-collapse
+               class="mb-2 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 max-h-[300px] overflow-y-auto scroll-area">
+            <div class="sticky top-0 z-10 flex items-center justify-between px-3 pt-2.5 pb-2 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800">
+              <span class="text-[11px] font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400" x-text="t('comp.more')"></span>
+              <button type="button" @click="matrixOpen=false"
+                      class="min-h-[44px] -my-2 px-2 flex items-center text-xs font-semibold text-vermilion"
+                      x-text="t('comp.less')"></button>
+            </div>
+
+            <!-- column headers, aligned to the 64px row-label gutter -->
+            <div class="grid grid-cols-[64px_1fr_1fr_1fr] gap-1.5 px-3 pt-2">
+              <div></div>
+              <template x-for="h in hards" :key="'mh'+h[0]">
+                <div class="text-center text-[11px] font-semibold text-zinc-500 dark:text-zinc-400 font-display" x-text="t(h[1])"></div>
+              </template>
+            </div>
+
+            <!-- 3 category rows x 3 hardness columns -->
+            <template x-for="c in cats" :key="'mr'+c[0]">
+              <div class="grid grid-cols-[64px_1fr_1fr_1fr] gap-1.5 px-3 pb-1.5 items-stretch">
+                <div class="flex items-center text-[12px] font-semibold text-zinc-700 dark:text-zinc-300" x-text="t(c[1])"></div>
+                <template x-for="h in hards" :key="'mc'+c[0]+h[0]">
+                  <button type="button"
+                          @click="settings.category=c[0]; settings.hardness=h[0]; userOverrodePicker=true; aiPickHardness=null; saveSettings(); matrixOpen=false"
+                          class="min-h-[52px] rounded-lg border px-1.5 py-1 text-[11px] leading-tight flex items-center justify-center text-center transition-colors"
+                          :class="(settings.category===c[0] && settings.hardness===h[0])
+                            ? 'border-vermilion text-vermilion font-semibold bg-vermilion/[0.06]'
+                            : 'border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800'">
+                    <span class="flex flex-col items-center gap-1">
+                      <span x-show="settings.category===c[0] && settings.hardness===h[0]" class="w-[6px] h-[6px] rounded-full bg-vermilion"></span>
+                      <span x-text="comboName(c[0], h[0])"></span>
+                    </span>
+                  </button>
+                </template>
+              </div>
+            </template>
+            <div class="h-1.5"></div>
+          </div>
+
+          <!-- Permanent preset rail: 3-column hardness segmented control -->
+          <div class="relative grid grid-cols-3 rounded-xl border border-zinc-200 dark:border-zinc-700 overflow-hidden bg-white dark:bg-zinc-800">
+            <template x-for="(h, i) in hards" :key="'rail'+h[0]">
+              <button type="button"
+                      @click="settings.hardness=h[0]; userOverrodePicker=true; aiPickHardness=null; saveSettings()"
+                      class="relative min-h-[52px] flex flex-col items-center justify-center gap-1 transition-colors"
+                      :class="[settings.hardness===h[0] ? 'text-vermilion' : 'text-zinc-500 dark:text-zinc-400', i>0 ? 'border-l border-zinc-200 dark:border-zinc-700' : '']">
+                <span class="w-2 h-2 rounded-full transition-opacity"
+                      :class="settings.hardness===h[0] ? 'bg-vermilion opacity-100' : 'opacity-0'"></span>
+                <span class="text-[14px] font-display font-semibold tracking-tight" x-text="t(h[1])"></span>
+                <span x-show="h[0]===aiPickHardness && !userOverrodePicker"
+                      class="absolute top-1.5 right-1.5 text-[10px] font-semibold leading-none px-1.5 py-0.5 rounded bg-vermilion text-white tabular-nums"
+                      x-text="t('comp.ai')"></span>
+              </button>
+            </template>
+          </div>
+
+          <!-- Hardness meter hairline (signature move) -->
+          <div class="mt-1.5 h-[3px] rounded-full meter-track overflow-hidden">
+            <div class="meter-fill h-full rounded-full" :style="'width:' + (hardnessLevel()/3*100) + '%'"></div>
+          </div>
+
+          <!-- Name + demoted platform + Mehr row -->
+          <div class="mt-2 flex items-center justify-between gap-2 px-1 text-xs">
+            <div class="flex items-center gap-1.5 min-w-0">
+              <span class="text-zinc-400 dark:text-zinc-600 shrink-0" x-text="t('comp.for')"></span>
+              <select x-model="settings.platform" @change="saveSettings()"
+                      class="min-h-[44px] bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md pl-2 pr-1 py-1 font-medium text-zinc-700 dark:text-zinc-300 focus:outline-none focus:border-vermilion dark:focus:border-vermilion cursor-pointer shrink-0">
+                <option value="Reddit" x-text="t('platform.reddit')"></option>
+                <option value="X/Twitter" x-text="t('platform.twitter')"></option>
+                <option value="Mündlich" x-text="t('platform.spoken')"></option>
+                <option value="WhatsApp" x-text="t('platform.whatsapp')"></option>
+              </select>
+              <span class="text-zinc-500 dark:text-zinc-400 truncate font-display" x-text="modeStyleName()"></span>
+            </div>
+            <button type="button" @click="matrixOpen=!matrixOpen"
+                    class="min-h-[44px] -my-2 shrink-0 flex items-center text-xs font-semibold text-vermilion"
+                    x-text="matrixOpen ? t('comp.less') : t('comp.more')"></button>
+          </div>
         </div>
 
         <!-- Pending images -->
@@ -524,7 +589,7 @@
                     class="flex-1 bg-transparent resize-none outline-none text-[15px] py-1.5 max-h-48 placeholder-zinc-400 dark:placeholder-zinc-500 text-zinc-900 dark:text-zinc-50"></textarea>
           <button @click="busy ? cancel() : send()"
                   :disabled="!busy && !canSend()"
-                  :class="busy ? 'bg-red-500/90 hover:bg-red-500 text-white' : (canSend() ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-black dark:hover:bg-white' : 'bg-zinc-200 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-600')"
+                  :class="busy ? 'bg-zinc-700 hover:bg-zinc-600 dark:bg-zinc-600 dark:hover:bg-zinc-500 text-white' : (canSend() ? 'bg-vermilion hover:bg-amber-600 text-white' : 'bg-zinc-200 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-600')"
                   class="rounded-full p-2 transition shrink-0 shadow-sm">
             <template x-if="!busy">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l14 0M13 6l6 6-6 6"/></svg>
@@ -536,7 +601,7 @@
         </div>
         <div class="mt-1.5 px-2 flex items-center justify-between text-[11px] text-zinc-500 dark:text-zinc-500 gap-2">
           <div class="flex items-center gap-1.5 min-w-0">
-            <template x-if="hasKey()">
+            <template x-if="canChat()">
               <div class="flex items-center gap-1.5 min-w-0">
                 <span class="opacity-70 capitalize" x-text="settings.provider"></span>
                 <span class="opacity-40">·</span>
@@ -550,7 +615,7 @@
                 </select>
               </div>
             </template>
-            <template x-if="!hasKey()">
+            <template x-if="!canChat()">
               <button @click="settingsOpen=true" class="hover:text-zinc-900 dark:hover:text-zinc-100" x-text="t('comp.noKey')"></button>
             </template>
           </div>
@@ -628,9 +693,10 @@
         <!-- General tab -->
         <div x-show="settingsTab==='general'" class="space-y-5">
           <div>
-            <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.provider')"></label>
+            <label class="text-xs font-display font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.provider')"></label>
             <select x-model="settings.provider" @change="onProviderChange()"
                     class="mt-1.5 w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-zinc-500 dark:focus:border-zinc-500">
+              <option value="touche" x-text="t('set.toucheOpt')"></option>
               <option value="anthropic">Anthropic (Claude)</option>
               <option value="openai">OpenAI (GPT)</option>
               <option value="moonshot">Moonshot (Kimi)</option>
@@ -640,7 +706,7 @@
           </div>
 
           <div>
-            <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.model')"></label>
+            <label class="text-xs font-display font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.model')"></label>
             <select :value="customMode ? '__custom__' : settings.model"
                     @change="onModelSelect($event.target.value)"
                     class="mt-1.5 w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-zinc-500 dark:focus:border-zinc-500">
@@ -655,8 +721,12 @@
                    class="mt-2 w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:border-zinc-500">
           </div>
 
-          <div>
-            <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.apiKey')"></label>
+          <div x-show="settings.provider === 'touche'"
+               class="rounded-lg border border-emerald-200 dark:border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 px-3 py-2.5 text-xs text-emerald-800 dark:text-emerald-200"
+               x-text="t('set.toucheNote')"></div>
+
+          <div x-show="settings.provider !== 'touche'">
+            <label class="text-xs font-display font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.apiKey')"></label>
             <div class="mt-1.5 flex gap-2">
               <input :type="showKey ? 'text' : 'password'"
                      x-model="settings.apiKey"
@@ -688,7 +758,7 @@
 
           <div class="grid grid-cols-2 gap-3">
             <div>
-              <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.platform')"></label>
+              <label class="text-xs font-display font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.platform')"></label>
               <select x-model="settings.platform"
                       class="mt-1.5 w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-zinc-500">
                 <option value="Reddit" x-text="t('platform.reddit')"></option>
@@ -698,7 +768,7 @@
               </select>
             </div>
             <div>
-              <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.cat')"></label>
+              <label class="text-xs font-display font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.cat')"></label>
               <select x-model="settings.category" class="mt-1.5 w-full bg-stone-50 dark:bg-zinc-950 border border-zinc-300 dark:border-zinc-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-zinc-500">
                 <option value="Fakten" x-text="t('cat.fakten')"></option>
                 <option value="Rhetorik" x-text="t('cat.rhetorik')"></option>
@@ -715,7 +785,7 @@
 
           <!-- Voice sample -->
           <div class="pt-3 border-t border-zinc-200 dark:border-zinc-800 space-y-2">
-            <label class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.voice.label')"></label>
+            <label class="text-xs font-display font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wide" x-text="t('set.voice.label')"></label>
             <p class="text-[11px] text-zinc-500 dark:text-zinc-500" x-text="t('set.voice.help')"></p>
             <input type="file" accept=".md,.markdown,.txt" x-ref="voiceFileInput" @change="loadVoiceSample($event)" class="hidden">
             <div class="flex items-center gap-2">
@@ -783,6 +853,7 @@
             <li x-text="t('priv.2')"></li>
             <li x-text="t('priv.3')"></li>
             <li x-text="t('priv.4')"></li>
+            <li class="text-emerald-700 dark:text-emerald-400" x-text="t('priv.5')"></li>
           </ol>
           <p class="pt-2 text-xs text-zinc-500" x-text="t('priv.foot')"></p>
         </div>
@@ -790,6 +861,59 @@
         <button @click="saveSettings(); settingsOpen=false"
                 class="w-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-black dark:hover:bg-white rounded-lg py-2.5 text-sm font-semibold"
                 x-text="t('set.save')"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- First-visit choice modal -->
+  <div x-show="welcomeOpen"
+       x-transition.opacity
+       @click.self="dismissWelcome()"
+       class="fixed inset-0 modal-backdrop bg-black/40 dark:bg-black/60 flex items-end sm:items-center justify-center z-50 p-0 sm:p-4">
+    <div @click.stop
+         class="relative bg-white dark:bg-zinc-900 border-t sm:border border-zinc-200 dark:border-zinc-800 sm:rounded-2xl w-full sm:max-w-md max-h-[92vh] overflow-y-auto scroll-area shadow-2xl"
+         style="padding-bottom: env(safe-area-inset-bottom);">
+
+      <!-- Dismiss (X) -->
+      <button @click="dismissWelcome()"
+              :title="t('welcome.later')"
+              class="absolute top-2 right-2 w-11 h-11 flex items-center justify-center rounded-lg text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="w-5 h-5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="p-5 sm:p-6 space-y-5">
+        <div class="pr-10">
+          <h2 class="font-display text-xl font-semibold text-zinc-900 dark:text-zinc-100" x-text="t('welcome.title')"></h2>
+          <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400" x-text="t('welcome.sub')"></p>
+        </div>
+
+        <div class="space-y-3">
+          <!-- BYOK (recommended, primary accent path) -->
+          <button @click="welcomeChooseByok()"
+                  class="w-full min-h-[56px] text-left rounded-xl border border-vermilion/60 bg-vermilion/[0.04] hover:border-vermilion hover:bg-vermilion/10 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-vermilion">
+            <div class="flex items-center gap-2">
+              <span class="font-display font-semibold text-zinc-900 dark:text-zinc-100" x-text="t('welcome.byok')"></span>
+              <span class="text-[10px] font-semibold uppercase tracking-wide text-vermilion border border-vermilion/40 bg-vermilion/10 rounded-full px-2 py-0.5" x-text="t('onb.recommended')"></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-vermilion shrink-0 ml-auto"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+            <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400" x-text="t('welcome.byokDesc')"></p>
+          </button>
+
+          <!-- FREE (fallback, so everyone has something) -->
+          <button @click="welcomeChooseFree()"
+                  class="w-full min-h-[56px] text-left rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-stone-50 dark:hover:bg-zinc-950/50 px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-500">
+            <div class="flex items-center gap-2">
+              <span class="font-display font-semibold text-zinc-700 dark:text-zinc-300" x-text="t('welcome.free')"></span>
+            </div>
+            <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400" x-text="t('welcome.freeDesc')"></p>
+          </button>
+        </div>
+
+        <p class="text-[11px] text-zinc-500 dark:text-zinc-500" x-text="t('welcome.disclaimer')"></p>
+
+        <button @click="dismissWelcome()"
+                class="w-full min-h-[44px] text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 underline underline-offset-2 transition"
+                x-text="t('welcome.later')"></button>
       </div>
     </div>
   </div>
@@ -809,6 +933,17 @@
   const WORKER_URL = 'https://bold-claim.proof-machine.workers.dev';
 
   const PROVIDERS = {
+    // Keyless default: server-side Cloudflare Workers AI via the worker (Pinecone-grounded, no user key).
+    // ponytail: generation goes through the worker's existing text+mode route; no client key, no worker change.
+    touche: {
+      defaultModel: 'cf-llama-3.3-70b',
+      keyPlaceholder: '',
+      keyPattern: null,
+      url: WORKER_URL,
+      vision: false,
+      noKey: true,
+      models: [{ id: 'cf-llama-3.3-70b', label: 'Llama 3.3 70B · gratis' }]
+    },
     anthropic: {
       defaultModel: 'claude-opus-4-7',
       keyPlaceholder: 'sk-ant-...',
@@ -1013,11 +1148,17 @@
       'examples.button': 'Typische Behauptungen',
       'examples.label': 'Typische Behauptungen',
       'welcome.setup': 'Setup-Anleitung', 'welcome.privacy': 'Privacy', 'welcome.code': 'Code',
+      'welcome.title': 'Willkommen bei Touché', 'welcome.sub': 'Wie möchtest du deine Konter erzeugen?',
+      'welcome.free': 'Gratis, ohne Key', 'welcome.freeDesc': 'Falls du keinen Key hast: brauchbare Konter mit Touché AI, ohne Anmeldung. Reicht zum Loslegen.',
+      'welcome.byok': 'Eigener API-Key', 'welcome.byokDesc': 'Beste Qualität mit Claude Sonnet oder Opus (oder GPT). Deine Konter bleiben lokal in deinem Browser.',
+      'welcome.disclaimer': 'Mit eigenem Key (Claude Sonnet/Opus) bekommst du die deutlich besseren Konter. Die Gratis-Version ist nur da, damit jeder sofort etwas hat.',
+      'welcome.later': 'Später, erstmal gratis',
       'comp.for': 'Für', 'comp.tone': 'im Ton', 'comp.placeholder': 'Comment einfügen, Bild droppen oder Thema beschreiben...',
       'comp.busy': 'Touché antwortet...', 'comp.attach': 'Bild anhängen',
       'comp.imgTooLarge': 'Bild zu groß (max 5 MB)', 'comp.turn': 'Turn', 'comp.turns': 'Turns',
       'comp.noKey': 'Kein API-Key, Settings öffnen',
       'comp.reco': 'Vorschlag', 'comp.recoReason': 'Gegner schrieb kurz, Audience unklar → kurz + sachlich halten',
+      'comp.more': 'Mehr Töne', 'comp.less': 'Weniger', 'comp.ai': 'KI',
       'platform.reddit': 'Reddit', 'platform.twitter': 'X/Twitter', 'platform.spoken': 'Mündlich', 'platform.whatsapp': 'WhatsApp',
       'tone.factual': 'Sachlich', 'tone.snarky': 'Hämisch', 'tone.gungho': 'Gungho',
       'tone.deescalate': 'De-eskalierend', 'tone.factcheck': 'Fact-Check pur', 'tone.expose': 'Taktik entblößen', 'tone.contradiction': 'Widerspruchsfalle',
@@ -1033,6 +1174,8 @@
       'set.critic': 'Konter-Prüfer (Eigentor- und Quellen-Check)', 'set.criticHelp': 'Zweiter Durchgang nach jeder Antwort: prüft jede Zahl gegen die Belege, fängt Eigentore, schärft die Stimme. Kostet einen zusätzlichen API-Call pro Antwort.',
       'set.tab.general': 'Allgemein', 'set.tab.setup': 'Setup', 'set.tab.privacy': 'Privacy',
       'set.provider': 'Provider', 'set.model': 'Modell', 'set.customOpt': 'Eigenes Modell eingeben...',
+      'set.toucheOpt': 'Touché AI (gratis, kein Key)',
+      'set.toucheNote': 'Touché AI läuft serverseitig (Cloudflare Workers AI) und ist gratis — kein API-Key nötig. Für eigene Modelle (Claude, GPT) oben den Provider wechseln; deine Counter bleiben dann komplett lokal.',
       'set.customPh': 'exakter Modellname', 'set.apiKey': 'API-Key', 'set.show': 'zeigen', 'set.hide': 'verbergen',
       'set.test': 'Verbindung testen', 'set.testing': 'teste...', 'set.testOk': '✓ Verbunden', 'set.testReceived': 'Antwort erhalten',
       'set.platform': 'Plattform', 'set.tone': 'Ton',
@@ -1053,6 +1196,7 @@
       'priv.2': 'Dein Counter-Text geht direkt von deinem Browser zu deinem Provider.',
       'priv.3': 'Touché sieht beides nie. Wir loggen nichts.',
       'priv.4': 'Dein Provider (Anthropic, OpenAI, etc.) sieht deine Counter, das ist deren Job. Wir nicht.',
+      'priv.5': 'Ausnahme — Touché AI (Standard, ohne Key): dein Kommentar geht an unseren Cloudflare-Worker, der die Antwort serverseitig erzeugt (Cloudflare Workers AI). Willst du volle Lokalität, nutze einen eigenen API-Key (BYOK).',
       'priv.foot': 'Quellcode öffentlich auf GitHub. Keine Cookies, keine Tracker, kein Analytics.'
     },
     en: {
@@ -1069,11 +1213,17 @@
       'examples.button': 'Typical claims',
       'examples.label': 'Typical claims',
       'welcome.setup': 'Setup guide', 'welcome.privacy': 'Privacy', 'welcome.code': 'Code',
+      'welcome.title': 'Welcome to Touché', 'welcome.sub': 'How would you like to generate your counters?',
+      'welcome.free': 'Free, no key', 'welcome.freeDesc': 'No key? Usable counters with Touché AI, no sign-up. Enough to get started.',
+      'welcome.byok': 'Use my own API key', 'welcome.byokDesc': 'Best quality with Claude Sonnet or Opus (or GPT). Your counters stay local in your browser.',
+      'welcome.disclaimer': 'Your own key (Claude Sonnet/Opus) gives clearly better counters. The free version is just so everyone has something to start with.',
+      'welcome.later': 'Later, free for now',
       'comp.for': 'For', 'comp.tone': 'in tone', 'comp.placeholder': 'Paste a comment, drop an image, or describe a topic...',
       'comp.busy': 'Touché is replying...', 'comp.attach': 'Attach image',
       'comp.imgTooLarge': 'Image too large (max 5 MB)', 'comp.turn': 'turn', 'comp.turns': 'turns',
       'comp.noKey': 'No API key, open Settings',
       'comp.reco': 'Suggestion', 'comp.recoReason': 'Opponent wrote short, audience unclear → keep it short and factual',
+      'comp.more': 'More tones', 'comp.less': 'Less', 'comp.ai': 'AI',
       'platform.reddit': 'Reddit', 'platform.twitter': 'X/Twitter', 'platform.spoken': 'Spoken', 'platform.whatsapp': 'WhatsApp',
       'tone.factual': 'Factual', 'tone.snarky': 'Snarky', 'tone.gungho': 'Gung-ho',
       'tone.deescalate': 'De-escalating', 'tone.factcheck': 'Fact-check only', 'tone.expose': 'Expose tactic', 'tone.contradiction': 'Contradiction trap',
@@ -1089,6 +1239,8 @@
       'set.critic': 'Counter-checker (own-goal and source check)', 'set.criticHelp': 'A second pass after every answer: checks every number against the evidence, catches own-goals, sharpens the voice. Costs one extra API call per answer.',
       'set.tab.general': 'General', 'set.tab.setup': 'Setup', 'set.tab.privacy': 'Privacy',
       'set.provider': 'Provider', 'set.model': 'Model', 'set.customOpt': 'Enter custom model...',
+      'set.toucheOpt': 'Touché AI (free, no key)',
+      'set.toucheNote': 'Touché AI runs server-side (Cloudflare Workers AI) and is free — no API key needed. For your own models (Claude, GPT), switch the provider above; your counters then stay fully local.',
       'set.customPh': 'exact model name', 'set.apiKey': 'API key', 'set.show': 'show', 'set.hide': 'hide',
       'set.test': 'Test connection', 'set.testing': 'testing...', 'set.testOk': '✓ Connected', 'set.testReceived': 'Reply received',
       'set.platform': 'Platform', 'set.tone': 'Tone',
@@ -1109,6 +1261,7 @@
       'priv.2': 'Your counter text goes directly from your browser to your provider.',
       'priv.3': 'Touché sees neither. We log nothing.',
       'priv.4': "Your provider (Anthropic, OpenAI, etc.) sees your counters, that's their job. We don't.",
+      'priv.5': 'Exception — Touché AI (default, no key): your comment goes to our Cloudflare worker, which generates the reply server-side (Cloudflare Workers AI). Want everything local? Use your own API key (BYOK).',
       'priv.foot': 'Source code public on GitHub. No cookies, no trackers, no analytics.'
     }
   };
@@ -1125,6 +1278,7 @@
       lightboxImg: null,
       selectedExampleCat: null,
       settingsOpen: false,
+      welcomeOpen: false,
       topicsVisible: false,
       settingsTab: 'general',
       sidebarOpen: localStorage.getItem('boldclaim_sidebar_open') === 'true',
@@ -1140,17 +1294,19 @@
       // Advisory style suggestion derived from the opponent comment + platform.
       // Null = no suggestion yet. recoApplied flips true once the user clicks the chip.
       recoStyle: null,
-      // Becomes true once the user manually touches the 3x3 picker, so the suggestion never stomps it.
+      // Becomes true once the user manually touches the picker, so the suggestion never stomps it.
       userOverrodePicker: false,
+      // Preset Rail state: matrix accordion open + which hardness the AI auto-picked (for the KI badge).
+      matrixOpen: false,
+      aiPickHardness: null,
 
       settings: {
-        provider: 'anthropic',
+        provider: 'touche',
         model: '',
         apiKey: '',
         platform: 'Reddit',
         category: 'Fakten',
         hardness: 'Direkt',
-        selectorStyle: 'pills',
         lang: 'de',
         voiceSample: '',
         critic: true
@@ -1164,6 +1320,8 @@
         }
         if (!this.settings.model) this.settings.model = this.defaultModel(this.settings.provider);
         this.customMode = !this.modelsForProvider().some(m => m.id === this.settings.model);
+        // First-visit choice modal: show once, ever.
+        if (!localStorage.getItem('boldclaim_welcome_v1')) { this.welcomeOpen = true; }
         this.loadArchive();
         const session = localStorage.getItem('boldclaim_session_v2');
         if (session) {
@@ -1175,6 +1333,14 @@
             }
           } catch (e) {}
         }
+        // Deep-link prefill from the topics overview: /?q=<claim>
+        try {
+          const qp = new URLSearchParams(window.location.search).get('q');
+          if (qp && qp.trim()) {
+            this.useExample(qp.trim());
+            history.replaceState(null, '', window.location.pathname);
+          }
+        } catch (e) {}
         window.addEventListener('resize', () => {
           if (window.innerWidth < 1024 && this.sidebarOpen) this.sidebarOpen = false;
         });
@@ -1201,14 +1367,17 @@
 
       // Computed
       hasKey() { return this.settings.apiKey && this.settings.apiKey.length > 8; },
+      usingTouche() { return this.settings.provider === 'touche'; },
+      // Can the user chat? Keyless Touché AI needs no key; every BYOK provider needs one.
+      canChat() { return this.usingTouche() || this.hasKey(); },
       canSend() {
         if (!(this.input.trim() || this.pendingImages.length)) return false;
         if (this.busy) return false;
-        return this.hasKey();
+        return this.canChat();
       },
       countUserMsgs() { return this.messages.filter(m => m.role === 'user').length; },
       modelLabel() {
-        if (this.hasKey()) return `${this.settings.provider} · ${this.settings.model || this.defaultModel(this.settings.provider)}`;
+        if (this.canChat()) return `${this.settings.provider} · ${this.settings.model || this.defaultModel(this.settings.provider)}`;
         return this.t('comp.noKey');
       },
       defaultModel(p) { return PROVIDERS[p]?.defaultModel || ''; },
@@ -1258,6 +1427,10 @@
       saveSettings() {
         localStorage.setItem('boldclaim_settings_v2', JSON.stringify(this.settings));
       },
+      // First-visit choice modal handlers.
+      welcomeChooseFree() { this.settings.provider = 'touche'; this.onProviderChange(); this.saveSettings(); this.dismissWelcome(); },
+      welcomeChooseByok() { this.settings.provider = 'anthropic'; this.onProviderChange(); this.saveSettings(); this.dismissWelcome(); this.settingsOpen = true; this.settingsTab = 'onboarding'; },
+      dismissWelcome() { localStorage.setItem('boldclaim_welcome_v1', '1'); this.welcomeOpen = false; },
       async testKey() {
         this.testing = true;
         this.testStatus = '';
@@ -1369,6 +1542,7 @@
         // Clear the advisory suggestion + override flag for the next comment.
         this.recoStyle = null;
         this.userOverrodePicker = false;
+        this.aiPickHardness = null;
         this.persistSession();
         this.scrollDown();
 
@@ -1395,7 +1569,7 @@
               // (do not let the worker's basic prompt overwrite it).
               // Live method/tactics from Pinecone (worker), with the built-in block as fallback.
               const knowledge = this.knowledgeBlock(context.docs);
-              context.systemPrompt = this.fallbackSystemPrompt(w.method) + (knowledge ? '\n\n' + knowledge : '');
+              context.systemPrompt = this.fallbackSystemPrompt(w.tactics) + (knowledge ? '\n\n' + knowledge : '');
             }
           } catch (e) { /* fallback */ }
         }
@@ -1438,14 +1612,14 @@
           this.persistSession();
           // Critic pass refines the answer (own-goal/inversion, grounding, voice) before the trust check verifies it.
           // Only with retrieved evidence: without it the grounding rule would strip correct numbers from a fallback answer.
-          if (this.settings.critic && !this.messages[idx].error && this.messages[idx].content
+          if (this.settings.critic && !this.usingTouche() && !this.messages[idx].error && this.messages[idx].content
               && this.messages[idx].sources && this.messages[idx].sources.length) {
             await this.criticPass(idx);
           }
           // Trust check runs AFTER the answer is rendered, so the user never waits for it.
           // Only when the answer succeeded and the message actually has sources to check against.
           const am = this.messages[idx];
-          if (am && !am.error && am.content && am.sources && am.sources.length) {
+          if (am && !this.usingTouche() && !am.error && am.content && am.sources && am.sources.length) {
             await this.runTrustCheck(idx);
           }
         }
@@ -1611,13 +1785,21 @@ If the draft is already clean, return it unchanged.`;
 
       cats: [['Fakten','cat.fakten'],['Rhetorik','cat.rhetorik'],['Logik','cat.logik']],
       hards: [['Ruhig','hard.ruhig'],['Direkt','hard.direkt'],['Gungho','hard.gungho']],
-      modeStyleName() {
+      // Named combo for an arbitrary category|hardness pair (the 9 tone names).
+      comboName(cat, hard) {
         const m = {
           'Fakten|Ruhig':'Sanfter Quellen-Konter','Fakten|Direkt':'Sachlicher Quellen-Konter','Fakten|Gungho':'Faktenbombe, keine Konzession',
           'Rhetorik|Ruhig':'Trick freundlich benennen','Rhetorik|Direkt':'Taktik entblößen','Rhetorik|Gungho':'Taktik-Demontage, schonungslos',
           'Logik|Ruhig':'Widerspruch sanft aufzeigen','Logik|Direkt':'Widerspruchsfalle','Logik|Gungho':'Widerspruchsfalle, vernichtend'
         };
-        return m[(this.settings.category||'Fakten')+'|'+(this.settings.hardness||'Direkt')] || '';
+        return m[(cat||'Fakten')+'|'+(hard||'Direkt')] || '';
+      },
+      modeStyleName() {
+        return this.comboName(this.settings.category, this.settings.hardness);
+      },
+      // 1/2/3 for the hardness meter fill. Defaults to Direkt's 2 if unknown.
+      hardnessLevel() {
+        return { 'Ruhig':1, 'Direkt':2, 'Gungho':3 }[this.settings.hardness] || 2;
       },
 
       // Map a recommended style key -> the matching {category, hardness} from cats/hards.
@@ -1654,6 +1836,17 @@ If the draft is already clean, return it unchanged.`;
         } else {
           // Public, medium length, intent unclear -> default to the SAFER short+cold lane.
           style = 'short-and-cold';
+        }
+        // Auto-apply the picked tone unless the user has already overridden the picker by hand.
+        // The KI badge then lands on the auto-picked hardness preset.
+        if (!this.userOverrodePicker) {
+          const m = this.recoStyleMap[style];
+          if (m) {
+            this.settings.category = m.category;
+            this.settings.hardness = m.hardness;
+            this.aiPickHardness = m.hardness;
+            this.saveSettings();
+          }
         }
         this.recoStyle = style;
       },
@@ -1949,10 +2142,52 @@ ${langTop}`;
       // Provider call dispatch
       async callProvider({ systemPrompt, messages, stream = false, onDelta }) {
         const p = this.settings.provider;
+        if (p === 'touche') return this.callTouche({ messages, onDelta });
         if (p === 'anthropic') return this.callAnthropic({ systemPrompt, messages, stream, onDelta });
         if (p === 'openai' || p === 'moonshot' || p === 'openrouter') return this.callOpenAICompat({ systemPrompt, messages, stream, onDelta });
         if (p === 'ollama') return this.callOllama({ systemPrompt, messages, stream, onDelta });
         throw new Error('Unbekannter Provider');
+      },
+
+      // Keyless path: server-side Cloudflare Workers AI via the worker's text+mode route.
+      // The worker runs its own Pinecone search + grounding; we send the latest comment + style.
+      // ponytail: non-streaming — onDelta fires once with the whole reply. No client key is ever sent.
+      async callTouche({ messages, onDelta }) {
+        const lastUser = [...messages].reverse().find(m => m.role === 'user');
+        const text = typeof lastUser?.content === 'string'
+          ? lastUser.content
+          : (Array.isArray(lastUser?.content)
+              ? lastUser.content.filter(c => c.type === 'text').map(c => c.text).join('\n')
+              : '');
+        // Keyless Touché AI is Cloudflare Workers AI (Llama, text only). An image-only
+        // message has no text to send, so the worker would 400. Tell the user plainly
+        // instead, and point at BYOK for a vision model.
+        if (!text.trim()) {
+          throw new Error(this.settings.lang === 'en'
+            ? 'Touché AI (free) is text only and cannot read images. Type the comment, or add your own API key (BYOK) in settings for a vision model.'
+            : 'Touché AI (gratis) ist textbasiert und kann keine Bilder lesen. Tippe den Kommentar ein, oder hinterlege in den Einstellungen einen eigenen API-Key (BYOK) für ein Vision-Modell.');
+        }
+        const ctrl = new AbortController();
+        this.currentAbort = ctrl;
+        const res = await fetch(WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            mode: 'reply',
+            text,
+            platform: this.settings.platform,
+            goal: this.settings.category,
+            tone: this.settings.category + ' / ' + this.settings.hardness,
+            lang: this.settings.lang
+          }),
+          signal: ctrl.signal
+        });
+        if (!res.ok) throw new Error('Touché AI ' + res.status + ': ' + (await res.text()).slice(0, 200));
+        const data = await res.json();
+        if (data.error) throw new Error(data.error);
+        const reply = data.reply || '';
+        if (onDelta && reply) onDelta(reply);
+        return reply;
       },
 
       async callAnthropic({ systemPrompt, messages, stream, onDelta }) {
@@ -2157,7 +2392,7 @@ ${langTop}`;
         this.messages = [];
         this.archive = [];
         this.activeConvId = null;
-        Object.assign(this.settings, { provider: 'anthropic', model: '', apiKey: '', platform: 'Reddit', category: 'Fakten', hardness: 'Direkt', selectorStyle: 'pills', lang: 'de' });
+        Object.assign(this.settings, { provider: 'touche', model: '', apiKey: '', platform: 'Reddit', category: 'Fakten', hardness: 'Direkt', lang: 'de' });
         this.settings.model = this.defaultModel('anthropic');
       },
 
